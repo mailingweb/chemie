@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemie-Experimente: Energetik & Ethin-Herstellung</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .experiment {
+            margin-bottom: 30px;
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        .dark-mode tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .dark-mode footer {
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Chemie-Experimente: Energetik & Ethin-Herstellung</h1>
+            <p>Lernübersicht für das Abitur (Leistungskurs Chemie)</p>
+        </header>
+
+        <div class="card experiment">
+            <h2>1. Temperaturmessung beim Lösen von NH₄Cl und NaOH</h2>
+            <h3>Beobachtung</h3>
+            <ul>
+                <li><span class="highlight">NH₄Cl (Ammoniumchlorid):</span> Temperatur <strong>sinkt</strong> → <span class="highlight">endotherme Reaktion</span> (Energieaufnahme)</li>
+                <li><span class="highlight">NaOH (Natriumhydroxid):</span> Temperatur <strong>steigt</strong> → <span class="highlight">exotherme Reaktion</span> (Energieabgabe)</li>
+            </ul>
+
+            <h3>Auswertung</h3>
+            <table>
+                <tr>
+                    <th>Substanz</th>
+                    <th>Reaktionstyp</th>
+                    <th>Enthalpieänderung (ΔH)</th>
+                    <th>Systemart</th>
+                </tr>
+                <tr>
+                    <td>NH₄Cl</td>
+                    <td>Endotherm</td>
+                    <td>ΔH > 0</td>
+                    <td>Offenes System</td>
+                </tr>
+                <tr>
+                    <td>NaOH</td>
+                    <td>Exotherm</td>
+                    <td>ΔH < 0</td>
+                    <td>Offenes System</td>
+                </tr>
+            </table>
+
+            <h3>Reaktionsgleichungen</h3>
+            <div class="reaction">
+NH₄Cl (s) → NH₄⁺ (aq) + Cl⁻ (aq) &nbsp;&nbsp;&nbsp; <span class="highlight">ΔH > 0 (endotherm)</span><br>
+NaOH (s) → Na⁺ (aq) + OH⁻ (aq) &nbsp;&nbsp;&nbsp; <span class="highlight">ΔH < 0 (exotherm)</span>
+            </div>
+        </div>
+
+        <div class="card experiment">
+            <h2>2. Herstellung von Ethin (C₂H₂) aus Calciumcarbid (CaC₂)</h2>
+            <h3>Beobachtung</h3>
+            <ul>
+                <li>Starkes Aufschäumen bei Wasserzugabe</li>
+                <li>Gasentwicklung (Ethin, C₂H₂) mit <strong>gelber, rußender Flamme</strong></li>
+                <li>Reaktion ist <span class="highlight">stark exotherm</span></li>
+            </ul>
+
+            <h3>Auswertung</h3>
+            <div class="reaction">
+CaC₂ + 2 H₂O → C₂H₂ + Ca(OH)₂ &nbsp;&nbsp;&nbsp; <span class="highlight">ΔH < 0 (exotherm)</span>
+            </div>
+            <p><strong>Systemart:</strong> Offenes System (Gasentweichung, Energieaustausch)</p>
+        </div>
+
+        <div class="card">
+            <h2>Protokollvorlage für beide Experimente</h2>
+            <ol>
+                <li><strong>Versuchsüberschrift</strong> (z. B. "Temperaturmessung bei Lösungsvorgängen")</li>
+                <li><strong>Aufgabenstellung</strong> (Ziel des Experiments)</li>
+                <li><strong>Geräte & Chemikalien</strong> (auflisten)</li>
+                <li><strong>Durchführung</strong> (schrittweise Beschreibung)</li>
+                <li><strong>Beobachtung</strong> (Temperatur, Gas, Flamme etc.)</li>
+                <li><strong>Auswertung</strong> (Reaktionsgleichungen, Systemart, Energetik)</li>
+                <li><strong>Sicherheitshinweise</strong> (Schutzbrille, Abzug, kleine Mengen)</li>
+            </ol>
+        </div>
+
+        <div class="card">
+            <h2>Zusammenfassung der Lerninhalte</h2>
+            <ul>
+                <li><span class="highlight">Exotherme Reaktion:</span> Energieabgabe (ΔH < 0), Temperatur steigt (z. B. NaOH)</li>
+                <li><span class="highlight">Endotherme Reaktion:</span> Energieaufnahme (ΔH > 0), Temperatur sinkt (z. B. NH₄Cl)</li>
+                <li><span class="highlight">Ethin-Synthese:</span> CaC₂ + H₂O → C₂H₂ + Ca(OH)₂ (exotherm, offenes System)</li>
+                <li><span class="highlight">Protokoll:</span> Strukturiert dokumentieren (Beobachtung ≠ Auswertung)</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Quellen: Chemieunterricht.de, Lernhelfer, Unterrichtsmaterialien Uni Göttingen (Abitur-Niveau)</p>
+        </footer>
+    </div>
+
+    <script>
+        // Empfange Nachrichten von der Elternseite (z. B. Modus-Änderungen)
+        window.addEventListener("message", (event) => {
+            if (event.data.type === "setMode") {
+                document.body.classList.toggle("dark-mode", event.data.mode === "dark");
+            }
+        });
+
+        // Frage den aktuellen Modus der Elternseite ab, sobald die Seite geladen ist
+        window.addEventListener("load", () => {
+            window.parent.postMessage({ type: "getMode" }, "*");
+        });
+        
+        // Höre auf Nachrichten vom Elternfenster
+        window.addEventListener("message", (event) => {
+            if (event.data.type === "getVisibleText") {
+                // Sende den sichtbaren Text des body zurück
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+    </script>
+</body>
+</html>

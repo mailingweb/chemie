@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moderne Lernplattform</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333;
+            --nav-bg: #fff;
+            --nav-text: #333;
+            --nav-hover: #e0e0e0;
+            --border-color: #ddd;
+            --search-bg: #eee;
+            --search-text: #333;
+            --button-bg: #4a6fa5;
+            --button-text: #fff;
+        }
+
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f5f5f5;
+            --nav-bg: #333;
+            --nav-text: #f5f5f5;
+            --nav-hover: #444;
+            --border-color: #555;
+            --search-bg: #444;
+            --search-text: #f5f5f5;
+            --button-bg: #5a7fb5;
+            --button-text: #fff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+        }
+
+        .sidebar {
+            width: 300px;
+            background-color: var(--nav-bg);
+            color: var(--nav-text);
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            border-right: 1px solid var(--border-color);
+            overflow-y: auto;
+        }
+
+        .search-container {
+            position: relative;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 10px 40px 10px 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            background-color: var(--search-bg);
+            color: var(--search-text);
+            box-sizing: border-box;
+        }
+
+        .clear-search {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #ccc;
+            color: var(--nav-text);
+            border: none;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        .content-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .content-list li {
+            padding: 8px 0;
+        }
+
+        .content-list li a {
+            text-decoration: none;
+            color: var(--nav-text);
+            display: block;
+            padding: 5px 10px;
+        }
+
+        .category {
+            font-weight: bold;
+            margin-top: 15px;
+            font-size: 1.1em;
+        }
+
+        .subcategory {
+            font-weight: 500;
+            margin-top: 10px;
+            margin-left: 10px;
+            font-size: 1em;
+            color: var(--button-bg);
+        }
+
+        .entry {
+            margin-left: 20px;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .entry:hover {
+            background-color: var(--nav-hover);
+        }
+
+        .main-content {
+            margin-left: 320px;
+            padding: 20px;
+            width: calc(100% - 320px);
+        }
+
+        .iframe-container {
+            width: 100%;
+            height: calc(100vh - 40px);
+            border: none;
+            border-radius: 5px;
+            background-color: var(--bg-color);
+        }
+
+        .toggle-mode {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            background-color: var(--button-bg);
+            color: var(--button-text);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .quiz-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: var(--button-text);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .toggle-mode:hover, .quiz-button:hover {
+            opacity: 0.9;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+
+        .toast-notification {
+            position: fixed;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 5px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 1001;
+            transition: top 0.4s ease-in-out, opacity 0.3s ease-in-out;
+            opacity: 0;
+            pointer-events: none; /* Verhindert Klicks während der Animation */
+        }
+
+        .toast-notification.show {
+            top: 20px;
+            opacity: 1;
+            pointer-events: auto;
+        }
+    </style>
+</head>
+<body>
+    <button class="toggle-mode" id="toggleMode">🌓 Dark Mode</button>
+    <button class="quiz-button" id="quizButton">📝 Quiz erstellen</button>
+
+    <div class="container">
+        <div class="sidebar">
+            <h1>Inhaltsverzeichnis</h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-box" placeholder="Suche...">
+                <button class="clear-search" id="clearSearch">×</button>
+            </div>
+            <ul class="content-list" id="contentList">
+                <!-- Wird per JavaScript gefüllt -->
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <iframe class="iframe-container" id="contentFrame" src=""></iframe>
+        </div>
+    </div>
+
+    <script>
+        // Levenshtein-Distanz-Algorithmus
+        function levenshtein(a, b) {
+            if (a.length === 0) return b.length;
+            if (b.length === 0) return a.length;
+            const matrix = [];
+            for (let i = 0; i <= b.length; i++) {
+                matrix[i] = [i];
+            }
+            for (let j = 0; j <= a.length; j++) {
+                matrix[0][j] = j;
+            }
+            for (let i = 1; i <= b.length; i++) {
+                for (let j = 1; j <= a.length; j++) {
+                    if (b.charAt(i-1) === a.charAt(j-1)) {
+                        matrix[i][j] = matrix[i-1][j-1];
+                    } else {
+                        matrix[i][j] = Math.min(
+                            matrix[i-1][j-1] + 1,
+                            matrix[i][j-1] + 1,
+                            matrix[i-1][j] + 1
+                        );
+                    }
+                }
+            }
+            return matrix[b.length][a.length];
+        }
+
+        // Prüft, ob ein String mit Fuzzy-Matching (Levenshtein ≤ 2) übereinstimmt
+        function isFuzzyMatch(str, term) {
+            return levenshtein(str.toLowerCase(), term.toLowerCase()) <= 2;
+        }
+
+        // Liste der HTML-Dateien mit Kategorie, Subkategorie, Anzeigenamen und Tags
+        const contentList = [
+            { category: "Grundlagen", subcategory: "HTML", displayName: "Experiment Ethin", fileName: "e_ethin.html", tags: ["ethin", "einführung", "grundlagen"] },
+            { category: "Grundlagen", subcategory: "HTML", displayName: "HTML5 Neuerungen", fileName: "html5_neuerungen.html", tags: ["html5", "neuerung", "neues", "features"] },
+            { category: "Grundlagen", subcategory: "CSS", displayName: "CSS Grundlagen", fileName: "css_grundlagen.html", tags: ["css", "stile", "design"] },
+            { category: "Grundlagen", subcategory: "CSS", displayName: "CSS Layouts", fileName: "css_layouts.html", tags: ["css", "layout", "grid", "flexbox"] },
+            { category: "Fortgeschritten", subcategory: "JavaScript", displayName: "JavaScript für Anfänger", fileName: "javascript_anfaenger.html", tags: ["javascript", "js", "anfänger", "grundlagen"] },
+            { category: "Fortgeschritten", subcategory: "JavaScript", displayName: "JavaScript OOP", fileName: "javascript_oop.html", tags: ["javascript", "js", "oop", "objekte"] },
+            { category: "Fortgeschritten", subcategory: "Design", displayName: "Webdesign Prinzipien", fileName: "webdesign_prinzipien.html", tags: ["design", "prinzipien", "ui", "ux"] },
+            { category: "Fortgeschritten", subcategory: "Design", displayName: "Responsive Design", fileName: "responsive_design.html", tags: ["design", "responsive", "mobile", "adaptiv"] },
+            { category: "Tools", subcategory: "Build", displayName: "Webpack Einführung", fileName: "webpack_einfuehrung.html", tags: ["webpack", "build", "tool", "bundler"] },
+            { category: "Tools", subcategory: "Build", displayName: "Gulp für Anfänger", fileName: "gulp_anfaenger.html", tags: ["gulp", "build", "tool", "automatisierung"] },
+        ];
+
+        // Sortiere die Liste nach Kategorie → Subkategorie → displayName
+        contentList.sort((a, b) => {
+            if (a.category < b.category) return -1;
+            if (a.category > b.category) return 1;
+            if (a.subcategory < b.subcategory) return -1;
+            if (a.subcategory > b.subcategory) return 1;
+            return a.displayName.localeCompare(b.displayName);
+        });
+
+        // Fülle das Inhaltsverzeichnis
+        const listElement = document.getElementById("contentList");
+        const searchInput = document.getElementById("searchInput");
+        const clearSearch = document.getElementById("clearSearch");
+
+        function renderContentList(filterTerm = "") {
+            listElement.innerHTML = "";
+            let currentCategory = null;
+            let currentSubcategory = null;
+            let categoryElement = null;
+            let subcategoryElement = null;
+
+            contentList.forEach(item => {
+                const searchTerm = filterTerm.toLowerCase();
+                const displayName = item.displayName.toLowerCase();
+                const category = item.category.toLowerCase();
+                const subcategory = item.subcategory.toLowerCase();
+                const tags = item.tags ? item.tags.map(tag => tag.toLowerCase()) : [];
+
+                // Fuzzy-Matching für displayName und tags
+                const displayNameMatches = !searchTerm || displayName.includes(searchTerm) || isFuzzyMatch(item.displayName, searchTerm);
+                const tagMatches = !searchTerm || (tags && tags.some(tag => tag.includes(searchTerm) || isFuzzyMatch(tag, searchTerm)));
+                const categoryMatches = !searchTerm || category.includes(searchTerm);
+                const subcategoryMatches = !searchTerm || subcategory.includes(searchTerm);
+
+                // Suche in category, subcategory, displayName (fuzzy) oder tags (fuzzy)
+                const matchesSearch = !searchTerm ||
+                    categoryMatches ||
+                    subcategoryMatches ||
+                    displayNameMatches ||
+                    tagMatches;
+
+                if (item.category !== currentCategory) {
+                    categoryElement = document.createElement("li");
+                    categoryElement.className = "category";
+                    categoryElement.textContent = item.category;
+                    listElement.appendChild(categoryElement);
+                    currentCategory = item.category;
+                    currentSubcategory = null;
+                }
+                if (item.subcategory !== currentSubcategory) {
+                    subcategoryElement = document.createElement("li");
+                    subcategoryElement.className = "subcategory";
+                    subcategoryElement.textContent = item.subcategory;
+                    listElement.appendChild(subcategoryElement);
+                    currentSubcategory = item.subcategory;
+                }
+                const entryElement = document.createElement("li");
+                entryElement.className = "entry";
+                if (!matchesSearch) {
+                    entryElement.style.display = "none";
+                }
+                entryElement.innerHTML = `
+                    <a href="#" data-file="${item.fileName}" data-category="${item.category}" data-subcategory="${item.subcategory}">
+                        ${item.displayName}
+                    </a>
+                `;
+                listElement.appendChild(entryElement);
+            });
+
+            // Verstecke leere Kategorien/Subkategorien
+            document.querySelectorAll(".category, .subcategory").forEach(element => {
+                const nextElement = element.nextElementSibling;
+                const isCategory = element.classList.contains("category");
+                let hasVisibleEntries = false;
+                let current = nextElementSibling(element);
+
+                while (current && (isCategory ? current.classList.contains("subcategory") || current.classList.contains("entry") : current.classList.contains("entry"))) {
+                    if (current.style.display !== "none") {
+                        hasVisibleEntries = true;
+                        break;
+                    }
+                    current = nextElementSibling(current);
+                }
+
+                if (!hasVisibleEntries) {
+                    element.style.display = "none";
+                }
+            });
+        }
+
+        function nextElementSibling(el) {
+            let next = el.nextElementSibling;
+            while (next && next.nodeType !== Node.ELEMENT_NODE) {
+                next = next.nextSibling;
+            }
+            return next;
+        }
+
+        // Klick-Event für die Links im Inhaltsverzeichnis
+        listElement.addEventListener("click", function(e) {
+            if (e.target.tagName === "A") {
+                e.preventDefault();
+                const fileName = e.target.getAttribute("data-file");
+                const frame = document.getElementById("contentFrame");
+                frame.src = fileName;
+                // Dark/Light-Mode an iframe weitergeben
+                frame.onload = function() {
+                    const mode = document.body.classList.contains("dark-mode") ? "dark" : "light";
+                    frame.contentWindow.postMessage({ type: "setMode", mode: mode }, "*");
+                };
+            }
+        });
+
+        // Suchfunktion
+        searchInput.addEventListener("input", function() {
+            renderContentList(this.value);
+            clearSearch.style.display = this.value ? "flex" : "none";
+        });
+
+        // Clear-Search-Button
+        clearSearch.addEventListener("click", function() {
+            searchInput.value = "";
+            renderContentList("");
+            clearSearch.style.display = "none";
+        });
+
+        // Dark/Light Mode Toggle mit Systemeinstellungen
+        const toggleButton = document.getElementById("toggleMode");
+
+        // Prüfe die Systemeinstellungen beim Laden der Seite
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.body.classList.add("dark-mode");
+            toggleButton.textContent = "☀️ Light Mode";
+        } else {
+            document.body.classList.remove("dark-mode");
+            toggleButton.textContent = "🌓 Dark Mode";
+        }
+
+        // Reagiere auf Änderungen der Systemeinstellungen
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.body.classList.add("dark-mode");
+                toggleButton.textContent = "☀️ Light Mode";
+            } else {
+                document.body.classList.remove("dark-mode");
+                toggleButton.textContent = "🌓 Dark Mode";
+            }
+            // Informiere iframe über Moduswechsel
+            const frame = document.getElementById("contentFrame");
+            if (frame.contentWindow) {
+                const mode = document.body.classList.contains("dark-mode") ? "dark" : "light";
+                frame.contentWindow.postMessage({ type: "setMode", mode: mode }, "*");
+            }
+        });
+
+        // Toggle-Button-Funktion
+        toggleButton.addEventListener("click", function() {
+            document.body.classList.toggle("dark-mode");
+            const mode = document.body.classList.contains("dark-mode") ? "dark" : "light";
+            this.textContent = mode === "dark" ? "☀️ Light Mode" : "🌓 Dark Mode";
+            // Informiere iframe über Moduswechsel
+            const frame = document.getElementById("contentFrame");
+            if (frame.contentWindow) {
+                frame.contentWindow.postMessage({ type: "setMode", mode: mode }, "*");
+            }
+        });
+
+        // Variablen für Spam-Schutz
+        let isToastActive = false;
+        let toastTimeout = null;
+
+        // Funktion zum Anzeigen der Toast-Benachrichtigung
+        function showToast(message, isError = false) {
+            if (isToastActive) return; // Verhindere Mehrfachausführung
+
+            isToastActive = true;
+            clearTimeout(toastTimeout);
+
+            let toast = document.getElementById("toastNotification");
+            if (!toast) {
+                toast = document.createElement("div");
+                toast.id = "toastNotification";
+                toast.className = "toast-notification";
+                document.body.appendChild(toast);
+            }
+
+            // Farbe anpassen (rot bei Fehler)
+            toast.style.backgroundColor = isError ? "#f44336" : "#4CAF50";
+            toast.textContent = message;
+            toast.classList.add("show");
+
+            // Nach 3 Sekunden ausblenden
+            toastTimeout = setTimeout(() => {
+                toast.classList.remove("show");
+                // Warte auf das Ende der Animation, bevor isToastActive zurückgesetzt wird
+                setTimeout(() => {
+                    isToastActive = false;
+                }, 400); // Entspricht der Transition-Dauer (0.4s)
+            }, 3000);
+        }
+
+        // Quiz-Button-Funktion
+        const quizButton = document.getElementById("quizButton");
+        quizButton.addEventListener("click", function() {
+            if (isToastActive) return; // Spam-Schutz
+
+            const frame = document.getElementById("contentFrame");
+            frame.contentWindow.postMessage({ type: "getVisibleText" }, "*");
+        });
+
+        // Empfange die Antwort vom iframe
+        window.addEventListener("message", (event) => {
+            if (event.data.type === "visibleTextResponse") {
+                const visibleText = event.data.text;
+                const promptText = "Erstelle 2 Fragen für eine Prüfung, die nur das Wissen aus den nachstehenden Informationen abfragen:\n\n" + visibleText;
+                navigator.clipboard.writeText(promptText)
+                    .then(() => {
+                        showToast("Prompt für Quiz-Fragen wurde kopiert!");
+                    })
+                    .catch(err => {
+                        console.error("Fehler beim Kopieren: ", err);
+                        showToast("Fehler beim Kopieren in die Zwischenablage.", true);
+                    });
+            }
+        });
+
+        // Standardmäßig die erste Seite laden und Inhaltsverzeichnis rendern
+        if (contentList.length > 0) {
+            document.getElementById("contentFrame").src = contentList[0].fileName;
+        }
+        renderContentList();
+
+        // Empfange Nachrichten vom iframe (z.B. für Dark/Light-Mode-Sync)
+        window.addEventListener("message", (event) => {
+            if (event.data.type === "getMode") {
+                const mode = document.body.classList.contains("dark-mode") ? "dark" : "light";
+                event.source.postMessage({ type: "setMode", mode: mode }, event.origin);
+            }
+        });
+    </script>
+</body>
+</html>
