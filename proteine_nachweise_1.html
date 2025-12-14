@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nachweis von Proteinen – Chemie Abitur</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="no-transition">
+    <div class="container">
+        <header>
+            <h1>Nachweis von Proteinen – Chemie Abitur</h1>
+            <p>Umfassende Übersicht für den Leistungskurs</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Biuret-Reaktion</span>
+            <span class="tag">Xanthoprotein-Reaktion</span>
+            <span class="tag">Ninhydrin-Reaktion</span>
+            <span class="tag">Protein-Nachweis</span>
+            <span class="tag">Reaktionsgleichungen</span>
+            <span class="tag">Abitur Chemie</span>
+        </div>
+
+        <div class="card">
+            <h2>1. Biuret-Reaktion</h2>
+            <h3>Prinzip</h3>
+            <p>Die Biuret-Reaktion dient zum Nachweis von <strong>Peptidbindungen</strong> in Proteinen und Polypeptiden. Sie beruht auf der Komplexbildung zwischen Cu²⁺-Ionen und den Peptidbindungen, die eine violette Färbung ergibt.</p>
+
+            <h3>Durchführung</h3>
+            <p>Die Probe wird mit Natronlauge (NaOH) versetzt und anschließend mit verdünnter Kupfersulfat-Lösung (CuSO₄) gemischt. Bei Anwesenheit von Peptidbindungen entsteht eine violette Färbung.</p>
+
+            <h3>Reaktionsgleichung</h3>
+            <div class="reaction">
+                <p>Peptidbindungen + Cu²⁺ (in alkalischer Lösung) → Violetter Komplex</p>
+            </div>
+
+            <h3>Interpretation</h3>
+            <p>Eine violette Färbung zeigt das Vorhandensein von Proteinen oder Polypeptiden an. Die Reaktion ist spezifisch für Verbindungen mit mindestens zwei Peptidbindungen.</p>
+        </div>
+
+        <div class="card">
+            <h2>2. Xanthoprotein-Reaktion</h2>
+            <h3>Prinzip</h3>
+            <p>Die Xanthoprotein-Reaktion weist aromatische Aminosäuren (z. B. Tyrosin, Phenylalanin, Tryptophan) in Proteinen nach. Durch Nitrierung der aromatischen Ringe mit konzentrierter Salpetersäure (HNO₃) entsteht eine gelbe Färbung.</p>
+
+            <h3>Durchführung</h3>
+            <p>Die Probe wird mit konzentrierter Salpetersäure versetzt und erhitzt. Bei Anwesenheit aromatischer Aminosäuren entsteht eine gelbe Färbung, die durch Zugabe von Ammoniak (NH₃) orange wird.</p>
+
+            <h3>Reaktionsgleichung</h3>
+            <div class="reaction">
+                <p>Aromatische Aminosäure + HNO₃ → Nitrierung → Gelber Nitrokörper</p>
+            </div>
+
+            <h3>Interpretation</h3>
+            <p>Eine gelbe Färbung zeigt das Vorhandensein aromatischer Aminosäuren an. Die Reaktion ist nicht spezifisch für Proteine, sondern für aromatische Verbindungen.</p>
+        </div>
+
+        <div class="card">
+            <h2>3. Ninhydrin-Reaktion</h2>
+            <h3>Prinzip</h3>
+            <p>Die Ninhydrin-Reaktion dient zum Nachweis von <strong>freien Aminogruppen</strong> in Aminosäuren und Proteinen. Ninhydrin oxidiert die Aminogruppen, wobei eine blauviolette Färbung entsteht.</p>
+
+            <h3>Durchführung</h3>
+            <p>Die Probe wird mit Ninhydrin-Lösung versetzt und erhitzt. Bei Anwesenheit von freien Aminogruppen entsteht eine blauviolette Färbung.</p>
+
+            <h3>Reaktionsgleichung</h3>
+            <div class="reaction">
+                <p>Aminosäure + Ninhydrin → Aldehyd + CO₂ + NH₃ + blauvioletter Farbstoff</p>
+            </div>
+
+            <h3>Interpretation</h3>
+            <p>Eine blauviolette Färbung zeigt das Vorhandensein von freien Aminogruppen an. Die Reaktion ist besonders empfindlich für α-Aminosäuren.</p>
+        </div>
+
+        <div class="card">
+            <h2>Zusammenfassung der Nachweismethoden</h2>
+            <table>
+                <tr>
+                    <th>Nachweismethode</th>
+                    <th>Nachweisprinzip</th>
+                    <th>Färbung</th>
+                    <th>Spezifität</th>
+                </tr>
+                <tr>
+                    <td>Biuret-Reaktion</td>
+                    <td>Peptidbindungen</td>
+                    <td>Violett</td>
+                    <td>Proteine, Polypeptide</td>
+                </tr>
+                <tr>
+                    <td>Xanthoprotein-Reaktion</td>
+                    <td>Aromatische Aminosäuren</td>
+                    <td>Gelb/Orange</td>
+                    <td>Aromatische Verbindungen</td>
+                </tr>
+                <tr>
+                    <td>Ninhydrin-Reaktion</td>
+                    <td>Freie Aminogruppen</td>
+                    <td>Blauviolett</td>
+                    <td>Aminosäuren, Proteine</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>Praktische Anwendung</h2>
+            <p>Diese Nachweismethoden werden im Labor eingesetzt, um Proteine in Lebensmitteln, biologischen Proben oder chemischen Substanzen nachzuweisen. Sie sind besonders relevant für:</p>
+            <ul>
+                <li>Qualitative Analysen in der Biochemie</li>
+                <li>Identifikation von Proteinen in Gemischen</li>
+                <li>Überprüfung von Reinheitsgraden</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Quellen: Standardlehrwerke der Chemie für die Sekundarstufe II, Abiturwissen Chemie</p>
+        </footer>
+    </div>
+
+    <script>
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        applySystemMode();
+
+        window.addEventListener("message", function(event) {
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            } else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            } else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

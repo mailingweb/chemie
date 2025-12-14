@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thermodynamik & Energetik im Chemie-Abitur</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .experiment {
+            margin-bottom: 30px;
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Thermodynamik & Energetik im Chemie-Abitur</h1>
+            <p>Lernübersicht für den Leistungskurs Chemie</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Volumenarbeit</span>
+            <span class="tag">Isochor</span>
+            <span class="tag">Isobar</span>
+            <span class="tag">Reaktionsenthalpie</span>
+            <span class="tag">Gitterenthalpie</span>
+            <span class="tag">Bindungsenthalpie</span>
+            <span class="tag">Hydratationsenthalpie</span>
+            <span class="tag">Freie Enthalpie</span>
+            <span class="tag">Entropie</span>
+            <span class="tag">Benzinverbrennung</span>
+            <span class="tag">Experimente</span>
+        </div>
+
+        <div class="card">
+            <h2>1. Volumenarbeit bei chemischen Reaktionen</h2>
+            <p>Volumenarbeit \( W = -p \cdot \Delta V \) tritt nur bei <span class="highlight">isobaren Reaktionen</span> auf (konstanter Druck). Das System kann sich ausdehnen und Arbeit verrichten. Die Volumenarbeit ist die Energie, die ein System bei Volumenänderung gegen den konstanten Umgebungsdruck aufwendet oder gewinnt.</p>
+            <p><strong>Beispiel:</strong> Bei der Reaktion \( N_2 + 3H_2 \rightarrow 2NH_3 \) beträgt die molare Volumenarbeit etwa 4,54 kJ/mol. Die meisten chemischen Reaktionen laufen unter isobaren Bedingungen ab, da der Druck in offenen Systemen (z. B. Atmosphäre) konstant bleibt.</p>
+            <p><strong>Zusammenhang mit innerer Energie:</strong> \( \Delta U = Q - p \cdot \Delta V \)</p>
+            <p><em>Quelle: <a href="https://knowunity.de/knows/chemie-chemische-thermodynamik-4411c0f7-1f55-4323-84ec-3f00f27def6e">Knowunity</a>, <a href="https://www.lernhelfer.de/schuelerlexikon/physik-abitur/artikel/isobare-zustandsaenderungen">Lernhelfer</a></em></p>
+        </div>
+
+        <div class="card">
+            <h2>2. Isochore Prozessführung & Reaktionsenergie</h2>
+            <p>Bei einer <span class="highlight">isochoren Zustandsänderung</span> bleibt das Volumen konstant. Es wird keine Volumenarbeit verrichtet, da \( \Delta V = 0 \). Die zugeführte Wärme \( Q \) erhöht nur die innere Energie \( U \) des Systems.</p>
+            <p><strong>Reaktionsenergie:</strong> \( \Delta_R U = Q_V \) (Wärme bei konstantem Volumen).</p>
+            <p><strong>Anwendung:</strong> Geschlossene Behälter, z. B. Bombenkalorimeter.</p>
+            <p><em>Quelle: <a href="https://www.lernhelfer.de/schuelerlexikon/physik-abitur/artikel/isochore-zustandsaenderungen">Lernhelfer</a>, <a href="http://www.wilke-j.de/chemie/thermodynamik/reaktionsenergie_und_enthalpie/Reaktionsenergie_und_Reaktionsenthalpie.pdf">Wilke-J</a></em></p>
+        </div>
+
+        <div class="card">
+            <h2>3. Reaktionsenthalpie \( \Delta_R H \)</h2>
+            <p>Die <span class="highlight">Reaktionsenthalpie</span> ist die bei konstantem Druck ausgetauschte Wärme. Sie setzt sich zusammen aus der Änderung der inneren Energie und der Volumenarbeit:</p>
+            <p>\[ \Delta_R H = \Delta_R U + p \cdot \Delta V \]</p>
+            <p><strong>Berechnung:</strong> Mit Standardbildungsenthalpien aus Tabellenwerken. Beispiel:</p>
+            <p>\[ \Delta_R H = \sum \Delta_f H(\text{Produkte}) - \sum \Delta_f H(\text{Edukte}) \]</p>
+            <p><em>Quelle: <a href="https://www.abiweb.de/chemie-energiechemie-thermodynamik/zustandsgroessen-der-energetik/die-vier-zustandsgroessen-und-ihre-regeln/reaktionsenergie-reaktionsenthalpie-berechnung.html">Abiweb</a>, <a href="https://knowunity.de/knows/chemie-chemie-lk-abitur-zusammenfassung-energie-87f0064a-27a9-4205-a0c8-12212d76af07">Knowunity</a></em></p>
+        </div>
+
+        <div class="card">
+            <h2>4. Gitterenthalpie, Bindungsenthalpie & Hydratationsenthalpie</h2>
+            <table>
+                <tr>
+                    <th>Begriff</th>
+                    <th>Definition</th>
+                    <th>Vorzeichen</th>
+                    <th>Beispiel</th>
+                </tr>
+                <tr>
+                    <td>Gitterenthalpie</td>
+                    <td>Energie zum Aufbrechen des Ionengitters</td>
+                    <td>positiv (endotherm)</td>
+                    <td>NaCl: +778 kJ/mol</td>
+                </tr>
+                <tr>
+                    <td>Hydratationsenthalpie</td>
+                    <td>Energie bei Bildung der Hydrathülle</td>
+                    <td>negativ (exotherm)</td>
+                    <td>Na\(^+\): -398 kJ/mol</td>
+                </tr>
+                <tr>
+                    <td>Bindungsenthalpie</td>
+                    <td>Energie zum Spalten einer Bindung</td>
+                    <td>positiv</td>
+                    <td>H-H: +436 kJ/mol</td>
+                </tr>
+            </table>
+            <p><strong>Lösungsenthalpie:</strong> \( \Delta_H L = \Delta_H H - \Delta_H G \)</p>
+            <p><em>Quelle: <a href="https://www.chemie-schule.de/KnowHow/Enthalpie">Chemie-Schule</a>, <a href="https://knowunity.de/knows/chemie-loesungsenthalpie-von-salzen-a9fe2dc4-86e4-48ec-a749-10570ada2009">Knowunity</a></em></p>
+        </div>
+
+        <div class="card">
+            <h2>5. Freie Reaktionsenthalpie \( \Delta_R G \) & Gibbs-Helmholtz-Gleichung</h2>
+            <p>Die <span class="highlight">freie Enthalpie</span> bestimmt, ob eine Reaktion freiwillig abläuft:</p>
+            <p>\[ \Delta_R G = \Delta_R H - T \cdot \Delta_R S \]</p>
+            <ul>
+                <li>\( \Delta_R G < 0 \): Reaktion läuft freiwillig ab (exergonisch).</li>
+                <li>\( \Delta_R G > 0 \): Reaktion läuft nicht freiwillig ab (endergonisch).</li>
+            </ul>
+            <p><strong>Rechenbeispiel:</strong> Für die Reaktion \( \text{CaCO}_3 \rightarrow \text{CaO} + \text{CO}_2 \) bei 25°C: \( \Delta_R G \) wird mit Standardwerten berechnet.</p>
+            <p><em>Quelle: <a href="https://abitur-wissen.org/index.php/anorganische-chemie/485-anorganische-chemie-freie-enthalpie-gibbs-helmholtz-und-reaktions-und-bildungsenthalpie">Abitur-Wissen</a>, <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/freiwilligkeit-chemischer-reaktionen">Lernhelfer</a></em></p>
+        </div>
+
+        <div class="card">
+            <h2>6. Entropie \( S \) & freiwilliger Reaktionsablauf</h2>
+            <p>Die <span class="highlight">Entropie</span> ist ein Maß für die Unordnung eines Systems. Eine Reaktion läuft freiwillig ab, wenn:</p>
+            <ul>
+                <li>die Entropie zunimmt (\( \Delta S > 0 \)), oder</li>
+                <li>die Enthalpie abnimmt (\( \Delta H < 0 \)), oder</li>
+                <li>beides zusammen \( \Delta G < 0 \) ergibt.</li>
+            </ul>
+            <p><strong>Beispiel:</strong> Lösen von Salzen (Zunahme der Unordnung) oder Verbrennung von Benzin (starker Enthalpieabfall).</p>
+            <p><em>Quelle: <a href="https://chemiezauber.de/inhalt/q3/energetik/entropie.html">Chemiezauber</a>, <a href="https://simpleclub.com/lessons/chemie-reaktionsthermodynamik-im-abi">SimpleClub</a></em></p>
+        </div>
+
+        <div class="card">
+            <h2>7. Experimente: Benzin verbrennen & Benzin-Luft-Gemisch entzünden</h2>
+            <h3>a) Verbrennung von Benzin</h3>
+            <p><strong>Reaktionsgleichung (Heptan):</strong></p>
+            <div class="reaction">
+\[ \text{C}_7\text{H}_{16} + 11 \text{O}_2 \rightarrow 7 \text{CO}_2 + 8 \text{H}_2\text{O} \quad \Delta H < 0 \ (\text{stark exotherm}) \]
+            </div>
+            <p><strong>Beobachtung:</strong> Heftige Verbrennung mit Flammenerscheinung, Deckel wird weggeschleudert (Explosion).</p>
+            <h3>b) Benzin-Luft-Gemisch</h3>
+            <p>Optimal: 1,9 % Benzindampf, 98,1 % Luft. Zu viel oder zu wenig Benzin → keine Explosion.</p>
+            <p><em>Quelle: <a href="https://www.chemieunterricht.de/dc2/haus/v104.htm">Chemieunterricht.de</a>, <a href="https://www.leifiphysik.de/waermelehre/waermekraftmaschinen/versuche/verbrennung-von-benzin">LEIFIphysik</a></em></p>
+        </div>
+
+        <footer>
+            <p>Quellen: Chemieunterricht.de, Lernhelfer, Knowunity, Abiweb, SimpleClub, LEIFIphysik (Abitur-Niveau, Stand 2025)</p>
+        </footer>
+    </div>
+    <script>
+        // Systemeinstellungen prüfen und anwenden
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+        }
+        applySystemMode();
+    </script>
+</body>
+</html>

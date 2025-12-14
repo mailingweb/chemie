@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemie-Lernübersicht: Glucose-Nachweis & Kohlenhydrate</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .experiment {
+            margin-bottom: 30px;
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="no-transition">
+    <div class="container">
+        <header>
+            <h1>Chemie-Lernübersicht: Glucose-Nachweis & Kohlenhydrate</h1>
+            <p>Für das Abitur (Leistungskurs Chemie)</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Glucose-Nachweis</span>
+            <span class="tag">Fehling-Probe</span>
+            <span class="tag">Tollens-Probe</span>
+            <span class="tag">Monosaccharide</span>
+            <span class="tag">Polysaccharide</span>
+            <span class="tag">Hydrolyse</span>
+            <span class="tag">Disaccharide</span>
+            <span class="tag">Redoxreaktion</span>
+            <span class="tag">Kohlenhydrate</span>
+        </div>
+
+        <div class="card experiment">
+            <h2>1. Glucose-Nachweis mit Fehling-Reagenz</h2>
+            <h3>Versuchsaufbau & Durchführung</h3>
+            <ul>
+                <li>Fehling I (Kupfersulfat-Lösung) und Fehling II (alkalische Kaliumnatriumtartrat-Lösung) werden im Verhältnis 1:1 gemischt → dunkelblaue Fehling-Lösung.</li>
+                <li>Die zu testende Glucose-Lösung wird hinzugegeben und das Reagenzglas im Wasserbad erhitzt.</li>
+            </ul>
+
+            <h3>Beobachtung</h3>
+            <p>Bei Anwesenheit von Glucose (reduzierender Zucker) bildet sich ein <strong>ziegelroter Niederschlag</strong> von Kupfer(I)-oxid (Cu₂O).</p>
+
+            <h3>Reaktionsgleichung</h3>
+            <div class="reaction">
+R-CHO + 2 Cu<sup>2+</sup> + 5 OH<sup>−</sup> → R-COOH + Cu<sub>2</sub>O + 3 H<sub>2</sub>O
+            </div>
+            <p>Glucose wird zur Gluconsäure oxidiert, während Cu<sup>2+</sup> zu Cu<sup>+</sup> reduziert wird.</p>
+
+            <h3>Auswertung</h3>
+            <p>Die Fehling-Probe ist positiv für alle reduzierenden Zucker (z. B. Glucose, Fructose, Maltose), da diese in alkalischer Lösung eine offenkettige Aldehydgruppe ausbilden können. Nicht-reduzierende Zucker (z. B. Saccharose) reagieren nicht.</p>
+            <p><a href="https://www.chemieunterricht.de/dc2/haus/v020.htm" target="_blank">(Quelle: Chemieunterricht.de)</a>, <a href="https://de.wikipedia.org/wiki/Fehling-Probe" target="_blank">(Wikipedia)</a></p>
+        </div>
+
+        <div class="card experiment">
+            <h2>2. Glucose-Nachweis mit Tollens-Reagenz (Silberspiegelprobe)</h2>
+            <h3>Versuchsaufbau & Durchführung</h3>
+            <ul>
+                <li>Tollens-Reagenz wird frisch hergestellt: Silbernitrat-Lösung wird mit Ammoniak versetzt, bis sich der braune Niederschlag von Silber(I)-oxid löst (Bildung des Diamminsilber(I)-Komplexes).</li>
+                <li>Die Glucose-Lösung wird hinzugegeben und das Reagenzglas im Wasserbad auf ca. 70°C erwärmt.</li>
+            </ul>
+
+            <h3>Beobachtung</h3>
+            <p>An der Innenwand des Reagenzglases scheidet sich elementares Silber ab → <strong>Silberspiegel</strong>.</p>
+
+            <h3>Reaktionsgleichung</h3>
+            <div class="reaction">
+R-CHO + 2 [Ag(NH<sub>3</sub>)<sub>2</sub>]<sup>+</sup> + 3 OH<sup>−</sup> → R-COOH + 2 Ag + 4 NH<sub>3</sub> + 2 H<sub>2</sub>O
+            </div>
+            <p>Glucose wird zur Gluconsäure oxidiert, während Ag<sup>+</sup> zu Ag reduziert wird.</p>
+
+            <h3>Auswertung</h3>
+            <p>Die Tollens-Probe ist positiv für Aldehyde und reduzierende Zucker (z. B. Glucose, Lactose). Nicht-reduzierende Zucker (z. B. Saccharose) reagieren nicht.</p>
+            <p><a href="https://de.wikipedia.org/wiki/Tollensprobe" target="_blank">(Quelle: Wikipedia)</a>, <a href="https://www.studysmarter.de/schule/chemie/analytische-chemie/tollens-probe/" target="_blank">(StudySmarter)</a></p>
+        </div>
+
+        <div class="card">
+            <h2>3. Unterschiede: Monosaccharide, Disaccharide, Polysaccharide</h2>
+            <table>
+                <tr>
+                    <th>Eigenschaft</th>
+                    <th>Monosaccharide</th>
+                    <th>Disaccharide</th>
+                    <th>Polysaccharide</th>
+                </tr>
+                <tr>
+                    <td>Aufbau</td>
+                    <td>Einzelner Zuckerring (z. B. Glucose, Fructose)</td>
+                    <td>Zwei Monosaccharide, glykosidisch verknüpft (z. B. Saccharose, Maltose)</td>
+                    <td>Viele Monosaccharide, ketten- oder verzweigt (z. B. Stärke, Cellulose)</td>
+                </tr>
+                <tr>
+                    <td>Hydrolyse</td>
+                    <td>Nicht spaltbar</td>
+                    <td>Spaltbar in zwei Monosaccharide</td>
+                    <td>Spaltbar in viele Monosaccharide</td>
+                </tr>
+                <tr>
+                    <td>Beispiel</td>
+                    <td>Glucose (C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>)</td>
+                    <td>Saccharose (C<sub>12</sub>H<sub>22</sub>O<sub>11</sub>)</td>
+                    <td>Stärke (C<sub>6</sub>H<sub>10</sub>O<sub>5</sub>)<sub>n</sub></td>
+                </tr>
+            </table>
+            <p><a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/kohlenhydrate" target="_blank">(Quelle: Lernhelfer)</a>, <a href="https://www.chemie-schule.de/Organische_Chemie/Polysaccharide.php" target="_blank">(Chemie-Schule)</a></p>
+        </div>
+
+        <div class="card">
+            <h2>4. Katalytische Hydrolyse von Disacchariden</h2>
+            <p>Disaccharide werden durch Wasseraufnahme und Säurekatalyse in ihre Monosaccharid-Bausteine gespalten:</p>
+            <div class="reaction">
+C<sub>12</sub>H<sub>22</sub>O<sub>11</sub> (Saccharose) + H<sub>2</sub>O → C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> (Glucose) + C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> (Fructose)
+            </div>
+            <p>Die Reaktion ist umkehrbar: Kondensation (Wasserabspaltung) führt zur Bildung von Disacchariden.</p>
+            <p><a href="https://chemiezauber.de/inhalt/q1/polysaccharide/saure-hydrolyse/579-die-spaltung-von-disaccharide-in-monosaccharide.html" target="_blank">(Quelle: Chemiezauber)</a></p>
+        </div>
+
+        <footer>
+            <p>Quellen: Chemieunterricht.de, Wikipedia, StudySmarter, Lernhelfer, Chemie-Schule, Chemiezauber</p>
+        </footer>
+    </div>
+    <script>
+        // 1. Systemeinstellungen prüfen und sofort anwenden (ohne Animation)
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            // Transition nach kurzer Verzögerung aktivieren
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        // 2. Modus manuell setzen (mit Animation)
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        // 3. Systemeinstellungen beim Laden anwenden
+        applySystemMode();
+
+        // 4. Nachrichten von der Hauptseite empfangen
+        window.addEventListener("message", function(event) {
+            // Dark/Light-Mode wechseln (mit Animation)
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            // Aktuellen Modus abfragen
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            // Sichtbaren Text zurücksenden
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        // 5. Hauptseite beim Laden über den aktuellen Modus informieren
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        // 6. Systemeinstellungen ändern (optional)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

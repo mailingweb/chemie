@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proteine & Aminosäuren – Lernübersicht für das Chemie-Abitur</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .experiment {
+            margin-bottom: 30px;
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Proteine & Aminosäuren – Lernübersicht für das Chemie-Abitur</h1>
+            <p>Struktur, Eigenschaften und Löslichkeit im Leistungskurs Chemie</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Proteine</span>
+            <span class="tag">Aminosäuren</span>
+            <span class="tag">unpolar</span>
+            <span class="tag">polar</span>
+            <span class="tag">sauer</span>
+            <span class="tag">basisch</span>
+            <span class="tag">Löslichkeit</span>
+            <span class="tag">Zwitterion</span>
+            <span class="tag">isoelektrischer Punkt</span>
+            <span class="tag">Peptidbindung</span>
+        </div>
+
+        <div class="card">
+            <h2>1. Proteine – Aufbau und Eigenschaften</h2>
+            <p>
+                Proteine (Eiweiße) sind <strong>makromolekulare Naturstoffe</strong>, die aus <strong>Aminosäuren</strong> aufgebaut sind. Sie erfüllen im Körper vielfältige Funktionen wie Stoff- und Energiewechsel, Vererbung und Fortpflanzung. Die Verknüpfung von Aminosäuren führt zu Peptiden, die nach ihrer Länge in Oligopeptide (2–9 Aminosäuren), Polypeptide (10–100) und Proteine (>100) unterteilt werden. Die Struktur von Proteinen wird in <strong>Primär-, Sekundär-, Tertiär- und Quartärstruktur</strong> eingeteilt.
+            </p>
+            <p>
+                Die <strong>Peptidbindung</strong> entsteht durch eine Kondensationsreaktion unter Abspaltung von Wasser zwischen der Aminogruppe einer Aminosäure und der Carboxylgruppe einer anderen.
+            </p>
+            <p>
+                <strong>Quellen:</strong>
+                <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/proteine-aufbau-und-eigenschaften" target="_blank">Lernhelfer</a>,
+                <a href="https://www.abiweb.de/organische-chemie/naturstoffchemie/eiweisse.html" target="_blank">Abiweb</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>2. Einteilung der Aminosäuren</h2>
+            <p>
+                Aminosäuren werden nach der <strong>Polarität ihrer Seitenkette</strong> in vier Gruppen unterteilt:
+            </p>
+            <table>
+                <tr>
+                    <th>Gruppe</th>
+                    <th>Beispiele</th>
+                    <th>Eigenschaften</th>
+                </tr>
+                <tr>
+                    <td><strong>Unpolare (hydrophobe) Aminosäuren</strong></td>
+                    <td>Glycin, Alanin, Valin, Leucin, Isoleucin, Prolin, Phenylalanin, Tryptophan, Methionin</td>
+                    <td>Seitenkette besteht aus Kohlenwasserstoffen, hydrophob, bilden Van-der-Waals-Wechselwirkungen</td>
+                </tr>
+                <tr>
+                    <td><strong>Polare, neutrale Aminosäuren</strong></td>
+                    <td>Serin, Threonin, Cystein, Tyrosin, Asparagin, Glutamin</td>
+                    <td>Seitenkette enthält polare Gruppen (z. B. OH, SH, NH<sub>2</sub>), hydrophil</td>
+                </tr>
+                <tr>
+                    <td><strong>Saure Aminosäuren</strong></td>
+                    <td>Asparaginsäure, Glutaminsäure</td>
+                    <td>Enthalten eine zusätzliche Carboxylgruppe, können Protonen abgeben (pK<sub>s</sub> ~2–4)</td>
+                </tr>
+                <tr>
+                    <td><strong>Basische Aminosäuren</strong></td>
+                    <td>Lysin, Arginin, Histidin</td>
+                    <td>Enthalten eine zusätzliche Aminogruppe, können Protonen aufnehmen (pK<sub>s</sub> ~9–12)</td>
+                </tr>
+            </table>
+            <p>
+                <strong>Quellen:</strong>
+                <a href="https://www.abiweb.de/organische-chemie/naturstoffchemie/eiweisse/aminosaeuren-grundbaustein-der-proteine/unterteilung-der-aminosaeuren.html" target="_blank">Abiweb</a>,
+                <a href="https://www.schule-bw.de/faecher-und-schularten/berufliche-bildung/ernaehrungslehre/unterrichtsmaterialien/handreichungen/handreichung_ernaehrung_und_chemie/handreichung-jahrgangsstufe-2/lpe18/lpe1809" target="_blank">Schule BW</a>,
+                <a href="https://www.u-helmich.de/bio/cytologie/02/021/Proteine/Proteine-02.html" target="_blank">Chemiezauber</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>3. Säure-Base-Verhalten und Zwitterionen</h2>
+            <p>
+                Aminosäuren sind <strong>Ampholyte</strong>: Sie können sowohl als Säure (Protonendonator) als auch als Base (Protonenakzeptor) reagieren. Im festen Zustand und in wässriger Lösung liegen sie hauptsächlich als <strong>Zwitterionen</strong> vor.
+            </p>
+            <p>
+                Der <strong>isoelektrische Punkt (IEP)</strong> ist der pH-Wert, bei dem die Aminosäure nach außen neutral ist. Die Löslichkeit ist am IEP minimal, da die Teilchen am wenigsten polar sind.
+            </p>
+            <p>
+                <strong>Saure Aminosäuren</strong> (z. B. Glutaminsäure) haben einen niedrigen IEP (pH ~2–3), <strong>basische Aminosäuren</strong> (z. B. Lysin) einen hohen IEP (pH ~9–11).
+            </p>
+            <p>
+                <strong>Quellen:</strong>
+                <a href="https://www.abiweb.de/organische-chemie/naturstoffchemie/eiweisse/aminosaeuren-grundbaustein-der-proteine/saeure-base-verhalten.html" target="_blank">Abiweb</a>,
+                <a href="https://chemiezauber.de/index.php/inhalt/q1/proteine-2/aminosaeuren-im-detail/268-saure-carboxyl-gruppe-gegen-basische-amino-gruppe" target="_blank">Chemiezauber</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>4. Löslichkeit von Aminosäuren</h2>
+            <p>
+                Die Löslichkeit von Aminosäuren in Wasser hängt von ihrer <strong>Ladung</strong> und der <strong>Polarität der Seitenkette</strong> ab:
+            </p>
+            <ul>
+                <li><strong>Am IEP</strong>: Minimale Löslichkeit, da die Aminosäure als neutrales Zwitterion vorliegt.</li>
+                <li><strong>Im Sauren/Alkalischen</strong>: Erhöhte Löslichkeit, da die Aminosäure als Kation (saures Milieu) oder Anion (alkalisches Milieu) vorliegt und sich besser hydratisieren lässt.</li>
+                <li><strong>Unpolare Aminosäuren</strong> sind schlechter löslich als polare oder geladene Aminosäuren.</li>
+            </ul>
+            <p>
+                <strong>Quellen:</strong>
+                <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/aminosaeuren" target="_blank">Lernhelfer</a>,
+                <a href="https://projekte.zum.de/wiki/Abiturwissen_Chemie_Oberstufe/Proteine/Aminosäuren/Zwitterionen/Löslichkeit" target="_blank">ZUM Projektwiki</a>,
+                <a href="https://chemieabitur.de/wp-content/uploads/OL-Aminos%C3%A4uren-und-Proteine.pdf" target="_blank">Chemieabitur</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>5. Zusammenfassung der Lerninhalte</h2>
+            <ul>
+                <li><strong>Proteine</strong> bestehen aus Aminosäuren, die über Peptidbindungen verknüpft sind.</li>
+                <li><strong>Unpolare Aminosäuren</strong> sind hydrophob, polare hydrophil.</li>
+                <li><strong>Saure Aminosäuren</strong> geben Protonen ab, <strong>basische</strong> nehmen Protonen auf.</li>
+                <li><strong>Löslichkeit</strong> ist pH-abhängig: minimal am IEP, maximal im Sauren/Alkalischen.</li>
+                <li><strong>Zwitterionen</strong> sind am IEP neutral und schwer löslich.</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Quellen: Lernhelfer, Abiweb, Schule BW, Chemiezauber, ZUM Projektwiki, Chemieabitur (Stand: 2025)</p>
+        </footer>
+    </div>
+    <script>
+        // 1. Systemeinstellungen prüfen und sofort anwenden (ohne Animation)
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            // Transition nach kurzer Verzögerung aktivieren
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        // 2. Modus manuell setzen (mit Animation)
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        // 3. Systemeinstellungen beim Laden anwenden
+        applySystemMode();
+
+        // 4. Nachrichten von der Hauptseite empfangen
+        window.addEventListener("message", function(event) {
+            // Dark/Light-Mode wechseln (mit Animation)
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            // Aktuellen Modus abfragen
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            // Sichtbaren Text zurücksenden
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        // 5. Hauptseite beim Laden über den aktuellen Modus informieren
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        // 6. Systemeinstellungen ändern (optional)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

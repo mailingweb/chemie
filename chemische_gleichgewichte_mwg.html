@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemische Gleichgewichte & Massenwirkungsgesetz</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Chemische Gleichgewichte & Massenwirkungsgesetz</h1>
+            <p>Lernübersicht für das Abitur (Leistungskurs Chemie)</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Massenwirkungsgesetz</span>
+            <span class="tag">Gleichgewichtskonstante</span>
+            <span class="tag">Druck & Temperatur</span>
+            <span class="tag">Fällungsreaktionen</span>
+            <span class="tag">Löslichkeitsprodukt</span>
+            <span class="tag">Prinzip von Le Chatelier</span>
+            <span class="tag">Abitur-Niveau</span>
+        </div>
+
+        <div class="card">
+            <h2>1. Massenwirkungsgesetz (MWG)</h2>
+            <p>
+                Das Massenwirkungsgesetz beschreibt das Mengenverhältnis von Produkten und Edukten einer chemischen Reaktion im Gleichgewichtszustand.
+                Es gilt für jede reversible Reaktion und stellt die Produktbildung ins Verhältnis zur Eduktbildung:
+            </p>
+            <div class="reaction">
+Für eine allgemeine Reaktion: a A + b B ⇌ c C + d D<br>
+gilt: K = [C]<sup>c</sup> · [D]<sup>d</sup> / [A]<sup>a</sup> · [B]<sup>b</sup>
+            </div>
+            <ul>
+                <li><strong>K > 1:</strong> Gleichgewicht liegt auf der Produktseite</li>
+                <li><strong>K < 1:</strong> Gleichgewicht liegt auf der Eduktseite</li>
+                <li><strong>K = 1:</strong> Edukte und Produkte liegen in gleichen Konzentrationen vor</li>
+            </ul>
+            <p>
+                Die Gleichgewichtskonstante K ist <strong>temperaturabhängig</strong> und ändert sich nicht durch Katalysatoren oder Druck (bei konstanter Temperatur).
+                <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/massenwirkungsgesetz" target="_blank">(Lernhelfer)</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>2. Einfluss von Druck und Temperatur</h2>
+            <h3>Temperatur</h3>
+            <ul>
+                <li><strong>Exotherme Reaktion:</strong> Temperaturerhöhung verschiebt das Gleichgewicht auf die Eduktseite (K sinkt)</li>
+                <li><strong>Endotherme Reaktion:</strong> Temperaturerhöhung verschiebt das Gleichgewicht auf die Produktseite (K steigt)</li>
+            </ul>
+            <h3>Druck</h3>
+            <ul>
+                <li>Druckerhöhung verschiebt das Gleichgewicht auf die Seite mit <strong>geringerer Teilchenanzahl</strong> (nur bei Gasbeteiligung)</li>
+                <li>Druckänderung beeinflusst K <strong>nicht</strong>, aber die Gleichgewichtslage</li>
+            </ul>
+            <p>
+                <a href="https://www.abiweb.de/anorganische-chemie/chemische-reaktionen/beeinflussung-des-chemischen-gleichgewichts.html" target="_blank">(Abiweb)</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>3. Fällungsreaktionen & Löslichkeitsprodukt</h2>
+            <p>
+                Bei Fällungsreaktionen fällt ein schwerlösliches Salz aus. Die Löslichkeit wird durch das <strong>Löslichkeitsprodukt K<sub>L</sub></strong> beschrieben:
+            </p>
+            <div class="reaction">
+Für AgCl: K<sub>L</sub> = [Ag<sup>+</sup>] · [Cl<sup>-</sup>]
+            </div>
+            <ul>
+                <li>K<sub>L</sub> ist temperaturabhängig und konstant für eine gesättigte Lösung</li>
+                <li>Gleichioniger Zusatz (z. B. Cl<sup>-</sup>) verringert die Löslichkeit (Prinzip von Le Chatelier)</li>
+            </ul>
+            <p>
+                <a href="https://www.abiweb.de/anorganische-chemie/faellungsreaktionen.html" target="_blank">(Abiweb)</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>4. Beispiele & Anwendungen</h2>
+            <h3>Ammoniaksynthese (Haber-Bosch-Verfahren)</h3>
+            <div class="reaction">
+N<sub>2</sub> + 3 H<sub>2</sub> ⇌ 2 NH<sub>3</sub> &nbsp;&nbsp;&nbsp; ΔH < 0 (exotherm)
+            </div>
+            <ul>
+                <li>Hoher Druck (300 bar) begünstigt NH<sub>3</sub>-Bildung (geringere Teilchenanzahl)</li>
+                <li>Tiefe Temperatur begünstigt NH<sub>3</sub>-Bildung, aber langsame Reaktion → Kompromiss bei 550°C</li>
+            </ul>
+            <h3>Fällung von Silberchlorid</h3>
+            <div class="reaction">
+Ag<sup>+</sup> + Cl<sup>-</sup> ⇌ AgCl (s)
+            </div>
+            <ul>
+                <li>K<sub>L</sub>(AgCl) = 1,8 · 10<sup>-10</sup> mol<sup>2</sup>/l<sup>2</sup> (25°C)</li>
+                <li>Zugabe von NaCl verringert die Löslichkeit von AgCl</li>
+            </ul>
+            <p>
+                <a href="https://www.leifichemie.de/analytische-methoden/einfuehrung-die-analytischen-methoden/grundwissen/faellungsreaktionen" target="_blank">(LEIFIchemie)</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>5. Zusammenfassung & Prüfungsrelevanz</h2>
+            <ul>
+                <li>MWG: Berechnung von K, Interpretation der Gleichgewichtslage</li>
+                <li>Prinzip von Le Chatelier: Vorhersage von Gleichgewichtsverschiebungen</li>
+                <li>Fällungsreaktionen: K<sub>L</sub>-Berechnungen, Löslichkeitsbeeinflussung</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Quellen: <a href="https://www.lernhelfer.de" target="_blank">Lernhelfer</a>, <a href="https://www.abiweb.de" target="_blank">Abiweb</a>, <a href="https://www.leifichemie.de" target="_blank">LEIFIchemie</a></p>
+        </footer>
+    </div>
+    <script>
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+        applySystemMode();
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            document.body.classList.toggle("dark-mode", e.matches);
+        });
+    </script>
+</body>
+</html>

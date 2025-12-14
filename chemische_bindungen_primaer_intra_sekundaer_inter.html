@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemische Bindungen: Primär- und Sekundärbindungen – Abitur Chemie</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+            --tag-bg: #e0e0e0;
+            --tag-text: #555555;
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+            --tag-bg: #333333;
+            --tag-text: #cccccc;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .experiment {
+            margin-bottom: 30px;
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .baumdiagramm {
+            text-align: center;
+            margin: 20px 0;
+            font-family: monospace;
+            white-space: pre;
+        }
+        .formel {
+            font-family: 'Courier New', monospace;
+            font-size: 1.1em;
+            background-color: var(--code-bg);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Chemische Bindungen: Primär- und Sekundärbindungen</h1>
+            <p>Lernübersicht für das Abitur (Leistungskurs Chemie)</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Primärbindungen</span>
+            <span class="tag">Sekundärbindungen</span>
+            <span class="tag">Metallbindung</span>
+            <span class="tag">Atombindung</span>
+            <span class="tag">Ionenbindung</span>
+            <span class="tag">Wasserstoffbrücken</span>
+            <span class="tag">Dipol-Dipol-Wechselwirkung</span>
+            <span class="tag">Van-der-Waals-Kräfte</span>
+            <span class="tag">Eigenschaften von Metallen</span>
+            <span class="tag">Baumdiagramm</span>
+        </div>
+
+        <div class="card">
+            <h2>1. Übersicht: Primär- vs. Sekundärbindungen</h2>
+            <p>
+                <strong>Primärbindungen (starke Bindungen, intramolekular):</strong><br>
+                Halten Atome innerhalb von Molekülen oder in Festkörpern zusammen.
+                <strong>Beispiele:</strong> Ionenbindung, Atombindung (kovalent, polar/unpolar), Metallbindung.
+            </p>
+            <p>
+                <strong>Sekundärbindungen (schwache Bindungen, intermolekular):</strong><br>
+                Wirken zwischen Molekülen oder Ionen, sind schwächer und oft temporär.
+                <strong>Beispiele:</strong> Wasserstoffbrückenbindung, Dipol-Dipol-Wechselwirkung, Van-der-Waals-Kräfte.
+            </p>
+            <p>
+                <strong>Bedeutung:</strong> Primärbindungen bestimmen die Struktur und Stabilität von Stoffen, Sekundärbindungen beeinflussen physikalische Eigenschaften wie Siedepunkt oder Löslichkeit.
+            </p>
+            <p>
+                <em>Quellen: <a href="https://www.studysmarter.de/schule/chemie/anorganische-chemie/sekundaerbindungen/" target="_blank">StudySmarter</a>, <a href="https://www.chemie.schule/j11/j11te/chemische_bindungsarten.pdf" target="_blank">Chemie-Schule</a>, <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/wasserstoffbrueckenbindungen-und-andere-zwischenmolekulare" target="_blank">Lernhelfer</a></em>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>2. Primärbindungen im Detail</h2>
+
+            <h3>2.1 Ionenbindung</h3>
+            <p>
+                <strong>Definition:</strong> Elektrostatische Anziehung zwischen Kationen (Metall) und Anionen (Nichtmetall) nach Elektronenübergang.
+                <strong>Beispiel:</strong> NaCl (Natriumchlorid)
+                <span class="formel">Na → Na<sup>+</sup> + e<sup>-</sup>; Cl + e<sup>-</sup> → Cl<sup>-</sup></span>
+            </p>
+            <p>
+                <strong>Eigenschaften:</strong> Hohe Schmelz- und Siedepunkte, spröde, leitet Strom in Lösung/Schmelze.
+            </p>
+
+            <h3>2.2 Atombindung (kovalent)</h3>
+            <p>
+                <strong>Definition:</strong> Gemeinsame Nutzung von Elektronenpaaren zwischen Nichtmetallen.
+                <strong>Beispiele:</strong>
+                <span class="formel">H<sub>2</sub>O (polar), O<sub>2</sub> (unpolar)</span>
+            </p>
+            <p>
+                <strong>Eigenschaften:</strong> Gerichtete Bindung, Moleküle mit definierter Form, oft niedrige Schmelzpunkte (außer Diamant).
+            </p>
+
+            <h3>2.3 Metallbindung</h3>
+            <p>
+                <strong>Definition:</strong> Anziehung zwischen positiv geladenen Metall-Atomrümpfen und frei beweglichen Valenzelektronen ("Elektronengas").
+                <strong>Beispiel:</strong> Cu (Kupfer)
+            </p>
+            <p>
+                <strong>Eigenschaften:</strong> Elektrische/thermische Leitfähigkeit, Verformbarkeit, metallischer Glanz.
+                <em>Quelle: <a href="https://www.abiweb.de/anorganische-chemie/bindungsarten/starke-bindungen/metallbindung.html" target="_blank">Abiweb</a></em>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>3. Sekundärbindungen im Detail</h2>
+
+            <h3>3.1 Wasserstoffbrückenbindung</h3>
+            <p>
+                <strong>Definition:</strong> Starke Dipol-Dipol-Wechselwirkung zwischen H-Atomen (an N, O, F gebunden) und freien Elektronenpaaren benachbarter Moleküle.
+                <strong>Beispiel:</strong> Wasser (H<sub>2</sub>O), DNA-Basenpaare.
+            </p>
+            <p>
+                <strong>Bedeutung:</strong> Verantwortlich für hohe Siedepunkte (z. B. Wasser) und biologische Strukturen.
+            </p>
+
+            <h3>3.2 Dipol-Dipol-Wechselwirkung</h3>
+            <p>
+                <strong>Definition:</strong> Anziehung zwischen permanenten Dipolen in polaren Molekülen.
+                <strong>Beispiel:</strong> HCl (Salzsäure)
+            </p>
+
+            <h3>3.3 Van-der-Waals-Kräfte</h3>
+            <p>
+                <strong>Definition:</strong> Schwache Anziehung zwischen temporären Dipolen (London-Kräfte).
+                <strong>Beispiel:</strong> Edelgase, unpolare Moleküle wie CH<sub>4</sub>.
+            </p>
+            <p>
+                <strong>Stärkevergleich:</strong> H-Brücken > Dipol-Dipol > Van-der-Waals.
+                <em>Quelle: <a href="https://studyflix.de/chemie/zwischenmolekulare-krafte-2392" target="_blank">Studyflix</a></em>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>4. Tabelle: Eigenschaften der Bindungstypen</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Bindungstyp</th>
+                        <th>Bindungspartner</th>
+                        <th>Bindungsstärke</th>
+                        <th>Eigenschaften</th>
+                        <th>Beispiel</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ionenbindung</td>
+                        <td>Metall + Nichtmetall</td>
+                        <td>Sehr stark</td>
+                        <td>Hochschmelzend, spröde, löslich in Wasser</td>
+                        <td>NaCl</td>
+                    </tr>
+                    <tr>
+                        <td>Atombindung (polar)</td>
+                        <td>Nichtmetall + Nichtmetall (ΔEN > 0,4)</td>
+                        <td>Stark</td>
+                        <td>Dipolmoleküle, Löslichkeit in polaren Lösungsmitteln</td>
+                        <td>H<sub>2</sub>O</td>
+                    </tr>
+                    <tr>
+                        <td>Atombindung (unpolar)</td>
+                        <td>Nichtmetall + Nichtmetall (ΔEN ≈ 0)</td>
+                        <td>Stark</td>
+                        <td>Niedrige Schmelzpunkte, unlöslich in Wasser</td>
+                        <td>O<sub>2</sub></td>
+                    </tr>
+                    <tr>
+                        <td>Metallbindung</td>
+                        <td>Metall + Metall</td>
+                        <td>Sehr stark</td>
+                        <td>Leitfähig, verformbar, glänzend</td>
+                        <td>Fe, Cu</td>
+                    </tr>
+                    <tr>
+                        <td>Wasserstoffbrücken</td>
+                        <td>H + N/O/F</td>
+                        <td>Mittel</td>
+                        <td>Hohe Siedepunkte, biologische Relevanz</td>
+                        <td>H<sub>2</sub>O, DNA</td>
+                    </tr>
+                    <tr>
+                        <td>Dipol-Dipol</td>
+                        <td>Polare Moleküle</td>
+                        <td>Schwach</td>
+                        <td>Erhöhte Siedepunkte</td>
+                        <td>HCl</td>
+                    </tr>
+                    <tr>
+                        <td>Van-der-Waals</td>
+                        <td>Alle Moleküle/Atome</td>
+                        <td>Sehr schwach</td>
+                        <td>Niedrige Siedepunkte, Zunahme mit Molekülgröße</td>
+                        <td>CH<sub>4</sub>, He</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                <em>Quelle: <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/wasserstoffbrueckenbindungen-und-andere-zwischenmolekulare" target="_blank">Lernhelfer</a>, <a href="https://www.abiweb.de/anorganische-chemie/bindungsarten/starke-bindungen/atombindung.html" target="_blank">Abiweb</a></em>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>5. Baumdiagramm: Entscheidungshilfe Bindungstyp</h2>
+            <div class="baumdiagramm">
+                Bindungspartner?
+                ├── Metall + Nichtmetall → <strong>Ionenbindung</strong>
+                ├── Nichtmetall + Nichtmetall →
+                │   ├── ΔEN > 1,7 → <strong>Ionenbindung</strong>
+                │   ├── 0,4 < ΔEN < 1,7 → <strong>Polare Atombindung</strong>
+                │   └── ΔEN < 0,4 → <strong>Unpolare Atombindung</strong>
+                └── Metall + Metall → <strong>Metallbindung</strong>
+            </div>
+            <p>
+                <em>Quelle: <a href="https://www.leifichemie.de/aufbau-der-materie/bindungen/grundwissen/bindungsarten-im-ueberblick" target="_blank">LEIFIchemie</a></em>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>6. Eigenschaften von Metallen</h2>
+            <p>
+                <strong>Ursache:</strong> Metallbindung (frei bewegliche Elektronen, "Elektronengas").
+                <strong>Folgen:</strong>
+                <ul>
+                    <li>Elektrische Leitfähigkeit (Elektronen sind beweglich)</li>
+                    <li>Thermische Leitfähigkeit (Energieübertragung durch Elektronen)</li>
+                    <li>Verformbarkeit (Atomrümpfe gleiten im Elektronengas)</li>
+                    <li>Metallischer Glanz (Reflexion von Licht durch Elektronen)</li>
+                </ul>
+                <em>Quelle: <a href="https://www.abiweb.de/anorganische-chemie/bindungsarten/starke-bindungen/metallbindung.html" target="_blank">Abiweb</a></em>
+            </p>
+        </div>
+
+        <footer>
+            <p>Zusammenfassung basierend auf: <a href="https://www.studysmarter.de" target="_blank">StudySmarter</a>, <a href="https://www.lernhelfer.de" target="_blank">Lernhelfer</a>, <a href="https://www.abiweb.de" target="_blank">Abiweb</a>, <a href="https://studyflix.de" target="_blank">Studyflix</a></p>
+        </footer>
+    </div>
+    <script>
+        // 1. Systemeinstellungen prüfen und sofort anwenden (ohne Animation)
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            // Transition nach kurzer Verzögerung aktivieren
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        // 2. Modus manuell setzen (mit Animation)
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        // 3. Systemeinstellungen beim Laden anwenden
+        applySystemMode();
+
+        // 4. Nachrichten von der Hauptseite empfangen
+        window.addEventListener("message", function(event) {
+            // Dark/Light-Mode wechseln (mit Animation)
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            // Aktuellen Modus abfragen
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            // Sichtbaren Text zurücksenden
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        // 5. Hauptseite beim Laden über den aktuellen Modus informieren
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        // 6. Systemeinstellungen ändern (optional)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

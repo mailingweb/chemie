@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Säure-Base-Theorien & Protolyse – Chemie Abitur</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="no-transition">
+    <div class="container">
+        <header>
+            <h1>Säure-Base-Theorien & Protolyse</h1>
+            <p>Lernübersicht für das Abitur (Leistungskurs Chemie)</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Säure-Base-Theorien</span>
+            <span class="tag">Brønstedt</span>
+            <span class="tag">Lewis</span>
+            <span class="tag">Ampholyte</span>
+            <span class="tag">Protolyse</span>
+            <span class="tag">Autoprotolyse</span>
+            <span class="tag">pH-Berechnungen</span>
+            <span class="tag">Säure-Base-Paare</span>
+        </div>
+
+        <div class="card">
+            <h2>1. Säure-Base-Theorien im Vergleich</h2>
+            <table>
+                <tr>
+                    <th>Theorie</th>
+                    <th>Definition Säure</th>
+                    <th>Definition Base</th>
+                    <th>Beispiel</th>
+                </tr>
+                <tr>
+                    <td><strong>Brønstedt</strong></td>
+                    <td>Protonendonator (H<sup>+</sup>-Geber)</td>
+                    <td>Protonenakzeptor (H<sup>+</sup>-Aufnehmer)</td>
+                    <td>HCl + H<sub>2</sub>O → H<sub>3</sub>O<sup>+</sup> + Cl<sup>-</sup></td>
+                </tr>
+                <tr>
+                    <td><strong>Lewis</strong></td>
+                    <td>Elektronenpaarakzeptor</td>
+                    <td>Elektronenpaardonator</td>
+                    <td>BF<sub>3</sub> + NH<sub>3</sub> → BF<sub>3</sub>NH<sub>3</sub></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>2. Brønstedt-Säure-Base-Paare & Beispiele</h2>
+            <div class="reaction">
+                <strong>Beispiel 1:</strong><br>
+                HCl (Säure) + H<sub>2</sub>O (Base) ⇌ H<sub>3</sub>O<sup>+</sup> (Säure) + Cl<sup>-</sup> (Base)<br>
+                <strong>Konjugiertes Säure-Base-Paar:</strong> HCl/Cl<sup>-</sup> und H<sub>3</sub>O<sup>+</sup>/H<sub>2</sub>O<br><br>
+
+                <strong>Beispiel 2:</strong><br>
+                NH<sub>3</sub> (Base) + H<sub>2</sub>O (Säure) ⇌ NH<sub>4</sub><sup>+</sup> (Säure) + OH<sup>-</sup> (Base)<br>
+                <strong>Konjugiertes Säure-Base-Paar:</strong> NH<sub>4</sub><sup>+</sup>/NH<sub>3</sub> und H<sub>2</sub>O/OH<sup>-</sup>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>3. Lewis-Säuren & -Basen</h2>
+            <div class="reaction">
+                <strong>Lewis-Säure:</strong> BF<sub>3</sub> (Elektronenlücke)<br>
+                <strong>Lewis-Base:</strong> NH<sub>3</sub> (freies Elektronenpaar)<br>
+                <strong>Reaktion:</strong> BF<sub>3</sub> + :NH<sub>3</sub> → BF<sub>3</sub>NH<sub>3</sub><br>
+                <strong>Anwendung:</strong> Komplexbildung, Katalyse
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>4. Ampholyte (Ammoniak + Nachweis)</h2>
+            <p><strong>Ampholyt:</strong> Teilchen, das sowohl als Säure als auch als Base reagieren kann (z. B. H<sub>2</sub>O, HSO<sub>4</sub><sup>-</sup>, NH<sub>3</sub>).</p>
+            <div class="reaction">
+                <strong>Ammoniak als Base:</strong><br>
+                NH<sub>3</sub> + H<sub>2</sub>O ⇌ NH<sub>4</sub><sup>+</sup> + OH<sup>-</sup><br>
+                <strong>Nachweis:</strong> Rotfärbung von Phenolphthalein in wässriger NH<sub>3</sub>-Lösung (basische Reaktion)
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>5. Protolyse & Autoprotolyse</h2>
+            <div class="reaction">
+                <strong>Protolyse:</strong> Übertragung eines Protons (H<sup>+</sup>) zwischen zwei Reaktionspartnern.<br>
+                <strong>Autoprotolyse des Wassers:</strong><br>
+                H<sub>2</sub>O + H<sub>2</sub>O ⇌ H<sub>3</sub>O<sup>+</sup> + OH<sup>-</sup><br>
+                <strong>Ionenprodukt des Wassers:</strong> K<sub>w</sub> = c(H<sub>3</sub>O<sup>+</sup>) · c(OH<sup>-</sup>) = 10<sup>-14</sup> mol<sup>2</sup>/L<sup>2</sup> (bei 25°C)
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>6. Berechnungen (K<sub>s</sub>, K<sub>w</sub>, c, N, n)</h2>
+            <table>
+                <tr>
+                    <th>Größe</th>
+                    <th>Bedeutung</th>
+                    <th>Formel</th>
+                    <th>Einheit</th>
+                </tr>
+                <tr>
+                    <td>K<sub>s</sub></td>
+                    <td>Säurekonstante</td>
+                    <td>K<sub>s</sub> = c(H<sup>+</sup>) · c(A<sup>-</sup>)/c(HA)</td>
+                    <td>mol/L</td>
+                </tr>
+                <tr>
+                    <td>K<sub>w</sub></td>
+                    <td>Ionenprodukt des Wassers</td>
+                    <td>K<sub>w</sub> = 10<sup>-14</sup></td>
+                    <td>mol<sup>2</sup>/L<sup>2</sup></td>
+                </tr>
+                <tr>
+                    <td>pH</td>
+                    <td>neg. dekad. Logarithmus von c(H<sup>+</sup>)</td>
+                    <td>pH = -log(c(H<sup>+</sup>))</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>c</td>
+                    <td>Stoffmengenkonzentration</td>
+                    <td>c = n/V</td>
+                    <td>mol/L</td>
+                </tr>
+                <tr>
+                    <td>n</td>
+                    <td>Stoffmenge</td>
+                    <td>n = m/M</td>
+                    <td>mol</td>
+                </tr>
+            </table>
+            <p><strong>Beispiel:</strong> Berechnung des pH-Werts einer 0,1 M HCl-Lösung:<br>
+            c(H<sup>+</sup>) = 0,1 mol/L → pH = -log(0,1) = 1</p>
+        </div>
+
+        <footer>
+            <p>Quellen: Standardlehrwerke der Oberstufe (z. B. Mortimer, Riedel), Chemie-Abiturwissen Bayern 2024</p>
+        </footer>
+    </div>
+    <script>
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        applySystemMode();
+
+        window.addEventListener("message", function(event) {
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

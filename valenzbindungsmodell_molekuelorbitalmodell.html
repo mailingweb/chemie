@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valenzbindungsmodell vs. Molekülorbitalmodell – Chemie Abitur</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+            --highlight: #3498db;
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+            --highlight: #f39c12;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--header-color);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-weight: normal;
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--highlight);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        .dark-mode tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .dark-mode footer {
+            color: #aaa;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body class="no-transition">
+    <div class="container">
+        <header>
+            <h1>Valenzbindungsmodell vs. Molekülorbitalmodell</h1>
+            <p>Lernübersicht für das Abitur (Leistungskurs Chemie)</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Valenzbindungsmodell</span>
+            <span class="tag">Molekülorbitalmodell</span>
+            <span class="tag">Bindungstheorie</span>
+            <span class="tag">Hybridisierung</span>
+            <span class="tag">Delokalisierung</span>
+            <span class="tag">Abitur Chemie</span>
+            <span class="tag">Bindungsordnung</span>
+            <span class="tag">Resonanzstrukturen</span>
+        </div>
+
+        <div class="card">
+            <h2>1. Valenzbindungsmodell (VB-Modell)</h2>
+            <h3>Grundlagen</h3>
+            <p>
+                Das <span class="highlight">Valenzbindungsmodell</span> (auch Valenzbindungstheorie, VB-Theorie) wurde 1927 von Walter Heitler und Fritz London entwickelt. Es beschreibt die chemische Bindung als Überlappung von Atomorbitalen, wobei sich Elektronenpaare zwischen den Atomen lokalisieren. Die Theorie ist besonders anschaulich und eignet sich gut für die Erklärung von Bindungen in organischen Molekülen.
+            </p>
+            <h3>Wichtige Konzepte</h3>
+            <ul>
+                <li><span class="highlight">Orbitalüberlappung:</span> Eine kovalente Bindung entsteht durch die Überlappung zweier Atomorbitale, in der sich zwei Elektronen mit entgegengesetztem Spin aufhalten. Die Überlappung führt zu einer erhöhten Elektronendichte zwischen den Atomkernen und damit zu einer Bindung.</li>
+                <li><span class="highlight">Hybridisierung:</span> Um die beobachtete Molekülgeometrie zu erklären, werden Atomorbitale zu Hybridorbitalen kombiniert (z. B. sp³-Hybridisierung im Methan).</li>
+                <li><span class="highlight">Resonanzstrukturen:</span> Bei Molekülen wie Benzol, die nicht durch eine einzige Lewis-Formel beschrieben werden können, werden mehrere Resonanzstrukturen formuliert, die alle zur realen Struktur beitragen.</li>
+                <li><span class="highlight">Lokalisierte Bindungen:</span> Die Bindungselektronen sind zwischen zwei Atomen lokalisiert.</li>
+            </ul>
+            <h3>Anwendung</h3>
+            <p>
+                Das VB-Modell wird vor allem in der <span class="highlight">organischen Chemie</span> verwendet, um Bindungswinkel, Bindungslängen und die räumliche Struktur von Molekülen zu erklären. Es ist einfach anzuwenden und reicht für viele alltägliche chemische Fragestellungen aus.
+            </p>
+            <h3>Beispiel: Methan (CH₄)</h3>
+            <div class="reaction">
+                C: 1s² 2s² 2p² → sp³-Hybridisierung → 4 sp³-Hybridorbitale<br>
+                Jedes sp³-Orbital überlappt mit einem 1s-Orbital von Wasserstoff → 4 σ-Bindungen
+            </div>
+            <p>
+                <a href="https://www.studysmarter.de/schule/chemie/anorganische-chemie/valenzbindungstheorie/" target="_blank">(Quelle: StudySmarter)</a>
+                <a href="https://de.wikipedia.org/wiki/Valenzbindungstheorie" target="_blank">(Quelle: Wikipedia)</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>2. Molekülorbitalmodell (MO-Modell)</h2>
+            <h3>Grundlagen</h3>
+            <p>
+                Die <span class="highlight">Molekülorbitaltheorie</span> (MO-Theorie) beschreibt die Elektronenstruktur von Molekülen durch delokalisierte Molekülorbitale, die sich über das gesamte Molekül erstrecken. Diese Orbitale entstehen durch Linearkombination von Atomorbitalen (LCAO-Methode).
+            </p>
+            <h3>Wichtige Konzepte</h3>
+            <ul>
+                <li><span class="highlight">Delokalisierte Orbitale:</span> Molekülorbitale sind nicht auf zwei Atome beschränkt, sondern erstrecken sich über das gesamte Molekül.</li>
+                <li><span class="highlight">Bindende und antibindende Orbitale:</span> Durch konstruktive Überlappung entstehen bindende Orbitale (niedrigere Energie), durch destruktive Überlappung antibindende Orbitale (höhere Energie).</li>
+                <li><span class="highlight">Bindungsordnung:</span> Die Bindungsordnung ergibt sich aus der Differenz zwischen der Anzahl der Elektronen in bindenden und antibindenden Orbitalen.</li>
+                <li><span class="highlight">Magnetische Eigenschaften:</span> Das MO-Modell kann paramagnetische Moleküle (z. B. O₂) erklären, die im VB-Modell als diamagnetisch vorhergesagt werden.</li>
+            </ul>
+            <h3>Anwendung</h3>
+            <p>
+                Das MO-Modell wird vor allem in der <span class="highlight">anorganischen Chemie</span> und für Moleküle mit delokalisierten Elektronen (z. B. O₂, NO, Benzol) verwendet. Es erklärt Eigenschaften wie Farbe, Magnetismus und UV/VIS-Spektren von Übergangsmetallkomplexen.
+            </p>
+            <h3>Beispiel: Sauerstoff (O₂)</h3>
+            <div class="reaction">
+                MO-Diagramm: σ(2s) < σ*(2s) < σ(2p) < π(2p) < π*(2p) < σ*(2p)<br>
+                Bindungsordnung = (Anzahl bindende e⁻ - Anzahl antibindende e⁻) / 2 = (10 - 6) / 2 = 2
+            </div>
+            <p>
+                <a href="https://www.studysmarter.de/schule/chemie/anorganische-chemie/molekuelorbitaltheorie/" target="_blank">(Quelle: StudySmarter)</a>
+                <a href="https://de.wikipedia.org/wiki/Molek%C3%BClorbitaltheorie" target="_blank">(Quelle: Wikipedia)</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>3. Unterschiede und Gemeinsamkeiten</h2>
+            <table>
+                <tr>
+                    <th>Kriterium</th>
+                    <th>Valenzbindungsmodell</th>
+                    <th>Molekülorbitalmodell</th>
+                </tr>
+                <tr>
+                    <td>Lokalisierung der Elektronen</td>
+                    <td>Lokalisiert zwischen zwei Atomen</td>
+                    <td>Delokalisiert über das gesamte Molekül</td>
+                </tr>
+                <tr>
+                    <td>Bindungsbeschreibung</td>
+                    <td>Überlappung von Atomorbitalen</td>
+                    <td>Linearkombination von Atomorbitalen zu Molekülorbitalen</td>
+                </tr>
+                <tr>
+                    <td>Hybridisierung</td>
+                    <td>Wird verwendet, um Bindungswinkel zu erklären</td>
+                    <td>Nicht erforderlich, aber kann integriert werden</td>
+                </tr>
+                <tr>
+                    <td>Resonanz</td>
+                    <td>Mehrere Resonanzstrukturen nötig</td>
+                    <td>Ein einziges MO-Diagramm reicht aus</td>
+                </tr>
+                <tr>
+                    <td>Anwendung</td>
+                    <td>Organische Chemie, einfache Moleküle</td>
+                    <td>Anorganische Chemie, delokalisierte Systeme, Spektroskopie</td>
+                </tr>
+                <tr>
+                    <td>Magnetismus</td>
+                    <td>Kann Paramagnetismus nicht immer erklären</td>
+                    <td>Erklärt Paramagnetismus (z. B. O₂)</td>
+                </tr>
+            </table>
+            <p>
+                <a href="https://www.ck12.org/flexi/de/chemie/hybridorbitale-sp/was-ist-der-unterschied-zwischen-der-molekuelorbitaltheorie-und-der-valenzbindungstheorie/" target="_blank">(Quelle: CK-12 Foundation)</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>4. Nutzen und Grenzen</h2>
+            <h3>Valenzbindungsmodell</h3>
+            <ul>
+                <li><span class="highlight">Vorteile:</span> Einfach, anschaulich, gut für organische Moleküle</li>
+                <li><span class="highlight">Grenzen:</span> Versagt bei delokalisierten Systemen und paramagnetischen Molekülen</li>
+            </ul>
+            <h3>Molekülorbitalmodell</h3>
+            <ul>
+                <li><span class="highlight">Vorteile:</span> Präzise, erklärt Magnetismus und Spektren, universell anwendbar</li>
+                <li><span class="highlight">Grenzen:</span> Komplexer, weniger anschaulich für einfache Moleküle</li>
+            </ul>
+            <p>
+                Beide Modelle ergänzen sich und werden je nach Fragestellung eingesetzt. Im Abitur wird oft das VB-Modell für organische Verbindungen und das MO-Modell für anorganische Komplexe und delokalisierte Systeme verwendet.
+            </p>
+        </div>
+
+        <footer>
+            <p>Quellen: <a href="https://www.studysmarter.de" target="_blank">StudySmarter</a>, <a href="https://de.wikipedia.org" target="_blank">Wikipedia</a>, <a href="https://www.ck12.org" target="_blank">CK-12 Foundation</a></p>
+        </footer>
+    </div>
+    <script>
+        // 1. Systemeinstellungen prüfen und sofort anwenden (ohne Animation)
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            // Transition nach kurzer Verzögerung aktivieren
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        // 2. Modus manuell setzen (mit Animation)
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        // 3. Systemeinstellungen beim Laden anwenden
+        applySystemMode();
+
+        // 4. Nachrichten von der Hauptseite empfangen
+        window.addEventListener("message", function(event) {
+            // Dark/Light-Mode wechseln (mit Animation)
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            // Aktuellen Modus abfragen
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            // Sichtbaren Text zurücksenden
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        // 5. Hauptseite beim Laden über den aktuellen Modus informieren
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        // 6. Systemeinstellungen ändern (optional)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

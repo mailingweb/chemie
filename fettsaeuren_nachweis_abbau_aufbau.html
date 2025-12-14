@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fette & Fettsäuren – Chemie Abitur</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .experiment {
+            margin-bottom: 30px;
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Fette & Fettsäuren – Chemie Abitur</h1>
+            <p>Lernübersicht für den Leistungskurs Chemie</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Fettfleckprobe</span>
+            <span class="tag">Nachweis von Fetten</span>
+            <span class="tag">gesättigte Fettsäuren</span>
+            <span class="tag">ungesättigte Fettsäuren</span>
+            <span class="tag">Glycerin</span>
+            <span class="tag">Kondensation</span>
+            <span class="tag">Hydrolyse</span>
+            <span class="tag">Seifen</span>
+            <span class="tag">Ester</span>
+            <span class="tag">Fettaufbau</span>
+        </div>
+
+        <div class="card experiment">
+            <h2>1. Fettfleckprobe – Nachweis von Fetten</h2>
+            <h3>Durchführung</h3>
+            <p>Die Fettfleckprobe ist eine einfache und zuverlässige Methode zum Nachweis von Fetten. Dazu wird die zu untersuchende Probe auf ein Stück Filterpapier aufgetragen und getrocknet. Bei Anwesenheit von Fett entsteht ein <strong>durchscheinender, bleibender Fleck</strong>, da Fette nicht verdampfen und sich dauerhaft im Papier ablagern.</p>
+
+            <h3>Beobachtung</h3>
+            <ul>
+                <li>Fetthaltige Proben hinterlassen einen <strong>transparenten, fettigen Fleck</strong> auf dem Papier.</li>
+                <li>Der Fleck bleibt auch nach dem Trocknen sichtbar und ist im Gegenlicht besonders gut zu erkennen.</li>
+            </ul>
+
+            <h3>Erklärung</h3>
+            <p>Fette haben hohe Siedepunkte und verdampfen nicht wie Wasser. Daher hinterlassen sie dauerhafte Spuren auf dem Papier. Diese Methode ist besonders für den Schulunterricht geeignet, da sie ohne gefährliche Chemikalien auskommt und schnelle Ergebnisse liefert.</p>
+
+            <p><a href="https://www.chemieunterricht.de/dc2/haus/v011.htm" target="_blank">(Quelle: Chemieunterricht.de)</a></p>
+        </div>
+
+        <div class="card experiment">
+            <h2>2. Gesättigte vs. ungesättigte Fettsäuren</h2>
+            <table>
+                <tr>
+                    <th>Eigenschaft</th>
+                    <th>Gesättigte Fettsäuren</th>
+                    <th>Ungesättigte Fettsäuren</th>
+                </tr>
+                <tr>
+                    <td>Struktur</td>
+                    <td>Keine C=C-Doppelbindungen, "voll" mit Wasserstoffatomen</td>
+                    <td>Mindestens eine C=C-Doppelbindung, "Knicke" im Molekül</td>
+                </tr>
+                <tr>
+                    <td>Aggregatzustand</td>
+                    <td>Meist fest (z. B. Butter, Talg)</td>
+                    <td>Meist flüssig (z. B. Pflanzenöle)</td>
+                </tr>
+                <tr>
+                    <td>Vorkommen</td>
+                    <td>Tierische Fette (Butter, Speck)</td>
+                    <td>Pflanzliche Öle (Olivenöl, Sonnenblumenöl)</td>
+                </tr>
+                <tr>
+                    <td>Nachweis</td>
+                    <td>Keine Reaktion mit Bromwasser</td>
+                    <td>Entfärbung von Bromwasser (Addition an Doppelbindung)</td>
+                </tr>
+            </table>
+
+            <p>Ungesättigte Fettsäuren sind essenziell für den Menschen und senken den Cholesterinspiegel, während gesättigte Fettsäuren den Cholesterinspiegel erhöhen können.</p>
+
+            <p><a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/fette-aufbau-und-eigenschaften" target="_blank">(Quelle: Lernhelfer)</a></p>
+        </div>
+
+        <div class="card experiment">
+            <h2>3. Glycerin – Aufbau und Rolle</h2>
+            <p>Glycerin (Propan-1,2,3-triol) ist ein <strong>dreiwertiger Alkohol</strong> und Baustein aller Fette. Es verknüpft sich mit drei Fettsäuren zu einem Fettmolekül (Triacylglycerin) durch <strong>Veresterung</strong>.</p>
+
+            <h3>Strukturformel</h3>
+            <div class="reaction">
+HO-CH₂-CH(OH)-CH₂-OH
+            </div>
+
+            <p>Glycerin ist hygroskopisch, süß schmeckend und wird in der Kosmetik, Pharmazie und Lebensmittelindustrie verwendet.</p>
+
+            <p><a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/mehrwertige-alkohole-eigenschaften-und-verwendung" target="_blank">(Quelle: Lernhelfer)</a></p>
+        </div>
+
+        <div class="card experiment">
+            <h2>4. Fettaufbau (Kondensation) und -abbau (Hydrolyse)</h2>
+            <h3>Kondensation (Veresterung)</h3>
+            <p>Fette entstehen durch die Reaktion von <strong>Glycerin mit drei Fettsäuren</strong> unter <strong>Wasserabspaltung</strong>:</p>
+            <div class="reaction">
+Glycerin + 3 Fettsäuren → Fett (Triacylglycerin) + 3 H₂O
+            </div>
+
+            <h3>Hydrolyse (Spaltung)</h3>
+            <p>Fette können durch Wasser (Hydrolyse) oder Laugen (Verseifung) gespalten werden:</p>
+            <div class="reaction">
+Fett + 3 H₂O → Glycerin + 3 Fettsäuren
+            </div>
+
+            <p>Bei der Verseifung entstehen <strong>Seifen</strong> (Salze der Fettsäuren) und Glycerin.</p>
+
+            <p><a href="https://www.abiweb.de/organische-chemie/organische-verbindungen-typen-eigenschaften-und-reaktionen/ester-bildung-und-spaltung.html" target="_blank">(Quelle: Abiweb)</a></p>
+        </div>
+
+        <div class="card experiment">
+            <h2>5. Seifen – Salze der Fettsäuren</h2>
+            <p>Seifen sind die Natrium- oder Kaliumsalze von Fettsäuren. Sie entstehen bei der <strong>Verseifung</strong> von Fetten mit Natronlauge:</p>
+            <div class="reaction">
+Fett + 3 NaOH → Glycerin + 3 Fettsäure-Natrium-Salze (Seife)
+            </div>
+
+            <p>Seifen wirken als Tenside und ermöglichen die Mischung von Fett und Wasser (Emulgierung).</p>
+
+            <p><a href="https://chemieabitur.de/wp-content/uploads/OA-Fette.pdf" target="_blank">(Quelle: ChemieAbitur)</a></p>
+        </div>
+
+        <div class="card">
+            <h2>Zusammenfassung</h2>
+            <ul>
+                <li><strong>Fettfleckprobe:</strong> Einfacher Nachweis von Fetten durch transparenten Fleck auf Filterpapier.</li>
+                <li><strong>Gesättigte Fettsäuren:</strong> Keine Doppelbindungen, fest, tierisch.</li>
+                <li><strong>Ungesättigte Fettsäuren:</strong> Doppelbindungen, flüssig, pflanzlich.</li>
+                <li><strong>Glycerin:</strong> Dreiwertiger Alkohol, Baustein der Fette.</li>
+                <li><strong>Kondensation:</strong> Fettbildung durch Veresterung (Wasserabspaltung).</li>
+                <li><strong>Hydrolyse:</strong> Fettspaltung durch Wasser oder Laugen.</li>
+                <li><strong>Seifen:</strong> Salze der Fettsäuren, entstehen bei der Verseifung.</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Quellen: Chemieunterricht.de, Lernhelfer, Abiweb, StudyHelp, Knowunity</p>
+        </footer>
+    </div>
+    <script>
+        // 1. Systemeinstellungen prüfen und sofort anwenden (ohne Animation)
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            // Transition nach kurzer Verzögerung aktivieren
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        // 2. Modus manuell setzen (mit Animation)
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        // 3. Systemeinstellungen beim Laden anwenden
+        applySystemMode();
+
+        // 4. Nachrichten von der Hauptseite empfangen
+        window.addEventListener("message", function(event) {
+            // Dark/Light-Mode wechseln (mit Animation)
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            // Aktuellen Modus abfragen
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            // Sichtbaren Text zurücksenden
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        // 5. Hauptseite beim Laden über den aktuellen Modus informieren
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        // 6. Systemeinstellungen ändern (optional)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

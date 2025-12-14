@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zwischenstufen organischer Reaktionen: Carbenium-Ion, Carbanion, Radikal</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Zwischenstufen organischer Reaktionen</h1>
+            <p>Lernübersicht für das Abitur (Leistungskurs Chemie)</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Carbenium-Ion</span>
+            <span class="tag">Carbokation</span>
+            <span class="tag">Carbanion</span>
+            <span class="tag">Radikal</span>
+            <span class="tag">Reaktionsmechanismen</span>
+            <span class="tag">SN1</span>
+            <span class="tag">SN2</span>
+            <span class="tag">Radikalische Substitution</span>
+            <span class="tag">Aldolreaktion</span>
+            <span class="tag">Mesomerie</span>
+        </div>
+
+        <div class="card">
+            <h2>1. Carbenium-Ion (Carbokation)</h2>
+            <p>
+                Ein <strong>Carbenium-Ion</strong> ist ein Kohlenwasserstoff-Molekül mit einem <strong>positiv geladenen Kohlenstoffatom</strong> (sp²-hybridisiert, planare Geometrie). Es besitzt nur sechs Valenzelektronen am Kohlenstoff und ist daher hochreaktiv. Carbenium-Ionen treten als Zwischenstufen bei <strong>SN1-Reaktionen</strong>, <strong>E1-Reaktionen</strong> und <strong>elektrophilen Additionen</strong> auf.
+            </p>
+            <h3>Stabilität</h3>
+            <p>
+                Die Stabilität nimmt von <strong>primär</strong> (am wenigsten stabil) über <strong>sekundär</strong> zu <strong>tertiär</strong> (am stabilsten) zu. Besonders stabil sind Carbenium-Ionen, die durch <strong>Mesomerie</strong> (z. B. Allyl- oder Benzylkationen) oder <strong>Hyperkonjugation</strong> stabilisiert werden.
+            </p>
+            <p>
+                <strong>Beispiel:</strong> Bei der Reaktion von tert-Butylfluorid mit Antimonpentafluorid (SbF₅) entsteht das stabile tert-Butylkation:
+            </p>
+            <div class="reaction">
+                (CH₃)₃C-F + SbF₅ → (CH₃)₃C⁺ + SbF₆⁻
+            </div>
+            <p>
+                <strong>Reaktionstypen:</strong> Carbenium-Ionen sind Schlüsselintermediate bei der <strong>nucleophilen Substitution (SN1)</strong> und der <strong>elektrophilen Addition an Alkene</strong> (z. B. Addition von HBr an Propen).
+            </p>
+            <p>
+                <strong>Quellen:</strong>
+                <a href="https://www.chemie-schule.de/KnowHow/Carbeniumion" target="_blank">Chemie-Schule</a>,
+                <a href="https://www.u-helmich.de/che/lexikon/C/Ca/carbenium-ion.html" target="_blank">Helmich</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>2. Carbanion</h2>
+            <p>
+                Ein <strong>Carbanion</strong> ist ein Molekül mit einem <strong>negativ geladenen Kohlenstoffatom</strong> (sp³-, sp²- oder sp-hybridisiert). Es entsteht durch Deprotonierung C-H-acider Verbindungen (z. B. Aldehyde, Ketone, Nitrile) und ist ein starkes <strong>Nucleophil</strong>.
+            </p>
+            <h3>Stabilität</h3>
+            <p>
+                Im Gegensatz zu Carbenium-Ionen sind <strong>primäre Carbanionen stabiler</strong> als sekundäre oder tertiäre. Stabilisierung erfolgt durch <strong>elektronenziehende Substituenten</strong> (z. B. Carbonylgruppen) oder <strong>Mesomerie</strong>.
+            </p>
+            <p>
+                <strong>Beispiel:</strong> In der <strong>Aldolreaktion</strong> reagiert ein Carbanion (aus einem Aldehyd oder Keton) mit einer zweiten Carbonylverbindung:
+            </p>
+            <div class="reaction">
+                R-CH₂-CHO + OH⁻ → R-CH⁻-CHO + H₂O → R-CH(OH)-CH₂-CHO (Aldol)
+            </div>
+            <p>
+                <strong>Reaktionstypen:</strong> Carbanionen sind Intermediate in der <strong>Aldolreaktion</strong>, <strong>Michael-Addition</strong> und bei der Bildung von <strong>Grignard-Verbindungen</strong> (RMgBr).
+            </p>
+            <p>
+                <strong>Quellen:</strong>
+                <a href="https://www.chemie-schule.de/KnowHow/Carbanion" target="_blank">Chemie-Schule</a>,
+                <a href="https://www.abiweb.de/chemie-kohlenstoffverbindungen/organische-verbindungen-typen-eigenschaften-und-reaktionen/carbonylverbindungenaldehydeketone/reaktionen-von-aldehyden.html" target="_blank">Abiweb</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>3. Radikal</h2>
+            <p>
+                <strong>Radikale</strong> sind Teilchen mit einem oder mehreren <strong>ungepaarten Elektronen</strong>. Sie entstehen durch <strong>homolytische Bindungsspaltung</strong> (z. B. durch Licht oder Hitze) und sind hochreaktiv.
+            </p>
+            <h3>Reaktionstypen</h3>
+            <p>
+                Radikale treten als Zwischenstufen bei der <strong>radikalischen Substitution</strong> (z. B. Halogenierung von Alkanen) auf. Die Reaktion verläuft in drei Schritten:
+            </p>
+            <ol>
+                <li><strong>Startreaktion:</strong> Bildung von Radikalen (z. B. Cl· aus Cl₂ durch Licht).</li>
+                <li><strong>Kettenreaktion:</strong> Abstraktion eines H-Atoms durch das Radikal (z. B. CH₄ + Cl· → CH₃· + HCl).</li>
+                <li><strong>Abbruchreaktion:</strong> Rekombination zweier Radikale (z. B. CH₃· + Cl· → CH₃Cl).</li>
+            </ol>
+            <p>
+                <strong>Beispiel:</strong> Chlorierung von Methan:
+            </p>
+            <div class="reaction">
+                Cl₂ → 2 Cl· (Start) <br>
+                CH₄ + Cl· → CH₃· + HCl (Kettenreaktion) <br>
+                CH₃· + Cl₂ → CH₃Cl + Cl· (Kettenfortpflanzung)
+            </div>
+            <p>
+                <strong>Quellen:</strong>
+                <a href="https://www.leifichemie.de/reaktionstypen-der-organischen-chemie/radikalische-reaktionen/grundwissen/radikalische-substitution" target="_blank">LEIFIchemie</a>,
+                <a href="https://www.abiweb.de/organische-chemie/organische-verbindungen-typen-eigenschaften-und-reaktionen/wichtige-reaktionstypen-der-alkane-radikalische-substitution.html" target="_blank">Abiweb</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>4. Vergleich der Zwischenstufen</h2>
+            <table>
+                <tr>
+                    <th>Zwischenstufe</th>
+                    <th>Ladung</th>
+                    <th>Hybridisierung</th>
+                    <th>Stabilität</th>
+                    <th>Typische Reaktionen</th>
+                </tr>
+                <tr>
+                    <td>Carbenium-Ion</td>
+                    <td>positiv</td>
+                    <td>sp²</td>
+                    <td>tertiär > sekundär > primär</td>
+                    <td>SN1, E1, elektrophile Addition</td>
+                </tr>
+                <tr>
+                    <td>Carbanion</td>
+                    <td>negativ</td>
+                    <td>sp³/sp²/sp</td>
+                    <td>primär > sekundär > tertiär</td>
+                    <td>Aldolreaktion, Michael-Addition</td>
+                </tr>
+                <tr>
+                    <td>Radikal</td>
+                    <td>neutral</td>
+                    <td>sp³/sp²</td>
+                    <td>tertiär > sekundär > primär</td>
+                    <td>radikalische Substitution</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>5. Zusammenfassung</h2>
+            <ul>
+                <li><strong>Carbenium-Ionen:</strong> Positiv geladen, planare Geometrie, SN1/E1, elektrophile Addition.</li>
+                <li><strong>Carbanionen:</strong> Negativ geladen, pyramidal/planar, Aldolreaktion, Michael-Addition.</li>
+                <li><strong>Radikale:</strong> Ungepaarte Elektronen, radikalische Substitution, Kettenmechanismus.</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Quellen: <a href="https://www.chemie-schule.de" target="_blank">Chemie-Schule</a>, <a href="https://www.abiweb.de" target="_blank">Abiweb</a>, <a href="https://www.leifichemie.de" target="_blank">LEIFIchemie</a>, <a href="https://www.u-helmich.de" target="_blank">Helmich</a></p>
+        </footer>
+    </div>
+    <script>
+        // 1. Systemeinstellungen prüfen und sofort anwenden (ohne Animation)
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            // Transition nach kurzer Verzögerung aktivieren
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        // 2. Modus manuell setzen (mit Animation)
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        // 3. Systemeinstellungen beim Laden anwenden
+        applySystemMode();
+
+        // 4. Nachrichten von der Hauptseite empfangen
+        window.addEventListener("message", function(event) {
+            // Dark/Light-Mode wechseln (mit Animation)
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            // Aktuellen Modus abfragen
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            // Sichtbaren Text zurücksenden
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        // 5. Hauptseite beim Laden über den aktuellen Modus informieren
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        // 6. Systemeinstellungen ändern (optional)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

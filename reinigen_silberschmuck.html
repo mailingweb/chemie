@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reinigen von Silberschmuck: Reaktionsgleichung, Beobachtung, Erklärung & Auswertung</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Reinigen von Silberschmuck mit Aluminiumfolie</h1>
+            <p>Lernübersicht für das Abitur (Leistungskurs Chemie)</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Redoxreaktion</span>
+            <span class="tag">Silberreinigung</span>
+            <span class="tag">Aluminiumfolie</span>
+            <span class="tag">Silbersulfid</span>
+            <span class="tag">Elektrochemie</span>
+            <span class="tag">Schülerexperiment</span>
+            <span class="tag">Abitur</span>
+        </div>
+
+        <div class="card">
+            <h2>1. Einleitung: Warum läuft Silber an?</h2>
+            <p>Silber reagiert mit Schwefelwasserstoff (H<sub>2</sub>S) aus der Luft oder schwefelhaltigen Lebensmitteln zu <strong>Silbersulfid (Ag<sub>2</sub>S)</strong>, das als schwarze Schicht auf der Oberfläche sichtbar wird. Diese Reaktion ist eine <strong>Korrosion</strong> und führt zum typischen "Anlaufen" von Silberschmuck und -besteck.</p>
+            <div class="reaction">
+                <strong>Bildung von Silbersulfid:</strong><br>
+                4 Ag + 2 H<sub>2</sub>S + O<sub>2</sub> → 2 Ag<sub>2</sub>S + 2 H<sub>2</sub>O
+            </div>
+            <p><a href="https://www.chemie-schule.de/KnowHow/Silberpflege" target="_blank">(Quelle: Chemie-Schule)</a></p>
+        </div>
+
+        <div class="card">
+            <h2>2. Durchführung des Experiments</h2>
+            <h3>Materialien:</h3>
+            <ul>
+                <li>Angelaufener Silberschmuck/Besteck</li>
+                <li>Aluminiumfolie</li>
+                <li>Kochsalz (NaCl) oder Soda (Na<sub>2</sub>CO<sub>3</sub>)</li>
+                <li>Warmes Wasser</li>
+                <li>Schüssel oder Becherglas</li>
+            </ul>
+            <h3>Durchführung:</h3>
+            <ol>
+                <li>Die Schüssel mit Aluminiumfolie auskleiden.</li>
+                <li>Kochsalz oder Soda in warmem Wasser auflösen.</li>
+                <li>Den angelaufenen Silberschmuck auf die Folie legen, sodass Metallkontakt besteht.</li>
+                <li>Mit der Salzlösung bedecken und 5–10 Minuten einwirken lassen.</li>
+            </ol>
+            <p><a href="https://www.leifichemie.de/anorganische-verbindungen/metalle-und-erze/versuche/silberreinigung" target="_blank">(Quelle: LEIFIchemie)</a></p>
+        </div>
+
+        <div class="card">
+            <h2>3. Beobachtung</h2>
+            <ul>
+                <li>Der Silberschmuck wird nach kurzer Zeit wieder blank.</li>
+                <li>Die Aluminiumfolie zeigt <strong>Löcher und eine raue Oberfläche</strong>.</li>
+                <li>Es entsteht ein <strong>unangenehmer Geruch nach faulen Eiern</strong> (Schwefelwasserstoff, H<sub>2</sub>S).</li>
+                <li>Die Lösung kann sich leicht trüben.</li>
+            </ul>
+            <p><a href="https://www.schullv.de/chemie/nrw-abi-lk-2023-ht-1" target="_blank">(Quelle: SchulLV)</a></p>
+        </div>
+
+        <div class="card">
+            <h2>4. Reaktionsgleichungen</h2>
+            <h3>Teilreaktionen (Redoxreaktion):</h3>
+            <div class="reaction">
+                <strong>Oxidation (Aluminium gibt Elektronen ab):</strong><br>
+                Al → Al<sup>3+</sup> + 3 e<sup>–</sup> &nbsp;&nbsp;&nbsp; (Oxidation)<br><br>
+                <strong>Reduktion (Silbersulfid nimmt Elektronen auf):</strong><br>
+                Ag<sub>2</sub>S + 2 e<sup>–</sup> + 2 H<sub>2</sub>O → 2 Ag + H<sub>2</sub>S + 2 OH<sup>–</sup> &nbsp;&nbsp;&nbsp; (Reduktion)
+            </div>
+            <h3>Gesamtreaktion (vereinfacht):</h3>
+            <div class="reaction">
+                3 Ag<sub>2</sub>S + 2 Al + 6 H<sub>2</sub>O → 6 Ag + 2 Al(OH)<sub>3</sub> + 3 H<sub>2</sub>S
+            </div>
+            <p>Alternativ mit Soda (Na<sub>2</sub>CO<sub>3</sub>):<br>
+            3 Ag<sub>2</sub>S + 2 Al + 4 Na<sub>2</sub>CO<sub>3</sub> + 8 H<sub>2</sub>O → 6 Ag + 2 Na[Al(OH)<sub>4</sub>] + 3 Na<sub>2</sub>S + 4 H<sub>2</sub>CO<sub>3</sub></p>
+            <p><a href="http://www.chemieonline.de/forum/showthread.php?t=8069" target="_blank">(Quelle: ChemieOnline Forum)</a></p>
+        </div>
+
+        <div class="card">
+            <h2>5. Erklärung</h2>
+            <p>Es handelt sich um eine <strong>Redoxreaktion</strong>:</p>
+            <ul>
+                <li><strong>Aluminium</strong> wirkt als <strong>Reduktionsmittel</strong> (gibt Elektronen ab, wird oxidiert).</li>
+                <li><strong>Silbersulfid</strong> wirkt als <strong>Oxidationsmittel</strong> (nimmt Elektronen auf, wird reduziert).</li>
+                <li>Das Salz oder Soda dient als <strong>Elektrolyt</strong> und beschleunigt die Reaktion.</li>
+                <li>Der entstehende Schwefelwasserstoff (H<sub>2</sub>S) ist für den Geruch verantwortlich.</li>
+            </ul>
+            <p><a href="https://www.sofatutor.com/chemie/videos/redoxchemie-von-silberbesteck" target="_blank">(Quelle: sofatutor)</a></p>
+        </div>
+
+        <div class="card">
+            <h2>6. Auswertung</h2>
+            <h3>Elektrochemische Vorgänge:</h3>
+            <p>Durch den Kontakt zwischen Silber und Aluminium in Gegenwart eines Elektrolyten entsteht ein <strong>Lokalelement</strong>. Aluminium löst sich langsam auf, während Silberionen zu elementarem Silber reduziert werden. Die Reaktion ist eine <strong>Kontaktkorrosion</strong>.</p>
+            <h3>Vor- und Nachteile der Methode:</h3>
+            <table>
+                <tr>
+                    <th>Vorteile</th>
+                    <th>Nachteile</th>
+                </tr>
+                <tr>
+                    <td>Schnell und kostengünstig</td>
+                    <td>Giftiger Schwefelwasserstoff entsteht</td>
+                </tr>
+                <tr>
+                    <td>Kein mechanischer Abrieb (Silber bleibt erhalten)</td>
+                    <td>Nur für unedelsteinbesetzten Schmuck geeignet</td>
+                </tr>
+                <tr>
+                    <td>Einfache Haushaltsmittel</td>
+                    <td>Aluminiumfolie wird angegriffen</td>
+                </tr>
+            </table>
+            <p><a href="https://www.chemieunterricht.de/dc2/haus/v089.htm" target="_blank">(Quelle: Prof. Blumes Bildungsserver)</a></p>
+        </div>
+
+        <div class="card">
+            <h2>7. Sicherheitshinweise</h2>
+            <ul>
+                <li>Experiment nur unter dem Abzug oder in gut belüfteten Räumen durchführen.</li>
+                <li>Schwefelwasserstoff (H<sub>2</sub>S) ist giftig – nicht einatmen!</li>
+                <li>Handschuhe tragen, um Hautkontakt mit der Salzlösung zu vermeiden.</li>
+            </ul>
+            <p><a href="https://www.leifichemie.de/anorganische-verbindungen/metalle-und-erze/versuche/silberreinigung" target="_blank">(Quelle: LEIFIchemie)</a></p>
+        </div>
+
+        <div class="card">
+            <h2>8. Zusammenfassung</h2>
+            <p>Die Reinigung von Silberschmuck mit Aluminiumfolie ist ein klassisches Beispiel für eine <strong>Redoxreaktion im Alltag</strong>. Aluminium reduziert Silbersulfid zu elementarem Silber, während es selbst oxidiert wird. Die Methode ist effektiv, aber aufgrund der giftigen Gase mit Vorsicht anzuwenden.</p>
+        </div>
+
+        <footer>
+            <p>Quellen: <a href="https://www.chemie-schule.de/KnowHow/Silberpflege" target="_blank">Chemie-Schule</a>, <a href="https://www.leifichemie.de/anorganische-verbindungen/metalle-und-erze/versuche/silberreinigung" target="_blank">LEIFIchemie</a>, <a href="https://www.sofatutor.com/chemie/videos/redoxchemie-von-silberbesteck" target="_blank">sofatutor</a>, <a href="https://www.schullv.de/chemie/nrw-abi-lk-2023-ht-1" target="_blank">SchulLV</a>, <a href="http://www.chemieonline.de/forum/showthread.php?t=8069" target="_blank">ChemieOnline Forum</a></p>
+        </footer>
+    </div>
+    <script>
+        // 1. Systemeinstellungen prüfen und sofort anwenden (ohne Animation)
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            // Transition nach kurzer Verzögerung aktivieren
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        // 2. Modus manuell setzen (mit Animation)
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        // 3. Systemeinstellungen beim Laden anwenden
+        applySystemMode();
+
+        // 4. Nachrichten von der Hauptseite empfangen
+        window.addEventListener("message", function(event) {
+            // Dark/Light-Mode wechseln (mit Animation)
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            // Aktuellen Modus abfragen
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            // Sichtbaren Text zurücksenden
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        // 5. Hauptseite beim Laden über den aktuellen Modus informieren
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        // 6. Systemeinstellungen ändern (optional)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

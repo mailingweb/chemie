@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reaktionstypen in der Organischen Chemie – Abiturwissen</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .source {
+            font-size: 0.8em;
+            color: #666;
+            margin-top: 10px;
+        }
+        @media (prefers-color-scheme: dark) {
+            .source {
+                color: #aaa;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Reaktionstypen in der Organischen Chemie – Abiturwissen</h1>
+            <p>Übersicht mit Beispielen, Reaktionsgleichungen und Bedeutung</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Substitution</span>
+            <span class="tag">Eliminierung</span>
+            <span class="tag">Addition</span>
+            <span class="tag">Umlagerung</span>
+            <span class="tag">Kondensation</span>
+            <span class="tag">Halogenisierung</span>
+            <span class="tag">Alkylierung</span>
+            <span class="tag">Acetylierung</span>
+            <span class="tag">Dehydratisierung</span>
+            <span class="tag">Dehydrierung</span>
+            <span class="tag">Decarboxylierung</span>
+            <span class="tag">Dehalogenierung</span>
+        </div>
+
+        <!-- Substitution -->
+        <div class="card">
+            <h2>1. Substitution</h2>
+            <p><strong>Definition:</strong> Austausch eines Atoms oder einer Atomgruppe durch ein anderes Atom oder eine andere Atomgruppe.</p>
+            <p><strong>Bedeutung:</strong> Wichtig für die Synthese von Halogenalkanen, Alkylbenzenen, Acetylverbindungen und vielen weiteren organischen Verbindungen.</p>
+            <h3>Beispiele & Reaktionsgleichungen</h3>
+            <table>
+                <tr>
+                    <th>Typ</th>
+                    <th>Beispiel</th>
+                    <th>Reaktionsgleichung</th>
+                    <th>Bedeutung</th>
+                </tr>
+                <tr>
+                    <td>Radikalische Substitution (Halogenierung)</td>
+                    <td>Methan + Chlor → Chlormethan</td>
+                    <td class="reaction">CH₄ + Cl₂ → CH₃Cl + HCl</td>
+                    <td>Herstellung von Halogenalkanen, z. B. für Lösungsmittel oder Zwischenprodukte in der Synthesechemie.</td>
+                </tr>
+                <tr>
+                    <td>Elektrophile Substitution (Aromaten)</td>
+                    <td>Benzol + Brom → Brombenzol</td>
+                    <td class="reaction">C₆H₆ + Br₂ → C₆H₅Br + HBr</td>
+                    <td>Einführung von Substituenten in Aromaten, z. B. für die Herstellung von Arzneimitteln oder Pestiziden.</td>
+                </tr>
+                <tr>
+                    <td>Alkylierung (Friedel-Crafts)</td>
+                    <td>Benzol + Chlormethan → Toluol</td>
+                    <td class="reaction">C₆H₆ + CH₃Cl → C₆H₅CH₃ + HCl</td>
+                    <td>Synthese von Alkylbenzenen, z. B. für die Herstellung von Tensiden oder Kunststoffen.</td>
+                </tr>
+                <tr>
+                    <td>Acetylierung</td>
+                    <td>Anilin + Acetylchlorid → Acetanilid</td>
+                    <td class="reaction">C₆H₅NH₂ + CH₃COCl → C₆H₅NHCOCH₃ + HCl</td>
+                    <td>Schutzgruppenchemie, Herstellung von Arzneimitteln (z. B. Paracetamol).</td>
+                </tr>
+            </table>
+            <div class="source">
+                Quellen: <a href="https://www.abiweb.de/organische-chemie/organische-verbindungen-typen-eigenschaften-und-reaktionen/wichtige-reaktionstypen-der-alkane-radikalische-substitution.html" target="_blank">Abiweb</a>, <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/reaktionen-organischer-stoffe-ueberblick" target="_blank">Lernhelfer</a>, <a href="https://de.wikipedia.org/wiki/Acetylierung" target="_blank">Wikipedia</a>
+            </div>
+        </div>
+
+        <!-- Eliminierung -->
+        <div class="card">
+            <h2>2. Eliminierung</h2>
+            <p><strong>Definition:</strong> Abspaltung von Atomen oder Atomgruppen aus einem Molekül, meist unter Bildung von Mehrfachbindungen.</p>
+            <p><strong>Bedeutung:</strong> Wichtig für die Synthese von Alkenen, Alkinen und die Herstellung von Polymeren.</p>
+            <h3>Beispiele & Reaktionsgleichungen</h3>
+            <table>
+                <tr>
+                    <th>Typ</th>
+                    <th>Beispiel</th>
+                    <th>Reaktionsgleichung</th>
+                    <th>Bedeutung</th>
+                </tr>
+                <tr>
+                    <td>Dehydratisierung</td>
+                    <td>Ethanol → Ethen</td>
+                    <td class="reaction">CH₃CH₂OH → CH₂=CH₂ + H₂O</td>
+                    <td>Herstellung von Ethen, einem wichtigen Grundstoff für die Kunststoffindustrie.</td>
+                </tr>
+                <tr>
+                    <td>Dehydrierung</td>
+                    <td>Ethan → Ethen</td>
+                    <td class="reaction">CH₃CH₃ → CH₂=CH₂ + H₂</td>
+                    <td>Industrielle Herstellung von Alkenen, z. B. für die Polymerisation.</td>
+                </tr>
+                <tr>
+                    <td>Dehydrohalogenierung</td>
+                    <td>2-Brombutan → But-2-en</td>
+                    <td class="reaction">CH₃CHBrCH₂CH₃ → CH₃CH=CHCH₃ + HBr</td>
+                    <td>Synthese von Alkenen aus Halogenalkanen.</td>
+                </tr>
+            </table>
+            <div class="source">
+                Quellen: <a href="https://www.chemie-schule.de/KnowHow/Dehydratisierung_(Chemie)" target="_blank">Chemie-Schule</a>, <a href="https://de.wikipedia.org/wiki/Dehydrierung" target="_blank">Wikipedia</a>, <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/reaktionen-organischer-stoffe-ueberblick" target="_blank">Lernhelfer</a>
+            </div>
+        </div>
+
+        <!-- Addition -->
+        <div class="card">
+            <h2>3. Addition</h2>
+            <p><strong>Definition:</strong> Anlagerung eines Moleküls an eine Doppel- oder Dreifachbindung.</p>
+            <p><strong>Bedeutung:</strong> Wichtig für die Synthese von gesättigten Verbindungen, Polymeren und die Herstellung von Alkoholen, Halogenalkanen und vielen weiteren Produkten.</p>
+            <h3>Beispiele & Reaktionsgleichungen</h3>
+            <table>
+                <tr>
+                    <th>Typ</th>
+                    <th>Beispiel</th>
+                    <th>Reaktionsgleichung</th>
+                    <th>Bedeutung</th>
+                </tr>
+                <tr>
+                    <td>Elektrophile Addition (Halogenierung)</td>
+                    <td>Ethen + Brom → 1,2-Dibromethan</td>
+                    <td class="reaction">CH₂=CH₂ + Br₂ → BrCH₂CH₂Br</td>
+                    <td>Herstellung von Halogenalkanen, z. B. für Lösungsmittel oder Zwischenprodukte.</td>
+                </tr>
+                <tr>
+                    <td>Hydratisierung</td>
+                    <td>Ethen + Wasser → Ethanol</td>
+                    <td class="reaction">CH₂=CH₂ + H₂O → CH₃CH₂OH</td>
+                    <td>Industrielle Herstellung von Ethanol.</td>
+                </tr>
+                <tr>
+                    <td>Polymerisation</td>
+                    <td>Ethen → Polyethylen</td>
+                    <td class="reaction">n CH₂=CH₂ → (–CH₂–CH₂–)ₙ</td>
+                    <td>Herstellung von Kunststoffen (z. B. Polyethylen).</td>
+                </tr>
+            </table>
+            <div class="source">
+                Quellen: <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/reaktionen-organischer-stoffe-ueberblick" target="_blank">Lernhelfer</a>, <a href="https://www.abiweb.de/organische-chemie/reaktionstypen-in-der-organischen-chemie.html" target="_blank">Abiweb</a>
+            </div>
+        </div>
+
+        <!-- Umlagerung (Isomerie) -->
+        <div class="card">
+            <h2>4. Umlagerung (Isomerie)</h2>
+            <p><strong>Definition:</strong> Intramolekulare Wanderung von Atomen oder Atomgruppen, die zu einer neuen Struktur führt.</p>
+            <p><strong>Bedeutung:</strong> Wichtig für die Synthese von Isomeren, die oft unterschiedliche chemische und physikalische Eigenschaften aufweisen.</p>
+            <h3>Beispiele & Reaktionsgleichungen</h3>
+            <table>
+                <tr>
+                    <th>Typ</th>
+                    <th>Beispiel</th>
+                    <th>Reaktionsgleichung</th>
+                    <th>Bedeutung</th>
+                </tr>
+                <tr>
+                    <td>Benzidin-Umlagerung</td>
+                    <td>Hydrazobenzol → Benzidin</td>
+                    <td class="reaction">C₁₂H₁₂N₂ → C₁₂H₁₂N₂ (Isomer)</td>
+                    <td>Synthese von aromatischen Aminen, z. B. für die Farbstoffindustrie.</td>
+                </tr>
+                <tr>
+                    <td>Isomerisierung von Alkenen</td>
+                    <td>But-1-en → But-2-en</td>
+                    <td class="reaction">CH₂=CHCH₂CH₃ → CH₃CH=CHCH₃</td>
+                    <td>Herstellung von Isomeren mit unterschiedlichen Reaktivitäten.</td>
+                </tr>
+            </table>
+            <div class="source">
+                Quellen: <a href="https://www.chemie-schule.de/KnowHow/Umlagerung" target="_blank">Chemie-Schule</a>, <a href="https://de.wikipedia.org/wiki/Umlagerung" target="_blank">Wikipedia</a>
+            </div>
+        </div>
+
+        <!-- Kondensation -->
+        <div class="card">
+            <h2>5. Kondensation</h2>
+            <p><strong>Definition:</strong> Verbindung zweier Moleküle unter Abspaltung eines kleinen Moleküls (meist Wasser).</p>
+            <p><strong>Bedeutung:</strong> Wichtig für die Synthese von Estern, Polyestern, Peptiden, Proteinen, Polysacchariden und vielen weiteren Biopolymeren.</p>
+            <h3>Beispiele & Reaktionsgleichungen</h3>
+            <table>
+                <tr>
+                    <th>Typ</th>
+                    <th>Beispiel</th>
+                    <th>Reaktionsgleichung</th>
+                    <th>Bedeutung</th>
+                </tr>
+                <tr>
+                    <td>Veresterung</td>
+                    <td>Ethanol + Essigsäure → Ethylacetat</td>
+                    <td class="reaction">CH₃COOH + CH₃CH₂OH → CH₃COOCH₂CH₃ + H₂O</td>
+                    <td>Herstellung von Estern, z. B. für Aromastoffe, Lösungsmittel oder Kunststoffe.</td>
+                </tr>
+                <tr>
+                    <td>Peptidbindung</td>
+                    <td>Glycin + Alanin → Dipeptid</td>
+                    <td class="reaction">NH₂CH₂COOH + NH₂CH(CH₃)COOH → NH₂CH₂CONHCH(CH₃)COOH + H₂O</td>
+                    <td>Grundlage der Proteinbiosynthese.</td>
+                </tr>
+                <tr>
+                    <td>Polykondensation</td>
+                    <td>Ethylenglycol + Terephthalsäure → Polyester</td>
+                    <td class="reaction">n HOCH₂CH₂OH + n HOOC–C₆H₄–COOH → (–OCH₂CH₂OOC–C₆H₄–CO–)ₙ + 2n H₂O</td>
+                    <td>Herstellung von Kunststoffen wie PET.</td>
+                </tr>
+            </table>
+            <div class="source">
+                Quellen: <a href="https://de.wikipedia.org/wiki/Kondensationsreaktion" target="_blank">Wikipedia</a>, <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/reaktionen-organischer-stoffe-ueberblick" target="_blank">Lernhelfer</a>, <a href="https://www.chemie-schule.de/KnowHow/Kondensationsreaktion" target="_blank">Chemie-Schule</a>
+            </div>
+        </div>
+
+        <!-- Decarboxylierung -->
+        <div class="card">
+            <h2>6. Decarboxylierung</h2>
+            <p><strong>Definition:</strong> Abspaltung von Kohlenstoffdioxid (CO₂) aus einer Carbonsäure.</p>
+            <p><strong>Bedeutung:</strong> Wichtig für die Synthese von Alkanen, Alkenen und die Herstellung von Aromastoffen.</p>
+            <h3>Beispiel & Reaktionsgleichung</h3>
+            <table>
+                <tr>
+                    <th>Typ</th>
+                    <th>Beispiel</th>
+                    <th>Reaktionsgleichung</th>
+                    <th>Bedeutung</th>
+                </tr>
+                <tr>
+                    <td>Decarboxylierung von Carbonsäuren</td>
+                    <td>Essigsäure → Methan</td>
+                    <td class="reaction">CH₃COOH → CH₄ + CO₂</td>
+                    <td>Herstellung von Alkanen, z. B. für die Synthesegaschemie.</td>
+                </tr>
+            </table>
+            <div class="source">
+                Quellen: <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/reaktionen-organischer-stoffe-ueberblick" target="_blank">Lernhelfer</a>
+            </div>
+        </div>
+
+        <!-- Dehalogenierung -->
+        <div class="card">
+            <h2>7. Dehalogenierung</h2>
+            <p><strong>Definition:</strong> Abspaltung von Halogenatomen aus einer organischen Verbindung.</p>
+            <p><strong>Bedeutung:</strong> Wichtig für die Synthese von Alkenen, Alkinen und die Entgiftung von halogenierten Schadstoffen.</p>
+            <h3>Beispiel & Reaktionsgleichung</h3>
+            <table>
+                <tr>
+                    <th>Typ</th>
+                    <th>Beispiel</th>
+                    <th>Reaktionsgleichung</th>
+                    <th>Bedeutung</th>
+                </tr>
+                <tr>
+                    <td>Dehalogenierung von Halogenalkanen</td>
+                    <td>1,2-Dibromethan → Ethen</td>
+                    <td class="reaction">BrCH₂CH₂Br + Zn → CH₂=CH₂ + ZnBr₂</td>
+                    <td>Herstellung von Alkenen, z. B. für die Polymerindustrie.</td>
+                </tr>
+            </table>
+            <div class="source">
+                Quellen: <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/reaktionen-organischer-stoffe-ueberblick" target="_blank">Lernhelfer</a>
+            </div>
+        </div>
+
+        <footer>
+            <p>Diese Übersicht wurde auf Basis von Abiturwissen (Leistungskurs Chemie) erstellt. Alle Reaktionsgleichungen und Beispiele sind typisch für das Chemie-Abitur und wurden aus den genannten Quellen entnommen.</p>
+        </footer>
+    </div>
+    <script>
+        // 1. Systemeinstellungen prüfen und sofort anwenden (ohne Animation)
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            // Transition nach kurzer Verzögerung aktivieren
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        // 2. Modus manuell setzen (mit Animation)
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        // 3. Systemeinstellungen beim Laden anwenden
+        applySystemMode();
+
+        // 4. Nachrichten von der Hauptseite empfangen
+        window.addEventListener("message", function(event) {
+            // Dark/Light-Mode wechseln (mit Animation)
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            // Aktuellen Modus abfragen
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            // Sichtbaren Text zurücksenden
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        // 5. Hauptseite beim Laden über den aktuellen Modus informieren
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        // 6. Systemeinstellungen ändern (optional)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

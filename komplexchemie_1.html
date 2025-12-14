@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komplexverbindungen – Chemie Abitur</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .experiment {
+            margin-bottom: 30px;
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="no-transition">
+    <div class="container">
+        <header>
+            <h1>Komplexverbindungen – Chemie Abitur</h1>
+            <p>Lernübersicht für den Leistungskurs Chemie</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Komplexverbindungen</span>
+            <span class="tag">Komplexstabilitätskonstante</span>
+            <span class="tag">Beispiele</span>
+            <span class="tag">Reaktionsgleichungen</span>
+            <span class="tag">Anwendungen</span>
+            <span class="tag">Vorkommen</span>
+        </div>
+
+        <div class="card">
+            <h2>1. Definition und Aufbau von Komplexverbindungen</h2>
+            <p>
+                Komplexverbindungen (auch Koordinationsverbindungen) bestehen aus einem <strong>Zentralion</strong> (meist ein Metallion) und umgebenden <strong>Liganden</strong> (Moleküle oder Ionen mit freien Elektronenpaaren). Die Bindung zwischen Zentralion und Liganden wird als <strong>koordinative Bindung</strong> bezeichnet.
+            </p>
+            <p>
+                <strong>Beispiel:</strong> [Cu(NH₃)₄]²⁺ – Tetraamminkupfer(II)-Ion
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>2. Komplexstabilitätskonstante (K)</h2>
+            <p>
+                Die Komplexstabilitätskonstante gibt an, wie stabil ein Komplex ist. Sie ist definiert als das Gleichgewicht zwischen dem gebildeten Komplex und seinen freien Bestandteilen:
+            </p>
+            <div class="reaction">
+[M(L)ₙ]ᶻ⁺ ⇌ Mᶻ⁺ + n L
+            </div>
+            <p>
+                Die Stabilitätskonstante \( K \) ist ein Maß für die Stabilität des Komplexes. Je größer \( K \), desto stabiler ist der Komplex.
+            </p>
+            <p>
+                <strong>Beispiel:</strong> Für [Ag(NH₃)₂]⁺ gilt:
+            </p>
+            <div class="reaction">
+K = [Ag(NH₃)₂⁺] / ([Ag⁺] · [NH₃]²)
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>3. Wichtige Beispiele für Komplexverbindungen</h2>
+            <table>
+                <tr>
+                    <th>Komplex</th>
+                    <th>Name</th>
+                    <th>Zentralion</th>
+                    <th>Liganden</th>
+                </tr>
+                <tr>
+                    <td>[Fe(CN)₆]⁴⁻</td>
+                    <td>Hexacyanoferrat(II)</td>
+                    <td>Fe²⁺</td>
+                    <td>CN⁻</td>
+                </tr>
+                <tr>
+                    <td>[Cu(NH₃)₄]²⁺</td>
+                    <td>Tetraamminkupfer(II)</td>
+                    <td>Cu²⁺</td>
+                    <td>NH₃</td>
+                </tr>
+                <tr>
+                    <td>[Ag(NH₃)₂]⁺</td>
+                    <td>Diamminsilber(I)</td>
+                    <td>Ag⁺</td>
+                    <td>NH₃</td>
+                </tr>
+                <tr>
+                    <td>[Co(NH₃)₆]³⁺</td>
+                    <td>Hexaamminkobalt(III)</td>
+                    <td>Co³⁺</td>
+                    <td>NH₃</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>4. Reaktionsgleichungen</h2>
+            <p>
+                <strong>Bildung von [Ag(NH₃)₂]⁺:</strong>
+            </p>
+            <div class="reaction">
+Ag⁺ + 2 NH₃ ⇌ [Ag(NH₃)₂]⁺
+            </div>
+            <p>
+                <strong>Bildung von [Cu(NH₃)₄]²⁺:</strong>
+            </p>
+            <div class="reaction">
+Cu²⁺ + 4 NH₃ ⇌ [Cu(NH₃)₄]²⁺
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>5. Anwendungen von Komplexverbindungen</h2>
+            <ul>
+                <li><strong>Medizin:</strong> Cisplatin ([Pt(NH₃)₂Cl₂]) als Krebsmedikament</li>
+                <li><strong>Analytik:</strong> Fehlingsche Lösung ([Cu(C₄H₄O₆)]²⁻) zum Nachweis von Aldehyden</li>
+                <li><strong>Industrie:</strong> Katalysatoren (z. B. [Rh(CO)₂I₂]⁻ im Monsanto-Prozess)</li>
+                <li><strong>Biologie:</strong> Hämoglobin (Fe²⁺-Komplex) für Sauerstofftransport</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>6. Vorkommen in der Natur</h2>
+            <ul>
+                <li><strong>Chlorophyll:</strong> Mg²⁺-Komplex für Photosynthese</li>
+                <li><strong>Hämoglobin:</strong> Fe²⁺-Komplex im Blut</li>
+                <li><strong>Vitamin B₁₂:</strong> Co³⁺-Komplex</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Quellen: Standardlehrbücher für Chemie (Abitur-Niveau), z. B. Mortimer, Riedel</p>
+        </footer>
+    </div>
+    <script>
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        applySystemMode();
+
+        window.addEventListener("message", function(event) {
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

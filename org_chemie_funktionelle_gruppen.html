@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stoffklassen & Funktionelle Gruppen – Organische Chemie Abitur</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+            --highlight: #3498db;
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--header-color);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-weight: normal;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        .dark-mode tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--highlight);
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .dark-mode footer {
+            color: #aaa;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .source {
+            font-size: 0.8em;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Stoffklassen & Funktionelle Gruppen – Organische Chemie Abitur</h1>
+            <p>Lernübersicht für den Leistungskurs Chemie</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Alkohole</span>
+            <span class="tag">Carbonsäuren</span>
+            <span class="tag">Aldehyde & Ketone</span>
+            <span class="tag">Amine</span>
+            <span class="tag">Ester</span>
+            <span class="tag">Halogenalkane</span>
+            <span class="tag">Nachweisreaktionen</span>
+            <span class="tag">Reaktionsmechanismen</span>
+            <span class="tag">Nomenklatur</span>
+        </div>
+
+        <div class="card">
+            <h2>1. Überblick: Stoffklassen & Funktionelle Gruppen</h2>
+            <p>
+                <strong>Funktionelle Gruppen</strong> sind Atome oder Atomgruppen, die das chemische Verhalten organischer Moleküle maßgeblich bestimmen. Sie sind entscheidend für die Einteilung in <strong>Stoffklassen</strong> und beeinflussen physikalische sowie chemische Eigenschaften wie Siedepunkt, Löslichkeit und Reaktivität.
+                Durch gezielte chemische Reaktionen lassen sich funktionelle Gruppen ineinander umwandeln, z. B. kann eine <strong>Carboxylgruppe (–COOH)</strong> durch Reduktion in eine <strong>Hydroxygruppe (–OH)</strong> überführt werden.
+            </p>
+            <p class="source">
+                Quellen: <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/organische-verbindungen-mit-funktionellen-gruppen-ueberblick" target="_blank">Lernhelfer</a>,
+                <a href="https://www.chemie-schule.de/KnowHow/Funktionelle_Gruppe" target="_blank">Chemie-Schule</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>2. Wichtige Stoffklassen & Beispiele</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Stoffklasse</th>
+                        <th>Funktionelle Gruppe</th>
+                        <th>Struktur</th>
+                        <th>Beispiel</th>
+                        <th>Eigenschaften & Reaktionen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Alkohole (Alkanole)</td>
+                        <td>Hydroxygruppe (–OH)</td>
+                        <td>R–OH</td>
+                        <td>Ethanol (C<sub>2</sub>H<sub>5</sub>OH)</td>
+                        <td>
+                            <strong>Polar</strong>, Wasserstoffbrückenbindungen → hoher Siedepunkt.
+                            <strong>Oxidation:</strong> primär → Aldehyd → Carbonsäure; sekundär → Keton.
+                            <strong>Nachweis:</strong> Cerammoniumnitrat (rot-violette Färbung).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Carbonsäuren</td>
+                        <td>Carboxylgruppe (–COOH)</td>
+                        <td>R–COOH</td>
+                        <td>Essigsäure (CH<sub>3</sub>COOH)</td>
+                        <td>
+                            <strong>Sauer</strong> (pK<sub>s</sub> ~4–5), reagieren mit Alkoholen zu Estern.
+                            <strong>Nachweis:</strong> pH-Indikator (sauer) oder Silbernitrat (Ag-Spiegel).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Aldehyde</td>
+                        <td>Carbonylgruppe (–CHO)</td>
+                        <td>R–CHO</td>
+                        <td>Methanal (HCHO)</td>
+                        <td>
+                            <strong>Reduzierend</strong> (Fehling-Probe: rotbrauner Niederschlag).
+                            <strong>Oxidation:</strong> zu Carbonsäuren.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ketone</td>
+                        <td>Carbonylgruppe (–CO–)</td>
+                        <td>R<sub>1</sub>–CO–R<sub>2</sub></td>
+                        <td>Aceton (CH<sub>3</sub>–CO–CH<sub>3</sub>)</td>
+                        <td>
+                            <strong>Nicht reduzierend</strong>, Lösungsmittel.
+                            <strong>Nachweis:</strong> 2,4-DNPH (gelb-orange Fällung).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Amine</td>
+                        <td>Aminogruppe (–NH<sub>2</sub>)</td>
+                        <td>R–NH<sub>2</sub></td>
+                        <td>Methylamin (CH<sub>3</sub>NH<sub>2</sub>)</td>
+                        <td>
+                            <strong>Basisch</strong>, reagieren mit Säuren zu Salzen.
+                            <strong>Nachweis:</strong> pH-Indikator (basisch) oder Hinsberg-Reagenz.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ester</td>
+                        <td>Ester-Gruppe (–COO–)</td>
+                        <td>R<sub>1</sub>–COO–R<sub>2</sub></td>
+                        <td>Ethansäureethylester (CH<sub>3</sub>COOC<sub>2</sub>H<sub>5</sub>)</td>
+                        <td>
+                            <strong>Fruchtiger Geruch</strong>, Hydrolyse zu Säure + Alkohol.
+                            <strong>Nachweis:</strong> Verseifung mit NaOH.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Halogenalkane</td>
+                        <td>Halogen (–X: Cl, Br, I)</td>
+                        <td>R–X</td>
+                        <td>Chlormethan (CH<sub>3</sub>Cl)</td>
+                        <td>
+                            <strong>Reaktiv</strong> (nukleophile Substitution).
+                            <strong>Nachweis:</strong> Beilstein-Probe (grüne Flamme).
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="source">
+                Quellen: <a href="https://knowunity.de/knows/chemie-funktionelle-gruppen-6d55c06e-8e91-4788-8d96-f5f29025440e" target="_blank">Knowunity</a>,
+                <a href="https://www.studysmarter.de/schule/chemie/organische-chemie/funktionelle-gruppen/" target="_blank">StudySmarter</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>3. Erkennungsmerkmale & Nachweisreaktionen</h2>
+            <ul>
+                <li>
+                    <strong>Alkohole:</strong>
+                    Cerammoniumnitrat → rot-violette Färbung.
+                    <span class="source"><a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/nachweis-funktionelle-gruppen-organischer-verbindungen" target="_blank">[Lernhelfer]</a></span>
+                </li>
+                <li>
+                    <strong>Aldehyde:</strong>
+                    Fehling-Probe → rotbrauner Cu<sub>2</sub>O-Niederschlag.
+                    <span class="source"><a href="https://www.schule-bw.de/faecher-und-schularten/berufliche-bildung/ernaehrungslehre/unterrichtsmaterialien/handreichungen/handreichung_ernaehrung_und_chemie/jahrgangsstufe1/lpe10/lpe1001" target="_blank">[Landesbildungsserver BW]</a></span>
+                </li>
+                <li>
+                    <strong>Carbonsäuren:</strong>
+                    pH-Wert < 7, Reaktion mit Carbonaten (CO<sub>2</sub>-Entwicklung).
+                </li>
+                <li>
+                    <strong>Halogenalkane:</strong>
+                    Beilstein-Probe → grüne Flamme.
+                </li>
+            </ul>
+            <p>
+                <strong>Hinweis:</strong> Viele Nachweise sind nicht stoffspezifisch, sondern nur für die Stoffklasse charakteristisch.
+                Moderne Methoden wie <strong>IR-Spektroskopie</strong> oder <strong>NMR</strong> liefern genauere Ergebnisse.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>4. Bedeutung & Anwendungen</h2>
+            <ul>
+                <li>
+                    <strong>Alkohole:</strong>
+                    Lösungsmittel (Ethanol), Desinfektionsmittel (Isopropanol).
+                </li>
+                <li>
+                    <strong>Carbonsäuren:</strong>
+                    Konservierungsmittel (Benzoesäure), Ameisensäure in der Textilindustrie.
+                </li>
+                <li>
+                    <strong>Ester:</strong>
+                    Aromastoffe (z. B. Bananenaroma: Isoamylacetat).
+                </li>
+                <li>
+                    <strong>Amine:</strong>
+                    Bausteine von Proteinen (Aminosäuren), Pharmaka (z. B. Adrenalin).
+                </li>
+            </ul>
+            <p class="source">
+                Quellen: <a href="https://www.abiweb.de/biologie-stoffwechsel/grundlagen-des-stoffwechsels/energieumwandlung-basiswissen-chemie/kohlenwasserstoffe-und-funktionelle-gruppen.html" target="_blank">Abiweb</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>5. Typische Reaktionen im Überblick</h2>
+            <div class="reaction">
+                <strong>Oxidation von Alkoholen:</strong><br>
+                Primär: R–CH<sub>2</sub>OH → R–CHO → R–COOH<br>
+                Sekundär: R<sub>1</sub>–CH(OH)–R<sub>2</sub> → R<sub>1</sub>–CO–R<sub>2</sub><br><br>
+
+                <strong>Veresterung:</strong><br>
+                R–COOH + R'–OH ⇌ R–COO–R' + H<sub>2</sub>O<br><br>
+
+                <strong>Nukleophile Substitution (Halogenalkane):</strong><br>
+                R–X + OH<sup>–</sup> → R–OH + X<sup>–</sup>
+            </div>
+            <p class="source">
+                Quellen: <a href="https://www.lernhelfer.de/schuelerlexikon/chemie/artikel/ueberblick-der-funktionellen-gruppen" target="_blank">Lernhelfer</a>
+            </p>
+        </div>
+
+        <footer>
+            <p>
+                Diese Übersicht basiert auf den Lehrplänen für das Chemie-Abitur (Leistungskurs) und wurde mit Informationen von
+                <a href="https://www.lernhelfer.de" target="_blank">Lernhelfer</a>,
+                <a href="https://www.chemie-schule.de" target="_blank">Chemie-Schule</a> und
+                <a href="https://knowunity.de" target="_blank">Knowunity</a> erstellt.
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Systemeinstellungen prüfen und anwenden
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        // Modus manuell setzen
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        // Systemeinstellungen beim Laden anwenden
+        applySystemMode();
+
+        // Nachrichten von der Hauptseite empfangen
+        window.addEventListener("message", function(event) {
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        // Hauptseite beim Laden über den aktuellen Modus informieren
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        // Systemeinstellungen ändern
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

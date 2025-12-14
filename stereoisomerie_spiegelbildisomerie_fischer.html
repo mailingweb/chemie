@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stereoisomerie & Spiegelbildisomerie – Chemie Abitur</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .experiment {
+            margin-bottom: 30px;
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .formula {
+            font-family: 'Courier New', monospace;
+            font-size: 1.1em;
+            background-color: var(--code-bg);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Stereoisomerie & Spiegelbildisomerie</h1>
+            <p>Lernübersicht für das Chemie-Abitur (Leistungskurs)</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Stereoisomerie</span>
+            <span class="tag">Spiegelbildisomerie</span>
+            <span class="tag">Optisch aktives C-Atom</span>
+            <span class="tag">Fischer-Projektion</span>
+            <span class="tag">Enantiomere</span>
+            <span class="tag">Diastereomere</span>
+            <span class="tag">Chiralität</span>
+            <span class="tag">Konfigurationsisomerie</span>
+            <span class="tag">Abitur Chemie</span>
+        </div>
+
+        <div class="card">
+            <h2>1. Grundlagen der Stereoisomerie</h2>
+            <p>
+                <strong>Stereoisomerie</strong> beschreibt die räumliche Anordnung von Atomen in Molekülen, die <strong>gleiche Summenformel und Konstitution</strong>, aber <strong>unterschiedliche räumliche Struktur</strong> aufweisen.
+                Man unterscheidet:
+            </p>
+            <ul>
+                <li><strong>Konformationsisomerie</strong>: Moleküle lassen sich durch Drehung um Einfachbindungen ineinander überführen.</li>
+                <li><strong>Konfigurationsisomerie</strong>: Moleküle lassen sich nur durch Brechen und Neuknüpfen von Bindungen ineinander überführen. Dazu gehören <strong>Enantiomere</strong> und <strong>Diastereomere</strong>.</li>
+            </ul>
+            <p>
+                <strong>Stereoisomere</strong> unterscheiden sich in ihren physikalischen und chemischen Eigenschaften, z. B. Schmelzpunkt, Siedepunkt, optische Aktivität und Reaktionsverhalten.
+                <a href="https://abitur-wissen.org/index.php/chemie-abitur?start=162" target="_blank">(Quelle: Abitur-Wissen)</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>2. Spiegelbildisomerie (Enantiomerie)</h2>
+            <p>
+                <strong>Enantiomere</strong> sind Stereoisomere, die sich wie <strong>Bild und Spiegelbild</strong> zueinander verhalten. Sie besitzen <strong>mindestens ein chirales Zentrum</strong> (meist ein Kohlenstoffatom mit vier verschiedenen Substituenten).
+            </p>
+            <h3>Optisch aktives C-Atom (chirales Zentrum)</h3>
+            <p>
+                Ein Kohlenstoffatom ist <strong>chiral</strong>, wenn es <strong>vier verschiedene Substituenten</strong> trägt. Solche Moleküle sind <strong>optisch aktiv</strong>, d. h., sie drehen die Ebene von polarisiertem Licht.
+                <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/der-optische-drehwert" target="_blank">(Quelle: Lernhelfer)</a>
+            </p>
+            <p>
+                <strong>Beispiel:</strong> Butan-2-ol
+                <br>
+                <span class="formula">
+                    CH₃-CH(OH)-CH₂-CH₃
+                </span>
+                <br>
+                Das zweite C-Atom ist chiral, da es mit -OH, -H, -CH₃ und -CH₂-CH₃ verbunden ist.
+            </p>
+            <p>
+                Enantiomere haben <strong>gleiche physikalische Eigenschaften</strong> (außer optische Aktivität) und <strong>gleiche chemische Eigenschaften</strong> (außer in chiraler Umgebung).
+                <a href="https://abitur-wissen.org/index.php/organische-chemie/779-organische-chemie-spiegelbildisomerie-stereoisomerie" target="_blank">(Quelle: Abitur-Wissen)</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>3. Fischer-Projektion</h2>
+            <p>
+                Die <strong>Fischer-Projektion</strong> ist eine zweidimensionale Darstellung chiraler Moleküle. Regeln:
+            </p>
+            <ul>
+                <li>Das Molekül wird vertikal gezeichnet, wobei das Kohlenstoffgerüst senkrecht steht.</li>
+                <li><strong>Horizontale Linien</strong> zeigen Bindungen <strong>aus der Ebene heraus</strong> (zum Betrachter hin).</li>
+                <li><strong>Vertikale Linien</strong> zeigen Bindungen <strong>hinter die Ebene</strong> (vom Betrachter weg).</li>
+                <li>Das Kohlenstoffatom mit der höchsten Oxidationszahl (z. B. Aldehydgruppe) steht oben.</li>
+            </ul>
+            <p>
+                <strong>Beispiel:</strong> D-Glucose in Fischer-Projektion
+                <br>
+                <span class="formula">
+                    CHO<br>
+                    |<br>
+                    H-C-OH<br>
+                    |<br>
+                    HO-C-H<br>
+                    |<br>
+                    H-C-OH<br>
+                    |<br>
+                    HO-C-H<br>
+                    |<br>
+                    CH₂OH
+                </span>
+                <a href="https://abitur-wissen.org/index.php/organische-chemie/771-organische-chemie-fischer-projektion-und-die-umwandlung-in-die-haworth-projektion" target="_blank">(Quelle: Abitur-Wissen)</a>
+            </p>
+            <p>
+                Die Fischer-Projektion wird genutzt, um die <strong>D/L-Konfiguration</strong> zu bestimmen. Zeigt die OH-Gruppe am untersten chiralen C-Atom nach rechts, handelt es sich um die <strong>D-Form</strong>, zeigt sie nach links, um die <strong>L-Form</strong>.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>4. Enantiomere vs. Diastereomere</h2>
+            <table>
+                <tr>
+                    <th>Eigenschaft</th>
+                    <th>Enantiomere</th>
+                    <th>Diastereomere</th>
+                </tr>
+                <tr>
+                    <td>Spiegelbildverhalten</td>
+                    <td>Bild und Spiegelbild</td>
+                    <td>Kein Spiegelbild</td>
+                </tr>
+                <tr>
+                    <td>Optische Aktivität</td>
+                    <td>Optisch aktiv, Drehwinkel gleich groß, aber entgegengesetzt</td>
+                    <td>Optisch aktiv, Drehwinkel unterschiedlich</td>
+                </tr>
+                <tr>
+                    <td>Physikalische Eigenschaften</td>
+                    <td>Gleich (außer optische Aktivität)</td>
+                    <td>Unterschiedlich (Schmelzpunkt, Siedepunkt, Löslichkeit)</td>
+                </tr>
+                <tr>
+                    <td>Beispiel</td>
+                    <td>D-Glucose und L-Glucose</td>
+                    <td>D-Glucose und D-Galactose</td>
+                </tr>
+            </table>
+            <p>
+                <strong>Diastereomere</strong> sind Stereoisomere, die <strong>keine Spiegelbilder</strong> voneinander sind. Sie entstehen, wenn ein Molekül <strong>mehrere chirale Zentren</strong> besitzt.
+                <a href="https://www.studysmarter.de/schule/chemie/biochemie/diastereomere/" target="_blank">(Quelle: StudySmarter)</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>5. Optische Aktivität</h2>
+            <p>
+                <strong>Optisch aktive Substanzen</strong> drehen die Ebene von polarisiertem Licht. Gemessen wird dies mit einem <strong>Polarimeter</strong>.
+            </p>
+            <ul>
+                <li><strong>Rechtsdrehend (+)</strong>: Drehung im Uhrzeigersinn</li>
+                <li><strong>Linksdrehend (-)</strong>: Drehung gegen den Uhrzeigersinn</li>
+            </ul>
+            <p>
+                Ein <strong>Racemat</strong> (1:1-Gemisch von Enantiomeren) ist optisch inaktiv, da sich die Drehungen aufheben.
+                <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/der-optische-drehwert" target="_blank">(Quelle: Lernhelfer)</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>6. Zusammenfassung & Abitur-Relevanz</h2>
+            <ul>
+                <li><strong>Stereoisomerie</strong>: Räumliche Anordnung von Atomen in Molekülen mit gleicher Konstitution.</li>
+                <li><strong>Enantiomere</strong>: Spiegelbildisomere mit chiralem Zentrum, optisch aktiv.</li>
+                <li><strong>Diastereomere</strong>: Nicht spiegelbildliche Stereoisomere, unterschiedliche physikalische Eigenschaften.</li>
+                <li><strong>Fischer-Projektion</strong>: 2D-Darstellung chiraler Moleküle, wichtig für D/L-Konfiguration.</li>
+                <li><strong>Optische Aktivität</strong>: Drehung von polarisiertem Licht durch chirale Moleküle.</li>
+            </ul>
+            <p>
+                Diese Themen sind zentral für das Verständnis von <strong>Kohlenhydraten, Aminosäuren und Naturstoffen</strong> im Abitur.
+            </p>
+        </div>
+
+        <footer>
+            <p>Quellen: <a href="https://abitur-wissen.org" target="_blank">Abitur-Wissen</a>, <a href="https://www.lernhelfer.de" target="_blank">Lernhelfer</a>, <a href="https://www.studysmarter.de" target="_blank">StudySmarter</a></p>
+        </footer>
+    </div>
+    <script>
+        // 1. Systemeinstellungen prüfen und sofort anwenden (ohne Animation)
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            // Transition nach kurzer Verzögerung aktivieren
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        // 2. Modus manuell setzen (mit Animation)
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        // 3. Systemeinstellungen beim Laden anwenden
+        applySystemMode();
+
+        // 4. Nachrichten von der Hauptseite empfangen
+        window.addEventListener("message", function(event) {
+            // Dark/Light-Mode wechseln (mit Animation)
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            // Aktuellen Modus abfragen
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            // Sichtbaren Text zurücksenden
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        // 5. Hauptseite beim Laden über den aktuellen Modus informieren
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        // 6. Systemeinstellungen ändern (optional)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organische Chemie: Kohlenwasserstoffe, Isomerie, Oxidationszahlen & Atombindungen</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .experiment {
+            margin-bottom: 30px;
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Organische Chemie: Kohlenwasserstoffe, Isomerie, Oxidationszahlen & Atombindungen</h1>
+            <p>Lernübersicht für das Abitur (Leistungskurs Chemie)</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Kohlenwasserstoffe</span>
+            <span class="tag">Isomerie</span>
+            <span class="tag">Oxidationszahlen</span>
+            <span class="tag">Atombindungen</span>
+            <span class="tag">Bindungstypen</span>
+            <span class="tag">Organische Chemie</span>
+            <span class="tag">Abitur</span>
+        </div>
+
+        <div class="card">
+            <h2>1. Kohlenwasserstoffe</h2>
+            <p>
+                Kohlenwasserstoffe sind Verbindungen, die nur aus <strong>Kohlenstoff (C)</strong> und <strong>Wasserstoff (H)</strong> bestehen. Sie bilden die Grundlage aller organischen Verbindungen und lassen sich in gesättigte (Alkane) und ungesättigte (Alkene, Alkine) unterteilen.
+            </p>
+            <h3>1.1 Klassifizierung</h3>
+            <table>
+                <tr>
+                    <th>Klasse</th>
+                    <th>Bindungstyp</th>
+                    <th>Allgemeine Formel</th>
+                    <th>Beispiel</th>
+                </tr>
+                <tr>
+                    <td>Alkane</td>
+                    <td>Einfachbindung (σ-Bindung)</td>
+                    <td>C<sub>n</sub>H<sub>2n+2</sub></td>
+                    <td>Methan (CH<sub>4</sub>)</td>
+                </tr>
+                <tr>
+                    <td>Alkene</td>
+                    <td>Doppelbindung (1×σ, 1×π)</td>
+                    <td>C<sub>n</sub>H<sub>2n</sub></td>
+                    <td>Ethen (C<sub>2</sub>H<sub>4</sub>)</td>
+                </tr>
+                <tr>
+                    <td>Alkine</td>
+                    <td>Dreifachbindung (1×σ, 2×π)</td>
+                    <td>C<sub>n</sub>H<sub>2n-2</sub></td>
+                    <td>Ethin (C<sub>2</sub>H<sub>2</sub>)</td>
+                </tr>
+                <tr>
+                    <td>Aromaten</td>
+                    <td>Delokalisierte π-Elektronen</td>
+                    <td>C<sub>n</sub>H<sub>2n-6</sub></td>
+                    <td>Benzol (C<sub>6</sub>H<sub>6</sub>)</td>
+                </tr>
+            </table>
+            <p>
+                <strong>Eigenschaften:</strong> Mit zunehmender Kettenlänge steigen Schmelz- und Siedepunkte durch stärkere Van-der-Waals-Kräfte.
+                <a href="https://www.abiweb.de/organische-chemie/grundlagen-der-kohlenstoffchemie.html" target="_blank">(Quelle: Abiweb)</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>2. Isomerie</h2>
+            <p>
+                Isomerie bezeichnet das Phänomen, dass Verbindungen die <strong>gleiche Summenformel</strong>, aber <strong>unterschiedliche Strukturen</strong> und Eigenschaften aufweisen.
+            </p>
+            <h3>2.1 Arten der Isomerie</h3>
+            <table>
+                <tr>
+                    <th>Typ</th>
+                    <th>Unterschied</th>
+                    <th>Beispiel</th>
+                </tr>
+                <tr>
+                    <td>Konstitutionsisomerie</td>
+                    <td>Verknüpfung der Atome</td>
+                    <td>Butan / Isobutan (C<sub>4</sub>H<sub>10</sub>)</td>
+                </tr>
+                <tr>
+                    <td>Stereoisomerie</td>
+                    <td>Räumliche Anordnung</td>
+                    <td>Cis-/Trans-But-2-en</td>
+                </tr>
+                <tr>
+                    <td>Enantiomerie</td>
+                    <td>Spiegelbildisomerie</td>
+                    <td>L- und D-Aminosäuren</td>
+                </tr>
+            </table>
+            <p>
+                <strong>Bedeutung:</strong> Isomere können unterschiedliche chemische und biologische Eigenschaften haben.
+                <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/formen-der-isomerie-organischen-verbindungen" target="_blank">(Quelle: Lernhelfer)</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>3. Oxidationszahlen in organischen Verbindungen</h2>
+            <p>
+                Oxidationszahlen (OXZ) helfen, Redoxreaktionen in organischen Molekülen zu erkennen. Für Kohlenstoff (C) gelten folgende Regeln:
+            </p>
+            <ul>
+                <li>Bindung zu H: C hat OXZ <strong>–I</strong> (H: +I)</li>
+                <li>Bindung zu O: C hat OXZ <strong>+I</strong> (O: –II)</li>
+                <li>Bindung zu C: OXZ <strong>0</strong></li>
+                <li>Bindung zu Halogenen: C hat OXZ <strong>–I</strong> (Halogen: –I)</li>
+            </ul>
+            <p>
+                <strong>Beispiel:</strong> In Ethanol (CH<sub>3</sub>–CH<sub>2</sub>OH) hat das erste C die OXZ <strong>–III</strong>, das zweite <strong>–I</strong>.
+                <a href="https://www.abiweb.de/organische-chemie/organische-verbindungen-typen-eigenschaften-und-reaktionen/alkohole/oxidationszahlen.html" target="_blank">(Quelle: Abiweb)</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>4. Atombindungen in der organischen Chemie</h2>
+            <p>
+                Atombindungen (kovalente Bindungen) entstehen durch <strong>gemeinsame Elektronenpaare</strong> zwischen Nichtmetallen. Man unterscheidet:
+            </p>
+            <table>
+                <tr>
+                    <th>Bindungstyp</th>
+                    <th>Elektronegativitätsdifferenz (ΔEN)</th>
+                    <th>Beispiel</th>
+                </tr>
+                <tr>
+                    <td>Unpolare Atombindung</td>
+                    <td>ΔEN < 0,5</td>
+                    <td>H<sub>2</sub>, CH<sub>4</sub></td>
+                </tr>
+                <tr>
+                    <td>Polare Atombindung</td>
+                    <td>0,5 < ΔEN < 1,7</td>
+                    <td>H<sub>2</sub>O, HCl</td>
+                </tr>
+            </table>
+            <p>
+                <strong>Bindungstypen in organischen Molekülen:</strong>
+                <ul>
+                    <li><strong>σ-Bindung:</strong> Einfachbindung (z. B. C–C, C–H)</li>
+                    <li><strong>π-Bindung:</strong> Teil von Mehrfachbindungen (z. B. C=C, C≡C)</li>
+                </ul>
+                <a href="https://www.abiweb.de/organische-chemie/grundlagen-der-kohlenstoffchemie/uebersicht-ueber-die-bindungstypen.html" target="_blank">(Quelle: Abiweb)</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>5. Zusammenfassung & Abitur-Relevanz</h2>
+            <ul>
+                <li><strong>Kohlenwasserstoffe:</strong> Struktur, Nomenklatur, Eigenschaften</li>
+                <li><strong>Isomerie:</strong> Konstitutions- und Stereoisomerie, Auswirkungen auf Eigenschaften</li>
+                <li><strong>Oxidationszahlen:</strong> Bestimmung, Redoxreaktionen in der Organik</li>
+                <li><strong>Atombindungen:</strong> Polare/unpolare Bindungen, Hybridisierung, Bindungswinkel</li>
+            </ul>
+            <p>
+                <strong>Tipps fürs Abitur:</strong> Übe das Aufstellen von Strukturformeln, das Bestimmen von Oxidationszahlen und das Erkennen von Isomeren!
+            </p>
+        </div>
+
+        <footer>
+            <p>Quellen: <a href="https://www.abiweb.de" target="_blank">Abiweb</a>, <a href="https://www.lernhelfer.de" target="_blank">Lernhelfer</a>, <a href="https://abitur-wissen.org" target="_blank">Abitur-Wissen</a></p>
+        </footer>
+    </div>
+    <script>
+        // 1. Systemeinstellungen prüfen und sofort anwenden (ohne Animation)
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            // Transition nach kurzer Verzögerung aktivieren
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        // 2. Modus manuell setzen (mit Animation)
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        // 3. Systemeinstellungen beim Laden anwenden
+        applySystemMode();
+
+        // 4. Nachrichten von der Hauptseite empfangen
+        window.addEventListener("message", function(event) {
+            // Dark/Light-Mode wechseln (mit Animation)
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            // Aktuellen Modus abfragen
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            // Sichtbaren Text zurücksenden
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        // 5. Hauptseite beim Laden über den aktuellen Modus informieren
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        // 6. Systemeinstellungen ändern (optional)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

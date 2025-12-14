@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nachweis von Polysacchariden mit Iod-Iodid-Lösung</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        /* Deaktiviere Transitionen beim initialen Laden */
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .experiment {
+            margin-bottom: 30px;
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="no-transition">
+    <div class="container">
+        <header>
+            <h1>Nachweis von Polysacchariden mit Iod-Iodid-Lösung</h1>
+            <p>Lernübersicht für das Abitur (Leistungskurs Chemie)</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Polysaccharide</span>
+            <span class="tag">Stärke</span>
+            <span class="tag">Iod-Iodid-Lösung</span>
+            <span class="tag">Iod-Stärke-Reaktion</span>
+            <span class="tag">Amylose</span>
+            <span class="tag">Nachweisreaktion</span>
+            <span class="tag">Helixstruktur</span>
+            <span class="tag">Polyiodid-Anionen</span>
+        </div>
+
+        <div class="card experiment">
+            <h2>1. Durchführung des Nachweises</h2>
+            <p>Zum Nachweis von Stärke (einem Polysaccharid) wird eine <strong>Iod-Iodid-Lösung</strong> (Lugol'sche Lösung) verwendet. Diese besteht aus elementarem Iod (I<sub>2</sub>) und Kaliumiodid (KI) in Wasser. Beim Vermischen von Stärkelösung mit Iod-Iodid-Lösung bildet sich eine charakteristische Färbung.</p>
+
+            <h3>Beobachtung</h3>
+            <ul>
+                <li><span class="highlight">Tiefblaue bis blauschwarze Färbung</span> der Lösung bei Anwesenheit von Stärke.</li>
+                <li>Die Färbung verschwindet beim <span class="highlight">Erhitzen</span> und kehrt beim <span class="highlight">Abkühlen</span> zurück.</li>
+            </ul>
+        </div>
+
+        <div class="card experiment">
+            <h2>2. Erklärung der Beobachtung</h2>
+            <p>Stärke besteht zu etwa 25 % aus <strong>Amylose</strong>, einem Polysaccharid mit einer <strong>helikalen (schraubenförmigen) Struktur</strong>. In den Hohlraum dieser Helix lagern sich Polyiodid-Anionen (z. B. I<sub>3</sub><sup>−</sup>, I<sub>5</sub><sup>−</sup>, I<sub>7</sub><sup>−</sup>) ein, die durch die Reaktion von Iod (I<sub>2</sub>) mit Iodid (I<sup>−</sup>) entstehen:</p>
+
+            <div class="reaction">
+I<sub>2</sub> + I<sup>−</sup> → I<sub>3</sub><sup>−</sup>
+            </div>
+
+            <p>Diese Einschlussverbindung („Iodstärke“) absorbiert Licht im langwelligen Bereich und erscheint daher <strong>tiefblau</strong>. Beim Erhitzen wird die Helixstruktur der Amylose zerstört, die Polyiodid-Anionen werden freigesetzt und die Lösung entfärbt sich. Beim Abkühlen bildet sich die Helix zurück und die blaue Färbung tritt wieder auf.</p>
+
+            <p>Die Reaktion ist <strong>reversibel</strong> und temperaturabhängig.</p>
+        </div>
+
+        <div class="card experiment">
+            <h2>3. Reaktionsgleichung</h2>
+            <p>Die Bildung der Polyiodid-Anionen und deren Einlagerung in die Amylose-Helix lässt sich vereinfacht darstellen:</p>
+
+            <div class="reaction">
+n I<sub>2</sub> + I<sup>−</sup> → I<sub>2n+1</sub><sup>−</sup>  (z. B. I<sub>3</sub><sup>−</sup>, I<sub>5</sub><sup>−</sup>, I<sub>7</sub><sup>−</sup>)<br>
+Amylose + I<sub>2n+1</sub><sup>−</sup> → Iod-Stärke-Komplex (tiefblau)
+            </div>
+
+            <p>Die genaue Zusammensetzung der Polyiodid-Anionen hängt von der Konzentration und den Bedingungen ab.</p>
+        </div>
+
+        <div class="card">
+            <h2>4. Zusammenfassung</h2>
+            <ul>
+                <li><span class="highlight">Nachweisprinzip:</span> Bildung einer Einschlussverbindung zwischen Polyiodid-Anionen und der Amylose-Helix.</li>
+                <li><span class="highlight">Färbung:</span> Tiefblau bis blauschwarz bei Anwesenheit von Stärke.</li>
+                <li><span class="highlight">Reversibilität:</span> Die Färbung verschwindet beim Erhitzen und kehrt beim Abkühlen zurück.</li>
+                <li><span class="highlight">Anwendung:</span> Spezifischer Nachweis für Stärke, z. B. in Lebensmitteln oder biologischen Proben.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>5. Quellen</h2>
+            <ul>
+                <li><a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/nachweisreaktionen-organischer-naturstoffe" target="_blank">Lernhelfer: Nachweisreaktionen organischer Naturstoffe</a></li>
+                <li><a href="https://www.chemie-schule.de/KnowHow/Iod-Stärke-Reaktion" target="_blank">Chemie-Schule: Iod-Stärke-Reaktion</a></li>
+                <li><a href="https://www.schullv.de/chemie/basiswissen/naturstoffe/polysaccharide/skript" target="_blank">SchulLV: Polysaccharide – Nachweis mit Iod-Iodid-Lösung</a></li>
+                <li><a href="https://www.chemieunterricht.de/dc2/mwg/g-iodsta.htm" target="_blank">Prof. Blumes Medienangebot: Iod-Stärke-Komplex</a></li>
+                <li><a href="https://lp.uni-goettingen.de/get/text/1969" target="_blank">LP – Versuch 19: Iod-Stärke-Reaktion</a></li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Diese Lernübersicht wurde auf Basis aktueller Lehrmaterialien für das Chemie-Abitur erstellt.</p>
+        </footer>
+    </div>
+    <script>
+        // 1. Systemeinstellungen prüfen und sofort anwenden (ohne Animation)
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            // Transition nach kurzer Verzögerung aktivieren
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        // 2. Modus manuell setzen (mit Animation)
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        // 3. Systemeinstellungen beim Laden anwenden
+        applySystemMode();
+
+        // 4. Nachrichten von der Hauptseite empfangen
+        window.addEventListener("message", function(event) {
+            // Dark/Light-Mode wechseln (mit Animation)
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            // Aktuellen Modus abfragen
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            // Sichtbaren Text zurücksenden
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        // 5. Hauptseite beim Laden über den aktuellen Modus informieren
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        // 6. Systemeinstellungen ändern (optional)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

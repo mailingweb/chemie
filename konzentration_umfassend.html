@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konzentration: Erklärung, Berechnung & Beispiele (Abitur Chemie)</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .experiment {
+            margin-bottom: 30px;
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Konzentration: Erklärung, Berechnung & Beispiele</h1>
+            <p>Lernübersicht für das Abitur (Leistungskurs Chemie)</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Konzentration</span>
+            <span class="tag">Stoffmengenkonzentration</span>
+            <span class="tag">Molarität</span>
+            <span class="tag">Massenprozent</span>
+            <span class="tag">Titration</span>
+            <span class="tag">Reaktionsgeschwindigkeit</span>
+            <span class="tag">Abituraufgaben</span>
+            <span class="tag">Chemisches Rechnen</span>
+        </div>
+
+        <div class="card">
+            <h2>1. Was ist Konzentration?</h2>
+            <p>
+                Die <span class="highlight">Konzentration</span> gibt an, wie viel von einem Stoff (Solvat) in einem Lösungsmittel (Solvens) oder in einem Gemisch enthalten ist. Sie ist eine <strong>Gehaltsangabe</strong>, die auf das Volumen des Gemisches bezogen ist und kann in verschiedenen Einheiten angegeben werden:
+            </p>
+            <ul>
+                <li><strong>Stoffmengenkonzentration (Molarität):</strong> mol/L (am häufigsten im Abitur verwendet)</li>
+                <li><strong>Massenprozent:</strong> Gramm gelöster Stoff in 100 g Lösung (z. B. 8 %ige Kochsalzlösung: 8 g NaCl + 92 g Wasser)</li>
+                <li><strong>Volumenprozent:</strong> Kubikzentimeter gelöster Stoff in 100 cm³ Lösung (z. B. 40 Vol.-% Ethanol in Branntwein)</li>
+            </ul>
+            <p>
+                Die Konzentration ist entscheidend für die <strong>Reaktionsgeschwindigkeit</strong>: Je höher die Konzentration, desto schneller findet die Reaktion statt, da die Wahrscheinlichkeit steigt, dass Teilchen zusammenstoßen und reagieren.
+            </p>
+            <p><a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/zusammensetzungsgroessen" target="_blank">(Quelle: Lernhelfer)</a></p>
+        </div>
+
+        <div class="card">
+            <h2>2. Berechnung der Stoffmengenkonzentration</h2>
+            <p>
+                Die <span class="highlight">Stoffmengenkonzentration</span> (c) gibt die Menge eines Stoffes in Mol pro Liter Lösung an:
+            </p>
+            <div class="reaction">
+c = n / V
+            </div>
+            <ul>
+                <li><strong>c</strong> = Stoffmengenkonzentration (mol/L)</li>
+                <li><strong>n</strong> = Stoffmenge (mol)</li>
+                <li><strong>V</strong> = Volumen der Lösung (L)</li>
+            </ul>
+            <p>
+                <strong>Beispiel:</strong> Berechnung der Konzentration einer Kaliumhydroxidlösung mit 30 g KOH in 3,0 dm³ Lösung:
+            </p>
+            <ol>
+                <li>Stoffmenge n(KOH) berechnen: n = m/M = 30 g / 56,1 g/mol ≈ 0,53 mol</li>
+                <li>Konzentration c(KOH) = 0,53 mol / 3,0 dm³ ≈ 0,18 mol/dm³</li>
+            </ol>
+            <p><a href="https://www.products.pcc.eu/de/academy/stoffmengenkonzentration-in-loesungen/" target="_blank">(Quelle: PCC-Gruppe)</a></p>
+        </div>
+
+        <div class="card">
+            <h2>3. Typische Abituraufgaben</h2>
+            <p>
+                Im Abitur wird oft die <strong>Titration</strong> zur Konzentrationsbestimmung von Säuren oder Basen verwendet. Beispiel aus dem Abitur 2011:
+            </p>
+            <ol>
+                <li>Verbrauchte Menge NaOH: 10,4 ml (c = 0,2 mol/L) → n(NaOH) = 0,00208 mol</li>
+                <li>Weinsäure ist zweiprotonig → n(Weinsäure) = 0,00104 mol</li>
+                <li>Konzentration der Weinsäure: c = 0,00104 mol / 0,025 L = 0,0416 mol/L</li>
+            </ol>
+            <p>
+                <strong>Tipp:</strong> Verstehe den Rechenweg, statt Formeln auswendig zu lernen!
+            </p>
+            <p><a href="https://u-helmich.de/che/Q1/inhaltsfeld-2-sb/1-konzentrationsbestimmung/seite-2-1-D.html" target="_blank">(Quelle: u-helmich.de)</a></p>
+        </div>
+
+        <div class="card">
+            <h2>4. Einfluss der Konzentration auf Reaktionen</h2>
+            <p>
+                Die Konzentration beeinflusst die <strong>Reaktionsgeschwindigkeit</strong> direkt:
+            </p>
+            <ul>
+                <li>Je höher die Konzentration der Edukte, desto schneller die Reaktion.</li>
+                <li>Mathematisch wird dies im <strong>Geschwindigkeitsgesetz</strong> beschrieben.</li>
+            </ul>
+            <p><a href="https://www.abiweb.de/chemie-chemisches-gleichgewicht-kinetik/reaktion/einflussfaktoren/konzentration.html" target="_blank">(Quelle: Abiweb)</a></p>
+        </div>
+
+        <div class="card">
+            <h2>5. Zusammenfassung & Merksätze</h2>
+            <ul>
+                <li>Konzentration = Gehaltsangabe (Stoffmenge/Volumen oder Masse/Volumen).</li>
+                <li>Stoffmengenkonzentration: c = n/V (Einheit: mol/L).</li>
+                <li>Titration: Verbrauchte Menge und Konzentration der Maßlösung → Konzentration der Analysenlösung.</li>
+                <li>Reaktionsgeschwindigkeit steigt mit der Konzentration.</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Quellen: Lernhelfer, PCC-Gruppe, u-helmich.de, Abiweb, StudySmarter</p>
+        </footer>
+    </div>
+    <script>
+        // 1. Systemeinstellungen prüfen und sofort anwenden (ohne Animation)
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            // Transition nach kurzer Verzögerung aktivieren
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        // 2. Modus manuell setzen (mit Animation)
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        // 3. Systemeinstellungen beim Laden anwenden
+        applySystemMode();
+
+        // 4. Nachrichten von der Hauptseite empfangen
+        window.addEventListener("message", function(event) {
+            // Dark/Light-Mode wechseln (mit Animation)
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            // Aktuellen Modus abfragen
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            // Sichtbaren Text zurücksenden
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        // 5. Hauptseite beim Laden über den aktuellen Modus informieren
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        // 6. Systemeinstellungen ändern (optional)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qualitative Analyse organischer Stoffe – Nachweisreaktionen im Abitur</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .experiment {
+            margin-bottom: 30px;
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Qualitative Analyse organischer Stoffe – Nachweisreaktionen</h1>
+            <p>Lernübersicht für das Abitur (Leistungskurs Chemie)</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Qualitative Analyse</span>
+            <span class="tag">Wassernachweis</span>
+            <span class="tag">Cobaltpapier</span>
+            <span class="tag">Barytwasser</span>
+            <span class="tag">CO₂-Nachweis</span>
+            <span class="tag">Beilsteinprobe</span>
+            <span class="tag">Halogenidnachweis</span>
+            <span class="tag">Tollensprobe</span>
+            <span class="tag">Fehlingprobe</span>
+            <span class="tag">Aldehydnachweis</span>
+        </div>
+
+        <div class="card">
+            <h2>1. Grundlagen der qualitativen Analyse organischer Stoffe</h2>
+            <p>
+                Die qualitative Analyse organischer Stoffe dient der Identifizierung der in einer Probe enthaltenen Elemente und funktionellen Gruppen. Organische Verbindungen bestehen hauptsächlich aus Kohlenstoff (C), Wasserstoff (H), Sauerstoff (O) und Stickstoff (N), können aber auch Halogene (F, Cl, Br, I), Schwefel (S) oder Phosphor (P) enthalten. Ziel ist es, durch charakteristische Nachweisreaktionen Rückschlüsse auf die Stoffklasse zu ziehen.
+            </p>
+            <p>
+                Typische Schritte:
+            </p>
+            <ol>
+                <li><strong>Vorprobe:</strong> Flammenfärbung, Geruch, Löslichkeit, Schmelz- und Siedepunkt</li>
+                <li><strong>Elementaranalyse:</strong> Nachweis von C, H, O, N, Halogenen, S</li>
+                <li><strong>Nachweis funktioneller Gruppen:</strong> Aldehyde, Ketone, Alkohole, Carbonsäuren, Ester etc.</li>
+            </ol>
+            <p>
+                Die meisten Nachweisreaktionen beruhen auf Farbänderungen, Fällungen oder Gasentwicklung.
+            </p>
+            <p>
+                <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/organische-qualitative-elementaranalyse" target="_blank">(Quelle: Lernhelfer)</a>
+            </p>
+        </div>
+
+        <div class="card experiment">
+            <h2>2. Wassernachweis mit Cobaltpapier (Kupfer(II)-sulfat)</h2>
+            <h3>Prinzip</h3>
+            <p>
+                Wasserfreies, weißes <strong>Kupfer(II)-sulfat (CuSO₄)</strong> bildet mit Wasser einen blauen Komplex (<strong>Kupfer(II)-sulfat-Pentahydrat</strong>).
+            </p>
+            <h3>Durchführung</h3>
+            <p>
+                Ein Stück Cobaltpapier (mit wasserfreiem CuSO₄ beschichtet) wird in die zu untersuchende Flüssigkeit oder in den Gasraum gehalten. Bei Anwesenheit von Wasser verfärbt es sich von <strong>weiß nach blau</strong>.
+            </p>
+            <h3>Reaktionsgleichung</h3>
+            <div class="reaction">
+CuSO₄ + 5 H₂O → [Cu(H₂O)₄]SO₄ · H₂O
+            </div>
+            <p>
+                <a href="https://www.chemie-schule.de/KnowHow/Nachweisreaktion" target="_blank">(Quelle: Chemie-Schule)</a>
+            </p>
+        </div>
+
+        <div class="card experiment">
+            <h2>3. CO₂-Nachweis mit Barytwasser</h2>
+            <h3>Prinzip</h3>
+            <p>
+                <strong>Barytwasser</strong> (gesättigte Bariumhydroxid-Lösung, Ba(OH)₂) reagiert mit Kohlenstoffdioxid (CO₂) unter Bildung von schwer löslichem, weißem <strong>Bariumcarbonat (BaCO₃)</strong>, das als Trübung sichtbar wird.
+            </p>
+            <h3>Durchführung</h3>
+            <p>
+                Das zu untersuchende Gas wird in Barytwasser eingeleitet. Eine weiße Trübung zeigt CO₂ an.
+            </p>
+            <h3>Reaktionsgleichung</h3>
+            <div class="reaction">
+Ba(OH)₂ + CO₂ → BaCO₃↓ + H₂O
+            </div>
+            <p>
+                Barytwasser ist empfindlicher als Kalkwasser und eignet sich besonders für den Nachweis kleiner CO₂-Mengen.
+            </p>
+            <p>
+                <a href="https://www.chemie-schule.de/KnowHow/Barytwasser" target="_blank">(Quelle: Chemie-Schule)</a>
+            </p>
+        </div>
+
+        <div class="card experiment">
+            <h2>4. Beilsteinprobe – Halogenidnachweis</h2>
+            <h3>Prinzip</h3>
+            <p>
+                Organische Halogenverbindungen (Cl, Br, I) bilden mit Kupfer in der Flamme flüchtige Kupferhalogenide, die die Flamme <strong>blaugrün</strong> färben.
+            </p>
+            <h3>Durchführung</h3>
+            <p>
+                Eine kleine Menge der Probe wird auf einen ausgeglühten Kupferdraht aufgebracht und in die nicht leuchtende Flamme gehalten. Eine blaugrüne Flammenfärbung ist positiv.
+            </p>
+            <h3>Hinweis</h3>
+            <p>
+                Fluorverbindungen reagieren nicht. Die Probe ist nur ein Hinweis auf Halogene, da auch andere stickstoffhaltige Verbindungen falsch-positive Ergebnisse liefern können.
+            </p>
+            <p>
+                <a href="https://learnattack.de/schuelerlexikon/chemie/beilstein-probe" target="_blank">(Quelle: Learnattack)</a>
+            </p>
+        </div>
+
+        <div class="card experiment">
+            <h2>5. Tollensprobe – Aldehydnachweis</h2>
+            <h3>Prinzip</h3>
+            <p>
+                Aldehyde reduzieren <strong>Silber(I)-Ionen</strong> (aus Tollens-Reagenz: [Ag(NH₃)₂]⁺) zu elementarem Silber, das als <strong>Silberspiegel</strong> an der Gefäßwand abgelagert wird.
+            </p>
+            <h3>Durchführung</h3>
+            <p>
+                Die Probe wird mit Tollens-Reagenz versetzt und vorsichtig erwärmt. Ein Silberspiegel oder eine schwarze Fällung (Ag) zeigt Aldehyde an.
+            </p>
+            <h3>Reaktionsgleichung</h3>
+            <div class="reaction">
+R-CHO + 2 [Ag(NH₃)₂]⁺ + 3 OH⁻ → R-COOH + 2 Ag↓ + 4 NH₃ + 2 H₂O
+            </div>
+            <p>
+                <a href="https://www.abiweb.de/organische-chemie/organische-verbindungen-typen-eigenschaften-und-reaktionen/carbonylverbindungenaldehydeketone/aldehyde/nachweisreaktion-der-aldehyde.html" target="_blank">(Quelle: Abiweb)</a>
+            </p>
+        </div>
+
+        <div class="card experiment">
+            <h2>6. Fehlingprobe – Aldehyd- und reduzierende Zucker-Nachweis</h2>
+            <h3>Prinzip</h3>
+            <p>
+                Aldehyde reduzieren <strong>Kupfer(II)-Ionen</strong> (aus Fehling-Lösung) zu rotem Kupfer(I)-oxid (Cu₂O). Die Lösung färbt sich von blau nach <strong>orangerot</strong>.
+            </p>
+            <h3>Durchführung</h3>
+            <p>
+                Die Probe wird mit Fehling-Lösung (I: CuSO₄, II: Kaliumnatriumtartrat + NaOH) versetzt und erhitzt. Ein orangeroter Niederschlag zeigt Aldehyde oder reduzierende Zucker an.
+            </p>
+            <h3>Reaktionsgleichung</h3>
+            <div class="reaction">
+R-CHO + 2 Cu²⁺ + 5 OH⁻ → R-COOH + Cu₂O↓ + 3 H₂O
+            </div>
+            <p>
+                Ketone reagieren nicht (Ausnahme: α-Hydroxyketone).
+            </p>
+            <p>
+                <a href="https://abitur-wissen.org/index.php/organische-chemie/880-organische-chemie-fehlingprobe-tollens-probe" target="_blank">(Quelle: Abitur-Wissen)</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>7. Zusammenfassung der wichtigsten Nachweise</h2>
+            <table>
+                <tr>
+                    <th>Nachweis</th>
+                    <th>Reagenz</th>
+                    <th>Positive Reaktion</th>
+                    <th>Nachgewiesene Stoffklasse/Element</th>
+                </tr>
+                <tr>
+                    <td>Wassernachweis</td>
+                    <td>Cobaltpapier (CuSO₄)</td>
+                    <td>Farbwechsel weiß → blau</td>
+                    <td>Wasser (H₂O)</td>
+                </tr>
+                <tr>
+                    <td>CO₂-Nachweis</td>
+                    <td>Barytwasser (Ba(OH)₂)</td>
+                    <td>Weiße Trübung (BaCO₃)</td>
+                    <td>Kohlenstoffdioxid (CO₂)</td>
+                </tr>
+                <tr>
+                    <td>Beilsteinprobe</td>
+                    <td>Kupferdraht</td>
+                    <td>Blaugrüne Flamme</td>
+                    <td>Halogene (Cl, Br, I)</td>
+                </tr>
+                <tr>
+                    <td>Tollensprobe</td>
+                    <td>[Ag(NH₃)₂]⁺</td>
+                    <td>Silberspiegel</td>
+                    <td>Aldehyde</td>
+                </tr>
+                <tr>
+                    <td>Fehlingprobe</td>
+                    <td>Cu²⁺ (Fehling-Lösung)</td>
+                    <td>Orangeroter Niederschlag (Cu₂O)</td>
+                    <td>Aldehyde, reduzierende Zucker</td>
+                </tr>
+            </table>
+        </div>
+
+        <footer>
+            <p>Quellen: Lernhelfer, Chemie-Schule, Learnattack, Abiweb, Abitur-Wissen</p>
+        </footer>
+    </div>
+    <script>
+        // 1. Systemeinstellungen prüfen und sofort anwenden (ohne Animation)
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            // Transition nach kurzer Verzögerung aktivieren
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        // 2. Modus manuell setzen (mit Animation)
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        // 3. Systemeinstellungen beim Laden anwenden
+        applySystemMode();
+
+        // 4. Nachrichten von der Hauptseite empfangen
+        window.addEventListener("message", function(event) {
+            // Dark/Light-Mode wechseln (mit Animation)
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            // Aktuellen Modus abfragen
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            // Sichtbaren Text zurücksenden
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        // 5. Hauptseite beim Laden über den aktuellen Modus informieren
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        // 6. Systemeinstellungen ändern (optional)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

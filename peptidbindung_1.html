@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemie-Abitur: Peptidbindung, Tripeptid, Hydrolyse & Proteineigenschaften</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        .dark-mode tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .dark-mode footer {
+            color: #aaa;
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Peptidbindung, Tripeptid, Hydrolyse & Proteineigenschaften</h1>
+            <p>Lernübersicht für das Abitur (Leistungskurs Chemie)</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Peptidbindung</span>
+            <span class="tag">Tripeptid</span>
+            <span class="tag">Hydrolyse</span>
+            <span class="tag">Proteineigenschaften</span>
+            <span class="tag">Aminosäuren</span>
+            <span class="tag">Primärstruktur</span>
+            <span class="tag">Sekundärstruktur</span>
+            <span class="tag">Tertiärstruktur</span>
+            <span class="tag">Quartärstruktur</span>
+            <span class="tag">Biuretreaktion</span>
+        </div>
+
+        <div class="card">
+            <h2>1. Peptidbindung</h2>
+            <p>
+                Die <span class="highlight">Peptidbindung</span> verbindet einzelne Aminosäuren miteinander und ist damit Voraussetzung zur Bildung von Peptidketten und Proteinen. Sie entsteht bei einer <span class="highlight">Kondensationsreaktion</span> unter Abspaltung von Wasser, wobei eine Peptidgruppe (-CO-NH-) gebildet wird. Formal reagiert die Carboxygruppe einer Aminosäure mit der Aminogruppe einer anderen Aminosäure:
+            </p>
+            <div class="reaction">
+R<sub>1</sub>-COOH + H<sub>2</sub>N-R<sub>2</sub> → R<sub>1</sub>-CO-NH-R<sub>2</sub> + H<sub>2</sub>O
+            </div>
+            <p>
+                Die Peptidbindung ist <span class="highlight">planar und starr</span>, da die C-N-Bindung einen partiellen Doppelbindungscharakter aufweist (Mesomerie). Die Bindungslänge beträgt 0,132 nm, und die Bindungswinkel betragen 120°.
+            </p>
+            <p>
+                <strong>Nachweis:</strong> Die <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/proteine-aufbau-und-eigenschaften" target="_blank">Biuretreaktion</a> weist Peptidbindungen nach: Bei Zugabe von Kaliumhydroxidlösung und Kupfersulfatlösung färbt sich die Lösung rotviolett, wenn Peptidbindungen vorhanden sind.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>2. Tripeptid</h2>
+            <p>
+                Ein <span class="highlight">Tripeptid</span> besteht aus drei Aminosäuren, die durch zwei Peptidbindungen verknüpft sind. Beispiel: <span class="highlight">Glutathion</span> (γ-L-Glutamyl-L-cysteinylglycin), ein wichtiges Tripeptid im menschlichen Organismus, das aus Glutaminsäure, Cystein und Glycin aufgebaut ist.
+            </p>
+            <p>
+                Tripeptide zählen zu den <span class="highlight">Oligopeptiden</span> (2–9 Aminosäuren). Die Benennung erfolgt nach der N-terminalen Aminosäure, gefolgt von den weiteren Aminosäuren in der Kette.
+            </p>
+            <p>
+                <strong>Beispiel:</strong> Alanylserylglycin (Ala-Ser-Gly)
+            </p>
+            <p>
+                <strong>Hydrolyse:</strong> Tripeptide können durch Hydrolyse (Wasseraufnahme) in ihre einzelnen Aminosäuren gespalten werden, z. B. unter Säure- oder Enzymkatalyse.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>3. Hydrolyse</h2>
+            <p>
+                Die <span class="highlight">Hydrolyse</span> ist die Spaltung einer chemischen Verbindung durch Reaktion mit Wasser. Bei Peptiden wird die Peptidbindung hydrolysiert, und die Aminosäuren werden freigesetzt:
+            </p>
+            <div class="reaction">
+R<sub>1</sub>-CO-NH-R<sub>2</sub> + H<sub>2</sub>O → R<sub>1</sub>-COOH + H<sub>2</sub>N-R<sub>2</sub>
+            </div>
+            <p>
+                Die Hydrolyse kann <span class="highlight">säurekatalysiert</span> (z. B. mit Salzsäure) oder <span class="highlight">enzymatisch</span> (z. B. bei der Verdauung) ablaufen. Sie ist die Umkehrreaktion der Kondensation.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>4. Eigenschaften von Proteinen</h2>
+            <h3>Strukturebenen</h3>
+            <table>
+                <tr>
+                    <th>Strukturebene</th>
+                    <th>Beschreibung</th>
+                    <th>Beispiel</th>
+                </tr>
+                <tr>
+                    <td>Primärstruktur</td>
+                    <td>Aminosäuresequenz, festgelegt durch Peptidbindungen</td>
+                    <td>Insulin (Phe-Val-Asn-Gln-...)</td>
+                </tr>
+                <tr>
+                    <td>Sekundärstruktur</td>
+                    <td>Räumliche Anordnung durch Wasserstoffbrücken (α-Helix, β-Faltblatt)</td>
+                    <td>α-Helix in Keratin</td>
+                </tr>
+                <tr>
+                    <td>Tertiärstruktur</td>
+                    <td>3D-Struktur durch Wechselwirkungen (Disulfidbrücken, Ionenbindungen, Van-der-Waals-Kräfte)</td>
+                    <td>Myoglobin</td>
+                </tr>
+                <tr>
+                    <td>Quartärstruktur</td>
+                    <td>Zusammenschluss mehrerer Polypeptidketten</td>
+                    <td>Hämoglobin (4 Untereinheiten)</td>
+                </tr>
+            </table>
+            <h3>Denaturierung</h3>
+            <p>
+                Proteine können durch Hitze, Säuren, Basen oder Schwermetalle <span class="highlight">denaturiert</span> werden, wobei die Sekundär-, Tertiär- und Quartärstruktur zerstört wird, die Primärstruktur jedoch erhalten bleibt.
+            </p>
+            <h3>Nachweisreaktionen</h3>
+            <ul>
+                <li><span class="highlight">Biuretreaktion</span>: Nachweis von Peptidbindungen (rotviolette Färbung)</li>
+                <li><span class="highlight">Xanthoproteinreaktion</span>: Nachweis aromatischer Aminosäuren (gelbe Färbung)</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Zusammenfassung</h2>
+            <ul>
+                <li><span class="highlight">Peptidbindung:</span> Verbindung zwischen Aminosäuren durch Kondensation, planar und starr</li>
+                <li><span class="highlight">Tripeptid:</span> Drei Aminosäuren, zwei Peptidbindungen, Beispiel: Glutathion</li>
+                <li><span class="highlight">Hydrolyse:</span> Spaltung von Peptidbindungen durch Wasser, Umkehrreaktion der Kondensation</li>
+                <li><span class="highlight">Proteineigenschaften:</span> Vier Strukturebenen, Denaturierung, Nachweis durch Biuretreaktion</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Quellen:
+                <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/eiweisse-proteine-aufbau-und-eigenschaften" target="_blank">Lernhelfer</a>,
+                <a href="https://www.abiweb.de/organische-chemie/naturstoffchemie/eiweisse.html" target="_blank">Abiweb</a>,
+                <a href="https://projekte.zum.de/wiki/Abiturwissen_Chemie_Oberstufe/Proteine/Peptide/Peptidbindung" target="_blank">ZUM Projektwiki</a>,
+                <a href="https://www.studysmarter.de/schule/chemie/biochemie/peptidbindung/" target="_blank">StudySmarter</a>
+            </p>
+        </footer>
+    </div>
+    <script>
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        applySystemMode();
+
+        window.addEventListener("message", function(event) {
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

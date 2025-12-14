@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nachweisreaktionen Chemie Abitur – Übersicht</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Nachweisreaktionen für das Chemie-Abitur (Leistungskurs)</h1>
+            <p>Übersicht zu Kationen-, Anionen- und organischen Nachweisen</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Kationennachweis</span>
+            <span class="tag">Anionennachweis</span>
+            <span class="tag">Flammenfärbung</span>
+            <span class="tag">Fehling-Probe</span>
+            <span class="tag">Tollens-Probe</span>
+            <span class="tag">Fällungsreaktion</span>
+            <span class="tag">Farbreaktion</span>
+            <span class="tag">Abitur</span>
+            <span class="tag">Leistungskurs</span>
+        </div>
+
+        <!-- Kationennachweise -->
+        <div class="card">
+            <h2>1. Kationennachweise</h2>
+            <p>Kationennachweise dienen dem qualitativen Nachweis von Metallionen in wässriger Lösung. Typische Methoden sind Flammenfärbung und Fällungsreaktionen.</p>
+
+            <h3>Flammenfärbung</h3>
+            <p>Charakteristische Flammenfarben beim Erhitzen von Metallsalzen in der Bunsenbrennerflamme:</p>
+            <table>
+                <tr>
+                    <th>Kation</th>
+                    <th>Flammenfarbe</th>
+                    <th>Beispiel</th>
+                </tr>
+                <tr>
+                    <td>Li<sup>+</sup></td>
+                    <td>Rot</td>
+                    <td>Lithiumchlorid (LiCl)</td>
+                </tr>
+                <tr>
+                    <td>Na<sup>+</sup></td>
+                    <td>Gelb</td>
+                    <td>Natriumchlorid (NaCl)</td>
+                </tr>
+                <tr>
+                    <td>K<sup>+</sup></td>
+                    <td>Violett</td>
+                    <td>Kaliumchlorid (KCl)</td>
+                </tr>
+                <tr>
+                    <td>Ca<sup>2+</sup></td>
+                    <td>Ziegelrot</td>
+                    <td>Calciumchlorid (CaCl<sub>2</sub>)</td>
+                </tr>
+                <tr>
+                    <td>Ba<sup>2+</sup></td>
+                    <td>Grün</td>
+                    <td>Bariumchlorid (BaCl<sub>2</sub>)</td>
+                </tr>
+                <tr>
+                    <td>Cu<sup>2+</sup></td>
+                    <td>Blaugrün</td>
+                    <td>Kupfer(II)-sulfat (CuSO<sub>4</sub>)</td>
+                </tr>
+            </table>
+            <p><strong>Hinweis:</strong> Natrium stört oft durch seine intensive Gelbfärbung. Ein Kobaltglas filtert das gelbe Licht heraus, um andere Farben besser zu erkennen.</p>
+            <p><em>Quelle: <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/flammenfaerbung">Lernhelfer</a>, <a href="https://www.chemie.de/lexikon/Nachweise_f%C3%BCr_Kationen.html">chemie.de</a></em></p>
+        </div>
+
+        <!-- Anionennachweise -->
+        <div class="card">
+            <h2>2. Anionennachweise</h2>
+            <p>Anionen werden meist durch Fällungsreaktionen oder Farbreaktionen nachgewiesen.</p>
+
+            <h3>Wichtige Nachweisreaktionen</h3>
+            <table>
+                <tr>
+                    <th>Anion</th>
+                    <th>Nachweisreagenz</th>
+                    <th>Beobachtung</th>
+                    <th>Reaktionsgleichung</th>
+                </tr>
+                <tr>
+                    <td>Cl<sup>-</sup></td>
+                    <td>AgNO<sub>3</sub> (Silbernitrat)</td>
+                    <td>Weißer Niederschlag (AgCl), löslich in NH<sub>3</sub></td>
+                    <td>Ag<sup>+</sup> + Cl<sup>-</sup> → AgCl↓</td>
+                </tr>
+                <tr>
+                    <td>SO<sub>4</sub><sup>2-</sup></td>
+                    <td>BaCl<sub>2</sub> (Bariumchlorid)</td>
+                    <td>Weißer Niederschlag (BaSO<sub>4</sub>), unlöslich in Säuren</td>
+                    <td>Ba<sup>2+</sup> + SO<sub>4</sub><sup>2-</sup> → BaSO<sub>4</sub>↓</td>
+                </tr>
+                <tr>
+                    <td>CO<sub>3</sub><sup>2-</sup></td>
+                    <td>HCl (Salzsäure)</td>
+                    <td>Gasentwicklung (CO<sub>2</sub>), Trübung von Kalkwasser</td>
+                    <td>CO<sub>3</sub><sup>2-</sup> + 2 H<sup>+</sup> → CO<sub>2</sub>↑ + H<sub>2</sub>O</td>
+                </tr>
+                <tr>
+                    <td>NO<sub>3</sub><sup>-</sup></td>
+                    <td>Fe<sup>2+</sup> + konz. H<sub>2</sub>SO<sub>4</sub></td>
+                    <td>Braunfärbung (NO<sub>2</sub>)</td>
+                    <td>NO<sub>3</sub><sup>-</sup> + 3 Fe<sup>2+</sup> + 4 H<sup>+</sup> → NO↑ + 3 Fe<sup>3+</sup> + 2 H<sub>2</sub>O</td>
+                </tr>
+            </table>
+            <p><em>Quelle: <a href="https://www.chemie-schule.de/KnowHow/Nachweise_f%C3%BCr_Anionen">Chemie-Schule</a>, <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/qualitative-anorganische-analyse">Lernhelfer</a></em></p>
+        </div>
+
+        <!-- Organische Nachweise -->
+        <div class="card">
+            <h2>3. Organische Nachweisreaktionen</h2>
+
+            <h3>Fehling-Probe</h3>
+            <p>Nachweis von Aldehyden und reduzierenden Zuckern:</p>
+            <ul>
+                <li><strong>Durchführung:</strong> Fehling-I (CuSO<sub>4</sub>) und Fehling-II (Kaliumnatriumtartrat) werden gemischt und erhitzt.</li>
+                <li><strong>Beobachtung:</strong> Rotbrauner Niederschlag (Cu<sub>2</sub>O) bei positivem Nachweis.</li>
+                <li><strong>Reaktionsgleichung:</strong>
+                    <div class="reaction">
+R-CHO + 2 Cu<sup>2+</sup> + 5 OH<sup>-</sup> → R-COOH + Cu<sub>2</sub>O↓ + 3 H<sub>2</sub>O
+                    </div>
+                </li>
+            </ul>
+
+            <h3>Tollens-Probe</h3>
+            <p>Nachweis von Aldehyden (Silberspiegelprobe):</p>
+            <ul>
+                <li><strong>Durchführung:</strong> Ammoniakalische Silbernitratlösung (Tollens-Reagenz) wird mit der Probe erhitzt.</li>
+                <li><strong>Beobachtung:</strong> Silberbelag am Reagenzglas (Ag↓).</li>
+                <li><strong>Reaktionsgleichung:</strong>
+                    <div class="reaction">
+R-CHO + 2 [Ag(NH<sub>3</sub>)<sub>2</sub>]<sup>+</sup> + 3 OH<sup>-</sup> → R-COOH + 2 Ag↓ + 4 NH<sub>3</sub> + 2 H<sub>2</sub>O
+                    </div>
+                </li>
+            </ul>
+            <p><em>Quelle: <a href="https://abitur-wissen.org/index.php/organische-chemie/880-organische-chemie-fehlingprobe-tollens-probe">Abitur-Wissen</a>, <a href="https://www.abiweb.de/organische-chemie/organische-verbindungen-typen-eigenschaften-und-reaktionen/carbonylverbindungenaldehydeketone/aldehyde/nachweisreaktion-der-aldehyde.html">abiweb.de</a></p>
+        </div>
+
+        <!-- Zusammenfassung -->
+        <div class="card">
+            <h2>4. Zusammenfassung der wichtigsten Nachweise</h2>
+            <ul>
+                <li><strong>Kationen:</strong> Flammenfärbung, Fällungsreaktionen (z. B. Cu<sup>2+</sup> mit NH<sub>3</sub> → tiefblauer Komplex)</li>
+                <li><strong>Anionen:</strong> Fällungsreaktionen (z. B. Cl<sup>-</sup> mit AgNO<sub>3</sub> → AgCl↓)</li>
+                <li><strong>Organisch:</strong> Fehling-Probe (Aldehyde), Tollens-Probe (Aldehyde), Iod-Stärke-Reaktion (Stärke)</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Quellen: <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur">Lernhelfer</a>, <a href="https://www.chemie-schule.de">Chemie-Schule</a>, <a href="https://abitur-wissen.org">Abitur-Wissen</a>, <a href="https://www.abiweb.de">abiweb.de</a></p>
+        </footer>
+    </div>
+    <script>
+        // 1. Systemeinstellungen prüfen und sofort anwenden (ohne Animation)
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        // 2. Modus manuell setzen (mit Animation)
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        // 3. Systemeinstellungen beim Laden anwenden
+        applySystemMode();
+
+        // 4. Nachrichten von der Hauptseite empfangen
+        window.addEventListener("message", function(event) {
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        // 5. Hauptseite beim Laden über den aktuellen Modus informieren
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        // 6. Systemeinstellungen ändern (optional)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

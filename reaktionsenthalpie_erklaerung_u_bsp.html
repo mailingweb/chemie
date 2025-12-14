@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reaktionsenthalpie & Hess'sches Gesetz – Chemie Abitur</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Reaktionsenthalpie & Hess'sches Gesetz</h1>
+            <p>Lernübersicht für das Chemie-Abitur (Leistungskurs)</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Reaktionsenthalpie</span>
+            <span class="tag">Hess'sches Gesetz</span>
+            <span class="tag">Standardbildungsenthalpie</span>
+            <span class="tag">Exotherm/Endotherm</span>
+            <span class="tag">Thermodynamik</span>
+            <span class="tag">Energetik</span>
+            <span class="tag">Abitur Chemie</span>
+        </div>
+
+        <div class="card">
+            <h2>1. Reaktionsenthalpie (Δ<sub>r</sub>H)</h2>
+            <p>
+                Die <span class="highlight">Reaktionsenthalpie</span> gibt die Wärmemenge an, die bei einer chemischen Reaktion unter konstantem Druck umgesetzt wird (freigesetzt oder aufgenommen).
+                Sie wird als Differenz der Enthalpien der Produkte und Edukte berechnet:
+            </p>
+            <div class="reaction">
+Δ<sub>r</sub>H° = Σ (ν<sub>i</sub> · Δ<sub>f</sub>H°<sub>Produkte</sub>) – Σ (ν<sub>j</sub> · Δ<sub>f</sub>H°<sub>Edukte</sub>)
+            </div>
+            <ul>
+                <li><span class="highlight">ν</span>: stöchiometrische Koeffizienten</li>
+                <li><span class="highlight">Δ<sub>f</sub>H°</span>: Standardbildungsenthalpie (bei 25 °C, 1 bar)</li>
+                <li><span class="highlight">Δ<sub>r</sub>H° < 0</span>: exotherme Reaktion (Energieabgabe)</li>
+                <li><span class="highlight">Δ<sub>r</sub>H° > 0</span>: endotherme Reaktion (Energieaufnahme)</li>
+            </ul>
+            <p>
+                <strong>Standardbedingungen:</strong> 25 °C, 1 bar, 1 Mol.
+                <strong>Elemente</strong> im stabilsten Zustand haben Δ<sub>f</sub>H° = 0 kJ/mol (z. B. O<sub>2</sub>(g), H<sub>2</sub>(g), C(Graphit)).
+            </p>
+            <p>
+                <strong>Beispiel:</strong> Verbrennung von Methan:
+            </p>
+            <div class="reaction">
+CH<sub>4</sub>(g) + 2 O<sub>2</sub>(g) → CO<sub>2</sub>(g) + 2 H<sub>2</sub>O(l)
+Δ<sub>r</sub>H° = [Δ<sub>f</sub>H°(CO<sub>2</sub>) + 2·Δ<sub>f</sub>H°(H<sub>2</sub>O)] – [Δ<sub>f</sub>H°(CH<sub>4</sub>) + 2·Δ<sub>f</sub>H°(O<sub>2</sub>)]
+= [-393,5 + 2·(-285,8)] – [-74,8 + 2·0] = -890,3 kJ/mol
+            </div>
+            <p>
+                <a href="https://abitur-wissen.org/index.php/anorganische-chemie/485-anorganische-chemie-freie-enthalpie-gibbs-helmholtz-und-reaktions-und-bildungsenthalpie" target="_blank">Quelle: Abitur-Wissen</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>2. Hess'sches Gesetz</h2>
+            <p>
+                Die Reaktionsenthalpie hängt <span class="highlight">nur vom Anfangs- und Endzustand</span> ab, nicht vom Reaktionsweg.
+                Damit lassen sich Enthalpien auch für Reaktionen berechnen, die experimentell schwer zugänglich sind.
+            </p>
+            <p>
+                <strong>Anwendung:</strong> Zerlegung komplexer Reaktionen in einfache Schritte, deren Enthalpien bekannt sind.
+            </p>
+            <p>
+                <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/hermann-heinrich-hess" target="_blank">Quelle: Lernhelfer</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>3. Standardbildungsenthalpie (Δ<sub>f</sub>H°)</h2>
+            <p>
+                Die Energie, die bei der Bildung von 1 Mol einer Verbindung aus ihren Elementen im Standardzustand umgesetzt wird.
+                <strong>Tabellenwerte</strong> sind essenziell für Berechnungen.
+            </p>
+            <table>
+                <tr>
+                    <th>Stoff</th>
+                    <th>Δ<sub>f</sub>H° (kJ/mol)</th>
+                </tr>
+                <tr>
+                    <td>CH<sub>4</sub>(g)</td>
+                    <td>-74,8</td>
+                </tr>
+                <tr>
+                    <td>CO<sub>2</sub>(g)</td>
+                    <td>-393,5</td>
+                </tr>
+                <tr>
+                    <td>H<sub>2</sub>O(l)</td>
+                    <td>-285,8</td>
+                </tr>
+                <tr>
+                    <td>O<sub>2</sub>(g)</td>
+                    <td>0</td>
+                </tr>
+            </table>
+            <p>
+                <a href="https://www.abiweb.de/chemie-energiechemie-thermodynamik/zustandsgroessen-der-energetik/die-vier-zustandsgroessen-und-ihre-regeln/reaktionsenergie-reaktionsenthalpie-berechnung.html" target="_blank">Quelle: Abiweb</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>4. Exotherme & Endotherme Reaktionen</h2>
+            <ul>
+                <li><span class="highlight">Exotherm:</span> Energie wird freigesetzt (ΔH < 0), z. B. Verbrennung.</li>
+                <li><span class="highlight">Endotherm:</span> Energie wird aufgenommen (ΔH > 0), z. B. Photosynthese.</li>
+            </ul>
+            <p>
+                <a href="https://www.lernhelfer.de/schuelerlexikon/chemie/kapitel/312-exotherme-und-endotherme-reaktionen" target="_blank">Quelle: Lernhelfer</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>5. Zusammenfassung & Tipps fürs Abitur</h2>
+            <ul>
+                <li>Immer die <span class="highlight">Reaktionsgleichung ausgleichen</span>.</li>
+                <li>Stöchiometrische Koeffizienten in der Enthalpie-Berechnung berücksichtigen.</li>
+                <li>Aggregatzustände beachten (z. B. H<sub>2</sub>O(l) vs. H<sub>2</sub>O(g)).</li>
+                <li>Tabellenwerte aus dem Tafelwerk entnehmen.</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Quellen: <a href="https://abitur-wissen.org" target="_blank">Abitur-Wissen</a>, <a href="https://www.lernhelfer.de" target="_blank">Lernhelfer</a>, <a href="https://www.abiweb.de" target="_blank">Abiweb</a></p>
+        </footer>
+    </div>
+    <script>
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+        applySystemMode();
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            document.body.classList.toggle("dark-mode", e.matches);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemie Abitur: pH-Wert, pKS/pKB, Säuren/Basen, Protolyte, Puffer</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .formula {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        .dark-mode tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .dark-mode footer {
+            color: #aaa;
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="no-transition">
+    <div class="container">
+        <header>
+            <h1>Chemie Abitur: pH-Wert, Säuren/Basen & Puffer</h1>
+            <p>Lernübersicht für den Leistungskurs</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">pH-Wert</span>
+            <span class="tag">pKS/pKB-Wert</span>
+            <span class="tag">starke/schwache Säuren/Basen</span>
+            <span class="tag">Logarithmus</span>
+            <span class="tag">Protolyte</span>
+            <span class="tag">Pufferlösung</span>
+            <span class="tag">Tafelwerk</span>
+        </div>
+
+        <!-- 1. pH-Wert Berechnung -->
+        <div class="card">
+            <h2>1. pH-Wert: Definition & Berechnung</h2>
+            <p>
+                Der <span class="highlight">pH-Wert</span> ist ein Maß für die Konzentration von H<sup>+</sup>-Ionen in einer Lösung.
+                Er gibt an, wie sauer oder basisch eine Lösung ist.
+            </p>
+            <div class="formula">
+pH = -log<sub>10</sub>([H<sup>+</sup>])<br>
+pOH = -log<sub>10</sub>([OH<sup>-</sup>])<br>
+pH + pOH = 14 (bei 25°C)
+            </div>
+            <p>
+                <strong>Beispiel:</strong> Bei [H<sup>+</sup>] = 10<sup>-3</sup> mol/L → pH = 3.
+            </p>
+        </div>
+
+        <!-- 2. pKS/pKB-Wert -->
+        <div class="card">
+            <h2>2. pKS- und pKB-Wert</h2>
+            <p>
+                Der <span class="highlight">pKS-Wert</span> beschreibt die Stärke einer Säure, der <span class="highlight">pKB-Wert</span> die einer Base.
+                Je kleiner der pKS-Wert, desto stärker die Säure.
+            </p>
+            <div class="formula">
+pKS = -log<sub>10</sub>(KS)<br>
+pKB = -log<sub>10</sub>(KB)<br>
+pKS + pKB = 14 (bei 25°C)
+            </div>
+            <p>
+                <strong>Tafelwerk:</strong> pKS-Werte werden in Tabellen angegeben (z. B. Essigsäure: pKS ≈ 4,75).
+            </p>
+        </div>
+
+        <!-- 3. Starke/schwache Säuren/Basen -->
+        <div class="card">
+            <h2>3. Starke vs. schwache Säuren/Basen</h2>
+            <table>
+                <tr>
+                    <th>Eigenschaft</th>
+                    <th>Starke Säure/Base</th>
+                    <th>Schwache Säure/Base</th>
+                </tr>
+                <tr>
+                    <td>Protolysegrad</td>
+                    <td>fast vollständig</td>
+                    <td>unvollständig</td>
+                </tr>
+                <tr>
+                    <td>pKS/pKB-Wert</td>
+                    <td>sehr klein (z. B. HCl: pKS ≈ -7)</td>
+                    <td>groß (z. B. NH<sub>3</sub>: pKB ≈ 4,75)</td>
+                </tr>
+                <tr>
+                    <td>Beispiele</td>
+                    <td>HCl, NaOH</td>
+                    <td>CH<sub>3</sub>COOH, NH<sub>3</sub></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 4. Logarithmus -->
+        <div class="card">
+            <h2>4. Logarithmus in der Chemie</h2>
+            <p>
+                Der <span class="highlight">Logarithmus</span> (Basis 10) wird zur Vereinfachung großer Zahlenbereiche genutzt.
+                Beispiel: pH-Wert-Skala (0–14) statt [H<sup>+</sup>]-Konzentration (1–10<sup>-14</sup> mol/L).
+            </p>
+            <div class="formula">
+log<sub>10</sub>(10<sup>-5</sup>) = -5 → pH = 5
+            </div>
+        </div>
+
+        <!-- 5. Protolyte -->
+        <div class="card">
+            <h2>5. Starke vs. schwache Protolyte</h2>
+            <p>
+                <span class="highlight">Starke Protolyte</span> (z. B. HCl) reagieren fast vollständig mit Wasser.
+                <span class="highlight">Schwache Protolyte</span> (z. B. CH<sub>3</sub>COOH) nur teilweise.
+            </p>
+            <p>
+                <strong>Gleichgewicht:</strong> CH<sub>3</sub>COOH + H<sub>2</sub>O ⇌ CH<sub>3</sub>COO<sup>-</sup> + H<sub>3</sub>O<sup>+</sup>
+            </p>
+        </div>
+
+        <!-- 6. Pufferlösung -->
+        <div class="card">
+            <h2>6. Pufferlösung</h2>
+            <p>
+                Puffer halten den pH-Wert bei Zugabe von Säure/Base konstant.
+                Bestehen aus einer <span class="highlight">schwachen Säure</span> und ihrer <span class="highlight">korrespondierenden Base</span> (z. B. CH<sub>3</sub>COOH/CH<sub>3</sub>COO<sup>-</sup>).
+            </p>
+            <div class="formula">
+pH = pKS - log<sub>10</sub>([Säure]/[Base]) (Henderson-Hasselbalch-Gleichung)
+            </div>
+        </div>
+
+        <footer>
+            <p>Typische Abiturinhalte – zur Vertiefung: Schulbuch, Tafelwerk oder <a href="https://www.lernhelfer.de" target="_blank">Lernhelfer Chemie</a></p>
+        </footer>
+    </div>
+
+    <script>
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) document.body.classList.add("dark-mode");
+            setTimeout(() => document.body.classList.remove("no-transition"), 10);
+        }
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+        applySystemMode();
+        window.addEventListener("message", function(event) {
+            if (event.data?.type === "setMode") setMode(event.data.mode);
+            else if (event.data?.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+        });
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

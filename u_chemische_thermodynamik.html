@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemische Thermodynamik – Lernübersicht für das Abitur</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        /* Deaktiviere Transitionen beim initialen Laden */
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .experiment {
+            margin-bottom: 30px;
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Chemische Thermodynamik – Lernübersicht für das Abitur</h1>
+            <p>Energien, Systeme und Energieumwandlungen im Überblick</p>
+        </header>
+
+        <!-- Subtile Themen-Tags -->
+        <div class="tags">
+            <span class="tag">Thermodynamik</span>
+            <span class="tag">Innere Energie</span>
+            <span class="tag">Zustandsgrößen</span>
+            <span class="tag">Systemarten</span>
+            <span class="tag">Energieumwandlung</span>
+            <span class="tag">Exotherm/Endotherm</span>
+            <span class="tag">Hauptsätze</span>
+            <span class="tag">Entropie</span>
+            <span class="tag">Reaktionsenthalpie</span>
+            <span class="tag">Abiturwissen</span>
+        </div>
+
+        <div class="card">
+            <h2>1. Energieformen in der Chemie</h2>
+            <p>
+                In der chemischen Thermodynamik unterscheidet man zwischen <span class="highlight">innerer Energie (U)</span> und <span class="highlight">äußerer Energie</span>. Die innere Energie umfasst alle Energieformen, die in einem System gespeichert sind, während die äußere Energie z. B. kinetische oder potenzielle Energie eines Systems als Ganzes bezeichnet.
+            </p>
+
+            <h3>1.1 Innere Energie (U)</h3>
+            <p>
+                Die innere Energie ist die <strong>Gesamtenergie aller Teilchen</strong> eines Systems und setzt sich zusammen aus:
+            </p>
+            <ul>
+                <li><span class="highlight">Chemische Energie (U<sub>ch</sub>)</span>: Energie der atomaren Bindungen und zwischenmolekularen Wechselwirkungen.</li>
+                <li><span class="highlight">Thermische Energie (U<sub>th</sub>)</span>: Bewegungsenergie der Teilchen (Translation, Rotation, Schwingung).</li>
+                <li><span class="highlight">Kernenergie (U<sub>K</sub>)</span>: Energie der Atomkerne (nicht Gegenstand der klassischen Chemie).</li>
+            </ul>
+            <p>
+                Die innere Energie ist eine <strong>Zustandsgröße</strong> und hängt von Druck, Volumen, Temperatur und Stoffmenge ab. Sie kann nicht absolut gemessen werden, nur ihre <span class="formula">Änderung (ΔU)</span> ist messbar:
+            </p>
+            <div class="reaction">
+ΔU = ΔQ + ΔW
+            </div>
+            <p>
+                (ΔQ = zugeführte Wärme, ΔW = verrichtete Arbeit)
+            </p>
+            <p>
+                <em>Quellen: <a href="https://www.abiweb.de/physikalische-chemie/chemische-thermodynamik/zustandsgroessen-und-ihre-regeln/innere-energie.html">abiweb.de</a>, <a href="https://www.lernhelfer.de/schuelerlexikon/physik-abitur/artikel/innere-energie">Lernhelfer</a>, <a href="https://www.chemie-schule.de/KnowHow/Innere_Energie">Chemie-Schule</a></em>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>2. Thermodynamische Systeme</h2>
+            <p>
+                Man unterscheidet drei Arten von Systemen, die für Energieumwandlungen relevant sind:
+            </p>
+            <table>
+                <tr>
+                    <th>Systemart</th>
+                    <th>Stoffaustausch</th>
+                    <th>Energieaustausch</th>
+                    <th>Beispiel</th>
+                </tr>
+                <tr>
+                    <td>Offenes System</td>
+                    <td>Ja</td>
+                    <td>Ja</td>
+                    <td>Reagenzglas ohne Stopfen</td>
+                </tr>
+                <tr>
+                    <td>Geschlossenes System</td>
+                    <td>Nein</td>
+                    <td>Ja</td>
+                    <td>Verschlossener Erlenmeyerkolben</td>
+                </tr>
+                <tr>
+                    <td>Abgeschlossenes System</td>
+                    <td>Nein</td>
+                    <td>Nein</td>
+                    <td>Thermoskanne</td>
+                </tr>
+            </table>
+            <p>
+                <em>Quellen: <a href="https://www.abiweb.de/lernen/Thermodynamik">abiweb.de</a>, <a href="https://chemie-schule.de/KnowHow/Thermodynamik">Chemie-Schule</a></em>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>3. Energieumwandlungen bei chemischen Reaktionen</h2>
+            <p>
+                Chemische Reaktionen sind immer mit <span class="highlight">Stoff- und Energieumwandlungen</span> verbunden. Die Art der Energieumwandlung bestimmt, ob eine Reaktion <span class="highlight">exotherm</span> (Energieabgabe) oder <span class="highlight">endotherm</span> (Energieaufnahme) verläuft.
+            </p>
+            <h3>3.1 Beispiele für Energieumwandlungen</h3>
+            <ul>
+                <li><strong>Verbrennung von Holz:</strong> Chemische Energie → Thermische Energie + Lichtenergie</li>
+                <li><strong>Elektrolyse von Wasser:</strong> Elektrische Energie → Chemische Energie (Wasserstoff, Sauerstoff)</li>
+                <li><strong>Bleiakkumulator:</strong> Chemische Energie → Elektrische Energie</li>
+                <li><strong>Atomkraftwerk:</strong> Kernenergie → Elektrische Energie</li>
+            </ul>
+            <p>
+                Die <span class="highlight">Reaktionsenthalpie (ΔH)</span> beschreibt die bei konstantem Druck ausgetauschte Wärmeenergie:
+            </p>
+            <div class="reaction">
+ΔH = H(Produkte) – H(Edukte)
+            </div>
+            <p>
+                <em>Quellen: <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/chemische-reaktionen">Lernhelfer</a>, <a href="https://knowunity.de/knows/chemie-chemische-thermodynamik-4411c0f7-1f55-4323-84ec-3f00f27def6e">Knowunity</a>, <a href="https://www.helles-koepfchen.de/?suche=energieumwandlungen">Helles Köpfchen</a></em>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>4. Hauptsätze der Thermodynamik</h2>
+            <h3>4.1 Erster Hauptsatz (Energieerhaltungssatz)</h3>
+            <p>
+                Energie kann weder erzeugt noch vernichtet, sondern nur umgewandelt werden:
+            </p>
+            <div class="reaction">
+ΔU = Q + W
+            </div>
+            <h3>4.2 Zweiter Hauptsatz (Entropie)</h3>
+            <p>
+                In einem abgeschlossenen System nimmt die <span class="highlight">Entropie (S)</span> (Maß für Unordnung) bei irreversiblen Prozessen zu.
+            </p>
+            <p>
+                <em>Quellen: <a href="https://abitur-wissen.org/index.php/chemie-abitur/37-physikalische-chemie/913-physikalische-chemie-die-grundlagen-der-thermodynamik">Abitur-Wissen</a>, <a href="https://knowunity.de/knows/chemie-thermodynamik-9dee0aed-9b1d-4c2e-9091-5d1972cfc80a">Knowunity</a></em>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>5. Einflussfaktoren auf Energieumwandlungen</h2>
+            <p>
+                Die Art der Reaktion, die Reaktionsbedingungen (Druck, Temperatur) und die Wahl der Edukte beeinflussen die Energieumwandlung. So kann z. B. eine Reaktion durch Katalysatoren beschleunigt werden, ohne dass sich die Thermodynamik ändert.
+            </p>
+            <p>
+                <em>Quellen: <a href="https://www.abiweb.de/kursinhalte/physikalische-chemie/chemische-thermodynamik">abiweb.de</a>, <a href="https://www.studysmarter.de/ausbildung/ausbildung-in-chemie/physiklaborant-ausbildung/energieformen/">StudySmarter</a></em>
+            </p>
+        </div>
+
+        <footer>
+            <p>Zusammenstellung nach den aktuellen Abiturstandards (2025) – Für den Leistungskurs Chemie.</p>
+        </footer>
+    </div>
+    <script>
+        // 1. Systemeinstellungen prüfen und sofort anwenden (ohne Animation)
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            // Transition nach kurzer Verzögerung aktivieren
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        // 2. Modus manuell setzen (mit Animation)
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        // 3. Systemeinstellungen beim Laden anwenden
+        applySystemMode();
+
+        // 4. Nachrichten von der Hauptseite empfangen
+        window.addEventListener("message", function(event) {
+            // Dark/Light-Mode wechseln (mit Animation)
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            // Aktuellen Modus abfragen
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            // Sichtbaren Text zurücksenden
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        // 5. Hauptseite beim Laden über den aktuellen Modus informieren
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        // 6. Systemeinstellungen ändern (optional)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantitative Elementaranalyse: Kupfer(II)-oxid, Glucose, Calciumchlorid & Kolbenprober</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .experiment {
+            margin-bottom: 30px;
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="no-transition">
+    <div class="container">
+        <header>
+            <h1>Quantitative Elementaranalyse: Kupfer(II)-oxid, Glucose, Calciumchlorid & Kolbenprober</h1>
+            <p>Lernübersicht für das Abitur (Leistungskurs Chemie)</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Elementaranalyse</span>
+            <span class="tag">Kupfer(II)-oxid</span>
+            <span class="tag">Glucose</span>
+            <span class="tag">Calciumchlorid</span>
+            <span class="tag">Kolbenprober</span>
+            <span class="tag">Redoxreaktion</span>
+            <span class="tag">CHN-Analyse</span>
+            <span class="tag">Versuchsaufbau</span>
+            <span class="tag">Reaktionsgleichungen</span>
+        </div>
+
+        <div class="card">
+            <h2>1. Prinzip der quantitativen Elementaranalyse</h2>
+            <p>
+                Die <strong>quantitative Elementaranalyse</strong> dient der Bestimmung der prozentualen Anteile von Kohlenstoff, Wasserstoff, Sauerstoff und Stickstoff in organischen Verbindungen. Dabei wird eine genau abgewogene Probe im Sauerstoffstrom an glühendem <strong>Kupfer(II)-oxid (CuO)</strong> als Katalysator verbrannt. Kupfer(II)-oxid wirkt hier als <strong>Reduktionsmittel für Sauerstoff</strong> und oxidiert gleichzeitig die Probe:
+            </p>
+            <ul>
+                <li><strong>Kohlenstoff</strong> → Kohlenstoffdioxid (CO₂)</li>
+                <li><strong>Wasserstoff</strong> → Wasser (H₂O)</li>
+            </ul>
+            <p>
+                Die entstehenden Gase werden in Absorptionsgefäßen gebunden:
+            </p>
+            <ul>
+                <li><strong>Wasser</strong> wird von <strong>Calciumchlorid (CaCl₂)</strong> absorbiert (Massezunahme).</li>
+                <li><strong>Kohlenstoffdioxid</strong> wird von Natronkalk (NaOH/Ca(OH)₂) absorbiert (Massezunahme).</li>
+            </ul>
+            <p>
+                Aus den Massezunahmen lassen sich die Stoffmengen der Elemente berechnen und die <strong>Verhältnisformel</strong> der Verbindung bestimmen.
+            </p>
+            <p>
+                <strong>Bedeutung:</strong> Die Methode ist essenziell für die Strukturaufklärung organischer Stoffe und wird seit Justus von Liebig (1831) genutzt. Sie ermöglicht die Berechnung der Summenformel aus den Massenanteilen der Elemente.
+            </p>
+            <p>
+                <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/quantitative-elementaranalyse-organischer-verbindungen" target="_blank">(Quelle: Lernhelfer)</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>2. Versuchsaufbau mit Kolbenprober</h2>
+            <p>
+                Der <strong>Kolbenprober</strong> dient zur Messung des Volumens entstehender Gase (z. B. CO₂) bei der Verbrennung. Der Aufbau besteht aus:
+            </p>
+            <ul>
+                <li>Verbrennungsrohr mit glühendem CuO</li>
+                <li>U-Rohre mit Calciumchlorid (Wasserabsorption) und Natronkalk (CO₂-Absorption)</li>
+                <li>Kolbenprober zur Volumenmessung des Gases</li>
+            </ul>
+            <p>
+                <strong>Funktion:</strong> Der Kolbenprober misst die Volumenänderung des Gases bei der Reaktion. Wichtig ist, dass er <strong>nicht vertikal</strong> eingespannt wird, um Messfehler zu vermeiden.
+            </p>
+            <p>
+                <a href="https://www.chemie-schule.de/KnowHow/Kolbenprober" target="_blank">(Quelle: Chemie-Schule)</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>3. Chemische Reaktionen</h2>
+            <h3>a) Reduktion von Kupfer(II)-oxid mit Glucose</h3>
+            <p>
+                Glucose (Aldehyd) reduziert CuO zu elementarem Kupfer (Cu), wobei die Aldehydgruppe zur Carbonsäure oxidiert wird:
+            </p>
+            <div class="reaction">
+CuO (s) + R-CHO (aq) → Cu (s) + R-COOH (aq)
+            </div>
+            <p>
+                <strong>Beobachtung:</strong> Das schwarze CuO färbt sich nach der Reaktion kupferrot (elementares Cu).
+            </p>
+            <p>
+                <a href="http://unterrichtsmaterialien-chemie.uni-goettingen.de/exp_neu.php?id=1871" target="_blank">(Quelle: Unterrichtsmaterialien Chemie)</a>
+            </p>
+
+            <h3>b) Oxidation von Kohlenstoff zu CO₂</h3>
+            <p>
+                Bei der Verbrennung organischer Substanzen (z. B. Glucose, C₆H₁₂O₆) mit CuO entsteht CO₂ und H₂O:
+            </p>
+            <div class="reaction">
+C₆H₁₂O₆ + 12 CuO → 6 CO₂ + 6 H₂O + 12 Cu
+            </div>
+            <p>
+                <strong>Beobachtung:</strong> Volumenänderung im Kolbenprober durch CO₂-Entwicklung.
+            </p>
+            <p>
+                <a href="http://www.unterrichtsmaterialien-chemie.uni-goettingen.de/material/11-12/V11-416.pdf" target="_blank">(Quelle: Unterrichtsmaterialien Chemie)</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>4. Beobachtungen und Auswertung</h2>
+            <table>
+                <tr>
+                    <th>Substanz</th>
+                    <th>Beobachtung</th>
+                    <th>Auswertung</th>
+                </tr>
+                <tr>
+                    <td>Kupfer(II)-oxid</td>
+                    <td>Farbwechsel von schwarz (CuO) zu rot (Cu)</td>
+                    <td>Reduktion von Cu²⁺ zu Cu⁰</td>
+                </tr>
+                <tr>
+                    <td>Calciumchlorid</td>
+                    <td>Massezunahme</td>
+                    <td>Absorption von H₂O → Bestimmung des Wasserstoffgehalts</td>
+                </tr>
+                <tr>
+                    <td>Natronkalk</td>
+                    <td>Massezunahme</td>
+                    <td>Absorption von CO₂ → Bestimmung des Kohlenstoffgehalts</td>
+                </tr>
+                <tr>
+                    <td>Kolbenprober</td>
+                    <td>Volumenänderung</td>
+                    <td>Messung des entstehenden CO₂-Volumens</td>
+                </tr>
+            </table>
+            <p>
+                <strong>Berechnung:</strong> Aus den Massen der Absorptionsgefäße und dem Gasvolumen werden die Massenanteile der Elemente berechnet und die Summenformel abgeleitet.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>5. Zusammenfassung der Lerninhalte</h2>
+            <ul>
+                <li><strong>Kupfer(II)-oxid</strong> dient als Sauerstofflieferant und Katalysator.</li>
+                <li><strong>Glucose</strong> wird oxidiert, CuO reduziert.</li>
+                <li><strong>Calciumchlorid</strong> bindet Wasser, Natronkalk CO₂.</li>
+                <li><strong>Kolbenprober</strong> misst das Gasvolumen.</li>
+                <li><strong>Bedeutung:</strong> Die Methode ist grundlegend für die analytische Chemie und die Strukturaufklärung.</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Quellen: Lernhelfer, Chemie-Schule, Unterrichtsmaterialien Chemie (Uni Göttingen)</p>
+        </footer>
+    </div>
+    <script>
+        // 1. Systemeinstellungen prüfen und sofort anwenden (ohne Animation)
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            // Transition nach kurzer Verzögerung aktivieren
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        // 2. Modus manuell setzen (mit Animation)
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        // 3. Systemeinstellungen beim Laden anwenden
+        applySystemMode();
+
+        // 4. Nachrichten von der Hauptseite empfangen
+        window.addEventListener("message", function(event) {
+            // Dark/Light-Mode wechseln (mit Animation)
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            // Aktuellen Modus abfragen
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            // Sichtbaren Text zurücksenden
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        // 5. Hauptseite beim Laden über den aktuellen Modus informieren
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        // 6. Systemeinstellungen ändern (optional)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

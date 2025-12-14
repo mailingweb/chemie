@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemisches Gleichgewicht & Massenwirkungsgesetz – Abitur Chemie</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .experiment {
+            margin-bottom: 30px;
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .formula {
+            font-family: 'Courier New', monospace;
+            font-size: 1.1em;
+            background-color: var(--code-bg);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="no-transition">
+    <div class="container">
+        <header>
+            <h1>Chemisches Gleichgewicht & Massenwirkungsgesetz</h1>
+            <p>Lernübersicht für das Abitur (Leistungskurs Chemie)</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Chemisches Gleichgewicht</span>
+            <span class="tag">Massenwirkungsgesetz</span>
+            <span class="tag">Esterbildung</span>
+            <span class="tag">Gleichgewichtskonstante K<sub>c</sub></span>
+            <span class="tag">Temperatur & Druck</span>
+            <span class="tag">Stoffmengenberechnung</span>
+            <span class="tag">Prinzip von Le Chatelier</span>
+        </div>
+
+        <!-- 1. Chemisches Gleichgewicht & MWG -->
+        <div class="card">
+            <h2>1. Chemisches Gleichgewicht & Massenwirkungsgesetz</h2>
+            <p>
+                Ein <span class="highlight">chemisches Gleichgewicht</span> liegt vor, wenn in einem geschlossenen System die Hin- und Rückreaktion mit gleicher Geschwindigkeit ablaufen.
+                Die Konzentrationen der Reaktionspartner bleiben dann konstant.
+            </p>
+            <p>
+                Das <span class="highlight">Massenwirkungsgesetz (MWG)</span> beschreibt das Gleichgewicht quantitativ:
+                Für eine Reaktion <span class="formula">aA + bB ⇌ cC + dD</span> gilt:
+            </p>
+            <div class="reaction">
+K<sub>c</sub> = ([C]<sup>c</sup> · [D]<sup>d</sup>) / ([A]<sup>a</sup> · [B]<sup>b</sup>)
+            </div>
+            <p>
+                <span class="highlight">K<sub>c</sub></span> ist die <strong>Gleichgewichtskonstante</strong> und hängt nur von der Temperatur ab.
+                Sie gibt das Verhältnis der Produkt- zu Eduktkonzentrationen im Gleichgewicht an.
+            </p>
+        </div>
+
+        <!-- 2. Esterbildung -->
+        <div class="card">
+            <h2>2. Esterbildung: Säure + Alkohol ⇌ Ester + Wasser</h2>
+            <p>
+                Beispiel: Essigsäure + Ethanol ⇌ Ethylacetat + Wasser
+            </p>
+            <div class="reaction">
+CH<sub>3</sub>COOH + C<sub>2</sub>H<sub>5</sub>OH ⇌ CH<sub>3</sub>COOC<sub>2</sub>H<sub>5</sub> + H<sub>2</sub>O
+            </p>
+            <p>
+                Die Reaktion ist reversibel und stellt sich im Gleichgewicht ein.
+                Die Gleichgewichtskonstante <span class="highlight">K<sub>c</sub></span> für diese Reaktion ist:
+            </p>
+            <div class="reaction">
+K<sub>c</sub> = ([Ethylacetat] · [H<sub>2</sub>O]) / ([Essigsäure] · [Ethanol])
+            </div>
+        </div>
+
+        <!-- 3. Berechnung von Kc -->
+        <div class="card">
+            <h2>3. Berechnung der Gleichgewichtskonstante K<sub>c</sub></h2>
+            <p>
+                <span class="highlight">K<sub>c</sub></span> wird berechnet, indem die Gleichgewichtskonzentrationen der Produkte durch die der Edukte geteilt werden,
+                jeweils potenziert mit ihren stöchiometrischen Koeffizienten.
+            </p>
+            <p>
+                <strong>Aussage:</strong>
+                <ul>
+                    <li>K<sub>c</sub> >> 1: Gleichgewicht liegt auf der Produktseite</li>
+                    <li>K<sub>c</sub> << 1: Gleichgewicht liegt auf der Eduktseite</li>
+                    <li>K<sub>c</sub> ≈ 1: Edukte und Produkte liegen in vergleichbaren Mengen vor</li>
+                </ul>
+            </p>
+            <p>
+                <strong>Beispiel:</strong> Bei 25°C ist K<sub>c</sub> für die Esterbildung oft klein (≈ 4),
+                d.h. die Ausbeute an Ester ist gering.
+            </p>
+        </div>
+
+        <!-- 4. Stoffmengenberechnung -->
+        <div class="card">
+            <h2>4. Mol, molare Masse & Gewicht</h2>
+            <p>
+                <strong>Mol (n):</strong> Stoffmenge, 1 mol = 6,022 · 10<sup>23</sup> Teilchen (Avogadro-Konstante)
+            </p>
+            <p>
+                <strong>Molare Masse (M):</strong> Masse von 1 mol eines Stoffes (Einheit: g/mol)
+            </p>
+            <p>
+                <strong>Berechnung:</strong>
+            </p>
+            <div class="reaction">
+n = m / M
+            </div>
+            <p>
+                <strong>Beispiel:</strong> 1 mol Ethanol (C<sub>2</sub>H<sub>5</sub>OH) hat eine molare Masse von 46 g/mol.
+                23 g Ethanol entsprechen also:
+            </p>
+            <div class="reaction">
+n = 23 g / 46 g/mol = 0,5 mol
+            </div>
+        </div>
+
+        <!-- 5. Einfluss von Temperatur & Druck -->
+        <div class="card">
+            <h2>5. Einfluss von Temperatur und Druck</h2>
+
+            <h3>Temperatur:</h3>
+            <table>
+                <tr>
+                    <th>Änderung</th>
+                    <th>Exotherme Reaktion</th>
+                    <th>Endotherme Reaktion</th>
+                </tr>
+                <tr>
+                    <td>Temperatur ↑</td>
+                    <td>Gleichgewicht verschiebt sich nach <strong>links</strong> (mehr Edukte)</td>
+                    <td>Gleichgewicht verschiebt sich nach <strong>rechts</strong> (mehr Produkte)</td>
+                </tr>
+                <tr>
+                    <td>Temperatur ↓</td>
+                    <td>Gleichgewicht verschiebt sich nach <strong>rechts</strong> (mehr Produkte)</td>
+                    <td>Gleichgewicht verschiebt sich nach <strong>links</strong> (mehr Edukte)</td>
+                </tr>
+            </table>
+
+            <h3>Druck (nur bei Gasreaktionen):</h3>
+            <table>
+                <tr>
+                    <th>Änderung</th>
+                    <th>Weniger Gasmoleküle auf der Produktseite</th>
+                    <th>Mehr Gasmoleküle auf der Produktseite</th>
+                </tr>
+                <tr>
+                    <td>Druck ↑</td>
+                    <td>Gleichgewicht verschiebt sich nach <strong>rechts</strong></td>
+                    <td>Gleichgewicht verschiebt sich nach <strong>links</strong></td>
+                </tr>
+                <tr>
+                    <td>Druck ↓</td>
+                    <td>Gleichgewicht verschiebt sich nach <strong>links</strong></td>
+                    <td>Gleichgewicht verschiebt sich nach <strong>rechts</strong></td>
+                </tr>
+            </table>
+            <p>
+                <strong>Prinzip von Le Chatelier:</strong>
+                Wird ein System im Gleichgewicht gestört, reagiert es so, dass die Störung minimiert wird.
+            </p>
+        </div>
+
+        <footer>
+            <p>Quellen: Standardlehrwerke für das Chemie-Abitur (Stand 2024)</p>
+        </footer>
+    </div>
+
+    <script>
+        // 1. Systemeinstellungen prüfen und sofort anwenden (ohne Animation)
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            // Transition nach kurzer Verzögerung aktivieren
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        // 2. Modus manuell setzen (mit Animation)
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        // 3. Systemeinstellungen beim Laden anwenden
+        applySystemMode();
+
+        // 4. Nachrichten von der Hauptseite empfangen
+        window.addEventListener("message", function(event) {
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        // 5. Hauptseite beim Laden über den aktuellen Modus informieren
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        // 6. Systemeinstellungen ändern (optional)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

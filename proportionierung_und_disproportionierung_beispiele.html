@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proportionierung, Disproportionierung & Autokatalyse – Chemie Abitur</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .experiment {
+            margin-bottom: 30px;
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="no-transition">
+    <div class="container">
+        <header>
+            <h1>Proportionierung, Disproportionierung & Autokatalyse</h1>
+            <p>Lernübersicht für das Abitur (Leistungskurs Chemie)</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Proportionierung</span>
+            <span class="tag">Disproportionierung</span>
+            <span class="tag">Autokatalyse</span>
+            <span class="tag">Redoxreaktion</span>
+            <span class="tag">KMnO₄</span>
+            <span class="tag">Braunstein</span>
+            <span class="tag">Chlor</span>
+            <span class="tag">Oxidationszahlen</span>
+        </div>
+
+        <div class="card">
+            <h2>1. Proportionierung (Komproportionierung)</h2>
+            <h3>Definition</h3>
+            <p>Bei der <strong>Proportionierung</strong> (auch Komproportionierung oder Synproportionierung) reagieren zwei verschiedene Oxidationsstufen eines Elements miteinander und bilden eine dazwischenliegende Oxidationsstufe. Es handelt sich um eine Redoxreaktion, bei der gleichzeitig eine Reduktion und eine Oxidation stattfinden.</p>
+            <p><strong>Beispiel:</strong> Iodid (I<sup>–</sup>) und Iodat (IO<sub>3</sub><sup>–</sup>) reagieren in saurer Lösung zu elementarem Iod (I<sub>2</sub>):</p>
+            <div class="reaction">
+IO<sub>3</sub><sup>–</sup> + 5 I<sup>–</sup> + 6 H<sup>+</sup> → 3 I<sub>2</sub> + 3 H<sub>2</sub>O
+            </div>
+            <p><a href="https://www.abiweb.de/anorganische-chemie/donator-akzeptor-prinzip/redox-chemie/dis-und-komproportionierung.html" target="_blank">(Quelle: Abiweb)</a></p>
+        </div>
+
+        <div class="card">
+            <h2>2. Disproportionierung</h2>
+            <h3>Definition</h3>
+            <p>Bei der <strong>Disproportionierung</strong> wird ein Element in einer mittleren Oxidationsstufe gleichzeitig oxidiert und reduziert, sodass Produkte mit einer höheren und einer niedrigeren Oxidationsstufe entstehen.</p>
+            <p><strong>Beispiel Chlor in Natronlauge:</strong></p>
+            <div class="reaction">
+Cl<sub>2</sub> + 2 OH<sup>–</sup> → Cl<sup>–</sup> + ClO<sup>–</sup> + H<sub>2</sub>O
+            </div>
+            <p>Hier wird Chlor (Oxidationszahl 0) zu Chlorid (–I) reduziert und zu Hypochlorit (+I) oxidiert.</p>
+            <p><a href="https://www.chemie-schule.de/KnowHow/Disproportionierung" target="_blank">(Quelle: Chemie-Schule)</a></p>
+            <p><strong>Beispiel Chlor zu Chlorat und Chlorid:</strong></p>
+            <div class="reaction">
+3 ClO<sup>–</sup> → ClO<sub>3</sub><sup>–</sup> + 2 Cl<sup>–</sup>
+            </div>
+            <p><a href="https://tu-braunschweig.de/index.php?eID=dumpFile&f=57131&t=f&token=4133bd4b36a27753cb43cf7530bc2df78be38238" target="_blank">(Quelle: TU Braunschweig)</a></p>
+        </div>
+
+        <div class="card">
+            <h2>3. Autokatalyse am Beispiel KMnO₄ und Braunstein</h2>
+            <h3>Definition</h3>
+            <p>Bei der <strong>Autokatalyse</strong> wird der Katalysator erst während der Reaktion gebildet, was zu einer Beschleunigung führt. Ein klassisches Beispiel ist die Reaktion von Kaliumpermanganat (KMnO₄) mit Oxalsäure:</p>
+            <div class="reaction">
+MnO<sub>4</sub><sup>–</sup> + 8 H<sup>+</sup> + 5 e<sup>–</sup> → Mn<sup>2+</sup> + 4 H<sub>2</sub>O
+            </div>
+            <p>Die gebildeten Mn<sup>2+</sup>-Ionen katalysieren die weitere Reaktion. Im basischen Milieu entsteht Braunstein (MnO<sub>2</sub>):</p>
+            <div class="reaction">
+MnO<sub>4</sub><sup>–</sup> + 2 H<sub>2</sub>O + 3 e<sup>–</sup> → MnO<sub>2</sub> + 4 OH<sup>–</sup>
+            </div>
+            <p><a href="https://www.chemieunterricht.de/dc2/os/os-kmno4.htm" target="_blank">(Quelle: Chemieunterricht.de)</a></p>
+        </div>
+
+        <div class="card">
+            <h2>4. Zusammenfassung der Lerninhalte</h2>
+            <ul>
+                <li><strong>Proportionierung:</strong> Zwei Oxidationsstufen → mittlere Stufe (z. B. I<sup>–</sup> + IO<sub>3</sub><sup>–</sup> → I<sub>2</sub>)</li>
+                <li><strong>Disproportionierung:</strong> Eine mittlere Stufe → höhere + niedrigere Stufe (z. B. Cl<sub>2</sub> → Cl<sup>–</sup> + ClO<sup>–</sup>)</li>
+                <li><strong>Autokatalyse:</strong> Katalysator entsteht während der Reaktion (z. B. Mn<sup>2+</sup> bei KMnO₄-Reduktion)</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Quellen: <a href="https://www.abiweb.de/anorganische-chemie/donator-akzeptor-prinzip/redox-chemie/dis-und-komproportionierung.html" target="_blank">Abiweb</a>, <a href="https://www.chemie-schule.de/KnowHow/Disproportionierung" target="_blank">Chemie-Schule</a>, <a href="https://www.chemieunterricht.de/dc2/os/os-kmno4.htm" target="_blank">Chemieunterricht.de</a>, <a href="https://tu-braunschweig.de/index.php?eID=dumpFile&f=57131&t=f&token=4133bd4b36a27753cb43cf7530bc2df78be38238" target="_blank">TU Braunschweig</a></p>
+        </footer>
+    </div>
+    <script>
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+        applySystemMode();
+        window.addEventListener("message", function(event) {
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

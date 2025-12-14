@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thermodynamik: Systeme, Energieerhaltung & Energieumwandlung</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        /* Deaktiviere Transitionen beim initialen Laden */
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .experiment {
+            margin-bottom: 30px;
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Thermodynamik: Systeme, Energieerhaltung & Energieumwandlung</h1>
+            <p>Lernübersicht für das Abitur (Leistungskurs Chemie)</p>
+        </header>
+
+        <!-- Subtile Themen-Tags -->
+        <div class="tags">
+            <span class="tag">Thermodynamik</span>
+            <span class="tag">Systemarten</span>
+            <span class="tag">Energieerhaltung</span>
+            <span class="tag">Erster Hauptsatz</span>
+            <span class="tag">Innere Energie</span>
+            <span class="tag">Energieumwandlung</span>
+            <span class="tag">Exotherm/Endotherm</span>
+            <span class="tag">Perpetuum Mobile</span>
+            <span class="tag">Abiturwissen</span>
+        </div>
+
+        <div class="card">
+            <h2>1. Stoffliche Systeme: Offen, geschlossen, abgeschlossen</h2>
+            <table>
+                <tr>
+                    <th>Systemart</th>
+                    <th>Stoffaustausch</th>
+                    <th>Energieaustausch</th>
+                    <th>Beispiel</th>
+                </tr>
+                <tr>
+                    <td><span class="highlight">Offenes System</span></td>
+                    <td>Möglich (Stoffe können ein- und austreten)</td>
+                    <td>Möglich (Wärme, Arbeit)</td>
+                    <td>Kochtopf ohne Deckel, lebende Zelle, Verbrennung im offenen Reagenzglas</td>
+                </tr>
+                <tr>
+                    <td><span class="highlight">Geschlossenes System</span></td>
+                    <td>Nicht möglich</td>
+                    <td>Möglich (z. B. Wärme durch Glaswand)</td>
+                    <td>Druckkochtopf, verschlossener Erlenmeyerkolben, Kühlschrank</td>
+                </tr>
+                <tr>
+                    <td><span class="highlight">Abgeschlossenes System</span></td>
+                    <td>Nicht möglich</td>
+                    <td>Nicht möglich (isoliert)</td>
+                    <td>Perfekt isolierte Thermoskanne, Universum</td>
+                </tr>
+            </table>
+            <p><strong>Bedeutung für Energie- und Stoffaustausch:</strong> Offene Systeme tauschen Materie und Energie mit der Umgebung aus, geschlossene nur Energie, abgeschlossene weder noch. In der Chemie sind offene und geschlossene Systeme besonders relevant, da Reaktionen oft Wärme oder Gase freisetzen oder benötigen.</p>
+        </div>
+
+        <div class="card">
+            <h2>2. Erster Hauptsatz der Thermodynamik (Energieerhaltungssatz)</h2>
+            <p><span class="highlight">Aussage:</span> Energie kann weder erschaffen noch vernichtet, sondern nur umgewandelt werden. Die Gesamtenergie eines abgeschlossenen Systems bleibt konstant.</p>
+            <p><span class="highlight">Mathematische Formulierung:</span> ΔU = Q + W
+                <br>ΔU: Änderung der inneren Energie
+                <br>Q: Zugeführte Wärme
+                <br>W: Verrichtete Arbeit
+            </p>
+            <p><span class="highlight">Konsequenz:</span> Ein <strong>Perpetuum mobile erster Art</strong> ist unmöglich, da es ohne Energiezufuhr dauerhaft Arbeit verrichten würde – dies widerspricht dem Energieerhaltungssatz.</p>
+        </div>
+
+        <div class="card">
+            <h2>3. Energieumwandlungskette am Beispiel Kohlekraftwerk</h2>
+            <ol>
+                <li><strong>Chemische Energie</strong> (Kohle) → <strong>Wärmeenergie</strong> (Verbrennung im Kessel)</li>
+                <li><strong>Wärmeenergie</strong> → <strong>Mechanische Energie</strong> (Dampf treibt Turbine an)</li>
+                <li><strong>Mechanische Energie</strong> → <strong>Elektrische Energie</strong> (Generator)</li>
+            </ol>
+            <p><strong>Wirkungsgrad:</strong> Nur ca. 30–45% der chemischen Energie wird in Strom umgewandelt, der Rest geht als Abwärme verloren.</p>
+        </div>
+
+        <div class="card">
+            <h2>4. Änderung der inneren Energie (ΔU)</h2>
+            <p><span class="highlight">Definition:</span> ΔU = U₂ – U₁ (Endzustand minus Anfangszustand)</p>
+            <p><span class="highlight">Interpretation:</span>
+                <br>ΔU > 0: Energie wird aufgenommen (endotherm)
+                <br>ΔU < 0: Energie wird abgegeben (exotherm)
+            </p>
+            <p><span class="highlight">Beispiel:</span> Bei der Verbrennung von Kohle ist ΔU negativ, da Energie in Form von Wärme und Arbeit freigesetzt wird.</p>
+        </div>
+
+        <div class="card">
+            <h2>5. Zusammenfassung & Abitur-Relevanz</h2>
+            <ul>
+                <li>Systemarten unterscheiden und Beispiele nennen können</li>
+                <li>Ersten Hauptsatz der Thermodynamik anwenden und Energieumwandlungen beschreiben</li>
+                <li>ΔU berechnen und interpretieren (exotherm/endotherm)</li>
+                <li>Perpetuum mobile erster Art als Verstoß gegen Energieerhaltung erkennen</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Quellen: <a href="https://www.lernhelfer.de/schuelerlexikon/physik-abitur/artikel/erster-hauptsatz-der-thermodynamik">Lernhelfer</a>, <a href="https://www.studysmarter.de/schule/physik/energie-in-natur-und-technik/umwandlung-und-uebertragung-von-energie/">StudySmarter</a>, <a href="https://www.chemie-schule.de/KnowHow/Innere_Energie">Chemie-Schule</a>, <a href="https://www.lernhelfer.de/schuelerlexikon/physik/artikel/perpetuum-mobile">Lernhelfer Perpetuum Mobile</a></p>
+        </footer>
+    </div>
+    <script>
+        // 1. Systemeinstellungen prüfen und sofort anwenden (ohne Animation)
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            // Transition nach kurzer Verzögerung aktivieren
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        // 2. Modus manuell setzen (mit Animation)
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        // 3. Systemeinstellungen beim Laden anwenden
+        applySystemMode();
+
+        // 4. Nachrichten von der Hauptseite empfangen
+        window.addEventListener("message", function(event) {
+            // Dark/Light-Mode wechseln (mit Animation)
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            // Aktuellen Modus abfragen
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            // Sichtbaren Text zurücksenden
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        // 5. Hauptseite beim Laden über den aktuellen Modus informieren
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        // 6. Systemeinstellungen ändern (optional)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

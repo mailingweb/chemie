@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestimmung von Reaktionsenthalpien – Kalorimetrie im Abitur</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+            margin: 15px 0;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Bestimmung von Reaktionsenthalpien – Kalorimetrie im Abitur</h1>
+            <p>Lernübersicht für das Chemie-Abitur (Leistungskurs)</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Kalorimetrie</span>
+            <span class="tag">Reaktionsenthalpie</span>
+            <span class="tag">spezifische Wärmekapazität</span>
+            <span class="tag">Versuchsaufbau</span>
+            <span class="tag">Messverfahren</span>
+            <span class="tag">kalorimetrische Grundgleichung</span>
+            <span class="tag">Abitur Chemie</span>
+            <span class="tag">Energetik</span>
+        </div>
+
+        <div class="card">
+            <h2>1. Versuchsaufbau eines Kalorimeters</h2>
+            <p>
+                Ein Kalorimeter ist ein Gerät zur Messung von Wärmemengen, die bei chemischen Reaktionen freigesetzt oder aufgenommen werden. Es besteht in der Regel aus:
+            </p>
+            <ul>
+                <li><strong>Thermisch isoliertem Dewargefäß</strong> (z. B. aus Styropor oder doppelwandigem Glas), um Wärmeverluste zu minimieren.</li>
+                <li><strong>Reaktionsgefäß</strong> (meist ein Becherglas oder Metallbehälter), in dem die Reaktion stattfindet.</li>
+                <li><strong>Thermometer</strong> zur präzisen Messung der Temperaturänderung.</li>
+                <li><strong>Rührer</strong> für eine gleichmäßige Wärmeverteilung im Wasserbad.</li>
+                <li><strong>Deckel</strong> mit Öffnungen für Thermometer und Rührer, um Wärmeaustausch mit der Umgebung zu reduzieren.</li>
+            </ul>
+            <p>
+                Das Kalorimeter wird mit einer bekannten Menge Wasser gefüllt, das als Wärmebad dient. Die zu untersuchende Reaktion wird im Reaktionsgefäß gestartet, und die Temperaturänderung des Wassers wird gemessen:refs[1-1,60].
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>2. Voraussetzungen für die Reaktion</h2>
+            <p>
+                Damit eine Reaktion kalorimetrisch untersucht werden kann, müssen folgende Voraussetzungen erfüllt sein:
+            </p>
+            <ul>
+                <li><strong>Schneller und vollständiger Ablauf:</strong> Die Reaktion muss schnell und vollständig ablaufen, damit die Temperaturänderung eindeutig der Reaktion zugeordnet werden kann. Langsame oder unvollständige Reaktionen führen zu ungenauen Messergebnissen:refs[3-38].</li>
+                <li><strong>Ausreichende Temperaturänderung:</strong> Die Temperaturänderung des Wasserbades muss groß genug sein (mindestens 2–3 K), um eine präzise Messung zu ermöglichen:refs[5-38].</li>
+                <li><strong>Konstanter Druck:</strong> Die Messung erfolgt bei konstantem Druck (isobar), da die Reaktionsenthalpie \( \Delta H \) nur unter dieser Bedingung der Reaktionswärme \( Q_p \) entspricht:refs[7-30].</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>3. Messverfahren</h2>
+            <p>
+                Das Messverfahren basiert auf der Bestimmung der Temperaturänderung \( \Delta T \) des Wassers im Kalorimeter während der Reaktion. Die Schritte sind:
+            </p>
+            <ol>
+                <li><strong>Eichung des Kalorimeters:</strong> Bestimmung der Wärmekapazität des Kalorimeters durch Mischung von kaltem und warmem Wasser bekannter Mengen und Temperaturen:refs[9-60].</li>
+                <li><strong>Durchführung der Reaktion:</strong> Die zu untersuchende Reaktion wird im Kalorimeter gestartet, z. B. durch Zugabe eines Reaktionspartners oder Zündung einer Verbrennung.</li>
+                <li><strong>Temperaturmessung:</strong> Die Temperaturänderung \( \Delta T \) wird mit einem Thermometer über die Zeit aufgezeichnet:refs[11-89].</li>
+                <li><strong>Grafische Auswertung:</strong> Die Temperatur-Zeit-Kurve wird verlängert, und die maximale Temperaturänderung wird durch Flächenausgleich bestimmt:refs[13-92].</li>
+                <li><strong>Berechnung der Reaktionswärme:</strong> Mit der kalorimetrischen Grundgleichung wird die Reaktionswärme \( Q_p \) berechnet:refs[15-87].</li>
+            </ol>
+        </div>
+
+        <div class="card">
+            <h2>4. Kalorimetrische Grundgleichung</h2>
+            <p>
+                Die kalorimetrische Grundgleichung lautet:
+            </p>
+            <div class="reaction">
+\[ Q_p = c_p(\text{H}_2\text{O}) \cdot m(\text{H}_2\text{O}) \cdot \Delta T \]
+            </div>
+            <p>
+                Dabei ist:
+            </p>
+            <table>
+                <tr>
+                    <th>Größe</th>
+                    <th>Bedeutung</th>
+                    <th>Einheit</th>
+                </tr>
+                <tr>
+                    <td>\( Q_p \)</td>
+                    <td>Reaktionswärme bei konstantem Druck</td>
+                    <td>J oder kJ</td>
+                </tr>
+                <tr>
+                    <td>\( c_p(\text{H}_2\text{O}) \)</td>
+                    <td>spezifische Wärmekapazität von Wasser (4,18 J/g·K)</td>
+                    <td>J/g·K</td>
+                </tr>
+                <tr>
+                    <td>\( m(\text{H}_2\text{O}) \)</td>
+                    <td>Masse des Wassers im Kalorimeter</td>
+                    <td>g</td>
+                </tr>
+                <tr>
+                    <td>\( \Delta T \)</td>
+                    <td>Temperaturänderung</td>
+                    <td>K oder °C</td>
+                </tr>
+            </table>
+            <p>
+                Die spezifische Wärmekapazität \( c_p \) gibt an, wie viel Energie benötigt wird, um 1 g eines Stoffes um 1 Kelvin zu erwärmen. Für Wasser beträgt dieser Wert 4,18 J/g·K:refs[17-123]</tr>
+                <tr>
+                    <td>\( \Delta T \)</td>
+                    <td>Temperaturänderung</td>
+                    <td>K oder °C</td>
+                </tr>
+            </table>
+            <p>
+                Die spezifische Wärmekapazität \( c_p \) gibt an, wie viel Energie benötigt wird, um 1 g eines Stoffes um 1 Kelvin zu erwärmen. Für Wasser beträgt dieser Wert 4,18 J/g·K.
+            </p>
+            <p>
+                Die molare Reaktionsenthalpie \( \Delta_r H_m \) wird berechnet, indem die Reaktionswärme \( Q_p \) durch die Stoffmenge \( n \) der umgesetzten Substanz geteilt wird:
+            </p>
+            <div class="reaction">
+\[ \Delta_r H_m = \frac{Q_p}{n} = \frac{c_p(\text{H}_2\text{O}) \cdot m(\text{H}_2\text{O}) \cdot \Delta T}{n} \]
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>5. Zusammenfassung und Beispielrechnung</h2>
+            <p>
+                <strong>Beispiel:</strong> Bei der Verbrennung von 1,5 g Marshmallows in einem Kalorimeter mit 410 g Wasser wird eine Temperaturerhöhung von 11,9 K gemessen. Die spezifische Wärmekapazität von Wasser beträgt 4,18 J/g·K:refs[19-89].
+            </p>
+            <p>
+                Die Reaktionswärme \( Q_p \) berechnet sich wie folgt:
+            </p>
+            <div class="reaction">
+\[ Q_p = 4{,}18 \, \text{J/g·K} \cdot 410 \, \text{g} \cdot 11{,}9 \, \text{K} = 20.390 \, \text{J} = 20{,}39 \, \text{kJ} \]
+            </div>
+            <p>
+                Die Reaktion ist exotherm, da \( Q_p > 0 \) und \( \Delta H < 0 \):refs[21-8]< 0 \).
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>6. Quellen und weiterführende Links</h2>
+            <ul>
+                <li><a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/kalorimetrische-messungen" target="_blank">Lernhelfer: Kalorimetrische Messungen</a></li>
+                <li><a href="https://www.abiweb.de/physikalische-chemie/chemische-thermodynamik/zustandsgroessen-und-ihre-regeln/enthalpie/kalorimetrie.html" target="_blank">Abiweb: Kalorimetrie</a></li>
+                <li><a href="https://chemiestunde.jimdofree.com/2024/09/04/energetik-08-berechnung-der-reaktionsw%C3%A4rme-und-der-reaktionsenthalpie/" target="_blank">Chemiestunde: Berechnung der Reaktionswärme</a></li>
+                <li><a href="https://www.chemie-schule.de/KnowHow/Spezifische_Wärmekapazität" target="_blank">Chemie-Schule: Spezifische Wärmekapazität</a></li>
+                <li><a href="https://www.leifiphysik.de/waermelehre/innere-energie-waermekapazitaet/grundwissen/spezifische-waermekapazitaet" target="_blank">LEIFIphysik: Spezifische Wärmekapazität</a></li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>© 2025 Chemie-Assistent. Alle Angaben ohne Gewähr. Bitte prüfe die aktuellen Lehrpläne und Richtlinien deines Bundeslandes.</p>
+        </footer>
+    </div>
+    <script>
+        // 1. Systemeinstellungen prüfen und sofort anwenden (ohne Animation)
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            // Transition nach kurzer Verzögerung aktivieren
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        // 2. Modus manuell setzen (mit Animation)
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        // 3. Systemeinstellungen beim Laden anwenden
+        applySystemMode();
+
+        // 4. Nachrichten von der Hauptseite empfangen
+        window.addEventListener("message", function(event) {
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        // 5. Hauptseite beim Laden über den aktuellen Modus informieren
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        // 6. Systemeinstellungen ändern (optional)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

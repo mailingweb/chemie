@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ammoniaksynthese: Haber-Bosch-Verfahren, ΔH, ΔG & Le Chatelier</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ammoniaksynthese nach Haber-Bosch</h1>
+            <p>Lernübersicht für das Abitur (Leistungskurs Chemie)</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Haber-Bosch-Verfahren</span>
+            <span class="tag">ΔH & ΔG</span>
+            <span class="tag">Prinzip von Le Chatelier</span>
+            <span class="tag">Gleichgewichtskonstante</span>
+            <span class="tag">Exotherme Reaktion</span>
+            <span class="tag">Industrielle Synthese</span>
+            <span class="tag">Katalysator</span>
+            <span class="tag">Reaktionsbedingungen</span>
+        </div>
+
+        <div class="card">
+            <h2>1. Reaktionsgleichung & Grundlagen</h2>
+            <div class="reaction">
+                \[
+                \text{N}_2 (g) + 3 \text{H}_2 (g) \rightleftharpoons 2 \text{NH}_3 (g) \quad \Delta H_R^0 = -92{,}28\,\text{kJ/mol}
+                \]
+            </div>
+            <ul>
+                <li><strong>Exotherme Reaktion:</strong> \(\Delta H < 0\) → Wärme wird freigesetzt.</li>
+                <li><strong>Volumenverminderung:</strong> 4 Volumenteile Edukte → 2 Volumenteile Produkt.</li>
+                <li><strong>Gleichgewichtsreaktion:</strong> Hin- und Rückreaktion laufen gleichzeitig ab.</li>
+            </ul>
+            <p><a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/technische-herstellung-von-ammoniak" target="_blank">(Quelle: Lernhelfer)</a></p>
+        </div>
+
+        <div class="card">
+            <h2>2. Thermodynamische Größen: ΔH und ΔG</h2>
+            <h3>ΔH (Reaktionsenthalpie)</h3>
+            <ul>
+                <li>\(\Delta H = -92{,}28\,\text{kJ/mol}\) → <span class="highlight">stark exotherm</span>.</li>
+                <li>Nach dem <strong>Prinzip von Le Chatelier</strong> begünstigen <span class="highlight">niedrige Temperaturen</span> die Hinreaktion (Ammoniakbildung).</li>
+            </ul>
+            <h3>ΔG (Freie Enthalpie/Gibbs-Energie)</h3>
+            <ul>
+                <li>\(\Delta G = \Delta H - T \cdot \Delta S\)</li>
+                <li>\(\Delta S\) (Entropieänderung) \(< 0\), da Gasvolumen abnimmt.</li>
+                <li>Bei niedrigen Temperaturen ist \(\Delta G < 0\) → Reaktion läuft freiwillig ab.</li>
+                <li>Mit steigender Temperatur wird \(\Delta G\) weniger negativ → Gleichgewicht verschiebt sich zu den Edukten.</li>
+            </ul>
+            <p><a href="https://simpleclub.com/lessons/chemie-haber-bosch-verfahren" target="_blank">(Quelle: simpleclub)</a></p>
+        </div>
+
+        <div class="card">
+            <h2>3. Prinzip von Le Chatelier</h2>
+            <table>
+                <tr>
+                    <th>Einflussfaktor</th>
+                    <th>Auswirkung auf das Gleichgewicht</th>
+                    <th>Industrielle Umsetzung</th>
+                </tr>
+                <tr>
+                    <td><strong>Temperatur</strong></td>
+                    <td>Niedrige \(T\) begünstigt \(\text{NH}_3\)-Bildung (exotherm), aber langsame Kinetik.</td>
+                    <td>Kompromiss: ~450°C (schnelle Reaktion, akzeptable Ausbeute).</td>
+                </tr>
+                <tr>
+                    <td><strong>Druck</strong></td>
+                    <td>Hoher Druck (200–300 bar) begünstigt \(\text{NH}_3\)-Bildung (Volumenabnahme).</td>
+                    <td>Technisch aufwendig, aber wirtschaftlich sinnvoll.</td>
+                </tr>
+                <tr>
+                    <td><strong>Konzentration</strong></td>
+                    <td>Entzug von \(\text{NH}_3\) (z. B. durch Verflüssigung) verschiebt GG nach rechts.</td>
+                    <td>Kreislaufführung nicht umgesetzter Gase.</td>
+                </tr>
+                <tr>
+                    <td><strong>Katalysator</strong></td>
+                    <td>Eisenkatalysator senkt Aktivierungsenergie, beschleunigt Einstellung des GG.</td>
+                    <td>Kein Einfluss auf Lage des GG, nur auf Geschwindigkeit.</td>
+                </tr>
+            </table>
+            <p><a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/prinzip-des-kleinsten-zwangs-prinzip-von-le-chatelier" target="_blank">(Quelle: Lernhelfer)</a></p>
+        </div>
+
+        <div class="card">
+            <h2>4. Gleichgewichtskonstante \(K\)</h2>
+            <div class="reaction">
+                \[
+                K = \frac{[\text{NH}_3]^2}{[\text{N}_2] \cdot [\text{H}_2]^3}
+                \]
+            </div>
+            <ul>
+                <li>\(K\) sinkt mit steigender Temperatur (exotherme Reaktion).</li>
+                <li>Hoher Druck erhöht \(K\) (Volumenverminderung).</li>
+                <li>Industriell: \(K \approx 4 \cdot 10^8\,\text{L}^2 \cdot \text{mol}^{-2}\) (bei Standardbedingungen).</li>
+            </ul>
+            <p><a href="https://www.stark-verlag.de/media/aktuell/85731_Abitur_BW_Chemie_Uebungsaufgaben_Seite_1_bis_6.pdf" target="_blank">(Quelle: Stark Verlag)</a></p>
+        </div>
+
+        <div class="card">
+            <h2>5. Industrielle Reaktionsbedingungen</h2>
+            <ul>
+                <li><strong>Temperatur:</strong> 450°C (Kompromiss zwischen Ausbeute und Geschwindigkeit).</li>
+                <li><strong>Druck:</strong> 200–300 bar (technisch realisierbarer Kompromiss).</li>
+                <li><strong>Katalysator:</strong> Eisen mit Promotoren (z. B. \(\text{K}_2\text{O}\), \(\text{Al}_2\text{O}_3\)).</li>
+                <li><strong>Synthesegas:</strong> \(\text{N}_2:\text{H}_2 = 1:3\) (aus Erdgas via Steamreforming).</li>
+            </ul>
+            <p><a href="https://studyflix.de/chemie/haber-bosch-verfahren-1565" target="_blank">(Quelle: Studyflix)</a></p>
+        </div>
+
+        <div class="card">
+            <h2>6. Zusammenfassung & Bedeutung</h2>
+            <ul>
+                <li><span class="highlight">Exotherme Reaktion</span> (\(\Delta H < 0\)) → niedrige \(T\) begünstigt \(\text{NH}_3\)-Bildung, aber hohe \(T\) nötig für Kinetik.</li>
+                <li><span class="highlight">Hoher Druck</span> (200–300 bar) → verschiebt GG nach rechts.</li>
+                <li><span class="highlight">Katalysator</span> → beschleunigt Reaktion, senkt Aktivierungsenergie.</li>
+                <li><span class="highlight">Kreislaufverfahren</span> → nicht umgesetzte Gase werden zurückgeführt.</li>
+                <li><span class="highlight">Anwendung:</span> Düngemittelproduktion (90% des Ammoniaks).</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Quellen: <a href="https://www.lernhelfer.de" target="_blank">Lernhelfer</a>, <a href="https://simpleclub.com" target="_blank">simpleclub</a>, <a href="https://studyflix.de" target="_blank">Studyflix</a>, <a href="https://www.stark-verlag.de" target="_blank">Stark Verlag</a></p>
+        </footer>
+    </div>
+    <script>
+        // 1. Systemeinstellungen prüfen und sofort anwenden (ohne Animation)
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            // Transition nach kurzer Verzögerung aktivieren
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        // 2. Modus manuell setzen (mit Animation)
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        // 3. Systemeinstellungen beim Laden anwenden
+        applySystemMode();
+
+        // 4. Nachrichten von der Hauptseite empfangen
+        window.addEventListener("message", function(event) {
+            // Dark/Light-Mode wechseln (mit Animation)
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            // Aktuellen Modus abfragen
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            // Sichtbaren Text zurücksenden
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        // 5. Hauptseite beim Laden über den aktuellen Modus informieren
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        // 6. Systemeinstellungen ändern (optional)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

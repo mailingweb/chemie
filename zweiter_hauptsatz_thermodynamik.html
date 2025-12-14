@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thermodynamik & Entropie – Lernübersicht fürs Abitur</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .experiment {
+            margin-bottom: 30px;
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Thermodynamik & Entropie – Lernübersicht fürs Abitur</h1>
+            <p>Leistungskurs Chemie – 2. Hauptsatz, Brownsche Molekularbewegung, Entropie, Gibbs-Helmholtz-Gleichung</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">2. Hauptsatz der Thermodynamik</span>
+            <span class="tag">Brownsche Molekularbewegung</span>
+            <span class="tag">Diffusion</span>
+            <span class="tag">Irreversibilität</span>
+            <span class="tag">Entropie S</span>
+            <span class="tag">Gibbs-Helmholtz-Gleichung</span>
+            <span class="tag">Spontanität</span>
+            <span class="tag">Zustandsgrößen</span>
+        </div>
+
+        <div class="card">
+            <h2>1. 2. Hauptsatz der Thermodynamik</h2>
+            <p>
+                Der <span class="highlight">2. Hauptsatz der Thermodynamik</span> macht Aussagen über die Richtung von Energieumwandlungen und die Irreversibilität von Prozessen. Er besagt:
+            </p>
+            <ul>
+                <li>Wärme fließt <span class="highlight">niemals von selbst</span> von einem Körper niederer zu einem Körper höherer Temperatur.</li>
+                <li>In <span class="highlight">abgeschlossenen Systemen</span> strebt die Entropie bei irreversiblen Zustandsänderungen gegen ein Maximum.</li>
+                <li>Er erklärt, warum <span class="highlight">Gase sich spontan vermischen</span> und dieser Prozess nicht von selbst umkehrbar ist.</li>
+            </ul>
+            <p>
+                <span class="highlight">Formulierung nach Clausius:</span>
+                "Es gibt keine periodisch arbeitende Maschine, die nichts anderes tut, als Wärme in mechanische Arbeit zu verwandeln."
+                <a href="https://www.lernhelfer.de/schuelerlexikon/physik-abitur/artikel/zweiter-hauptsatz-der-thermodynamik" target="_blank">(Lernhelfer)</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>2. Brownsche Molekularbewegung & Diffusion</h2>
+            <p>
+                Die <span class="highlight">Brownsche Molekularbewegung</span> beschreibt die unregelmäßige, zufällige Bewegung von Teilchen in Flüssigkeiten oder Gasen, verursacht durch Stöße mit anderen Teilchen. Sie ist die Ursache für die <span class="highlight">Diffusion</span>: Teilchen bewegen sich von Bereichen hoher zu Bereichen niedriger Konzentration, bis ein Gleichgewicht erreicht ist.
+            </p>
+            <ul>
+                <li>Diffusion ist <span class="highlight">temperaturabhängig</span>: Höhere Temperatur → schnellere Diffusion.</li>
+                <li>Beispiel: Parfüm verströmt sich im Raum, bis es gleichmäßig verteilt ist.</li>
+            </ul>
+            <p>
+                <a href="https://www.studysmarter.de/schule/biologie/zellbiologie/brownsche-molekularbewegung/" target="_blank">(StudySmarter)</a>,
+                <a href="https://www.leifiphysik.de/waermelehre/temperatur-und-teilchenmodell/versuche/brownsche-bewegung" target="_blank">(LEIFIphysik)</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>3. Entropie S – Maß für Unordnung</h2>
+            <p>
+                Die <span class="highlight">Entropie S</span> ist ein Maß für die Unordnung in einem System. Je größer die Unordnung, desto höher die Entropie.
+            </p>
+            <ul>
+                <li>Formel: <span class="highlight">ΔS = Q<sub>rev</sub> / T</span> (J/K)</li>
+                <li>Bei spontanen Prozessen (z. B. Gasvermischung) <span class="highlight">nimmt die Entropie zu</span>.</li>
+                <li>Beispiel: Beim Schmelzen von Eis steigt die Entropie, da die geordnete Kristallstruktur in eine ungeordnete Flüssigkeit übergeht.</li>
+            </ul>
+            <p>
+                <a href="https://www.abiweb.de/chemie-energiechemie-thermodynamik/zustandsgroessen-der-energetik/die-vier-zustandsgroessen-und-ihre-regeln/entropie-und-der-zweiter-hauptsatz-der-thermodynamik.html" target="_blank">(Abiweb)</a>,
+                <a href="https://www.chemie-schule.de/KnowHow/Entropie_(Thermodynamik)" target="_blank">(Chemie-Schule)</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>4. Irreversibilität von Gasvermischungen</h2>
+            <p>
+                Die Vermischung von Gasen zu einem homogenen Gemisch ist <span class="highlight">irreversibel</span>, da die Entropie zunimmt und der Prozess nicht von selbst rückgängig gemacht werden kann.
+            </p>
+            <p>
+                <a href="https://www.standardsicherung.schulministerium.nrw.de/zentralabitur-gost/faecher/chemie" target="_blank">(Zentralabitur NRW)</a>,
+                <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/umkehrbarkeit-chemischer-reaktionen" target="_blank">(Lernhelfer)</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>5. Gibbs-Helmholtz-Gleichung</h2>
+            <p>
+                Die <span class="highlight">Gibbs-Helmholtz-Gleichung</span> verknüpft Enthalpie (ΔH) und Entropie (ΔS) zur freien Enthalpie (ΔG):
+            </p>
+            <div class="reaction">
+ΔG = ΔH – T · ΔS
+            </div>
+            <ul>
+                <li>ΔG < 0: Reaktion läuft <span class="highlight">spontan</span> ab.</li>
+                <li>ΔG > 0: Reaktion läuft <span class="highlight">nicht spontan</span> ab.</li>
+                <li>ΔG = 0: System befindet sich im <span class="highlight">Gleichgewicht</span>.</li>
+            </ul>
+            <p>
+                Die Gleichung ermöglicht Vorhersagen über die Spontanität von Reaktionen in Abhängigkeit von Temperatur und Druck.
+            </p>
+            <p>
+                <a href="https://www.studysmarter.de/studium/chemie-studium/physikalische-chemie-studium/gibbs-helmholtz-gleichung-studium/" target="_blank">(StudySmarter)</a>,
+                <a href="https://chemiezauber.de/inhalt/q3/energetik/entropie/172-die-gibbs-helmholtz-gleichung.html" target="_blank">(Chemiezauber)</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Zusammenfassung & Protokoll-Tipps</h2>
+            <ul>
+                <li><span class="highlight">2. Hauptsatz:</span> Energieumwandlungen sind gerichtet, Entropie nimmt zu.</li>
+                <li><span class="highlight">Brownsche Bewegung:</span> Ursache für Diffusion, temperaturabhängig.</li>
+                <li><span class="highlight">Entropie:</span> Maß für Unordnung, ΔS = Q<sub>rev</sub>/T.</li>
+                <li><span class="highlight">Gibbs-Helmholtz:</span> ΔG = ΔH – T·ΔS → Spontanität von Reaktionen.</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Quellen: Lernhelfer, StudySmarter, Chemie-Schule, Abiweb, LEIFIphysik, Chemiezauber (Abitur-Niveau, Stand 2025)</p>
+        </footer>
+    </div>
+    <script>
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+        applySystemMode();
+        window.addEventListener("message", function(event) {
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elektrochemische Korrosion & Korrosionsschutz – Chemie Abitur</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .experiment {
+            margin-bottom: 30px;
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="no-transition">
+    <div class="container">
+        <header>
+            <h1>Elektrochemische Korrosion & Korrosionsschutz</h1>
+            <p>Lernübersicht für das Abitur (Leistungskurs Chemie)</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Elektrochemische Korrosion</span>
+            <span class="tag">Rosten von Eisen</span>
+            <span class="tag">Korrosionsarten</span>
+            <span class="tag">Versuchsaufbau</span>
+            <span class="tag">Zinn als Korrosionsschutz</span>
+            <span class="tag">Passiver & Aktiver Schutz</span>
+            <span class="tag">Redoxreaktionen</span>
+            <span class="tag">Lokalelemente</span>
+        </div>
+
+        <div class="card">
+            <h2>1. Elektrochemische Korrosion: Ursache, Bedeutung & Erklärung</h2>
+            <p>
+                <strong>Elektrochemische Korrosion</strong> ist die von der Oberfläche ausgehende Zerstörung eines metallischen Werkstoffs aufgrund von <strong>Redoxreaktionen</strong> mit seiner Umgebung. Im Gegensatz zur chemischen Korrosion erfordert sie das Vorhandensein eines <strong>Elektrolyten</strong> (meist Wasser) und eines zweiten Metalls oder einer Verunreinigung, die als Lokalelement wirkt.
+            </p>
+            <p>
+                <strong>Ursache:</strong> Unterschiedliche Metalle oder Bereiche eines Metalls bilden mit einem Elektrolyten eine galvanische Zelle. Das unedlere Metall (z. B. Eisen) wird oxidiert (Anode), während das edlere Metall (z. B. Kupfer) reduziert wird (Kathode). Es fließt ein elektrischer Strom, der die Korrosion beschleunigt.
+            </p>
+            <p>
+                <strong>Bedeutung:</strong> Korrosion verursacht jährlich immense volkswirtschaftliche Schäden, z. B. durch Rost an Brücken, Autos oder Pipelines. Sie beeinträchtigt die Funktion und Sicherheit von Bauteilen.
+            </p>
+            <p>
+                <strong>Beispiele:</strong>
+                <ul>
+                    <li>Rosten von Eisen (Fe → Fe²⁺ + 2e⁻)</li>
+                    <li>Lochfraß bei Aluminium in salzhaltiger Umgebung</li>
+                    <li>Kontaktkorrosion zwischen Kupfer und Eisen in Wasserleitungen</li>
+                </ul>
+            </p>
+            <p>
+                <strong>Typische Arten:</strong>
+            </p>
+            <table>
+                <tr>
+                    <th>Art</th>
+                    <th>Beschreibung</th>
+                    <th>Beispiel</th>
+                </tr>
+                <tr>
+                    <td>Flächenkorrosion</td>
+                    <td>Gleichmäßige Zerstörung der Oberfläche</td>
+                    <td>Rosten von Stahlblechen</td>
+                </tr>
+                <tr>
+                    <td>Lochkorrosion</td>
+                    <td>Lokale Zerstörung, führt zu Löchern</td>
+                    <td>Aluminium in salzhaltiger Lösung</td>
+                </tr>
+                <tr>
+                    <td>Säurekorrosion</td>
+                    <td>Angriff durch Oxonium-Ionen (H₃O⁺)</td>
+                    <td>Eisen in Salzsäure</td>
+                </tr>
+                <tr>
+                    <td>Sauerstoffkorrosion</td>
+                    <td>Oxidation durch Luftsauerstoff in feuchter Umgebung</td>
+                    <td>Rosten von Eisen</td>
+                </tr>
+                <tr>
+                    <td>Kontaktkorrosion</td>
+                    <td>Korrosion durch Kontakt zweier Metalle</td>
+                    <td>Kupfer und Eisen in Wasser</td>
+                </tr>
+            </table>
+            <p>
+                <em>Quellen: <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/korrosion-verschiedener-metalle" target="_blank">Lernhelfer</a>, <a href="https://www.studysmarter.de/studium/ingenieurwissenschaften/werkstoffkunde/elektrochemische-korrosion/" target="_blank">StudySmarter</a>, <a href="https://www.chemie.de/lexikon/Elektrochemische_Korrosion.html" target="_blank">Chemie.de</a></em>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>2. Rosten von Eisenwerkstoffen: Versuchsaufbau & Ablauf</h2>
+            <h3>Versuchsaufbau (Beispiel: Eisenwolle und Wasser)</h3>
+            <p>
+                <strong>Materialien:</strong> Eisenwolle, Glasrohr, gefärbtes Wasser, Stopfen.
+            </p>
+            <p>
+                <strong>Durchführung:</strong> Die Eisenwolle wird in ein Glasrohr gegeben, das mit gefärbtem Wasser gefüllt ist. Nach einigen Stunden steigt das Wasser im Rohr an, da Sauerstoff verbraucht wird. Die Eisenwolle rostet (braune Färbung).
+            </p>
+            <p>
+                <strong>Beobachtung:</strong>
+                <ul>
+                    <li>Wasser steigt im Rohr auf (Sauerstoffverbrauch).</li>
+                    <li>Eisenwolle färbt sich rostbraun (Bildung von FeO(OH)).</li>
+                </ul>
+            </p>
+            <p>
+                <strong>Reaktionsgleichungen:</strong>
+            </p>
+            <div class="reaction">
+Anode (Oxidation): Fe → Fe²⁺ + 2e⁻<br>
+Kathode (Reduktion): O₂ + 2 H₂O + 4e⁻ → 4 OH⁻<br>
+Gesamt: 4 Fe + 3 O₂ + 6 H₂O → 4 FeO(OH) (Rost)
+            </div>
+            <p>
+                <strong>Auswertung:</strong> Rost (FeO(OH)) ist porös und schützt das Eisen nicht vor weiterer Korrosion. Der Prozess wird durch Salze (z. B. NaCl) beschleunigt, da sie die Leitfähigkeit des Elektrolyten erhöhen.
+            </p>
+            <p>
+                <em>Quellen: <a href="http://www.unterrichtsmaterialien-chemie.uni-goettingen.de/exp_neu.php?id=820" target="_blank">Uni Göttingen</a>, <a href="https://www.chemie-schule.de/KnowHow/Rost" target="_blank">Chemie-Schule</a></em>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>3. Zinn als Korrosionsschutz & weitere Schutzmöglichkeiten</h2>
+            <h3>Zinn (Sn) als Schutzschicht</h3>
+            <p>
+                <strong>Funktionsweise:</strong> Zinn wird galvanisch oder durch Schmelztauchen auf Eisen aufgebracht (Weißblech). Es schützt solange die Schicht intakt ist. Bei Verletzungen wirkt Zinn jedoch als Kathode und Eisen als Anode – es entsteht <strong>Lochfraß</strong>.
+            </p>
+            <p>
+                <strong>Vor- und Nachteile:</strong>
+            </p>
+            <table>
+                <tr>
+                    <th>Vorteile</th>
+                    <th>Nachteile</th>
+                </tr>
+                <tr>
+                    <td>Gute Barriere gegen Feuchtigkeit</td>
+                    <td>Bei Beschädigung: beschleunigte Korrosion des Eisens</td>
+                </tr>
+                <tr>
+                    <td>Ungiftig (für Lebensmittelverpackungen geeignet)</td>
+                    <td>Teurer als Zink</td>
+                </tr>
+            </table>
+            <h3>Weitere Korrosionsschutzmethoden</h3>
+            <table>
+                <tr>
+                    <th>Methode</th>
+                    <th>Beispiel</th>
+                    <th>Wirkprinzip</th>
+                </tr>
+                <tr>
+                    <td>Verzinken</td>
+                    <td>Feuerverzinkte Stahlteile</td>
+                    <td>Zink wirkt als Opferanode (aktiver Schutz)</td>
+                </tr>
+                <tr>
+                    <td>Lackieren/Fetten</td>
+                    <td>Autokarosserien</td>
+                    <td>Barriere gegen Sauerstoff und Feuchtigkeit</td>
+                </tr>
+                <tr>
+                    <td>Passivierung</td>
+                    <td>Aluminiumoxidschicht</td>
+                    <td>Dichte Oxidschicht verhindert weitere Korrosion</td>
+                </tr>
+                <tr>
+                    <td>Kathodischer Schutz</td>
+                    <td>Opferanoden an Schiffen</td>
+                    <td>Unedles Metall (z. B. Magnesium) opfert sich</td>
+                </tr>
+                <tr>
+                    <td>Legieren</td>
+                    <td>Edelstahl (Chrom-Nickel)</td>
+                    <td>Bildung einer stabilen Passivschicht</td>
+                </tr>
+            </table>
+            <p>
+                <em>Quellen: <a href="https://www.chemie-schule.de/KnowHow/Korrosionsschutz" target="_blank">Chemie-Schule</a>, <a href="https://abitur-wissen.org/index.php/anorganische-chemie/209-anorganische-chemie-metalle-korrosion-und-korrosionsschutz" target="_blank">Abitur-Wissen</a>, <a href="https://www.ai-futureschool.com/de/chemie/zinn-als-korrosionsschutz-fur-metalle.php" target="_blank">AI-FutureSchool</a></em>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>4. Zusammenfassung & Prüfungsrelevanz</h2>
+            <ul>
+                <li><strong>Elektrochemische Korrosion</strong> erfordert ein Lokalelement, einen Elektrolyten und Redoxreaktionen.</li>
+                <li><strong>Rosten</strong> ist Sauerstoffkorrosion: Fe + O₂ + H₂O → FeO(OH).</li>
+                <li><strong>Zinn</strong> schützt nur bei intakter Schicht; bei Verletzung entsteht Lochfraß.</li>
+                <li><strong>Schutzmaßnahmen:</strong> Verzinken, Lackieren, Passivierung, Opferanoden.</li>
+            </ul>
+            <p>
+                <strong>Prüfungstipp:</strong> Immer Reaktionsgleichungen und Versuchsaufbauten skizzieren! Typische Fragen: "Erklären Sie die Rolle des Elektrolyten bei der Korrosion" oder "Vergleichen Sie Zinn und Zink als Korrosionsschutz".
+            </p>
+        </div>
+
+        <footer>
+            <p>Quellen: <a href="https://www.lernhelfer.de" target="_blank">Lernhelfer</a>, <a href="https://www.studysmarter.de" target="_blank">StudySmarter</a>, <a href="https://www.chemie-schule.de" target="_blank">Chemie-Schule</a>, <a href="https://abitur-wissen.org" target="_blank">Abitur-Wissen</a>, <a href="http://www.unterrichtsmaterialien-chemie.uni-goettingen.de" target="_blank">Uni Göttingen</a></p>
+        </footer>
+    </div>
+    <script>
+        // 1. Systemeinstellungen prüfen und sofort anwenden (ohne Animation)
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            // Transition nach kurzer Verzögerung aktivieren
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        // 2. Modus manuell setzen (mit Animation)
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        // 3. Systemeinstellungen beim Laden anwenden
+        applySystemMode();
+
+        // 4. Nachrichten von der Hauptseite empfangen
+        window.addEventListener("message", function(event) {
+            // Dark/Light-Mode wechseln (mit Animation)
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            // Aktuellen Modus abfragen
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            // Sichtbaren Text zurücksenden
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        // 5. Hauptseite beim Laden über den aktuellen Modus informieren
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        // 6. Systemeinstellungen ändern (optional)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

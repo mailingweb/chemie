@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exotherme & Endotherme Reaktionen – Chemie Abitur</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="no-transition">
+    <div class="container">
+        <header>
+            <h1>Exotherme & Endotherme Reaktionen – Chemie Abitur</h1>
+            <p>Lernübersicht mit Beispielen und Gleichgewichtsbeeinflussung</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Exotherme Reaktion</span>
+            <span class="tag">Endotherme Reaktion</span>
+            <span class="tag">Chemisches Gleichgewicht</span>
+            <span class="tag">Prinzip des kleinsten Zwangs</span>
+            <span class="tag">Abitur Chemie</span>
+            <span class="tag">Energetik</span>
+            <span class="tag">Reaktionsbeispiele</span>
+        </div>
+
+        <div class="card">
+            <h2>1. Exotherme Reaktionen</h2>
+            <p><strong>Definition:</strong> Reaktionen, bei denen Energie in Form von Wärme oder Licht an die Umgebung abgegeben wird (ΔH < 0).</p>
+
+            <h3>Beispiele:</h3>
+            <table>
+                <tr>
+                    <th>Reaktion</th>
+                    <th>Reaktionsgleichung</th>
+                    <th>Beobachtung</th>
+                </tr>
+                <tr>
+                    <td>Verbrennung von Methan</td>
+                    <td class="reaction">CH₄ + 2 O₂ → CO₂ + 2 H₂O &nbsp;&nbsp;&nbsp; ΔH = -890 kJ/mol</td>
+                    <td>Flamme, Wärmeentwicklung</td>
+                </tr>
+                <tr>
+                    <td>Lösen von Natriumhydroxid (NaOH)</td>
+                    <td class="reaction">NaOH (s) → Na⁺ (aq) + OH⁻ (aq) &nbsp;&nbsp;&nbsp; ΔH < 0</td>
+                    <td>Temperaturanstieg</td>
+                </tr>
+                <tr>
+                    <td>Neutralisation von Salzsäure mit Natronlauge</td>
+                    <td class="reaction">HCl + NaOH → NaCl + H₂O &nbsp;&nbsp;&nbsp; ΔH = -57 kJ/mol</td>
+                    <td>Erwärmung der Lösung</td>
+                </tr>
+                <tr>
+                    <td>Rosten von Eisen</td>
+                    <td class="reaction">4 Fe + 3 O₂ → 2 Fe₂O₃ &nbsp;&nbsp;&nbsp; ΔH < 0</td>
+                    <td>Langsame Wärmeabgabe</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>2. Endotherme Reaktionen</h2>
+            <p><strong>Definition:</strong> Reaktionen, bei denen Energie aus der Umgebung aufgenommen wird (ΔH > 0).</p>
+
+            <h3>Beispiele:</h3>
+            <table>
+                <tr>
+                    <th>Reaktion</th>
+                    <th>Reaktionsgleichung</th>
+                    <th>Beobachtung</th>
+                </tr>
+                <tr>
+                    <td>Lösen von Ammoniumchlorid (NH₄Cl)</td>
+                    <td class="reaction">NH₄Cl (s) → NH₄⁺ (aq) + Cl⁻ (aq) &nbsp;&nbsp;&nbsp; ΔH > 0</td>
+                    <td>Temperaturabfall</td>
+                </tr>
+                <tr>
+                    <td>Photosynthese</td>
+                    <td class="reaction">6 CO₂ + 6 H₂O → C₆H₁₂O₆ + 6 O₂ &nbsp;&nbsp;&nbsp; ΔH > 0</td>
+                    <td>Energieaufnahme aus Licht</td>
+                </tr>
+                <tr>
+                    <td>Thermolyse von Calciumcarbonat</td>
+                    <td class="reaction">CaCO₃ → CaO + CO₂ &nbsp;&nbsp;&nbsp; ΔH > 0</td>
+                    <td>Erhitzen nötig</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>3. Beeinflussung des chemischen Gleichgewichts</h2>
+            <p><strong>Prinzip des kleinsten Zwangs (Le Chatelier):</strong> Ein System im Gleichgewicht reagiert auf äußere Störungen so, dass deren Wirkung minimiert wird.</p>
+
+            <h3>Faktoren und Auswirkungen:</h3>
+            <table>
+                <tr>
+                    <th>Faktor</th>
+                    <th>Änderung</th>
+                    <th>Auswirkung auf exotherme Reaktion</th>
+                    <th>Auswirkung auf endotherme Reaktion</th>
+                </tr>
+                <tr>
+                    <td>Temperatur</td>
+                    <td>Erhöhung</td>
+                    <td>Gleichgewicht verschiebt sich nach links (Rückreaktion begünstigt)</td>
+                    <td>Gleichgewicht verschiebt sich nach rechts (Hinreaktion begünstigt)</td>
+                </tr>
+                <tr>
+                    <td>Druck</td>
+                    <td>Erhöhung</td>
+                    <td>Seite mit weniger Gasvolumen begünstigt</td>
+                    <td>Seite mit weniger Gasvolumen begünstigt</td>
+                </tr>
+                <tr>
+                    <td>Konzentration</td>
+                    <td>Erhöhung der Edukte</td>
+                    <td>Gleichgewicht verschiebt sich nach rechts (Produktseite)</td>
+                    <td>Gleichgewicht verschiebt sich nach rechts (Produktseite)</td>
+                </tr>
+            </table>
+
+            <h3>Beispiel: Ammoniaksynthese (Haber-Bosch-Verfahren)</h3>
+            <div class="reaction">
+N₂ (g) + 3 H₂ (g) ⇌ 2 NH₃ (g) &nbsp;&nbsp;&nbsp; ΔH = -92 kJ/mol (exotherm)
+            </div>
+            <ul>
+                <li><strong>Temperaturerniedrigung:</strong> Begünstigt NH₃-Bildung (exotherm)</li>
+                <li><strong>Druckerhöhung:</strong> Begünstigt NH₃-Bildung (geringeres Volumen)</li>
+                <li><strong>Entfernen von NH₃:</strong> Gleichgewicht verschiebt sich nach rechts</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>4. Zusammenfassung</h2>
+            <ul>
+                <li><span class="highlight">Exotherme Reaktionen:</span> Energieabgabe, ΔH < 0, z. B. Verbrennung, Neutralisation</li>
+                <li><span class="highlight">Endotherme Reaktionen:</span> Energieaufnahme, ΔH > 0, z. B. Lösen von NH₄Cl, Photosynthese</li>
+                <li><span class="highlight">Gleichgewichtsbeeinflussung:</span> Temperatur, Druck, Konzentration nach Le Chatelier</li>
+                <li><span class="highlight">Abiturrelevanz:</span> Energetik, Gleichgewichtsberechnungen, technische Prozesse</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Quellen: Standardlehrwerke der Oberstufe, Abiturwissen Chemie</p>
+        </footer>
+    </div>
+    <script>
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        applySystemMode();
+
+        window.addEventListener("message", function(event) {
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

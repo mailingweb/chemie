@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proteinstrukturen: Primär-, Sekundär-, Tertiär-, Quartärstruktur</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .experiment {
+            margin-bottom: 30px;
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Proteinstrukturen: Primär-, Sekundär-, Tertiär-, Quartärstruktur</h1>
+            <p>Lernübersicht für das Abitur (Leistungskurs Chemie)</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Primärstruktur</span>
+            <span class="tag">Sekundärstruktur</span>
+            <span class="tag">Tertiärstruktur</span>
+            <span class="tag">Quartärstruktur</span>
+            <span class="tag">Aminosäuresequenz</span>
+            <span class="tag">α-Helix</span>
+            <span class="tag">β-Faltblatt</span>
+            <span class="tag">Denaturierung</span>
+            <span class="tag">Hämoglobin</span>
+            <span class="tag">Insulin</span>
+            <span class="tag">Peptidbindung</span>
+            <span class="tag">Proteinbiosynthese</span>
+        </div>
+
+        <div class="card">
+            <h2>1. Primärstruktur</h2>
+            <p><strong>Definition:</strong> Die Primärstruktur gibt die <span class="highlight">Aminosäuresequenz</span>, also die Art, Anzahl und Reihenfolge der einzelnen Aminosäuren wieder. Die Verknüpfung der Aminosäuren erfolgt kovalent durch die <span class="highlight">Peptidbindung</span>.</p>
+            <p><strong>Beispiel:</strong> Das Hormon Insulin besteht aus 51 Aminosäuren, die in zwei Ketten angeordnet sind. Die Primärstruktur wird mit Hilfe der Abkürzungen der Aminosäuren angegeben, z. B.: Phe – Val – Asn – Gln – His – Leu – Cys – Glu – Ser – His – Leu – Val – Glu – Ala – Leu – Tyr – Leu – Val – Cys – Glu – Glu – Arg – Gly – Phe – Phe – Tyr – Thr – Pro – Lys – Thr.</p>
+            <p><strong>Bedeutung:</strong> Die Primärstruktur ist genetisch festgelegt und einzigartig für jedes Protein. Sie bestimmt die spezifischen Eigenschaften und legt die Basis für die Ausbildung höherer Strukturebenen. Sobald eine einzige Aminosäure ausgetauscht ist, kann die Funktion des Proteins beeinträchtigt oder zerstört werden.</p>
+            <p><strong>Vorkommen:</strong> In allen Lebewesen, z. B. in Enzymen, Hormonen, Transportproteinen.</p>
+            <p><strong>Quellen:</strong>
+                <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/proteine-aufbau-und-eigenschaften" target="_blank">Lernhelfer</a>,
+                <a href="https://www.studyhelp.de/online-lernen/chemie/protein/" target="_blank">StudyHelp</a>,
+                <a href="https://studyflix.de/chemie/proteine-3582" target="_blank">Studyflix</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>2. Sekundärstruktur</h2>
+            <p><strong>Definition:</strong> Die Sekundärstruktur beschreibt die <span class="highlight">räumliche Anordnung einzelner Abschnitte eines Peptids</span>. Sie entsteht durch Wasserstoffbrückenbindungen zwischen den CO- und NH-Gruppen der Peptidbindungen.</p>
+            <p><strong>Typen:</strong>
+                <ul>
+                    <li><span class="highlight">α-Helix:</span> Spiralige Anordnung der Aminosäurereste, häufigste Sekundärstruktur in Proteinen.</li>
+                    <li><span class="highlight">β-Faltblatt:</span> Gefaltete Struktur, bei der sich Teile der Aminosäurekette längs nebeneinander legen, entweder parallel oder antiparallel.</li>
+                </ul>
+            </p>
+            <p><strong>Beispiel:</strong> Myoglobin (Sauerstoffspeicher in Muskeln) enthält viele α-Helices, Seidenfibroin (Spinnenseide) besteht fast ausschließlich aus β-Faltblättern.</p>
+            <p><strong>Bedeutung:</strong> Die Sekundärstruktur ist entscheidend für die Stabilität und Funktion des Proteins. Sie wird durch Wasserstoffbrücken stabilisiert.</p>
+            <p><strong>Quellen:</strong>
+                <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/eiweisse-proteine-aufbau-und-eigenschaften" target="_blank">Lernhelfer</a>,
+                <a href="https://www.abiweb.de/organische-chemie/naturstoffchemie/eiweisse/aminosaeuren-grundbaustein-der-proteine/strukturebenen-der-proteinfaltung.html" target="_blank">Abiweb</a>,
+                <a href="https://www.chemie-schule.de/KnowHow/Sekund%C3%A4rstruktur" target="_blank">Chemie-Schule</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>3. Tertiärstruktur</h2>
+            <p><strong>Definition:</strong> Die Tertiärstruktur beschreibt den <span class="highlight">vollständigen räumlichen Aufbau des Moleküls</span>. Sie entsteht durch Wechselwirkungen zwischen den Seitenketten der Aminosäuren, z. B. Disulfidbrücken, Ionenbindungen, Van-der-Waals-Kräfte und hydrophobe Wechselwirkungen.</p>
+            <p><strong>Beispiel:</strong> Myoglobin und Hämoglobin (Sauerstofftransport) besitzen eine kompakte, kugelförmige Tertiärstruktur.</p>
+            <p><strong>Bedeutung:</strong> Die Tertiärstruktur ist für die biologische Funktion des Proteins essenziell. Sie bestimmt, wie das Protein mit anderen Molekülen interagiert.</p>
+            <p><strong>Quellen:</strong>
+                <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/proteine-aufbau-und-eigenschaften" target="_blank">Lernhelfer</a>,
+                <a href="https://studyflix.de/chemie/proteine-3582" target="_blank">Studyflix</a>,
+                <a href="https://www.schule-bw.de/faecher-und-schularten/berufliche-bildung/ernaehrungslehre/unterrichtsmaterialien/handreichungen/handreichung_ernaehrung_und_chemie/handreichung-jahrgangsstufe-2/lpe18/lpe1808" target="_blank">Landesbildungsserver Baden-Württemberg</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>4. Quartärstruktur</h2>
+            <p><strong>Definition:</strong> Die Quartärstruktur beschreibt die <span class="highlight">räumliche Anordnung mehrerer Polypeptidketten</span> zu einem funktionsfähigen Gesamtprotein. Sie kommt nur bei Proteinen vor, die aus mehreren Untereinheiten bestehen.</p>
+            <p><strong>Beispiel:</strong> Hämoglobin besteht aus vier Polypeptidketten (zwei α- und zwei β-Ketten), die durch nicht-kovalente Bindungen zusammengehalten werden.</p>
+            <p><strong>Bedeutung:</strong> Die Quartärstruktur ermöglicht komplexe Funktionen, z. B. den kooperativen Sauerstofftransport im Blut.</p>
+            <p><strong>Quellen:</strong>
+                <a href="https://projekte.zum.de/wiki/Abiturwissen_Chemie_Oberstufe/Proteine/Strukturebenen_der_Proteine" target="_blank">ZUM Abiturwissen</a>,
+                <a href="https://knowunity.de/knows/biologie-proteine-f4e17736-2994-403b-a17e-e3d70fd87405" target="_blank">Knowunity</a>,
+                <a href="https://flexikon.doccheck.com/de/Quart%C3%A4rstruktur" target="_blank">DocCheck Flexikon</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>5. Beispiele für Proteinstrukturen</h2>
+            <table>
+                <tr>
+                    <th>Protein</th>
+                    <th>Struktur</th>
+                    <th>Funktion</th>
+                    <th>Vorkommen</th>
+                </tr>
+                <tr>
+                    <td>Insulin</td>
+                    <td>Primär: 51 Aminosäuren in zwei Ketten; Tertiär: kompakte Faltung</td>
+                    <td>Regulation des Blutzuckerspiegels</td>
+                    <td>Mensch, Tier</td>
+                </tr>
+                <tr>
+                    <td>Hämoglobin</td>
+                    <td>Quartär: vier Untereinheiten (2 α, 2 β)</td>
+                    <td>Sauerstofftransport im Blut</td>
+                    <td>Rote Blutkörperchen</td>
+                </tr>
+                <tr>
+                    <td>Myoglobin</td>
+                    <td>Tertiär: α-Helices, kompakt</td>
+                    <td>Sauerstoffspeicher in Muskeln</td>
+                    <td>Muskelgewebe</td>
+                </tr>
+                <tr>
+                    <td>Collagen</td>
+                    <td>Sekundär: Tripelhelix; Tertiär: Fasern</td>
+                    <td>Strukturprotein in Bindegewebe</td>
+                    <td>Haut, Knochen, Sehnen</td>
+                </tr>
+                <tr>
+                    <td>Casein</td>
+                    <td>Primär: ungeordnet; Quartär: Micellen</td>
+                    <td>Milcheiweiß, Nährstoffquelle</td>
+                    <td>Milch, Käse</td>
+                </tr>
+            </table>
+            <p><strong>Quellen:</strong>
+                <a href="https://abitur-wissen.org/index.php/biologie/19-cytologie/40-cytologie-proteine" target="_blank">Abitur-Wissen</a>,
+                <a href="https://www.sofatutor.com/chemie/videos/der-raeumliche-aufbau-von-proteinen" target="_blank">Sofatutor</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>6. Einsatz und Verwendung in Natur/Industrie</h2>
+            <p><strong>Natur:</strong> Proteine erfüllen lebenswichtige Funktionen wie Transport (Hämoglobin), Katalyse (Enzyme), Struktur (Collagen), Regulation (Hormone) und Abwehr (Antikörper).</p>
+            <p><strong>Industrie:</strong>
+                <ul>
+                    <li><span class="highlight">Gelatine:</span> Gewinnung aus Knochen, Verwendung in Lebensmitteln, Pharmazie und Fotografie.</li>
+                    <li><span class="highlight">Casein:</span> Beschichtung von Glanzpapier, Klebstoffe.</li>
+                    <li><span class="highlight">Enzyme:</span> Waschmittel, Lebensmittelproduktion (z. B. Käseherstellung).</li>
+                </ul>
+            </p>
+            <p><strong>Quellen:</strong>
+                <a href="https://abitur-wissen.org/index.php/biologie/19-cytologie/40-cytologie-proteine" target="_blank">Abitur-Wissen</a>,
+                <a href="https://www.studysmarter.de/schule/chemie/biochemie/proteinstruktur/" target="_blank">StudySmarter</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>7. Denaturierung und Herstellung</h2>
+            <p><strong>Denaturierung:</strong> Durch Hitze, Säuren, Basen oder Schwermetallionen können die Sekundär-, Tertiär- und Quartärstrukturen zerstört werden, während die Primärstruktur erhalten bleibt. Beispiel: Eiweiß wird beim Kochen fest.</p>
+            <p><strong>Herstellung:</strong> Proteine werden biotechnologisch (z. B. Insulin aus Bakterien) oder durch Extraktion aus natürlichen Quellen (z. B. Gelatine aus Knochen) gewonnen.</p>
+            <p><strong>Quellen:</strong>
+                <a href="https://www.studysmarter.de/schule/chemie/biochemie/proteinstruktur/" target="_blank">StudySmarter</a>,
+                <a href="https://studyflix.de/chemie/proteine-3582" target="_blank">Studyflix</a>
+            </p>
+        </div>
+
+        <footer>
+            <p>Quellen: Lernhelfer, StudyHelp, Studyflix, ZUM Abiturwissen, Abiweb, Chemie-Schule, DocCheck Flexikon, Sofatutor, Knowunity, Landesbildungsserver Baden-Württemberg</p>
+        </footer>
+    </div>
+    <script>
+        // 1. Systemeinstellungen prüfen und sofort anwenden (ohne Animation)
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            // Transition nach kurzer Verzögerung aktivieren
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        // 2. Modus manuell setzen (mit Animation)
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        // 3. Systemeinstellungen beim Laden anwenden
+        applySystemMode();
+
+        // 4. Nachrichten von der Hauptseite empfangen
+        window.addEventListener("message", function(event) {
+            // Dark/Light-Mode wechseln (mit Animation)
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            // Aktuellen Modus abfragen
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            // Sichtbaren Text zurücksenden
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        // 5. Hauptseite beim Laden über den aktuellen Modus informieren
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        // 6. Systemeinstellungen ändern (optional)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

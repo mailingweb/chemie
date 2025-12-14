@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemie: Molare Massen, Reaktionsenthalpien & Kalorimetrie</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .experiment {
+            margin-bottom: 30px;
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Chemie: Molare Massen, Reaktionsenthalpien & Kalorimetrie</h1>
+            <p>Lernübersicht für das Abitur (Leistungskurs Chemie)</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Molare Masse</span>
+            <span class="tag">Reaktionsenthalpie</span>
+            <span class="tag">Exotherme Reaktion</span>
+            <span class="tag">Endotherme Reaktion</span>
+            <span class="tag">Kalorimetrie</span>
+            <span class="tag">Cyclohexan</span>
+            <span class="tag">Benzol</span>
+            <span class="tag">Wasserstoff</span>
+            <span class="tag">Energetik</span>
+        </div>
+
+        <div class="card experiment">
+            <h2>1. Molare Massen und Reaktionsgleichung: C₆H₁₂ → C₆H₆ + 3 H₂</h2>
+            <h3>Molare Massen</h3>
+            <ul>
+                <li><strong>Cyclohexan (C₆H₁₂):</strong> 6 × 12,01 g/mol (C) + 12 × 1,01 g/mol (H) = <strong>84,18 g/mol</strong></li>
+                <li><strong>Benzol (C₆H₆):</strong> 6 × 12,01 g/mol (C) + 6 × 1,01 g/mol (H) = <strong>78,11 g/mol</strong> <a href="https://studyflix.de/chemie/benzol-3276" target="_blank">[1]</a></li>
+                <li><strong>Wasserstoff (H₂):</strong> 2 × 1,01 g/mol = <strong>2,02 g/mol</strong> <a href="https://www.abiweb.de/anorganische-chemie/stoffe-und-stoffeigenschaften/chemisches-rechnen.html" target="_blank">[2]</a></li>
+            </ul>
+
+            <h3>Reaktionsgleichung</h3>
+            <div class="reaction">
+C₆H₁₂ → C₆H₆ + 3 H₂
+            </div>
+            <p>Diese Reaktion beschreibt die Dehydrierung von Cyclohexan zu Benzol und Wasserstoff.</p>
+        </div>
+
+        <div class="card experiment">
+            <h2>2. Reaktionsenthalpie: Cyclohexan → Benzol + 3 H₂</h2>
+            <h3>Energetik</h3>
+            <p>Die Reaktion ist <strong>endotherm</strong>, da Benzol durch Mesomerie stabilisiert ist. Die Hydrierung von Benzol zu Cyclohexan setzt etwa <strong>−206 kJ/mol</strong> frei, daher ist die Rückreaktion (Dehydrierung) endotherm mit <strong>ΔH ≈ +206 kJ/mol</strong> <a href="https://u-helmich.de/che/lexikon/M/Mesomerieenergie.html" target="_blank">[3]</a> <a href="https://www.chemieunterricht.de/dc2/ch/cht-201.htm" target="_blank">[4]</a>.</p>
+            <p>Die Mesomerieenergie von Benzol beträgt etwa <strong>151 kJ/mol</strong>, was die Stabilität des Benzolrings erklärt.</p>
+        </div>
+
+        <div class="card experiment">
+            <h2>3. Beispiele für exotherme und endotherme Reaktionen</h2>
+            <h3>Exotherme Reaktionen</h3>
+            <ul>
+                <li><strong>Ammoniaksynthese:</strong> N₂ + 3 H₂ → 2 NH₃ (ΔH = −92 kJ/mol) <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/technische-herstellung-von-ammoniak" target="_blank">[5]</a></li>
+                <li><strong>CO₂-Synthese:</strong> C + O₂ → CO₂ (ΔH = −393 kJ/mol)</li>
+                <li><strong>Stickstoffmonoxid-Synthese:</strong> N₂ + O₂ → 2 NO (ΔH = +90 kJ/mol, aber bei Oxidation von NH₃ zu NO exotherm)</li>
+                <li><strong>Ethanol-Herstellung:</strong> C₆H₁₂O₆ → 2 C₂H₅OH + 2 CO₂ (ΔH = −67 kJ/mol)</li>
+            </ul>
+
+            <h3>Endotherme Reaktionen</h3>
+            <ul>
+                <li><strong>Benzol-Synthese:</strong> C₆H₁₂ → C₆H₆ + 3 H₂ (ΔH ≈ +206 kJ/mol)</li>
+                <li><strong>Dehydrierung von Ethylbenzol:</strong> C₈H₁₀ → C₈H₈ + H₂ (ΔH = +124,9 kJ/mol) <a href="https://webdoc.sub.gwdg.de/ebook/diss/2003/fu-berlin/2003/12/Kapitel1.pdf" target="_blank">[6]</a></li>
+                <li><strong>Synthesegas:</strong> C + H₂O → CO + H₂ (ΔH = +131 kJ/mol) <a href="https://www.abiweb.de/chemie-antrieb-und-steuerung-chemischer-reaktionen/chemische-thermodynamik-energetik/zustandsgroessen-und-ihre-regeln/reaktionsenergie-reaktionsenthalpie-berechnungen.html" target="_blank">[7]</a></li>
+                <li><strong>Ozonsynthese:</strong> 3 O₂ → 2 O₃ (ΔH = +285 kJ/mol)</li>
+                <li><strong>Fotosynthese:</strong> 6 CO₂ + 6 H₂O → C₆H₁₂O₆ + 6 O₂ (ΔH = +2803 kJ/mol)</li>
+                <li><strong>Kalkbrennen:</strong> CaCO₃ → CaO + CO₂ (ΔH = +178 kJ/mol)</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>4. Anleitung: Reaktionsenthalpie im Kalorimeter berechnen</h2>
+            <h3>Schritt-für-Schritt</h3>
+            <ol>
+                <li><strong>Kalorimeter vorbereiten:</strong> Gefäß mit Wasser füllen, Temperatur messen (T₁).</li>
+                <li><strong>Reaktion durchführen:</strong> Edukte im Kalorimeter umsetzen, Endtemperatur messen (T₂).</li>
+                <li><strong>Temperaturdifferenz berechnen:</strong> ΔT = T₂ − T₁</li>
+                <li><strong>Wärmemenge Q berechnen:</strong> Q = m(Wasser) × c(Wasser) × ΔT (c = 4,19 J/g·K)</li>
+                <li><strong>Reaktionsenthalpie ΔH:</strong> ΔH = −Q / n(Stoffmenge) <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/kalorimetrische-messungen" target="_blank">[8]</a></li>
+                <li><strong>Berücksichtigung der Wärmekapazität des Kalorimeters:</strong> Q = (m × c + C_Kalorimeter) × ΔT <a href="https://www.abiweb.de/physikalische-chemie/chemische-thermodynamik/zustandsgroessen-und-ihre-regeln/enthalpie/kalorimetrie.html" target="_blank">[9]</a></li>
+            </ol>
+            <p><strong>Hinweis:</strong> Bei exothermen Reaktionen ist ΔH negativ, bei endothermen positiv.</p>
+        </div>
+
+        <footer>
+            <p>Quellen: <a href="https://studyflix.de/chemie/benzol-3276" target="_blank">Studyflix</a>, <a href="https://www.abiweb.de/anorganische-chemie/stoffe-und-stoffeigenschaften/chemisches-rechnen.html" target="_blank">Abiweb</a>, <a href="https://u-helmich.de/che/lexikon/M/Mesomerieenergie.html" target="_blank">u-helmich.de</a>, <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/kalorimetrische-messungen" target="_blank">Lernhelfer</a></p>
+        </footer>
+    </div>
+    <script>
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+        applySystemMode();
+        window.addEventListener("message", function(event) {
+            if (event.data && event.data.type === "setMode") {
+                document.body.classList.toggle("dark-mode", event.data.mode === "dark");
+            }
+        });
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+    </script>
+</body>
+</html>

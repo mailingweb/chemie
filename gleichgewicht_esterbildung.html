@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemisches Gleichgewicht & Esterbildung – Abitur Chemie</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="no-transition">
+    <div class="container">
+        <header>
+            <h1>Chemisches Gleichgewicht & Esterbildung</h1>
+            <p>Lernübersicht für das Abitur (Leistungskurs Chemie)</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Chemisches Gleichgewicht</span>
+            <span class="tag">Esterbildung</span>
+            <span class="tag">Dynamisches Gleichgewicht</span>
+            <span class="tag">Prinzip von Le Chatelier</span>
+            <span class="tag">Hydrierung/Dehydrierung</span>
+            <span class="tag">Unvollständige Reaktion</span>
+            <span class="tag">Reaktionsgleichung</span>
+        </div>
+
+        <div class="card">
+            <h2>1. Chemisches Gleichgewicht</h2>
+            <p>Ein <span class="highlight">chemisches Gleichgewicht</span> liegt vor, wenn in einem geschlossenen System die Hin- und Rückreaktion mit gleicher Geschwindigkeit ablaufen. Die Konzentrationen der Reaktionspartner bleiben konstant, obwohl die Reaktion weiterläuft.</p>
+            <p>Beispiel: <span class="highlight">Esterbildung</span> (Veresterung) aus Carbonsäure und Alkohol:</p>
+            <div class="reaction">
+R–COOH + R'–OH ⇌ R–COO–R' + H₂O
+            </div>
+            <p>Die Reaktion ist <span class="highlight">unvollständig</span>, da sowohl Edukte als auch Produkte im Gleichgewicht vorliegen.</p>
+        </div>
+
+        <div class="card">
+            <h2>2. Dynamisches Gleichgewicht</h2>
+            <p>Ein <span class="highlight">dynamisches Gleichgewicht</span> ist ein Zustand, in dem Hin- und Rückreaktion gleich schnell ablaufen. Makroskopisch erscheint die Reaktion "stillzustehen", mikroskopisch finden jedoch ständig Umsetzungen statt.</p>
+            <p><strong>Merkmale:</strong></p>
+            <ul>
+                <li>Konzentrationen der Stoffe bleiben konstant.</li>
+                <li>Reaktion kann von beiden Seiten aus gestartet werden.</li>
+                <li>Das Gleichgewicht stellt sich bei konstanter Temperatur ein.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>3. Unvollständigkeit der Reaktion</h2>
+            <p>Die meisten chemischen Reaktionen verlaufen <span class="highlight">unvollständig</span>, d. h., es liegen im Gleichgewichtszustand sowohl Edukte als auch Produkte vor. Der Grund ist, dass die Rückreaktion (Hydrolyse des Esters) gleichzeitig abläuft.</p>
+            <p>Beispiel: Bei der Veresterung von Ethansäure mit Ethanol entsteht Ethansäureethylester, aber nur etwa 67 % der Edukte reagieren zu Produkten (bei Raumtemperatur).</p>
+        </div>
+
+        <div class="card">
+            <h2>4. Beeinflussung des Gleichgewichts</h2>
+            <p>Das <span class="highlight">Prinzip von Le Chatelier</span> besagt: Übt man auf ein im Gleichgewicht befindliches System einen Zwang aus (z. B. Konzentrations-, Druck- oder Temperaturänderung), so verschiebt sich das Gleichgewicht so, dass der Zwang minimiert wird.</p>
+            <table>
+                <tr>
+                    <th>Änderung</th>
+                    <th>Folge für das Gleichgewicht</th>
+                    <th>Beispiel Esterbildung</th>
+                </tr>
+                <tr>
+                    <td>Erhöhung der Eduktkonzentration</td>
+                    <td>Gleichgewicht verschiebt sich nach rechts (mehr Produkt).</td>
+                    <td>Mehr Ethansäure/Ethanol → mehr Ester.</td>
+                </tr>
+                <tr>
+                    <td>Entfernen eines Produkts (z. B. Wasser)</td>
+                    <td>Gleichgewicht verschiebt sich nach rechts.</td>
+                    <td>Wasserentzug mit Molekularsieb → höhere Ausbeute.</td>
+                </tr>
+                <tr>
+                    <td>Temperaturerhöhung (exotherme Reaktion)</td>
+                    <td>Gleichgewicht verschiebt sich nach links (mehr Edukte).</td>
+                    <td>Veresterung ist exotherm → Kühlung begünstigt Esterbildung.</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>5. Hydrierung & Dehydrierung</h2>
+            <p><span class="highlight">Hydrierung:</span> Anlagerung von Wasserstoff an eine Doppelbindung (z. B. Alken → Alkan).</p>
+            <div class="reaction">
+R–CH=CH–R' + H₂ → R–CH₂–CH₂–R'
+            </div>
+            <p><span class="highlight">Dehydrierung:</span> Abspaltung von Wasserstoff (z. B. Alkan → Alken).</p>
+            <div class="reaction">
+R–CH₂–CH₂–R' → R–CH=CH–R' + H₂
+            </div>
+            <p>Beide Reaktionen sind Gleichgewichtsreaktionen und können durch Druck, Temperatur oder Katalysatoren beeinflusst werden.</p>
+        </div>
+
+        <div class="card">
+            <h2>6. Zusammenfassung</h2>
+            <ul>
+                <li>Esterbildung ist eine <span class="highlight">Gleichgewichtsreaktion</span>.</li>
+                <li>Das Gleichgewicht ist <span class="highlight">dynamisch</span> und <span class="highlight">unvollständig</span>.</li>
+                <li>Durch Konzentrationsänderung, Druck oder Temperatur kann das Gleichgewicht beeinflusst werden.</li>
+                <li>Hydrierung/Dehydrierung sind wichtige Gleichgewichtsreaktionen in der organischen Chemie.</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Typische Abiturinhalte – basierend auf Standardlehrwerken der Chemie (z. B. Mortimer, Riedel).</p>
+        </footer>
+    </div>
+    <script>
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+        applySystemMode();
+        window.addEventListener("message", function(event) {
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

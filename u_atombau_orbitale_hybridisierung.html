@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atombau: Orbitale & Hybridisierung – Chemie Abitur</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .experiment {
+            margin-bottom: 30px;
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        .orbital-img {
+            text-align: center;
+            margin: 15px 0;
+        }
+        .orbital-img img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Atombau: Orbitale & Hybridisierung</h1>
+            <p>Lernübersicht für das Chemie-Abitur (Leistungskurs)</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Orbitalmodell</span>
+            <span class="tag">Quantenzahlen</span>
+            <span class="tag">sp³-Hybridisierung</span>
+            <span class="tag">sp²-Hybridisierung</span>
+            <span class="tag">sp-Hybridisierung</span>
+            <span class="tag">Bindungswinkel</span>
+            <span class="tag">Molekülgeometrie</span>
+            <span class="tag">Elektronenkonfiguration</span>
+            <span class="tag">Chemische Bindung</span>
+            <span class="tag">Abiturvorbereitung</span>
+        </div>
+
+        <!-- Orbitalmodell -->
+        <div class="card">
+            <h2>1. Orbitalmodell</h2>
+            <h3>Definition & Bedeutung</h3>
+            <p>
+                Das <span class="highlight">Orbitalmodell</span> ist ein modernes Atommodell, das auf der Quantenmechanik basiert. Es beschreibt den <span class="highlight">wahrscheinlichen Aufenthaltsraum von Elektronen</span> in der Atomhülle. Orbitale sind keine festen Bahnen, sondern <span class="highlight">räumliche Wahrscheinlichkeitsverteilungen</span>, in denen sich Elektronen mit 95% Wahrscheinlichkeit aufhalten. Das Modell ermöglicht die Erklärung von chemischen Bindungen, Molekülgeometrien und Reaktivitäten.
+            </p>
+            <p>
+                Jedes Orbital kann maximal <span class="highlight">zwei Elektronen</span> mit entgegengesetztem Spin aufnehmen (Pauli-Prinzip). Die Orbitale werden durch <span class="highlight">vier Quantenzahlen</span> charakterisiert:
+            </p>
+            <ul>
+                <li><strong>Hauptquantenzahl (n):</strong> Gibt die Schale an (n = 1, 2, 3, ...).</li>
+                <li><strong>Nebenquantenzahl (l):</strong> Bestimmt die Form des Orbitals (s, p, d, f).</li>
+                <li><strong>Magnetquantenzahl (m<sub>l</sub>):</strong> Beschreibt die räumliche Ausrichtung.</li>
+                <li><strong>Spinquantenzahl (m<sub>s</sub>):</strong> Gibt den Spin des Elektrons an (±½).</li>
+            </ul>
+            <p>
+                Die <span class="highlight">Energieniveaus</span> der Orbitale steigen mit zunehmender Hauptquantenzahl. Innerhalb einer Schale gilt: s &lt; p &lt; d &lt; f.
+            </p>
+            <p>
+                <span class="highlight">Besetzungsregeln:</span>
+                <ul>
+                    <li><strong>Aufbauprinzip:</strong> Orbitale werden nach steigender Energie besetzt.</li>
+                    <li><strong>Hundsche Regel:</strong> Orbitale gleicher Energie werden zunächst einfach besetzt.</li>
+                    <li><strong>Pauli-Prinzip:</strong> Kein Orbital enthält mehr als zwei Elektronen mit entgegengesetztem Spin.</li>
+                </ul>
+            </p>
+            <div class="orbital-img">
+                <img src="https://blog.assets.studyflix.de/wp-content/uploads/2018/12/03_Madelung-Schema-2-1024x576.jpg" alt="Energieniveauschema der Orbitale" />
+                <p><em>Energieniveauschema der Orbitale (Madelung-Regel)</em></p>
+            </div>
+            <h3>Beispiele für Elektronenkonfigurationen</h3>
+            <table>
+                <tr>
+                    <th>Element</th>
+                    <th>Ordnungszahl</th>
+                    <th>Elektronenkonfiguration</th>
+                </tr>
+                <tr>
+                    <td>Wasserstoff (H)</td>
+                    <td>1</td>
+                    <td>1s<sup>1</sup></td>
+                </tr>
+                <tr>
+                    <td>Kohlenstoff (C)</td>
+                    <td>6</td>
+                    <td>1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>2</sup></td>
+                </tr>
+                <tr>
+                    <td>Sauerstoff (O)</td>
+                    <td>8</td>
+                    <td>1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>4</sup></td>
+                </tr>
+                <tr>
+                    <td>Neon (Ne)</td>
+                    <td>10</td>
+                    <td>1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup></td>
+                </tr>
+            </table>
+            <p>
+                <span class="highlight">Anwendung:</span> Das Orbitalmodell erklärt die <strong>Stabilität von Edelgasen</strong> (vollbesetzte Schalen) und die <strong>Reaktivität von Alkalimetallen</strong> (ein Valenzelektron in der äußersten Schale).
+            </p>
+        </div>
+
+        <!-- Hybridisierung -->
+        <div class="card">
+            <h2>2. Hybridisierung</h2>
+            <h3>Definition & Bedeutung</h3>
+            <p>
+                <span class="highlight">Hybridisierung</span> ist die <span class="highlight">Mischung (Linearkombination) von Atomorbitalen</span> eines Atoms zu neuen, energetisch gleichwertigen <span class="highlight">Hybridorbitalen</span>. Dieser Prozess ermöglicht die Bildung von <span class="highlight">räumlich gerichteten Bindungen</span> und erklärt die Geometrie von Molekülen.
+            </p>
+            <p>
+                Durch Hybridisierung können Atome mehr Bindungen eingehen, als es ihre ungepaarten Valenzelektronen zulassen würden. Besonders relevant ist dies für <span class="highlight">Kohlenstoff</span>, der vier Bindungen ausbildet.
+            </p>
+            <h3>Hybridisierungstypen</h3>
+            <table>
+                <tr>
+                    <th>Hybridisierungstyp</th>
+                    <th>Beteiligte Orbitale</th>
+                    <th>Anzahl Hybridorbitale</th>
+                    <th>Bindungswinkel</th>
+                    <th>Molekülgeometrie</th>
+                    <th>Beispiel</th>
+                </tr>
+                <tr>
+                    <td>sp<sup>3</sup></td>
+                    <td>1 × s, 3 × p</td>
+                    <td>4</td>
+                    <td>109,5°</td>
+                    <td>Tetraeder</td>
+                    <td>Methan (CH<sub>4</sub>)</td>
+                </tr>
+                <tr>
+                    <td>sp<sup>2</sup></td>
+                    <td>1 × s, 2 × p</td>
+                    <td>3</td>
+                    <td>120°</td>
+                    <td>Trigonal-planar</td>
+                    <td>Ethen (C<sub>2</sub>H<sub>4</sub>)</td>
+                </tr>
+                <tr>
+                    <td>sp</td>
+                    <td>1 × s, 1 × p</td>
+                    <td>2</td>
+                    <td>180°</td>
+                    <td>Linear</td>
+                    <td>Ethin (C<sub>2</sub>H<sub>2</sub>)</td>
+                </tr>
+            </table>
+            <h3>sp<sup>3</sup>-Hybridisierung (Beispiel: Methan, CH<sub>4</sub>)</h3>
+            <p>
+                Ein <span class="highlight">2s-Orbital</span> und drei <span class="highlight">2p-Orbitale</span> des Kohlenstoffs mischen sich zu vier <span class="highlight">sp<sup>3</sup>-Hybridorbitalen</span>. Diese bilden mit den s-Orbitalen der Wasserstoffatome vier <span class="highlight">σ-Bindungen</span> (Einfachbindungen) aus. Die Molekülgeometrie ist <span class="highlight">tetraedrisch</span> mit einem Bindungswinkel von 109,5°.
+            </p>
+            <div class="orbital-img">
+                <img src="https://blog.assets.studyflix.de/wp-content/uploads/2020/09/WordPress_Bilder_Hybridisierung_1-1-1024x576.png" alt="sp3-Hybridisierung am Kohlenstoffatom" />
+                <p><em>sp<sup>3</sup>-Hybridisierung am Kohlenstoffatom (Methan)</em></p>
+            </div>
+            <h3>sp<sup>2</sup>-Hybridisierung (Beispiel: Ethen, C<sub>2</sub>H<sub>4</sub>)</h3>
+            <p>
+                Ein <span class="highlight">2s-Orbital</span> und zwei <span class="highlight">2p-Orbitale</span> bilden drei <span class="highlight">sp<sup>2</sup>-Hybridorbitale</span>. Das verbliebene p-Orbital bildet eine <span class="highlight">π-Bindung</span> (Doppelbindung). Die Molekülgeometrie ist <span class="highlight">trigonal-planar</span> mit einem Bindungswinkel von 120°.
+            </p>
+            <div class="orbital-img">
+                <img src="https://blog.assets.studyflix.de/wp-content/uploads/2018/12/Ethen_SEO-1024x576.jpg" alt="sp2-Hybridisierung am Ethen" />
+                <p><em>sp<sup>2</sup>-Hybridisierung am Ethen</em></p>
+            </div>
+            <h3>sp-Hybridisierung (Beispiel: Ethin, C<sub>2</sub>H<sub>2</sub>)</h3>
+            <p>
+                Ein <span class="highlight">2s-Orbital</span> und ein <span class="highlight">2p-Orbital</span> bilden zwei <span class="highlight">sp-Hybridorbitale</span>. Die beiden verbleibenden p-Orbitale bilden zwei <span class="highlight">π-Bindungen</span> (Dreifachbindung). Die Molekülgeometrie ist <span class="highlight">linear</span> mit einem Bindungswinkel von 180°.
+            </p>
+            <div class="orbital-img">
+                <img src="https://blog.assets.studyflix.de/wp-content/uploads/2018/12/Ethin_SEO-1024x576.jpg" alt="sp-Hybridisierung am Ethin" />
+                <p><em>sp-Hybridisierung am Ethin</em></p>
+            </div>
+            <h3>Anwendung & Bedeutung</h3>
+            <p>
+                Die Hybridisierung erklärt:
+                <ul>
+                    <li>Die <strong>räumliche Struktur organischer Moleküle</strong> (z. B. Tetraeder, planar, linear).</li>
+                    <li>Die <strong>Reaktivität von Molekülen</strong> (z. B. π-Bindungen in Alkenen und Alkinen).</li>
+                    <li>Die <strong>Bindungswinkel und Molekülsymmetrie</strong>.</li>
+                    <li>Die <strong>Eigenschaften von Komplexverbindungen</strong> (z. B. oktaedrische oder quadratisch-planare Geometrie).</li>
+                </ul>
+            </p>
+        </div>
+
+        <!-- Zusammenfassung -->
+        <div class="card">
+            <h2>3. Zusammenfassung & Prüfungsrelevanz</h2>
+            <ul>
+                <li><span class="highlight">Orbitale:</span> Beschreiben den Aufenthaltsraum von Elektronen und erklären chemische Bindungen.</li>
+                <li><span class="highlight">Hybridisierung:</span> Ermöglicht die Bildung von räumlich gerichteten Bindungen und erklärt Molekülgeometrien.</li>
+                <li><span class="highlight">sp<sup>3</sup>:</span> Tetraedrisch (109,5°), z. B. Methan.</li>
+                <li><span class="highlight">sp<sup>2</sup>:</span> Trigonal-planar (120°), z. B. Ethen.</li>
+                <li><span class="highlight">sp:</span> Linear (180°), z. B. Ethin.</li>
+                <li><span class="highlight">Prüfungsrelevanz:</span> Hybridisierungszustände in Kohlenstoffverbindungen sind ein häufiges Abiturthema.</li>
+            </ul>
+            <p>
+                <span class="highlight">Tipps für die Prüfung:</span>
+                <ul>
+                    <li>Elektronenkonfigurationen sicher bestimmen können.</li>
+                    <li>Hybridisierungstypen an Molekülbeispielen erkennen.</li>
+                    <li>Bindungswinkel und Molekülgeometrien ableiten.</li>
+                    <li>π- und σ-Bindungen unterscheiden können.</li>
+                </ul>
+            </p>
+        </div>
+
+        <footer>
+            <p>Quellen: <a href="https://www.abiweb.de">abiweb.de</a>, <a href="https://www.lernhelfer.de">lernhelfer.de</a>, <a href="https://www.studysmarter.de">studysmarter.de</a>, <a href="https://www.spektrum.de">spektrum.de</a>, <a href="https://studyflix.de">studyflix.de</a></p>
+        </footer>
+    </div>
+    <script>
+        // 1. Systemeinstellungen prüfen und sofort anwenden (ohne Animation)
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            // Transition nach kurzer Verzögerung aktivieren
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        // 2. Modus manuell setzen (mit Animation)
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        // 3. Systemeinstellungen beim Laden anwenden
+        applySystemMode();
+
+        // 4. Nachrichten von der Hauptseite empfangen
+        window.addEventListener("message", function(event) {
+            // Dark/Light-Mode wechseln (mit Animation)
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            // Aktuellen Modus abfragen
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            // Sichtbaren Text zurücksenden
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        // 5. Hauptseite beim Laden über den aktuellen Modus informieren
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        // 6. Systemeinstellungen ändern (optional)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

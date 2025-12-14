@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verbrennung von Kohlenstoff im Hochofen</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Verbrennung von Kohlenstoff im Hochofen</h1>
+            <p>Lernübersicht für das Abitur (Leistungskurs Chemie)</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Hochofenprozess</span>
+            <span class="tag">Kohlenstoffverbrennung</span>
+            <span class="tag">ΔH & ΔG</span>
+            <span class="tag">Redoxreaktionen</span>
+            <span class="tag">Prinzip von Le Chatelier</span>
+            <span class="tag">Eisenherstellung</span>
+            <span class="tag">Koks</span>
+            <span class="tag">Boudouard-Gleichgewicht</span>
+        </div>
+
+        <!-- 1. Reaktionsgleichungen & Grundlagen -->
+        <div class="card">
+            <h2>1. Reaktionsgleichungen & Grundlagen</h2>
+            <h3>Hauptreaktionen im Hochofen</h3>
+            <div class="reaction">
+                \[
+                \text{C} (s) + \text{O}_2 (g) \rightarrow \text{CO}_2 (g) \quad \Delta H_R^0 = -393{,}5\,\text{kJ/mol}
+                \]
+                \[
+                \text{CO}_2 (g) + \text{C} (s) \rightleftharpoons 2\,\text{CO} (g) \quad \Delta H_R^0 = +172{,}5\,\text{kJ/mol} \quad (\text{Boudouard-Gleichgewicht})
+                \]
+                \[
+                \text{Fe}_2\text{O}_3 (s) + 3\,\text{CO} (g) \rightarrow 2\,\text{Fe} (l) + 3\,\text{CO}_2 (g) \quad \Delta H_R^0 = -27\,\text{kJ/mol}
+                \]
+            </div>
+            <ul>
+                <li><strong>Kohlenstoffverbrennung:</strong> Exotherme Reaktion (\(\Delta H < 0\)), liefert Energie für den Prozess.</li>
+                <li><strong>Boudouard-Gleichgewicht:</strong> Endotherme Reaktion (\(\Delta H > 0\)), bildet CO als Reduktionsmittel.</li>
+                <li><strong>Eisenoxid-Reduktion:</strong> CO reduziert \(\text{Fe}_2\text{O}_3\) zu flüssigem Eisen.</li>
+                <li><strong>Koks:</strong> Wichtigste Kohlenstoffquelle, porös für bessere Reaktion mit \(\text{CO}_2\).</li>
+            </ul>
+            <p><a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/hochofenprozess" target="_blank">(Quelle: Lernhelfer)</a></p>
+        </div>
+
+        <!-- 2. Thermodynamik: ΔH und ΔG -->
+        <div class="card">
+            <h2>2. Thermodynamische Betrachtung: ΔH und ΔG</h2>
+            <h3>ΔH (Reaktionsenthalpie)</h3>
+            <ul>
+                <li><strong>Verbrennung von C zu \(\text{CO}_2\):</strong> \(\Delta H = -393{,}5\,\text{kJ/mol}\) (exotherm).</li>
+                <li><strong>Boudouard-Reaktion:</strong> \(\Delta H = +172{,}5\,\text{kJ/mol}\) (endotherm).</li>
+                <li><strong>Eisenoxid-Reduktion:</strong> \(\Delta H = -27\,\text{kJ/mol}\) (leicht exotherm).</li>
+                <li><strong>Gesamtprozess:</strong> Exotherm, da die Verbrennung die endothermen Schritte überkompensiert.</li>
+            </ul>
+            <h3>ΔG (Freie Enthalpie)</h3>
+            <ul>
+                <li>\(\Delta G = \Delta H - T \cdot \Delta S\)</li>
+                <li><strong>Boudouard-Reaktion:</strong> \(\Delta S > 0\) (Volumenzunahme), \(\Delta G\) wird mit steigender \(T\) negativer → CO-Bildung begünstigt.</li>
+                <li><strong>Optimale Temperatur:</strong> 1500–2000°C im Gestell, 400–900°C in der Kohlungszone.</li>
+            </ul>
+            <p><a href="https://www.chemie.de/lexikon/Hochofen.html" target="_blank">(Quelle: Chemie.de)</a></p>
+        </div>
+
+        <!-- 3. Redoxvorgänge -->
+        <div class="card">
+            <h2>3. Redoxvorgänge im Hochofen</h2>
+            <table>
+                <tr>
+                    <th>Reaktion</th>
+                    <th>Oxidation</th>
+                    <th>Reduktion</th>
+                    <th>Oxidationsmittel</th>
+                    <th>Reduktionsmittel</th>
+                </tr>
+                <tr>
+                    <td>\(\text{C} + \text{O}_2 \rightarrow \text{CO}_2\)</td>
+                    <td>C: \(0 \rightarrow +4\)</td>
+                    <td>\(\text{O}_2\): \(0 \rightarrow -2\)</td>
+                    <td>\(\text{O}_2\)</td>
+                    <td>C</td>
+                </tr>
+                <tr>
+                    <td>\(\text{CO}_2 + \text{C} \rightarrow 2\,\text{CO}\)</td>
+                    <td>C: \(0 \rightarrow +2\)</td>
+                    <td>\(\text{CO}_2\): \(+4 \rightarrow +2\) (C)</td>
+                    <td>\(\text{CO}_2\)</td>
+                    <td>C</td>
+                </tr>
+                <tr>
+                    <td>\(\text{Fe}_2\text{O}_3 + 3\,\text{CO} \rightarrow 2\,\text{Fe} + 3\,\text{CO}_2\)</td>
+                    <td>CO: \(+2 \rightarrow +4\)</td>
+                    <td>\(\text{Fe}_2\text{O}_3\): \(+3 \rightarrow 0\) (Fe)</td>
+                    <td>\(\text{Fe}_2\text{O}_3\)</td>
+                    <td>CO</td>
+                </tr>
+            </table>
+            <p><a href="https://www.abiweb.de/chemie-redoxreaktionen/redoxreaktionen-in-der-technik/hochofenprozess.html" target="_blank">(Quelle: Abiweb)</a></p>
+        </div>
+
+        <!-- 4. Prinzip von Le Chatelier -->
+        <div class="card">
+            <h2>4. Prinzip von Le Chatelier</h2>
+            <table>
+                <tr>
+                    <th>Einflussfaktor</th>
+                    <th>Auswirkung auf das Boudouard-Gleichgewicht</th>
+                    <th>Industrielle Umsetzung</th>
+                </tr>
+                <tr>
+                    <td><strong>Temperatur</strong></td>
+                    <td>Hohe \(T\) begünstigt CO-Bildung (endotherme Reaktion).</td>
+                    <td>Temperaturgradient: 400–2000°C von oben nach unten.</td>
+                </tr>
+                <tr>
+                    <td><strong>Druck</strong></td>
+                    <td>Niedriger Druck begünstigt CO-Bildung (Volumenzunahme).</td>
+                    <td>Atmosphärendruck, da Druckerhöhung technisch aufwendig.</td>
+                </tr>
+                <tr>
+                    <td><strong>Konzentration</strong></td>
+                    <td>Entzug von CO (durch Reduktion von \(\text{Fe}_2\text{O}_3\)) verschiebt GG nach rechts.</td>
+                    <td>Kontinuierliche Beschickung mit \(\text{Fe}_2\text{O}_3\) und C.</td>
+                </tr>
+            </table>
+            <p><a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/prinzip-des-kleinsten-zwangs-prinzip-von-le-chatelier" target="_blank">(Quelle: Lernhelfer)</a></p>
+        </div>
+
+        <!-- 5. Industrielle Bedingungen -->
+        <div class="card">
+            <h2>5. Industrielle Bedingungen im Hochofen</h2>
+            <ul>
+                <li><strong>Temperaturzonen:</strong>
+                    <ul>
+                        <li><strong>Gichtgaszone (oben):</strong> 200–400°C (Trocknung, Vorwärmung).</li>
+                        <li><strong>Kohlungszone:</strong> 400–900°C (Boudouard-Reaktion).</li>
+                        <li><strong>Schmelzzone:</strong> 1200–1500°C (Reduktion von \(\text{Fe}_2\text{O}_3\)).</li>
+                        <li><strong>Gestell (unten):</strong> 1500–2000°C (Verbrennung von C zu \(\text{CO}_2\)).</li>
+                    </ul>
+                </li>
+                <li><strong>Beschickung:</strong> Schichtweise Eisenerz (\(\text{Fe}_2\text{O}_3\)), Koks (C), und Zuschläge (z. B. \(\text{CaCO}_3\)).</li>
+                <li><strong>Heißwind:</strong> 1200–1300°C, mit \(\text{O}_2\) angereichert (bis zu 25% \(\text{O}_2\)), beschleunigt Verbrennung.</li>
+                <li><strong>Produkte:</strong> Roheisen (4% C, Si, Mn, P), Gichtgas (CO, \(\text{CO}_2\), \(\text{N}_2\)), Schlacke (\(\text{CaSiO}_3\)).</li>
+            </ul>
+            <p><a href="https://de.wikipedia.org/wiki/Hochofen" target="_blank">(Quelle: Wikipedia)</a></p>
+        </div>
+
+        <!-- 6. Zusammenfassung & Bedeutung -->
+        <div class="card">
+            <h2>6. Zusammenfassung & Bedeutung</h2>
+            <ul>
+                <li><span class="highlight">Exotherme Verbrennung</span> (\(\text{C} + \text{O}_2 \rightarrow \text{CO}_2\)) liefert Energie für den Prozess.</li>
+                <li><span class="highlight">Endothermes Boudouard-Gleichgewicht</span> (\(\text{CO}_2 + \text{C} \rightarrow 2\,\text{CO}\)) bildet das Reduktionsmittel CO.</li>
+                <li><span class="highlight">Redoxprozesse:</span> CO reduziert \(\text{Fe}_2\text{O}_3\) zu flüssigem Eisen, C wird zu \(\text{CO}_2\) oxidiert.</li>
+                <li><span class="highlight">Prinzip von Le Chatelier:</span> Hohe Temperaturen und CO-Entzug begünstigen die CO-Bildung.</li>
+                <li><span class="highlight">Anwendung:</span> 70% der weltweiten Stahlproduktion basiert auf dem Hochofenprozess.</li>
+                <li><span class="highlight">Umweltaspekte:</span> \(\text{CO}_2\)-Emissionen (1,8 t pro Tonne Roheisen), Forschung zu Wasserstoff als Reduktionsmittel.</li>
+            </ul>
+            <p><a href="https://www.stahl-online.de/wissen/roheisen-und-stahlerzeugung/hochofen/" target="_blank">(Quelle: Stahl-Online)</a></p>
+        </div>
+
+        <footer>
+            <p>Quellen: <a href="https://www.lernhelfer.de" target="_blank">Lernhelfer</a>, <a href="https://www.abiweb.de" target="_blank">Abiweb</a>, <a href="https://de.wikipedia.org" target="_blank">Wikipedia</a>, <a href="https://www.chemie.de" target="_blank">Chemie.de</a>, <a href="https://www.stahl-online.de" target="_blank">Stahl-Online</a></p>
+        </footer>
+    </div>
+    <script>
+        // 1. Systemeinstellungen prüfen und sofort anwenden (ohne Animation)
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            // Transition nach kurzer Verzögerung aktivieren
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        // 2. Modus manuell setzen (mit Animation)
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        // 3. Systemeinstellungen beim Laden anwenden
+        applySystemMode();
+
+        // 4. Nachrichten von der Hauptseite empfangen
+        window.addEventListener("message", function(event) {
+            // Dark/Light-Mode wechseln (mit Animation)
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            // Aktuellen Modus abfragen
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            // Sichtbaren Text zurücksenden
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        // 5. Hauptseite beim Laden über den aktuellen Modus informieren
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        // 6. Systemeinstellungen ändern (optional)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

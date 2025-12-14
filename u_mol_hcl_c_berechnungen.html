@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemie-Experimente: Reaktion von Salzsäure mit Zink & Verbrennung von Kohlenstoff</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .experiment {
+            margin-bottom: 30px;
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Chemie-Experimente: Reaktion von Salzsäure mit Zink & Verbrennung von Kohlenstoff</h1>
+            <p>Lernübersicht für das Abitur (Leistungskurs Chemie)</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Reaktionsgleichung</span>
+            <span class="tag">Molare Masse</span>
+            <span class="tag">Molvolumen</span>
+            <span class="tag">Chemisches Gleichgewicht</span>
+            <span class="tag">Thermodynamik</span>
+            <span class="tag">Reaktionsenthalpie</span>
+            <span class="tag">Salzsäure</span>
+            <span class="tag">Zink</span>
+            <span class="tag">Kohlenstoff</span>
+            <span class="tag">Verbrennung</span>
+        </div>
+
+        <div class="card experiment">
+            <h2>1. Reaktion von Salzsäure mit Zink</h2>
+            <h3>Reaktionsgleichung</h3>
+            <div class="reaction">
+Zn + 2 HCl → ZnCl₂ + H₂
+            </div>
+
+            <h3>Berechnungsschritte</h3>
+            <table>
+                <tr>
+                    <th>Größe</th>
+                    <th>Wert</th>
+                    <th>Einheit</th>
+                    <th>Berechnung</th>
+                </tr>
+                <tr>
+                    <td>Molare Masse Zink (M(Zn))</td>
+                    <td>65,38</td>
+                    <td>g/mol</td>
+                    <td>–</td>
+                </tr>
+                <tr>
+                    <td>Molare Masse Wasserstoff (M(H₂))</td>
+                    <td>2,016</td>
+                    <td>g/mol</td>
+                    <td>–</td>
+                </tr>
+                <tr>
+                    <td>Molvolumen (ideales Gas)</td>
+                    <td>22,4</td>
+                    <td>L/mol</td>
+                    <td>–</td>
+                </tr>
+                <tr>
+                    <td>Stoffmenge Zink (n(Zn))</td>
+                    <td>m(Zn) / M(Zn)</td>
+                    <td>mol</td>
+                    <td>z. B. 0,38 g / 65,38 g/mol ≈ 0,0058 mol</td>
+                </tr>
+                <tr>
+                    <td>Stoffmenge Wasserstoff (n(H₂))</td>
+                    <td>n(Zn)</td>
+                    <td>mol</td>
+                    <td>1:1 Verhältnis</td>
+                </tr>
+                <tr>
+                    <td>Volumen Wasserstoff (V(H₂))</td>
+                    <td>n(H₂) × 22,4 L/mol</td>
+                    <td>L</td>
+                    <td>z. B. 0,0058 mol × 22,4 L/mol ≈ 0,13 L</td>
+                </tr>
+            </table>
+
+            <h3>Beispielrechnung</h3>
+            <p>Bei der Reaktion von 0,38 g Zink mit Salzsäure entstehen:</p>
+            <ul>
+                <li>0,0058 mol Wasserstoff</li>
+                <li>0,13 L Wasserstoffgas (bei Normalbedingungen)</li>
+            </ul>
+            <p><strong>Hinweis:</strong> Die Reaktion verläuft exotherm. Das entstehende Gasvolumen kann mit einem Kolbenprober gemessen werden.</p>
+        </div>
+
+        <div class="card experiment">
+            <h2>2. Verbrennung von Kohlenstoff</h2>
+            <h3>Reaktionsgleichung</h3>
+            <div class="reaction">
+C + O₂ → CO₂
+            </div>
+
+            <h3>Berechnungsschritte</h3>
+            <table>
+                <tr>
+                    <th>Größe</th>
+                    <th>Wert</th>
+                    <th>Einheit</th>
+                    <th>Berechnung</th>
+                </tr>
+                <tr>
+                    <td>Molare Masse Kohlenstoff (M(C))</td>
+                    <td>12,01</td>
+                    <td>g/mol</td>
+                    <td>–</td>
+                </tr>
+                <tr>
+                    <td>Molare Masse CO₂ (M(CO₂))</td>
+                    <td>44,01</td>
+                    <td>g/mol</td>
+                    <td>–</td>
+                </tr>
+                <tr>
+                    <td>Molvolumen (ideales Gas)</td>
+                    <td>22,4</td>
+                    <td>L/mol</td>
+                    <td>–</td>
+                </tr>
+                <tr>
+                    <td>Stoffmenge Kohlenstoff (n(C))</td>
+                    <td>m(C) / M(C)</td>
+                    <td>mol</td>
+                    <td>z. B. 12 g / 12,01 g/mol ≈ 1 mol</td>
+                </tr>
+                <tr>
+                    <td>Stoffmenge CO₂ (n(CO₂))</td>
+                    <td>n(C)</td>
+                    <td>mol</td>
+                    <td>1:1 Verhältnis</td>
+                </tr>
+                <tr>
+                    <td>Volumen CO₂ (V(CO₂))</td>
+                    <td>n(CO₂) × 22,4 L/mol</td>
+                    <td>L</td>
+                    <td>z. B. 1 mol × 22,4 L/mol = 22,4 L</td>
+                </tr>
+            </table>
+
+            <h3>Beispielrechnung</h3>
+            <p>Bei der Verbrennung von 12 g Kohlenstoff entstehen:</p>
+            <ul>
+                <li>1 mol Kohlenstoffdioxid</li>
+                <li>22,4 L Kohlenstoffdioxidgas (bei Normalbedingungen)</li>
+            </ul>
+
+            <h3>Reaktionsenthalpie ΔU und ΔH</h3>
+            <p>Die Reaktionsenthalpie ΔH für die Verbrennung von Kohlenstoff zu CO₂ beträgt unter Standardbedingungen (25°C, 1013 hPa):</p>
+            <div class="reaction">
+ΔH° = -393 kJ/mol
+            </div>
+            <p><strong>Rechenweg:</strong></p>
+            <p>Die Reaktionsenthalpie ΔH wird aus den Standardbildungsenthalpien der Produkte und Edukte berechnet:</p>
+            <div class="reaction">
+ΔH° = Σ ΔH°f(Produkte) - Σ ΔH°f(Edukte)
+ΔH° = ΔH°f(CO₂) - [ΔH°f(C) + ΔH°f(O₂)]
+ΔH° = -393,5 kJ/mol - [0 kJ/mol + 0 kJ/mol] = -393,5 kJ/mol
+            </div>
+            <p><strong>Erklärung:</strong></p>
+            <ul>
+                <li>Die Standardbildungsenthalpie von CO₂ beträgt -393,5 kJ/mol.</li>
+                <li>Die Standardbildungsenthalpien der Elemente (C, O₂) sind definitionsgemäß 0 kJ/mol.</li>
+                <li>Die Reaktion ist stark exotherm (ΔH° < 0), es wird Energie freigesetzt.</li>
+                <li>Für ΔU (innere Energie) gilt bei Gasreaktionen: ΔU ≈ ΔH - Δn·R·T, wobei Δn die Differenz der Stoffmengen an gasförmigen Produkten und Edukten ist. Bei dieser Reaktion ist Δn = 0 (1 mol CO₂ entsteht, 1 mol O₂ wird verbraucht), also ist ΔU ≈ ΔH.</li>
+            </ul>
+            <p><strong>Hinweis:</strong> Die Reaktion ist vollständig und exotherm. Das chemische Gleichgewicht liegt bei vollständiger Verbrennung auf der Produktseite.</p>
+        </div>
+
+        <div class="card">
+            <h2>Zusammenfassung der Lerninhalte</h2>
+            <ul>
+                <li><span class="highlight">Reaktionsgleichungen:</span> Ausgleichen der Atome, stöchiometrische Koeffizienten</li>
+                <li><span class="highlight">Molare Massen:</span> Berechnung aus dem Periodensystem</li>
+                <li><span class="highlight">Molvolumen:</span> 22,4 L/mol (ideales Gas, Normalbedingungen)</li>
+                <li><span class="highlight">Thermodynamik:</span> Exotherme Reaktionen, Energieumsatz, Reaktionsenthalpie ΔH und ΔU</li>
+                <li><span class="highlight">Chemisches Gleichgewicht:</span> Vollständige Reaktionen (kein Rückwärtsablauf)</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Quellen: <a href="https://www.leifichemie.de">LEIFIchemie</a>, <a href="https://www.sofatutor.com">sofatutor</a>, <a href="https://www.chemie-schule.de">Chemie-Schule</a>, <a href="https://knowunity.de">Knowunity</a>, <a href="https://chemie.osz-biv.de">OSZ Chemie</a> (Abitur-Niveau)</p>
+        </footer>
+    </div>
+    <script>
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        window.addEventListener("message", function(event) {
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

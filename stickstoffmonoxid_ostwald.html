@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technische Herstellung von Stickstoffmonoxid (NO) nach Ostwald</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Technische Herstellung von Stickstoffmonoxid (NO) nach Ostwald</h1>
+            <p>Lernübersicht für das Abitur (Leistungskurs Chemie)</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Ostwald-Verfahren</span>
+            <span class="tag">Stickstoffmonoxid (NO)</span>
+            <span class="tag">ΔH & ΔG</span>
+            <span class="tag">Prinzip von Le Chatelier</span>
+            <span class="tag">Katalysator</span>
+            <span class="tag">Exotherme Reaktion</span>
+            <span class="tag">Industrielle Synthese</span>
+            <span class="tag">Salpetersäure</span>
+        </div>
+
+        <div class="card">
+            <h2>1. Reaktionsgleichungen & Grundlagen</h2>
+            <h3>Hauptreaktion (Schritt 1)</h3>
+            <div class="reaction">
+                \[
+                4\,\text{NH}_3 (g) + 5\,\text{O}_2 (g) \xrightarrow{\text{Pt/Rh}, 800-900\,^\circ\text{C}} 4\,\text{NO} (g) + 6\,\text{H}_2\text{O} (g) \quad \Delta H_R^0 = -905\,\text{kJ/mol}
+                \]
+            </div>
+            <ul>
+                <li><strong>Exotherme Reaktion:</strong> \(\Delta H < 0\) → Wärme wird freigesetzt.</li>
+                <li><strong>Katalysator:</strong> Platin-Rhodium-Netz (90% Pt, 10% Rh).</li>
+                <li><strong>Bedeutung:</strong> NO ist Zwischenprodukt für die Salpetersäureherstellung.</li>
+            </ul>
+            <p><a href="https://www.abiweb.de/anorganische-chemie/chemische-reaktionen/anwendungen-des-mwg-in-der-chemischen-grossindustrie/ostwald-verfahren.html" target="_blank">(Quelle: Abiweb)</a></p>
+        </div>
+
+        <div class="card">
+            <h2>2. Thermodynamische Größen: ΔH und ΔG</h2>
+            <h3>ΔH (Reaktionsenthalpie)</h3>
+            <ul>
+                <li>\(\Delta H_R^0 = -905\,\text{kJ/mol}\) → <span class="highlight">stark exotherm</span>.</li>
+                <li>Nach Le Chatelier begünstigen <span class="highlight">niedrige Temperaturen</span> die NO-Bildung, aber hohe Temperaturen sind für die Reaktionsgeschwindigkeit nötig.</li>
+            </ul>
+            <h3>ΔG (Freie Enthalpie)</h3>
+            <ul>
+                <li>\(\Delta G = \Delta H - T \cdot \Delta S\)</li>
+                <li>\(\Delta S\) (Entropieänderung) \(< 0\), da Gasvolumen abnimmt.</li>
+                <li>Bei niedrigen Temperaturen ist \(\Delta G < 0\) → Reaktion läuft freiwillig ab.</li>
+                <li>Mit steigender Temperatur wird \(\Delta G\) weniger negativ → Gleichgewicht verschiebt sich zu den Edukten.</li>
+            </ul>
+            <p><a href="https://www.chemie-schule.de/KnowHow/Ostwaldverfahren" target="_blank">(Quelle: Chemie-Schule)</a></p>
+        </div>
+
+        <div class="card">
+            <h2>3. Prinzip von Le Chatelier</h2>
+            <table>
+                <tr>
+                    <th>Einflussfaktor</th>
+                    <th>Auswirkung auf das Gleichgewicht</th>
+                    <th>Industrielle Umsetzung</th>
+                </tr>
+                <tr>
+                    <td><strong>Temperatur</strong></td>
+                    <td>Niedrige \(T\) begünstigt NO-Bildung (exotherm), aber langsame Kinetik.</td>
+                    <td>Kompromiss: 800–900°C (schnelle Reaktion, akzeptable Ausbeute).</td>
+                </tr>
+                <tr>
+                    <td><strong>Druck</strong></td>
+                    <td>Hoher Druck begünstigt NO-Bildung (Volumenabnahme), aber technisch nicht sinnvoll.</td>
+                    <td>Atmosphärendruck, da Druckerhöhung Nebenreaktionen fördert.</td>
+                </tr>
+                <tr>
+                    <td><strong>Konzentration</strong></td>
+                    <td>Hohe \(\text{NH}_3\)- und \(\text{O}_2\)-Konzentrationen erhöhen NO-Ausbeute.</td>
+                    <td>Luftüberschuss (20% \(\text{O}_2\)) und \(\text{NH}_3\)-Überschuss vermeiden.</td>
+                </tr>
+                <tr>
+                    <td><strong>Katalysator</strong></td>
+                    <td>Pt/Rh-Netz senkt Aktivierungsenergie, beschleunigt Reaktion.</td>
+                    <td>Kein Einfluss auf Gleichgewichtslage, nur auf Geschwindigkeit.</td>
+                </tr>
+            </table>
+            <p><a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/prinzip-des-kleinsten-zwangs-prinzip-von-le-chatelier" target="_blank">(Quelle: Lernhelfer)</a></p>
+        </div>
+
+        <div class="card">
+            <h2>4. Industrielle Reaktionsbedingungen</h2>
+            <ul>
+                <li><strong>Temperatur:</strong> 800–900°C (Kompromiss zwischen Ausbeute und Geschwindigkeit).</li>
+                <li><strong>Druck:</strong> Atmosphärendruck (1 bar), da höhere Drücke Nebenreaktionen fördern.</li>
+                <li><strong>Katalysator:</strong> Platin-Rhodium-Netz (90% Pt, 10% Rh), Lebensdauer: ~6 Monate.</li>
+                <li><strong>Verweilzeit:</strong> ~0,001 s (kurzer Kontakt, um Zerfall von NO zu vermeiden).</li>
+                <li><strong>Luftüberschuss:</strong> 20% \(\text{O}_2\), um vollständige Oxidation zu gewährleisten.</li>
+            </ul>
+            <p><a href="https://de.wikipedia.org/wiki/Ostwald-Verfahren" target="_blank">(Quelle: Wikipedia)</a></p>
+        </div>
+
+        <div class="card">
+            <h2>5. Folgereaktionen & Salpetersäureherstellung</h2>
+            <h3>Schritt 2: Oxidation von NO zu \(\text{NO}_2\)</h3>
+            <div class="reaction">
+                \[
+                2\,\text{NO} (g) + \text{O}_2 (g) \rightleftharpoons 2\,\text{NO}_2 (g) \quad \Delta H_R^0 = -114{,}2\,\text{kJ/mol}
+                \]
+            </div>
+            <ul>
+                <li>Temperatur: \(< 50\,^\circ\text{C}\) (exotherm, Gleichgewicht liegt bei niedrigen Temperaturen auf der Produktseite).</li>
+                <li>Dimerisierung: \(2\,\text{NO}_2 \rightleftharpoons \text{N}_2\text{O}_4\) (farbloses Dimer).</li>
+            </ul>
+            <h3>Schritt 3: Absorption in Wasser</h3>
+            <div class="reaction">
+                \[
+                3\,\text{NO}_2 (g) + \text{H}_2\text{O} (l) \rightarrow 2\,\text{HNO}_3 (aq) + \text{NO} (g)
+                \]
+            </div>
+            <ul>
+                <li>NO wird zurückgeführt (Kreislaufverfahren).</li>
+                <li>Endprodukt: 60–65%ige Salpetersäure.</li>
+            </ul>
+            <p><a href="https://www.studysmarter.de/schule/chemie/anorganische-chemie/ostwald-verfahren/" target="_blank">(Quelle: StudySmarter)</a></p>
+        </div>
+
+        <div class="card">
+            <h2>6. Zusammenfassung & Bedeutung</h2>
+            <ul>
+                <li><span class="highlight">Exotherme Reaktion</span> (\(\Delta H < 0\)) → niedrige \(T\) begünstigt NO-Bildung, aber hohe \(T\) nötig für Kinetik.</li>
+                <li><span class="highlight">Katalysator</span> (Pt/Rh) → senkt Aktivierungsenergie, beschleunigt Reaktion.</li>
+                <li><span class="highlight">Kurze Verweilzeit</span> → verhindert Zerfall von NO zu \(\text{N}_2\) und \(\text{O}_2\).</li>
+                <li><span class="highlight">Anwendung:</span> 90% der Salpetersäure wird für Düngemittel (Ammoniumnitrat) verwendet.</li>
+                <li><span class="highlight">Nebenreaktionen:</span> \(4\,\text{NH}_3 + 3\,\text{O}_2 \rightarrow 2\,\text{N}_2 + 6\,\text{H}_2\text{O}\) (unerwünscht, wird durch hohe \(T\) und kurzen Kontakt minimiert).</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Quellen: <a href="https://www.abiweb.de" target="_blank">Abiweb</a>, <a href="https://www.chemie-schule.de" target="_blank">Chemie-Schule</a>, <a href="https://de.wikipedia.org" target="_blank">Wikipedia</a>, <a href="https://www.studysmarter.de" target="_blank">StudySmarter</a>, <a href="https://www.lernhelfer.de" target="_blank">Lernhelfer</a></p>
+        </footer>
+    </div>
+    <script>
+        // 1. Systemeinstellungen prüfen und sofort anwenden (ohne Animation)
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            // Transition nach kurzer Verzögerung aktivieren
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        // 2. Modus manuell setzen (mit Animation)
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        // 3. Systemeinstellungen beim Laden anwenden
+        applySystemMode();
+
+        // 4. Nachrichten von der Hauptseite empfangen
+        window.addEventListener("message", function(event) {
+            // Dark/Light-Mode wechseln (mit Animation)
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            // Aktuellen Modus abfragen
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            // Sichtbaren Text zurücksenden
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        // 5. Hauptseite beim Laden über den aktuellen Modus informieren
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        // 6. Systemeinstellungen ändern (optional)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

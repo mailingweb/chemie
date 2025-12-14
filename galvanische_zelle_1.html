@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galvanische Zelle – Lernübersicht für das Abitur</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .experiment {
+            margin-bottom: 30px;
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Galvanische Zelle – Lernübersicht für das Abitur</h1>
+            <p>Leistungskurs Chemie – Elektrochemie</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Galvanische Zelle</span>
+            <span class="tag">Daniell-Element</span>
+            <span class="tag">Redoxreaktion</span>
+            <span class="tag">Anode/Kathode</span>
+            <span class="tag">Elektrochemie</span>
+            <span class="tag">Energiewandlung</span>
+            <span class="tag">Halbzelle</span>
+            <span class="tag">Elektrolyt</span>
+            <span class="tag">Spannungsreihe</span>
+        </div>
+
+        <div class="card">
+            <h2>1. Begriff und Erklärung</h2>
+            <p>
+                Eine <strong>galvanische Zelle</strong> (auch galvanisches Element genannt) ist eine Vorrichtung zur spontanen Umwandlung von <strong>chemischer in elektrische Energie</strong>. Sie besteht aus zwei räumlich getrennten <strong>Halbzellen</strong>, in denen jeweils eine Elektrode in einen Elektrolyten eintaucht. Durch eine <strong>Redoxreaktion</strong> wird chemische Energie in elektrische Energie umgewandelt, die über einen äußeren Stromkreis nutzbar ist.
+            </p>
+            <p>
+                <strong>Merke:</strong> In galvanischen Zellen finden Redoxprozesse statt, wobei Oxidation und Reduktion räumlich voneinander getrennt sind. Jede Teilreaktion stellt eine Halbzelle dar. Wenn der Stromkreis geschlossen ist, läuft der Redoxprozess freiwillig ab und es fließt Strom.
+            </p>
+            <p>
+                <strong>Beispiel:</strong> Das <a href="https://www.abiweb.de/anorganische-chemie/donator-akzeptor-prinzip/redox-chemie/redoxreaktionen-elektrochemie/daniell-element-galvanische-zelle.html" target="_blank">Daniell-Element</a> ist eine klassische galvanische Zelle.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>2. Aufbau und Versuchsaufbau</h2>
+            <p>
+                Eine galvanische Zelle besteht aus:
+            </p>
+            <ul>
+                <li><strong>Anode (Minuspol):</strong> Hier findet die <strong>Oxidation</strong> statt (Elektronenabgabe).</li>
+                <li><strong>Kathode (Pluspol):</strong> Hier findet die <strong>Reduktion</strong> statt (Elektronenaufnahme).</li>
+                <li><strong>Elektrolyt:</strong> Eine Ionenleitende Lösung oder Paste, die die Elektroden umgibt.</li>
+                <li><strong>Salzbrücke/Diaphragma:</strong> Ermöglicht den Ladungsausgleich durch Ionenwanderung, verhindert aber die Durchmischung der Elektrolytlösungen.</li>
+                <li><strong>Äußerer Stromkreis:</strong> Verbindet die Elektroden leitend, sodass Elektronen von der Anode zur Kathode fließen können.</li>
+            </ul>
+            <p>
+                <strong>Beispiel Daniell-Element:</strong>
+            </p>
+            <ul>
+                <li><strong>Anodenraum:</strong> Zinkstab in Zinksulfat-Lösung (Zn → Zn²⁺ + 2e⁻)</li>
+                <li><strong>Kathodenraum:</strong> Kupferstab in Kupfersulfat-Lösung (Cu²⁺ + 2e⁻ → Cu)</li>
+            </ul>
+            <div class="image-container">
+                <img src="https://blog.assets.studyflix.de/wp-content/uploads/2019/12/Galvanische-Zelle_WP_2_daniell-1-1024x576.jpg" alt="Daniell-Element: Aufbau einer galvanischen Zelle mit Zink- und Kupferhalbzelle" />
+                <p><small>Abbildung: Aufbau des Daniell-Elements (<a href="https://studyflix.de/chemie/galvanische-zelle-1694" target="_blank">Studyflix</a>)</small></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>3. Funktion und Reaktionsgleichungen</h2>
+            <p>
+                Im Daniell-Element laufen folgende Reaktionen ab:
+            </p>
+            <div class="reaction">
+Anode (Oxidation): Zn → Zn²⁺ + 2e⁻<br>
+Kathode (Reduktion): Cu²⁺ + 2e⁻ → Cu<br>
+Gesamtreaktion: Zn + Cu²⁺ → Zn²⁺ + Cu
+            </div>
+            <p>
+                Die <strong>Zellspannung</strong> ergibt sich aus der Differenz der Elektrodenpotentiale (Standardpotentiale aus der elektrochemischen Spannungsreihe).
+            </p>
+            <p>
+                <strong>Merke:</strong> Der Minuspol ist immer die Anode (Oxidation), der Pluspol immer die Kathode (Reduktion). Eine Eselsbrücke: <strong>„OMA“</strong> (Oxidation, Minuspol, Anode).
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>4. Beispiele für galvanische Zellen</h2>
+            <p>
+                Neben dem Daniell-Element gibt es weitere wichtige Beispiele:
+            </p>
+            <ul>
+                <li><strong>Leclanché-Element:</strong> Zink-Mangan-Batterie (1,5 V), z. B. in Taschenlampen.</li>
+                <li><strong>Brennstoffzelle:</strong> Wasserstoff-Sauerstoff-Zelle, bei der die Reaktanden kontinuierlich zugeführt werden.</li>
+                <li><strong>Blei-Akkumulator:</strong> Wiederaufladbare Zelle in Autos (Pb/PbO₂ in Schwefelsäure).</li>
+                <li><strong>Lithium-Ionen-Akku:</strong> Moderne Akkus in Handys und Laptops.</li>
+            </ul>
+            <p>
+                <strong>Anwendung:</strong> Galvanische Zellen sind die Grundlage für Batterien, Akkus und Brennstoffzellen.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>5. Kathodenraum und Anodenraum</h2>
+            <p>
+                In einer galvanischen Zelle sind Anoden- und Kathodenraum räumlich getrennt:
+            </p>
+            <ul>
+                <li><strong>Anodenraum:</strong> Enthält die Elektrode, an der die Oxidation stattfindet. Die Konzentration der Kationen steigt, da Metall-Ionen in Lösung gehen.</li>
+                <li><strong>Kathodenraum:</strong> Enthält die Elektrode, an der die Reduktion stattfindet. Die Konzentration der Kationen sinkt, da Metall-Ionen reduziert werden.</li>
+            </ul>
+            <p>
+                Der <strong>Ladungsausgleich</strong> erfolgt durch Wanderung von Anionen zur Anode und Kationen zur Kathode (über die Salzbrücke oder das Diaphragma).
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>6. Zusammenfassung und Prüfungsrelevanz</h2>
+            <p>
+                <strong>Wichtige Punkte für das Abitur:</strong>
+            </p>
+            <ul>
+                <li>Galvanische Zellen wandeln chemische in elektrische Energie um.</li>
+                <li>Oxidation an der Anode (Minuspol), Reduktion an der Kathode (Pluspol).</li>
+                <li>Die Zellspannung hängt von den verwendeten Metallen und Ionenkonzentrationen ab (Nernst-Gleichung).</li>
+                <li>Beispiele: Daniell-Element, Brennstoffzelle, Blei-Akku.</li>
+                <li>Anwendung in Alltagsgeräten wie Batterien, Akkus und Brennstoffzellen.</li>
+            </ul>
+            <p>
+                <strong>Typische Abituraufgaben:</strong> Skizzieren des Aufbaus, Aufstellen von Reaktionsgleichungen, Berechnen der Zellspannung, Erklären des Elektronenflusses.
+            </p>
+        </div>
+
+        <footer>
+            <p>Quellen:</p>
+            <ul>
+                <li><a href="https://www.abiweb.de/anorganische-chemie/donator-akzeptor-prinzip/redox-chemie/redoxreaktionen-elektrochemie/daniell-element-galvanische-zelle.html" target="_blank">Abiweb: Daniell-Element</a></li>
+                <li><a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/galvanische-elemente" target="_blank">Lernhelfer: Galvanische Elemente</a></li>
+                <li><a href="https://studyflix.de/chemie/galvanische-zelle-1694" target="_blank">Studyflix: Galvanische Zelle</a></li>
+                <li><a href="https://www.leifichemie.de/redoxreaktionen-und-elektrochemie/einfuehrung-die-elektrochemie/grundwissen/aufbau-von-galvanischen-zellen" target="_blank">LEIFIchemie: Aufbau galvanischer Zellen</a></li>
+                <li><a href="https://de.wikipedia.org/wiki/Galvanische_Zelle" target="_blank">Wikipedia: Galvanische Zelle</a></li>
+            </ul>
+        </footer>
+    </div>
+    <script>
+        // 1. Systemeinstellungen prüfen und sofort anwenden (ohne Animation)
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            // Transition nach kurzer Verzögerung aktivieren
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        // 2. Modus manuell setzen (mit Animation)
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        // 3. Systemeinstellungen beim Laden anwenden
+        applySystemMode();
+
+        // 4. Nachrichten von der Hauptseite empfangen
+        window.addEventListener("message", function(event) {
+            // Dark/Light-Mode wechseln (mit Animation)
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            // Aktuellen Modus abfragen
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            // Sichtbaren Text zurücksenden
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        // 5. Hauptseite beim Laden über den aktuellen Modus informieren
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        // 6. Systemeinstellungen ändern (optional)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

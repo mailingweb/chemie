@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reaktionsarten: Fällungsreaktionen & Überblick für das Abitur</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Reaktionsarten: Fällungsreaktionen & Überblick für das Abitur</h1>
+            <p>Lernübersicht für den Leistungskurs Chemie</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Fällungsreaktion</span>
+            <span class="tag">Reaktionsarten</span>
+            <span class="tag">Abitur Chemie</span>
+            <span class="tag">Löslichkeitsprodukt</span>
+            <span class="tag">Nachweisreaktion</span>
+            <span class="tag">Ionenbindung</span>
+            <span class="tag">Schwerlösliche Salze</span>
+        </div>
+
+        <div class="card">
+            <h2>1. Fällungsreaktionen</h2>
+            <p><strong>Definition:</strong> Chemische Reaktionen, bei denen aus zwei gelösten Ionenverbindungen ein schwerlösliches Salz (Niederschlag) entsteht. Der Niederschlag ist mit bloßem Auge sichtbar und kann abfiltriert werden.</p>
+
+            <h3>Besonderheiten</h3>
+            <ul>
+                <li><strong>Löslichkeitsprodukt (K<sub>L</sub>):</strong> Bestimmt, ob ein Salz ausfällt. K<sub>L</sub> ist temperaturabhängig.</li>
+                <li><strong>Heterogenes Gleichgewicht:</strong> Zwischen gelösten Ionen und dem festen Niederschlag.</li>
+                <li><strong>Analytische Chemie:</strong> Wird zur Identifikation von Ionen (z. B. Kationentrenngang) genutzt.</li>
+                <li><strong>Anwendung:</strong> Abwasserreinigung, Pigmentherstellung, Nachweisreaktionen.</li>
+            </ul>
+
+            <h3>Beispiele</h3>
+            <table>
+                <tr>
+                    <th>Reaktion</th>
+                    <th>Beobachtung</th>
+                    <th>Reaktionsgleichung</th>
+                    <th>Besonderheit</th>
+                </tr>
+                <tr>
+                    <td>Silberchlorid-Bildung</td>
+                    <td>Weißer Niederschlag</td>
+                    <td>Ag<sup>+</sup>(aq) + Cl<sup>−</sup>(aq) → AgCl(s)</td>
+                    <td>Nachweis für Chlorid-Ionen</td>
+                </tr>
+                <tr>
+                    <td>Bariumsulfat-Bildung</td>
+                    <td>Weißer, schwerlöslicher Niederschlag</td>
+                    <td>Ba<sup>2+</sup>(aq) + SO<sub>4</sub><sup>2−</sup>(aq) → BaSO<sub>4</sub>(s)</td>
+                    <td>Röntgenkontrastmittel, sehr geringes K<sub>L</sub></td>
+                </tr>
+                <tr>
+                    <td>Bleisulfid-Bildung</td>
+                    <td>Schwarzer Niederschlag</td>
+                    <td>Pb<sup>2+</sup>(aq) + S<sup>2−</sup>(aq) → PbS(s)</td>
+                    <td>Nachweis für Sulfid-Ionen</td>
+                </tr>
+                <tr>
+                    <td>Calciumcarbonat-Bildung</td>
+                    <td>Weißer Niederschlag, CO<sub>2</sub>-Entwicklung bei Säurezugabe</td>
+                    <td>Ca<sup>2+</sup>(aq) + CO<sub>3</sub><sup>2−</sup>(aq) → CaCO<sub>3</sub>(s)</td>
+                    <td>Kalknachweis, Kalk-Kohlensäure-Gleichgewicht</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>2. Weitere wichtige Reaktionsarten im Überblick</h2>
+            <table>
+                <tr>
+                    <th>Reaktionstyp</th>
+                    <th>Definition</th>
+                    <th>Beispiel</th>
+                    <th>Besonderheit</th>
+                </tr>
+                <tr>
+                    <td>Säure-Base-Reaktion</td>
+                    <td>Protonenübertragung (H<sup>+</sup>)</td>
+                    <td>HCl + NaOH → NaCl + H<sub>2</sub>O</td>
+                    <td>Neutralisation, pH-Wert-Änderung</td>
+                </tr>
+                <tr>
+                    <td>Redoxreaktion</td>
+                    <td>Elektronenübertragung</td>
+                    <td>Zn + Cu<sup>2+</sup> → Zn<sup>2+</sup> + Cu</td>
+                    <td>Oxidation und Reduktion gleichzeitig</td>
+                </tr>
+                <tr>
+                    <td>Addition (organisch)</td>
+                    <td>Anlagerung an Mehrfachbindungen</td>
+                    <td>C<sub>2</sub>H<sub>4</sub> + Br<sub>2</sub> → C<sub>2</sub>H<sub>4</sub>Br<sub>2</sub></td>
+                    <td>Charakteristisch für Alkene/Alkine</td>
+                </tr>
+                <tr>
+                    <td>Substitution (organisch)</td>
+                    <td>Ersatz eines Atoms/Atomgruppe</td>
+                    <td>CH<sub>4</sub> + Cl<sub>2</sub> → CH<sub>3</sub>Cl + HCl</td>
+                    <td>Radikalisch oder nucleophil</td>
+                </tr>
+                <tr>
+                    <td>Eliminierung (organisch)</td>
+                    <td>Abspaltung unter Bildung von Mehrfachbindungen</td>
+                    <td>C<sub>2</sub>H<sub>5</sub>OH → C<sub>2</sub>H<sub>4</sub> + H<sub>2</sub>O</td>
+                    <td>Umkehr der Addition</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>3. Zusammenfassung: Fällungsreaktionen im Abitur</h2>
+            <ul>
+                <li><strong>Nachweisreaktionen:</strong> Spezifische Fällungsmittel für bestimmte Ionen (z. B. AgNO<sub>3</sub> für Cl<sup>−</sup>).</li>
+                <li><strong>Löslichkeitsregeln:</strong> Nicht alle Salze sind schwerlöslich (z. B. Natrium-, Kaliumsalze meist löslich).</li>
+                <li><strong>Stöchiometrie:</strong> Berechnung der Niederschlagsmenge über Reaktionsgleichung und K<sub>L</sub>.</li>
+                <li><strong>Anwendungen:</strong> Kationentrenngang, Abwasserbehandlung, Pigmentsynthese.</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Quellen: <a href="https://www.abiweb.de/anorganische-chemie/faellungsreaktionen.html">Abiweb</a>, <a href="https://www.leifichemie.de/analytische-methoden/einfuehrung-die-analytischen-methoden/grundwissen/faellungsreaktionen">LEIFIchemie</a>, <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/chemische-reaktionen">Lernhelfer</a>, <a href="https://de.wikipedia.org/wiki/Fällungsreaktion">Wikipedia</a></p>
+        </footer>
+    </div>
+    <script>
+        // 1. Systemeinstellungen prüfen und sofort anwenden (ohne Animation)
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        // 2. Modus manuell setzen (mit Animation)
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        // 3. Systemeinstellungen beim Laden anwenden
+        applySystemMode();
+
+        // 4. Nachrichten von der Hauptseite empfangen
+        window.addEventListener("message", function(event) {
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        // 5. Hauptseite beim Laden über den aktuellen Modus informieren
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        // 6. Systemeinstellungen ändern (optional)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

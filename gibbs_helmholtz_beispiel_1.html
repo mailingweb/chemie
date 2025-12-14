@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gibbs-Helmholtz-Gleichung: Beispiele für das Abitur</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gibbs-Helmholtz-Gleichung: Beispiele für das Abitur</h1>
+            <p>Lernübersicht zu Spontanität und Thermodynamik (Leistungskurs Chemie)</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Gibbs-Helmholtz-Gleichung</span>
+            <span class="tag">Freie Enthalpie ΔG</span>
+            <span class="tag">Reaktionsenthalpie ΔH</span>
+            <span class="tag">Entropie ΔS</span>
+            <span class="tag">Spontanität</span>
+            <span class="tag">Thermodynamik</span>
+            <span class="tag">Abitur Chemie</span>
+        </div>
+
+        <!-- Beispiel 1: Pentan-Verbrennung -->
+        <div class="card">
+            <h2>1. Verbrennung von Pentan</h2>
+            <p>Pentan (C<sub>5</sub>H<sub>12</sub>) reagiert mit Sauerstoff (O<sub>2</sub>) zu Kohlenstoffdioxid (CO<sub>2</sub>) und Wasser (H<sub>2</sub>O).</p>
+            <div class="reaction">
+C<sub>5</sub>H<sub>12</sub> + 8 O<sub>2</sub> → 5 CO<sub>2</sub> + 6 H<sub>2</sub>O
+            </div>
+            <table>
+                <tr>
+                    <th>ΔH</th>
+                    <th>ΔS</th>
+                    <th>ΔG</th>
+                    <th>Spontanität</th>
+                </tr>
+                <tr>
+                    <td>-3539,1 kJ/mol</td>
+                    <td>negativ</td>
+                    <td>negativ</td>
+                    <td>spontan</td>
+                </tr>
+            </table>
+            <p><a href="https://www.cup.uni-muenchen.de/oc/mayr/Lehre/Vorl09SS.pdf" target="_blank">(Quelle: LMU München)</a></p>
+        </div>
+
+        <!-- Beispiel 2: Ozonbildung -->
+        <div class="card">
+            <h2>2. Ozonbildung</h2>
+            <p>Sauerstoffatome reagieren mit Sauerstoffmolekülen zu Ozon (O<sub>3</sub>):</p>
+            <div class="reaction">
+2 O + 2 O<sub>2</sub> → 2 O<sub>3</sub>
+            </div>
+            <table>
+                <tr>
+                    <th>ΔH</th>
+                    <th>ΔS</th>
+                    <th>ΔG</th>
+                    <th>Spontanität</th>
+                </tr>
+                <tr>
+                    <td>positiv (endotherm)</td>
+                    <td>negativ</td>
+                    <td>positiv (bei Standardbedingungen)</td>
+                    <td>nicht spontan</td>
+                </tr>
+            </table>
+            <p>Die Reaktion ist endotherm und die Entropie nimmt ab, daher ist ΔG > 0 und die Reaktion läuft nicht spontan ab.</p>
+            <p><a href="https://www.w-hoelzel.de/chemie/1-und-2-jahrgangsstufe/energetik-thermodynamik/12-1-gibbs-helmholtz-beispiele" target="_blank">(Quelle: Hoelzel Verlag)</a></p>
+        </div>
+
+        <!-- Beispiel 3: Wasserdampf-Kohle-Reaktion -->
+        <div class="card">
+            <h2>3. Wasserdampf mit Kohle</h2>
+            <p>Kohle reagiert mit Wasserdampf zu Kohlenstoffmonoxid (CO) und Wasserstoff (H<sub>2</sub>):</p>
+            <div class="reaction">
+C (s) + H<sub>2</sub>O (g) → CO (g) + H<sub>2</sub> (g)
+            </div>
+            <table>
+                <tr>
+                    <th>ΔH</th>
+                    <th>ΔS</th>
+                    <th>ΔG (bei 1000°C)</th>
+                    <th>Spontanität</th>
+                </tr>
+                <tr>
+                    <td>+131 kJ/mol</td>
+                    <td>+106 J/(mol·K)</td>
+                    <td>negativ</td>
+                    <td>spontan bei hohen Temperaturen</td>
+                </tr>
+            </table>
+            <p>Bei 1000°C überwiegt der Entropieterm (T·ΔS), sodass ΔG < 0 und die Reaktion spontan abläuft.</p>
+            <p><a href="http://www.vorwerg-net.de/Chemie/3.Physikalische%20Chemie/3.3.S.7.Die%20freie%20Enthalpie.pdf" target="_blank">(Quelle: Vorwerg-Net)</a></p>
+        </div>
+
+        <div class="card">
+            <h2>4. Zusammenfassung der Gibbs-Helmholtz-Gleichung</h2>
+            <div class="reaction">
+ΔG = ΔH - T · ΔS
+            </div>
+            <ul>
+                <li><span class="highlight">ΔG < 0:</span> Reaktion läuft spontan ab.</li>
+                <li><span class="highlight">ΔG > 0:</span> Reaktion läuft nicht spontan ab.</li>
+                <li><span class="highlight">ΔG = 0:</span> System im Gleichgewicht.</li>
+            </ul>
+            <p>Die Spontanität hängt von der Kombination aus Enthalpie und Entropie ab.</p>
+            <p><a href="https://www.studysmarter.de/schule/chemie/physikalische-chemie/gibbs-helmholtz-gleichung/" target="_blank">(Quelle: StudySmarter)</a></p>
+        </div>
+
+        <footer>
+            <p>Quellen: LMU München, Hoelzel Verlag, Vorwerg-Net, StudySmarter, Knowunity</p>
+        </footer>
+    </div>
+    <script>
+        // 1. Systemeinstellungen prüfen und sofort anwenden (ohne Animation)
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            // Transition nach kurzer Verzögerung aktivieren
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        // 2. Modus manuell setzen (mit Animation)
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        // 3. Systemeinstellungen beim Laden anwenden
+        applySystemMode();
+
+        // 4. Nachrichten von der Hauptseite empfangen
+        window.addEventListener("message", function(event) {
+            // Dark/Light-Mode wechseln (mit Animation)
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            // Aktuellen Modus abfragen
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            // Sichtbaren Text zurücksenden
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        // 5. Hauptseite beim Laden über den aktuellen Modus informieren
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        // 6. Systemeinstellungen ändern (optional)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

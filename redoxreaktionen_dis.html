@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redoxreaktionen: Disproportionierung, Gleichungen, Beispiele & Anwendungen</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .experiment {
+            margin-bottom: 30px;
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        .step {
+            margin-bottom: 15px;
+        }
+        .step-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .source {
+            font-size: 0.85em;
+            color: #666;
+            margin-top: 10px;
+        }
+        @media (prefers-color-scheme: dark) {
+            .source {
+                color: #aaa;
+            }
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Redoxreaktionen: Disproportionierung, Gleichungen, Beispiele & Anwendungen</h1>
+            <p>Lernübersicht für das Abitur (Leistungskurs Chemie)</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Redoxreaktion</span>
+            <span class="tag">Disproportionierung</span>
+            <span class="tag">Oxidationszahlen</span>
+            <span class="tag">Teilgleichungen</span>
+            <span class="tag">Anwendungen</span>
+            <span class="tag">Abitur</span>
+            <span class="tag">Beispiele</span>
+            <span class="tag">Gleichungen ausgleichen</span>
+        </div>
+
+        <!-- 1. Disproportionierung -->
+        <div class="card">
+            <h2>1. Disproportionierung: Definition & Prinzip</h2>
+            <p>
+                Bei einer <span class="highlight">Disproportionierung</span> (auch Dismutation) wirkt ein Element oder eine Verbindung in einer Redoxreaktion gleichzeitig als <span class="highlight">Oxidationsmittel</span> und als <span class="highlight">Reduktionsmittel</span>. Dabei geht das Element aus einer mittleren Oxidationsstufe in eine niedrigere und eine höhere Oxidationsstufe über – es wird also <span class="highlight">teils oxidiert und teils reduziert</span>.
+            </p>
+            <p>
+                <strong>Beispiel:</strong> Chlor reagiert in Natronlauge zu Chlorid (Oxidationszahl −1) und Chlorat (Oxidationszahl +5):
+            </p>
+            <div class="reaction">
+Cl₂ + 6 OH⁻ → Cl⁻ + ClO₃⁻ + 3 H₂O
+            </div>
+            <p>
+                <strong>Anwendung:</strong> Disproportionierung spielt eine Rolle bei der Herstellung von Seife, der Zerfallsreaktion von Wasserstoffperoxid (H₂O₂ → H₂O + O₂) und in der organischen Synthese (z. B. Herstellung von Aldehyden aus Alkoholen)
+                (<a href="https://www.chemie-schule.de/KnowHow/Disproportionierung" target="_blank">Chemie-Schule</a>,
+                <a href="https://www.studysmarter.de/studium/chemie-studium/anorganische-chemie-studium/disproportionierung/" target="_blank">StudySmarter</a>).
+            </p>
+        </div>
+
+        <!-- 2. Gleichungen erstellen -->
+        <div class="card">
+            <h2>2. Redoxgleichungen erstellen: Schritt-für-Schritt</h2>
+            <ol>
+                <li class="step">
+                    <div class="step-title">Oxidationszahlen bestimmen</div>
+                    <p>Bestimme die Oxidationszahlen aller beteiligten Atome, um Oxidation und Reduktion zu identifizieren.</p>
+                </li>
+                <li class="step">
+                    <div class="step-title">Teilgleichungen aufstellen</div>
+                    <p>Formuliere die Oxidation und Reduktion als separate Teilgleichungen.</p>
+                    <div class="reaction">
+Oxidation: 2 Cl⁰ → 2 Cl⁻ + 2 e⁻<br>
+Reduktion: Cl₂⁰ + 12 OH⁻ + 10 e⁻ → 2 ClO₃⁻ + 6 H₂O
+                    </div>
+                </li>
+                <li class="step">
+                    <div class="step-title">Elektronen ausgleichen</div>
+                    <p>Multipliziere die Teilgleichungen so, dass die Anzahl der übertragenen Elektronen übereinstimmt.</p>
+                </li>
+                <li class="step">
+                    <div class="step-title">Ladungs- und Stoffbilanz</div>
+                    <p>Gleiche Ladungen mit H⁺/OH⁻ und Stoffe mit H₂O aus, je nach Milieu (sauer/basisch)
+                    (<a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/aufstellen-von-redoxgleichungen" target="_blank">Lernhelfer</a>,
+                    <a href="https://studyflix.de/chemie/redoxreaktionen-ubungen-5030" target="_blank">Studyflix</a>).</p>
+                </li>
+                <li class="step">
+                    <div class="step-title">Gesamtgleichung bilden</div>
+                    <p>Addiere die Teilgleichungen und kürze gemeinsame Terme.</p>
+                </li>
+            </ol>
+        </div>
+
+        <!-- 3. Beispiele -->
+        <div class="card">
+            <h2>3. Wichtige Beispiele & Anwendungen</h2>
+
+            <h3>a) Disproportionierung von Chlor in Natronlauge</h3>
+            <div class="reaction">
+3 Cl₂ + 6 OH⁻ → 5 Cl⁻ + ClO₃⁻ + 3 H₂O
+            </div>
+            <p><strong>Anwendung:</strong> Desinfektion, Bleichmittelherstellung
+            (<a href="https://de.wikipedia.org/wiki/Disproportionierung" target="_blank">Wikipedia</a>,
+            <a href="https://www.chemie-schule.de/KnowHow/Disproportionierung" target="_blank">Chemie-Schule</a>).</p>
+
+            <h3>b) Zerfall von Wasserstoffperoxid</h3>
+            <div class="reaction">
+2 H₂O₂ → 2 H₂O + O₂
+            </div>
+            <p><strong>Anwendung:</strong> Bleichmittel, Raketentreibstoff, medizinische Desinfektion
+            (<a href="https://www.studysmarter.de/studium/chemie-studium/anorganische-chemie-studium/disproportionierung/" target="_blank">StudySmarter</a>).</p>
+
+            <h3>c) Iod-Disproportionierung im Basischen</h3>
+            <div class="reaction">
+3 I₂ + 6 OH⁻ → 5 I⁻ + IO₃⁻ + 3 H₂O
+            </div>
+            <p><strong>Anwendung:</strong> Iodometrie in der Analytik
+            (<a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/ph-abhaengigkeit-von-redoxreaktionen" target="_blank">Lernhelfer</a>,
+            <a href="https://www.helles-koepfchen.de/?suche=disproportionierung" target="_blank">Helles Köpfchen</a>).</p>
+
+            <h3>d) Organische Chemie: Polymerisation</h3>
+            <p>Radikalische Disproportionierung bei der Kunststoffherstellung (z. B. Polystyrol)
+            (<a href="https://www.helles-koepfchen.de/?suche=disproportionierung" target="_blank">Helles Köpfchen</a>).</p>
+        </div>
+
+        <!-- 4. Anwendungen im Alltag & Industrie -->
+        <div class="card">
+            <h2>4. Anwendungen von Redoxreaktionen</h2>
+            <ul>
+                <li><strong>Biologie:</strong> Atmung, Fotosynthese, Stoffwechselprozesse
+                (<a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/anwendungen-von-redoxreaktionen" target="_blank">Lernhelfer</a>,
+                <a href="https://abitur-wissen.org/index.php/anorganische-chemie/90-anorganische-chemie-redoxreaktionen-im-alltag" target="_blank">Abitur-Wissen</a>).</li>
+                <li><strong>Industrie:</strong> Herstellung von Schwefelsäure, Ammoniak, Metallen (z. B. Aluminothermie)
+                (<a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/anwendungen-von-redoxreaktionen" target="_blank">Lernhelfer</a>).</li>
+                <li><strong>Energie:</strong> Batterien, Akkus, Verbrennung fossiler Brennstoffe
+                (<a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/anwendungen-von-redoxreaktionen" target="_blank">Lernhelfer</a>,
+                <a href="https://simpleclub.com/lessons/chemie-redox--elektrochemie-im-abi" target="_blank">simpleclub</a>).</li>
+                <li><strong>Analytik:</strong> Redoxtitration, Nachweisreaktionen
+                (<a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/anwendungen-von-redoxreaktionen" target="_blank">Lernhelfer</a>).</li>
+            </ul>
+        </div>
+
+        <!-- 5. Übungsaufgaben -->
+        <div class="card">
+            <h2>5. Übungsaufgaben zum Selbsttest</h2>
+            <ol>
+                <li>Stelle die Redoxgleichung für die Reaktion von Kaliumpermanganat mit Eisen(II)-sulfat im sauren Milieu auf.</li>
+                <li>Erkläre, warum die Disproportionierung von Wasserstoffperoxid katalysiert werden muss.</li>
+                <li>Beschreibe die Rolle der Disproportionierung bei der Seifenherstellung.</li>
+            </ol>
+            <p><strong>Lösungen:</strong> Siehe Lehrbuch oder Online-Übungsplattformen wie
+            <a href="https://studyflix.de/chemie/redoxreaktionen-ubungen-5030" target="_blank">Studyflix</a> oder
+            <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/aufstellen-von-redoxgleichungen" target="_blank">Lernhelfer</a>.</p>
+        </div>
+
+        <footer>
+            <p>Quellen: <a href="https://www.lernhelfer.de" target="_blank">Lernhelfer</a>, <a href="https://www.chemie-schule.de" target="_blank">Chemie-Schule</a>, <a href="https://de.wikipedia.org" target="_blank">Wikipedia</a>, <a href="https://www.studysmarter.de" target="_blank">StudySmarter</a>, <a href="https://abitur-wissen.org" target="_blank">Abitur-Wissen</a>, <a href="https://simpleclub.com" target="_blank">simpleclub</a> (Stand 2025)</p>
+        </footer>
+    </div>
+    <script>
+        // 1. Systemeinstellungen prüfen und sofort anwenden (ohne Animation)
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        // 2. Modus manuell setzen (mit Animation)
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        // 3. Systemeinstellungen beim Laden anwenden
+        applySystemMode();
+
+        // 4. Nachrichten von der Hauptseite empfangen
+        window.addEventListener("message", function(event) {
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        // 5. Hauptseite beim Laden über den aktuellen Modus informieren
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        // 6. Systemeinstellungen ändern (optional)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

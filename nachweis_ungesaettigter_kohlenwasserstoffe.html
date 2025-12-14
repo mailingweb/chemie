@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nachweis ungesättigter Kohlenwasserstoffe: Baeyer-Probe & Bromwasserprobe</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        /* Deaktiviere Transitionen beim initialen Laden */
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .experiment {
+            margin-bottom: 30px;
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="no-transition">
+    <div class="container">
+        <header>
+            <h1>Nachweis ungesättigter Kohlenwasserstoffe</h1>
+            <p>Lernübersicht für das Abitur (Leistungskurs Chemie)</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Alkene</span>
+            <span class="tag">Baeyer-Probe</span>
+            <span class="tag">Bromwasserprobe</span>
+            <span class="tag">Ungesättigte Kohlenwasserstoffe</span>
+            <span class="tag">Nachweisreaktionen</span>
+            <span class="tag">Elektrophile Addition</span>
+            <span class="tag">Abitur Chemie</span>
+        </div>
+
+        <div class="card experiment">
+            <h2>1. Baeyer-Probe</h2>
+            <h3>Prinzip</h3>
+            <p>
+                Die <strong>Baeyer-Probe</strong> dient zum qualitativen Nachweis von ungesättigten Kohlenwasserstoffen, insbesondere Alkenen. Das Baeyer-Reagenz besteht aus einer alkalischen Kaliumpermanganat-Lösung (KMnO<sub>4</sub> + Natriumcarbonat).
+            </p>
+            <h3>Durchführung</h3>
+            <ul>
+                <li>Die zu untersuchende Substanz wird mit dem Baeyer-Reagenz versetzt.</li>
+                <li>Bei Anwesenheit von Doppelbindungen entfärbt sich die violette Lösung und es entsteht ein brauner Niederschlag (Mangan(IV)-oxid, MnO<sub>2</sub>).</li>
+            </ul>
+            <h3>Beobachtung</h3>
+            <table>
+                <tr>
+                    <th>Substanz</th>
+                    <th>Beobachtung</th>
+                    <th>Schlussfolgerung</th>
+                </tr>
+                <tr>
+                    <td>Alken (z. B. Hex-1-en)</td>
+                    <td>Entfärbung der Lösung, brauner Niederschlag</td>
+                    <td>Positiver Nachweis für ungesättigte Verbindungen</td>
+                </tr>
+                <tr>
+                    <td>Alkan (z. B. Hexan)</td>
+                    <td>Keine Entfärbung</td>
+                    <td>Keine Doppelbindung vorhanden</td>
+                </tr>
+            </table>
+            <h3>Reaktionsmechanismus</h3>
+            <p>
+                Die Reaktion beruht auf der Oxidation der Doppelbindung durch Kaliumpermanganat. Dabei entsteht zunächst Manganat(V) (MnO<sub>3</sub><sup>–</sup>), das zu Mangan(IV)-oxid und Manganat(VI) disproportioniert.
+            </p>
+            <p>
+                <strong>Hinweis:</strong> Die Baeyer-Probe reagiert auch mit Alkinen und anderen oxidierbaren Verbindungen positiv.
+            </p>
+            <p>
+                <a href="https://www.chemie-schule.de/KnowHow/Baeyer-Probe" target="_blank">Quelle: Chemie-Schule</a>,
+                <a href="https://de.wikipedia.org/wiki/Baeyer-Probe" target="_blank">Wikipedia</a>
+            </p>
+        </div>
+
+        <div class="card experiment">
+            <h2>2. Bromwasserprobe</h2>
+            <h3>Prinzip</h3>
+            <p>
+                Die <strong>Bromwasserprobe</strong> ist ein klassischer Nachweis für Doppel- und Dreifachbindungen. Brom (Br<sub>2</sub>) lagert sich elektrophil an die Mehrfachbindung an, wodurch die gelb-braune Färbung des Bromwassers verschwindet.
+            </p>
+            <h3>Durchführung</h3>
+            <ul>
+                <li>Die Probe wird mit Bromwasser versetzt.</li>
+                <li>Bei Anwesenheit von Alkenen oder Alkinen entfärbt sich die Lösung.</li>
+            </ul>
+            <h3>Beobachtung</h3>
+            <table>
+                <tr>
+                    <th>Substanz</th>
+                    <th>Beobachtung</th>
+                    <th>Schlussfolgerung</th>
+                </tr>
+                <tr>
+                    <td>Alken (z. B. Hexen)</td>
+                    <td>Entfärbung des Bromwassers</td>
+                    <td>Positiver Nachweis für ungesättigte Verbindungen</td>
+                </tr>
+                <tr>
+                    <td>Alkan (z. B. Hexan)</td>
+                    <td>Keine Entfärbung</td>
+                    <td>Keine Doppelbindung vorhanden</td>
+                </tr>
+            </table>
+            <h3>Reaktionsmechanismus</h3>
+            <p>
+                Brom addiert sich an die Doppelbindung in einer elektrophilen Addition. Es entsteht ein farbloses Dibromalkan.
+            </p>
+            <div class="reaction">
+R-CH=CH-R' + Br<sub>2</sub> → R-CHBr-CHBr-R'
+            </div>
+            <p>
+                <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/alkene" target="_blank">Quelle: Lernhelfer</a>,
+                <a href="https://www.helpster.de/bromwasserprobe-anleitung-und-erklaerung_115266" target="_blank">Helpster</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Zusammenfassung & Vergleich</h2>
+            <table>
+                <tr>
+                    <th>Methode</th>
+                    <th>Reagenz</th>
+                    <th>Nachweisprinzip</th>
+                    <th>Beobachtung</th>
+                </tr>
+                <tr>
+                    <td>Baeyer-Probe</td>
+                    <td>KMnO<sub>4</sub> + Na<sub>2</sub>CO<sub>3</sub></td>
+                    <td>Oxidation der Doppelbindung</td>
+                    <td>Entfärbung, brauner Niederschlag</td>
+                </tr>
+                <tr>
+                    <td>Bromwasserprobe</td>
+                    <td>Br<sub>2</sub> (Bromwasser)</td>
+                    <td>Elektrophile Addition</td>
+                    <td>Entfärbung der Lösung</td>
+                </tr>
+            </table>
+            <p>
+                Beide Methoden sind einfach durchzuführen und eignen sich für den schnellen Nachweis von Alkenen im Schülerexperiment. Die Bromwasserprobe ist spezifischer für Alkene und Alkine, während die Baeyer-Probe auch mit anderen oxidierbaren Verbindungen reagiert.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Hinweise für das Abitur</h2>
+            <ul>
+                <li>Im Protokoll immer <strong>Beobachtung</strong> und <strong>Schlussfolgerung</strong> klar trennen.</li>
+                <li>Reaktionsgleichungen und Mechanismen (elektrophile Addition) erklären können.</li>
+                <li>Sicherheitshinweise beachten: Bromwasser und Kaliumpermanganat sind gesundheitsschädlich!</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Quellen: <a href="https://www.chemie-schule.de/KnowHow/Baeyer-Probe" target="_blank">Chemie-Schule</a>, <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/alkene" target="_blank">Lernhelfer</a>, <a href="https://de.wikipedia.org/wiki/Baeyer-Probe" target="_blank">Wikipedia</a>, <a href="https://www.helpster.de/bromwasserprobe-anleitung-und-erklaerung_115266" target="_blank">Helpster</a></p>
+        </footer>
+    </div>
+    <script>
+        // 1. Systemeinstellungen prüfen und sofort anwenden (ohne Animation)
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            // Transition nach kurzer Verzögerung aktivieren
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+
+        // 2. Modus manuell setzen (mit Animation)
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        // 3. Systemeinstellungen beim Laden anwenden
+        applySystemMode();
+
+        // 4. Nachrichten von der Hauptseite empfangen
+        window.addEventListener("message", function(event) {
+            // Dark/Light-Mode wechseln (mit Animation)
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            // Aktuellen Modus abfragen
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            // Sichtbaren Text zurücksenden
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+
+        // 5. Hauptseite beim Laden über den aktuellen Modus informieren
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        // 6. Systemeinstellungen ändern (optional)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>

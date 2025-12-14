@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kohlenhydrate: Aldosen, Ketosen, glykosidische Bindungen & Tautomerie</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #2c3e50;
+            --border-color: #dddddd;
+            --code-bg: #f8f9fa;
+            --code-text: #c7254e;
+            --card-bg: #fefefe;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --header-color: #3498db;
+            --border-color: #444444;
+            --code-bg: #2d2d2d;
+            --code-text: #f96;
+            --card-bg: #252525;
+            --card-shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        body.no-transition {
+            transition: none !important;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--header-color);
+        }
+        h1, h2, h3 {
+            color: var(--header-color);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+        .reaction {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: var(--code-text);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--header-color);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--header-color);
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
+        }
+        a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .image-container {
+            text-align: center;
+            margin: 15px 0;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Kohlenhydrate: Aldosen, Ketosen, glykosidische Bindungen & Tautomerie</h1>
+            <p>Lernübersicht für das Abitur (Leistungskurs Chemie)</p>
+        </header>
+
+        <div class="tags">
+            <span class="tag">Aldosen</span>
+            <span class="tag">Ketosen</span>
+            <span class="tag">Glykosidische Bindung</span>
+            <span class="tag">Pyranosen</span>
+            <span class="tag">Furanosen</span>
+            <span class="tag">Keto-Enol-Tautomerie</span>
+            <span class="tag">Maltose</span>
+            <span class="tag">Cellulose</span>
+            <span class="tag">Monosaccharide</span>
+            <span class="tag">Disaccharide</span>
+        </div>
+
+        <div class="card">
+            <h2>1. Aldosen und Ketosen: Unterschiede</h2>
+            <p>
+                <strong>Aldosen</strong> sind Monosaccharide mit einer <strong>Aldehydgruppe (-CHO)</strong> am ersten Kohlenstoffatom (endständig).
+                <strong>Ketosen</strong> tragen eine <strong>Ketogruppe (C=O)</strong> am zweiten Kohlenstoffatom.
+                Beide gehören zu den Kohlenhydraten und enthalten die Carbonylgruppe (C=O), unterscheiden sich aber in Position und Reaktivität:
+            </p>
+            <table>
+                <tr>
+                    <th>Eigenschaft</th>
+                    <th>Aldosen (z. B. Glucose, Ribose)</th>
+                    <th>Ketosen (z. B. Fructose)</th>
+                </tr>
+                <tr>
+                    <td>Funktionelle Gruppe</td>
+                    <td>Aldehydgruppe (-CHO)</td>
+                    <td>Ketogruppe (C=O)</td>
+                </tr>
+                <tr>
+                    <td>Position der Carbonylgruppe</td>
+                    <td>Endständig (C1)</td>
+                    <td>C2</td>
+                </tr>
+                <tr>
+                    <td>Reduzierende Wirkung</td>
+                    <td>Ja (Fehling-Probe positiv)</td>
+                    <td>Nur nach Tautomerisierung</td>
+                </tr>
+                <tr>
+                    <td>Beispiele</td>
+                    <td>Glucose, Ribose, Galactose</td>
+                    <td>Fructose, Ribulose</td>
+                </tr>
+            </table>
+            <p>
+                <strong>Glucose</strong> ist eine Aldohexose, <strong>Fructose</strong> eine Ketohexose.
+                Aldosen wirken direkt reduzierend, Ketosen erst nach Umlagerung zur Aldose (z. B. über Keto-Enol-Tautomerie).
+                <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/kohlenhydrate" target="_blank">(Lernhelfer)</a>,
+                <a href="https://www.chemie-schule.de/KnowHow/Ketosen" target="_blank">(Chemie-Schule)</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>2. Zucker mit Aldehyd- und Ketogruppe</h2>
+            <h3>Glucose und Ribose (Aldosen)</h3>
+            <p>
+                <strong>Glucose</strong> (Traubenzucker) ist die wichtigste Aldohexose und liegt in wässriger Lösung überwiegend als <strong>Pyranose</strong> (Sechsring) vor.
+                <strong>Ribose</strong> (Pentose) ist ein Baustein der RNA und liegt als Furanose (Fünfring) vor.
+                Beide zeigen eine freie Aldehydgruppe in der offenkettigen Form und reagieren positiv in der Fehling-Probe.
+                <a href="https://www.abiweb.de/chemie-naturstoffe/naturstoffe/kohlenhydrat/unterteilung-der-kohlenhydrate-und-projektionen.html" target="_blank">(Abiweb)</a>
+            </p>
+            <h3>Fructose (Ketose)</h3>
+            <p>
+                <strong>Fructose</strong> (Fruchtzucker) ist eine Ketohexose mit der Ketogruppe am C2-Atom.
+                In alkalischer Lösung lagert sich Fructose über die <strong>Keto-Enol-Tautomerie</strong> zu Glucose um und wirkt dann reduzierend.
+                <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/keto-enol-tautomerie" target="_blank">(Lernhelfer)</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>3. Glykosidische Bindungen</h2>
+            <h3>1,4-α-glykosidische Bindung (Maltose)</h3>
+            <p>
+                <strong>Maltose</strong> besteht aus zwei α-D-Glucopyranose-Molekülen, die über eine <strong>1,4-α-glykosidische Bindung</strong> verknüpft sind.
+                Die Bindung entsteht durch Wasserabspaltung zwischen dem C1-Atom (anomeres C) des ersten Glucose-Moleküls und dem C4-Atom des zweiten.
+                <strong>Merkmal:</strong> Beide Glucose-Einheiten liegen in der α-Form vor.
+                <a href="https://www.abiweb.de/chemie-makromolekuele/naturstoffe/kohlenhydrate/die-glykosidische-bindung.html" target="_blank">(Abiweb)</a>
+            </p>
+            <div class="image-container">
+                <img src="https://blog.assets.studyflix.de/wp-content/uploads/2022/08/WP_Maltose_Strukturformel-1024x576.jpeg" alt="Strukturformel Maltose mit 1,4-α-glykosidischer Bindung">
+                <p><small>Strukturformel Maltose (Quelle: Studyflix)</small></p>
+            </div>
+
+            <h3>1,4-β-glykosidische Bindung (Cellulose)</h3>
+            <p>
+                <strong>Cellulose</strong> besteht aus β-D-Glucopyranose-Molekülen, die über eine <strong>1,4-β-glykosidische Bindung</strong> verknüpft sind.
+                <strong>Merkmal:</strong> Die β-Konfiguration führt zu linearen, unverzweigten Ketten mit hoher Stabilität durch Wasserstoffbrücken.
+                Menschliche Enzyme können diese Bindung nicht spalten.
+                <a href="https://www.u-helmich.de/bio/cytologie/02/021/Kohlenhydrate/Kohlenhydrate-062.html" target="_blank">(Helmich)</a>
+            </p>
+            <div class="image-container">
+                <img src="https://www.u-helmich.de/bio/cytologie/02/021/Kohlenhydrate/Bilder/Cellulose-1.jpg" alt="Struktur Cellulose mit 1,4-β-glykosidischer Bindung">
+                <p><small>Struktur Cellulose (Quelle: U. Helmich)</small></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>4. Pyranosen und Furanosen</h2>
+            <p>
+                <strong>Pyranosen</strong> sind sechsgliedrige Ringe (5 C-Atome + 1 O-Atom), z. B. Glucose in der Sesselform.
+                <strong>Furanosen</strong> sind fünfgliedrige Ringe (4 C-Atome + 1 O-Atom), z. B. Fructose oder Ribose.
+                Die Ringbildung erfolgt durch Halbacetalbildung zwischen der Carbonylgruppe und einer OH-Gruppe.
+                <a href="https://www.sofatutor.com/chemie/videos/pyranosen-und-furanosen" target="_blank">(Sofatutor)</a>,
+                <a href="https://www.chemie-schule.de/KnowHow/Pyranose" target="_blank">(Chemie-Schule)</a>
+            </p>
+            <table>
+                <tr>
+                    <th>Ringform</th>
+                    <th>Atome im Ring</th>
+                    <th>Beispiele</th>
+                    <th>Darstellung</th>
+                </tr>
+                <tr>
+                    <td>Pyranose</td>
+                    <td>6 (5 C + 1 O)</td>
+                    <td>Glucose, Galactose</td>
+                    <td>Haworth- oder Sesselprojektion</td>
+                </tr>
+                <tr>
+                    <td>Furanose</td>
+                    <td>5 (4 C + 1 O)</td>
+                    <td>Fructose, Ribose</td>
+                    <td>Haworth-Projektion</td>
+                </tr>
+            </table>
+            <div class="image-container">
+                <img src="https://blog.assets.studyflix.de/wp-content/uploads/2020/11/WordPress_Bilder_Monosaccharide_2-2-1024x576.png" alt="Pyranose- und Furanose-Formen von Glucose und Fructose">
+                <p><small>Pyranose- und Furanose-Formen (Quelle: Studyflix)</small></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>5. Keto-Enol-Tautomerie</h2>
+            <p>
+                Die <strong>Keto-Enol-Tautomerie</strong> beschreibt das Gleichgewicht zwischen Keto- und Enolform einer Carbonylverbindung.
+                Bei Monosacchariden ermöglicht sie die Umwandlung von Fructose (Ketose) zu Glucose (Aldose) und umgekehrt.
+                <strong>Mechanismus:</strong> Ein Proton wandert vom α-C-Atom zur Carbonylgruppe, es entsteht eine Enol-Zwischenstufe.
+                <a href="https://www.lernhelfer.de/schuelerlexikon/chemie-abitur/artikel/keto-enol-tautomerie" target="_blank">(Lernhelfer)</a>
+            </p>
+            <div class="reaction">
+                Ketoform (Fructose) ⇌ Enolform ⇌ Aldoseform (Glucose)
+            </div>
+            <p>
+                <strong>Bedeutung:</strong> Erklärt, warum Fructose (Ketose) in der Fehling-Probe positiv reagiert.
+                <a href="https://abitur-wissen.org/index.php/organische-chemie/458-organische-chemie-keto-en-di-ol-tautomerie-bei-monosacchariden" target="_blank">(Abitur-Wissen)</a>
+            </p>
+            <div class="image-container">
+                <img src="https://blog.assets.studyflix.de/wp-content/uploads/2022/04/Keto-Enol-Tautomerie-im-Detail-1-1024x576.jpg" alt="Keto-Enol-Tautomerie-Mechanismus">
+                <p><small>Keto-Enol-Tautomerie (Quelle: Studyflix)</small></p>
+            </div>
+        </div>
+
+        <footer>
+            <p>Quellen: Lernhelfer, Chemie-Schule, Abiweb, Sofatutor, Helmich, Studyflix (Abitur-Niveau, Stand 2025)</p>
+        </footer>
+    </div>
+    <script>
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
+            }
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+        applySystemMode();
+        window.addEventListener("message", function(event) {
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            else if (event.data && event.data.type === "getVisibleText") {
+                const visibleText = document.body.innerText;
+                window.parent.postMessage({
+                    type: "visibleTextResponse",
+                    text: visibleText
+                }, "*");
+            }
+        });
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
+        });
+    </script>
+</body>
+</html>
