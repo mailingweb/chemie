@@ -814,6 +814,8 @@
                 frame.onload = function() {
                     const mode = document.body.classList.contains("dark-mode") ? "dark" : "light";
                     frame.contentWindow.postMessage({ type: "setMode", mode: mode }, "*");
+                    // Hash in URL setzen
+                    window.location.hash = fileName;
                 };
             }
         });
@@ -984,10 +986,24 @@
             }
         });
 
-        // Erste Seite laden
-        if (contentList.length > 0) {
-            document.getElementById("contentFrame").src = contentList[0].fileName;
+        // Hash in URL auslesen und iframe laden
+        function loadPageFromHash() {
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                const frame = document.getElementById("contentFrame");
+                frame.src = hash;
+                frame.onload = function() {
+                    const mode = document.body.classList.contains("dark-mode") ? "dark" : "light";
+                    frame.contentWindow.postMessage({ type: "setMode", mode: mode }, "*");
+                };
+            } else {
+                // Standardmäßig "e_ethin.html" laden, wenn kein Hash vorhanden ist
+                document.getElementById("contentFrame").src = "e_ethin.html";
+            }
         }
+
+        // Erste Seite laden oder Hash auslesen
+        loadPageFromHash();
         renderContentList();
 
         // Schließe Input-Menü bei Klick außerhalb
