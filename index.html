@@ -68,12 +68,14 @@
             display: flex;
             min-height: 100vh;
             transition: margin-left 0.6s var(--easing);
-            overflow-x: hidden;
+            overflow: hidden;
+            height: 100vh;
         }
 
         .container {
             display: flex;
             width: 100%;
+            height: 100vh;
         }
 
         /* Sidebar */
@@ -219,24 +221,12 @@
 
         .content-list li {
             padding: 6px 0;
-            transition: background-color 0.25s var(--easing);
+            transition: none;
             overflow: hidden;
             border-radius: 8px;
             white-space: nowrap;
             text-overflow: ellipsis;
             position: relative;
-        }
-
-        .content-list li::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background-color: var(--nav-hover);
-            border-radius: 8px;
-            opacity: 0;
-            transition: opacity 0.25s var(--easing);
-            pointer-events: none;
-            z-index: -1;
         }
 
         .content-list li a {
@@ -245,18 +235,9 @@
             display: block;
             padding: 8px 15px;
             border-radius: 8px;
-            transition: padding-left 0.25s var(--easing);
+            transition: none;
             position: relative;
             z-index: 1;
-        }
-
-        .content-list li a:hover {
-            background-color: transparent;
-            padding-left: 20px;
-        }
-
-        .content-list li:hover::before {
-            opacity: 1;
         }
 
         .category {
@@ -265,13 +246,7 @@
             font-size: 1.1em;
             padding: 0 10px;
             color: var(--button-text);
-            transition: all 0.3s var(--easing);
-            will-change: transform, color;
-        }
-
-        .category:hover {
-            color: var(--button-text);
-            transform: translateX(3px);
+            transition: none;
         }
 
         .subcategory {
@@ -281,13 +256,7 @@
             font-size: 0.95em;
             color: var(--button-text);
             padding: 0 10px;
-            transition: all 0.3s var(--easing);
-            will-change: transform, color;
-        }
-
-        .subcategory:hover {
-            color: var(--button-text);
-            transform: translateX(3px);
+            transition: none;
         }
 
         .entry {
@@ -316,16 +285,15 @@
             display: block;
             padding: inherit;
             border-radius: inherit;
-            transition: padding-left 0.25s var(--easing);
+            transition: none;
         }
 
         .entry:hover::before {
             opacity: 1;
         }
 
-        .entry a:hover {
-            background-color: transparent;
-            padding-left: 30px;
+        .entry:active::before {
+            opacity: 1;
         }
 
         /* Main Content */
@@ -335,6 +303,8 @@
             width: calc(100% - var(--sidebar-width));
             transition: margin-left 0.6s var(--easing), width 0.6s var(--easing);
             will-change: margin-left, width;
+            overflow: hidden;
+            height: 100vh;
         }
 
         .main-content.expanded {
@@ -352,6 +322,7 @@
             box-shadow: var(--shadow-lg);
             transition: all 0.4s var(--easing);
             will-change: border-radius, box-shadow;
+            overflow: auto;
         }
 
         /* Toggle Mode Button */
@@ -373,21 +344,19 @@
             align-items: center;
             justify-content: center;
             font-size: 18px;
-            transition: all 0.3s var(--easing);
+            transition: none;
             box-shadow: var(--shadow-md);
-            will-change: transform, box-shadow;
         }
 
-        .toggle-mode:hover {
-            transform: scale(1.08);
-            box-shadow: var(--shadow-lg);
+        .toggle-mode:active {
+            transform: scale(0.98);
         }
 
         /* Floating Buttons */
         .floating-button-wrapper {
             position: fixed;
-            right: 25px;
-            bottom: 25px;
+            right: 55px;
+            bottom: 45px;
             z-index: 1000;
             display: flex;
             align-items: center;
@@ -397,7 +366,7 @@
         }
 
         .floating-button-wrapper.collapsed {
-            transform: translateX(calc(100%));
+            transform: translateX(calc(100% + 30px));
         }
 
         .floating-button-toggle {
@@ -460,14 +429,13 @@
             font-weight: 500;
             box-shadow: var(--shadow-md);
             backdrop-filter: blur(var(--blur));
-            transition: all 0.3s var(--easing), transform 0.2s var(--easing);
+            transition: none;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
             position: relative;
             overflow: hidden;
-            will-change: transform, box-shadow;
         }
 
         .floating-button::before {
@@ -479,16 +447,11 @@
             height: 100%;
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
             transform: translateX(-100%) translateY(-100%);
-            transition: transform 0.4s var(--easing);
+            transition: none;
         }
 
-        .floating-button:hover::before {
+        .floating-button:active::before {
             transform: translateX(100%) translateY(100%);
-        }
-
-        .floating-button:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
         }
 
         .floating-button:active {
@@ -654,7 +617,7 @@
                 <span>Frage stellen</span>
             </button>
             <div class="input-menu" id="frageInputMenu">
-                <input type="text" id="frageInput" placeholder="Stelle deine Frage...">
+                <input type="text" id="frageInput" placeholder="Frage eingeben + Enter drücken">
             </div>
             <button class="floating-button" id="zusammenfassungButton">
                 <span>Zusammenfassen</span>
