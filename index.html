@@ -681,7 +681,7 @@
                 <span>Frage stellen</span>
             </button>
             <div class="input-menu" id="frageInputMenu">
-                <input type="text" id="frageInput" placeholder="Frage eingeben + Enter drücken">
+                <input type="text" id="frageInput" placeholder="Frage + Enter">
             </div>
             <button class="floating-button" id="zusammenfassungButton">
                 <span>Zusammenfassen</span>
@@ -960,7 +960,7 @@
                 const visibleText = event.data.text;
 
                 if (zusammenfassungButton.dataset.active === "true") {
-                    const promptText = "Fasse den nachstehenden Text präzise und strukturiert zusammen:\n\n" + visibleText;
+                    const promptText = "Fasse den nachstehenden Text kurz in wenigen Sätzen zusammen:\n\n" + visibleText;
                     navigator.clipboard.writeText(promptText)
                         .then(() => { showToast("Prompt für Zusammenfassung kopiert!"); })
                         .catch(err => { showToast("Fehler beim Kopieren.", true); });
@@ -972,7 +972,7 @@
                         .catch(err => { showToast("Fehler beim Kopieren.", true); });
                 }
                 else if (frageButton.dataset.question) {
-                    const promptText = frageButton.dataset.question + "\n\n" + visibleText;
+                    const promptText = "Beantworte die Frage:\n\n" + frageButton.dataset.question + "\n\nnur mithilfe der nachstehenden Informationen:\n\n" + visibleText;
                     navigator.clipboard.writeText(promptText)
                         .then(() => { showToast("Prompt für Frage kopiert!"); })
                         .catch(err => { showToast("Fehler beim Kopieren.", true); });
