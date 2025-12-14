@@ -39,11 +39,57 @@
             color: var(--text-color);
             display: flex;
             min-height: 100vh;
+            transition: margin-left 0.3s;
         }
 
         .container {
             display: flex;
             width: 100%;
+        }
+
+        .sidebar-wrapper {
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 1000;
+            display: flex;
+            transition: transform 0.3s;
+            transform: translateX(0);
+        }
+
+        .sidebar-wrapper.collapsed {
+            transform: translateX(-280px);
+        }
+
+        .sidebar-toggle {
+            width: 15px;
+            height: 50px;
+            background-color: var(--nav-bg);
+            border: 1px solid var(--border-color);
+            border-left: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+            z-index: 1001;
+        }
+
+        .sidebar-toggle:hover {
+            opacity: 1;
+        }
+
+        .sidebar-toggle::after {
+            content: "◀";
+            color: var(--nav-text);
+            font-size: 12px;
+        }
+
+        .sidebar-wrapper.collapsed .sidebar-toggle::after {
+            content: "▶";
         }
 
         .sidebar {
@@ -52,7 +98,6 @@
             color: var(--nav-text);
             padding: 20px;
             height: 100vh;
-            position: fixed;
             border-right: 1px solid var(--border-color);
             overflow-y: auto;
         }
@@ -137,6 +182,12 @@
             margin-left: 320px;
             padding: 20px;
             width: calc(100% - 320px);
+            transition: margin-left 0.3s;
+        }
+
+        .main-content.expanded {
+            margin-left: 20px;
+            width: calc(100% - 20px);
         }
 
         .iframe-container {
@@ -160,21 +211,115 @@
             z-index: 1000;
         }
 
-        .quiz-button {
+        .toggle-mode:hover {
+            opacity: 0.9;
+        }
+
+        .floating-button-wrapper {
             position: fixed;
-            bottom: 20px;
             right: 20px;
-            padding: 10px 15px;
+            bottom: 20px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s;
+            transform: translateX(0);
+        }
+
+        .floating-button-wrapper.collapsed {
+            transform: translateX(calc(100%));
+        }
+
+        .floating-button-toggle {
+            width: 15px;
+            height: 130px;
+            background-color: var(--button-bg);
+            color: var(--button-text);
+            border: 1px solid var(--border-color);
+            border-right: none;
+            border-radius: 5px 0 0 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.2;
+            transition: opacity 0.2s;
+            z-index: 1001;
+            margin-right: 20px;
+        }
+
+        .floating-button-toggle:hover {
+            opacity: 1;
+        }
+
+        .floating-button-toggle::after {
+            content: "▶";
+            color: var(--button-text);
+            font-size: 12px;
+        }
+
+        .floating-button-wrapper.collapsed .floating-button-toggle::after {
+            content: "◀";
+        }
+
+        .floating-button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+            margin-left: -15px;
+        }
+
+        .floating-button {
+            width: 180px;
+            text-align: center;
             background-color: #4CAF50;
             color: var(--button-text);
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            z-index: 1000;
+            padding: 10px 15px;
+            box-sizing: border-box;
         }
 
-        .toggle-mode:hover, .quiz-button:hover {
+        .floating-button:hover {
             opacity: 0.9;
+        }
+
+        #frageButton {
+            background-color: #ff9800;
+        }
+
+        #zusammenfassungButton {
+            background-color: #2196F3;
+        }
+
+        #quizButton {
+            background-color: #4CAF50;
+        }
+
+        .input-menu {
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+            width: 180px;
+            background-color: var(--nav-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            padding: 10px;
+            box-sizing: border-box;
+            display: none;
+            z-index: 1002;
+        }
+
+        .input-menu input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid var(--border-color);
+            border-radius: 3px;
+            background-color: var(--search-bg);
+            color: var(--search-text);
+            box-sizing: border-box;
         }
 
         h1 {
@@ -195,7 +340,7 @@
             z-index: 1001;
             transition: top 0.4s ease-in-out, opacity 0.3s ease-in-out;
             opacity: 0;
-            pointer-events: none; /* Verhindert Klicks während der Animation */
+            pointer-events: none;
         }
 
         .toast-notification.show {
@@ -207,9 +352,8 @@
 </head>
 <body>
     <button class="toggle-mode" id="toggleMode">🌓 Dark Mode</button>
-    <button class="quiz-button" id="quizButton">📝 Quiz erstellen</button>
 
-    <div class="container">
+    <div class="sidebar-wrapper">
         <div class="sidebar">
             <h1>Inhaltsverzeichnis</h1>
             <div class="search-container">
@@ -220,7 +364,22 @@
                 <!-- Wird per JavaScript gefüllt -->
             </ul>
         </div>
+        <div class="sidebar-toggle" id="sidebarToggle"></div>
+    </div>
 
+    <div class="floating-button-wrapper">
+        <div class="floating-button-toggle" id="floatingButtonToggle"></div>
+        <div class="floating-button-container">
+            <button class="floating-button" id="frageButton">💬 Frage stellen</button>
+            <div class="input-menu" id="frageInputMenu">
+                <input type="text" id="frageInput" placeholder="Frage eingeben...">
+            </div>
+            <button class="floating-button" id="zusammenfassungButton">📄 Zusammenfassung erstellen</button>
+            <button class="floating-button" id="quizButton">📝 Quiz erstellen</button>
+        </div>
+    </div>
+
+    <div class="container">
         <div class="main-content">
             <iframe class="iframe-container" id="contentFrame" src=""></iframe>
         </div>
@@ -262,8 +421,8 @@
         // Liste der HTML-Dateien mit Kategorie, Subkategorie, Anzeigenamen und Tags
         const contentList = [
             { category: "Grundlagen", subcategory: "HTML", displayName: "Experiment Ethin", fileName: "e_ethin.html", tags: ["ethin", "einführung", "grundlagen"] },
-            { category: "Grundlagen", subcategory: "HTML", displayName: "HTML5 Neuerungen", fileName: "html5_neuerungen.html", tags: ["html5", "neuerung", "neues", "features"] },
-            { category: "Grundlagen", subcategory: "CSS", displayName: "CSS Grundlagen", fileName: "css_grundlagen.html", tags: ["css", "stile", "design"] },
+            { category: "Grundlagen", subcategory: "HTML", displayName: "Chemische Thermodynamik", fileName: "u_chemische_thermodynamik.html", tags: ["html5", "neuerung", "neues", "features"] },
+            { category: "Grundlagen", subcategory: "CSS", displayName: "Arten stofflicher Systeme", fileName: "u_arten_stofflicher_systeme.html", tags: ["css", "stile", "design"] },
             { category: "Grundlagen", subcategory: "CSS", displayName: "CSS Layouts", fileName: "css_layouts.html", tags: ["css", "layout", "grid", "flexbox"] },
             { category: "Fortgeschritten", subcategory: "JavaScript", displayName: "JavaScript für Anfänger", fileName: "javascript_anfaenger.html", tags: ["javascript", "js", "anfänger", "grundlagen"] },
             { category: "Fortgeschritten", subcategory: "JavaScript", displayName: "JavaScript OOP", fileName: "javascript_oop.html", tags: ["javascript", "js", "oop", "objekte"] },
@@ -301,13 +460,11 @@
                 const subcategory = item.subcategory.toLowerCase();
                 const tags = item.tags ? item.tags.map(tag => tag.toLowerCase()) : [];
 
-                // Fuzzy-Matching für displayName und tags
                 const displayNameMatches = !searchTerm || displayName.includes(searchTerm) || isFuzzyMatch(item.displayName, searchTerm);
                 const tagMatches = !searchTerm || (tags && tags.some(tag => tag.includes(searchTerm) || isFuzzyMatch(tag, searchTerm)));
                 const categoryMatches = !searchTerm || category.includes(searchTerm);
                 const subcategoryMatches = !searchTerm || subcategory.includes(searchTerm);
 
-                // Suche in category, subcategory, displayName (fuzzy) oder tags (fuzzy)
                 const matchesSearch = !searchTerm ||
                     categoryMatches ||
                     subcategoryMatches ||
@@ -342,7 +499,6 @@
                 listElement.appendChild(entryElement);
             });
 
-            // Verstecke leere Kategorien/Subkategorien
             document.querySelectorAll(".category, .subcategory").forEach(element => {
                 const nextElement = element.nextElementSibling;
                 const isCategory = element.classList.contains("category");
@@ -378,7 +534,6 @@
                 const fileName = e.target.getAttribute("data-file");
                 const frame = document.getElementById("contentFrame");
                 frame.src = fileName;
-                // Dark/Light-Mode an iframe weitergeben
                 frame.onload = function() {
                     const mode = document.body.classList.contains("dark-mode") ? "dark" : "light";
                     frame.contentWindow.postMessage({ type: "setMode", mode: mode }, "*");
@@ -402,7 +557,6 @@
         // Dark/Light Mode Toggle mit Systemeinstellungen
         const toggleButton = document.getElementById("toggleMode");
 
-        // Prüfe die Systemeinstellungen beim Laden der Seite
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
             document.body.classList.add("dark-mode");
             toggleButton.textContent = "☀️ Light Mode";
@@ -411,7 +565,6 @@
             toggleButton.textContent = "🌓 Dark Mode";
         }
 
-        // Reagiere auf Änderungen der Systemeinstellungen
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
             if (event.matches) {
                 document.body.classList.add("dark-mode");
@@ -420,7 +573,6 @@
                 document.body.classList.remove("dark-mode");
                 toggleButton.textContent = "🌓 Dark Mode";
             }
-            // Informiere iframe über Moduswechsel
             const frame = document.getElementById("contentFrame");
             if (frame.contentWindow) {
                 const mode = document.body.classList.contains("dark-mode") ? "dark" : "light";
@@ -433,21 +585,59 @@
             document.body.classList.toggle("dark-mode");
             const mode = document.body.classList.contains("dark-mode") ? "dark" : "light";
             this.textContent = mode === "dark" ? "☀️ Light Mode" : "🌓 Dark Mode";
-            // Informiere iframe über Moduswechsel
             const frame = document.getElementById("contentFrame");
             if (frame.contentWindow) {
                 frame.contentWindow.postMessage({ type: "setMode", mode: mode }, "*");
             }
         });
 
-        // Variablen für Spam-Schutz
+        // Sidebar Toggle
+        const sidebarToggle = document.getElementById("sidebarToggle");
+        const sidebarWrapper = document.querySelector(".sidebar-wrapper");
+        const mainContent = document.querySelector(".main-content");
+
+        sidebarToggle.addEventListener("click", function() {
+            sidebarWrapper.classList.toggle("collapsed");
+            mainContent.classList.toggle("expanded");
+        });
+
+        // Floating Buttons Toggle
+        const floatingButtonToggle = document.getElementById("floatingButtonToggle");
+        const floatingButtonWrapper = document.querySelector(".floating-button-wrapper");
+
+        floatingButtonToggle.addEventListener("click", function() {
+            floatingButtonWrapper.classList.toggle("collapsed");
+        });
+
+        // Frage stellen Button
+        const frageButton = document.getElementById("frageButton");
+        const frageInputMenu = document.getElementById("frageInputMenu");
+        const frageInput = document.getElementById("frageInput");
+
+        frageButton.addEventListener("click", function(e) {
+            e.stopPropagation();
+            frageInputMenu.style.display = frageInputMenu.style.display === "block" ? "none" : "block";
+            frageInput.focus();
+        });
+
+        frageInput.addEventListener("keydown", function(e) {
+            if (e.key === "Enter" && this.value.trim()) {
+                const frame = document.getElementById("contentFrame");
+                frame.contentWindow.postMessage({ type: "getVisibleText" }, "*");
+                frageInputMenu.style.display = "none";
+
+                // Speichere die Frage für die Antwort
+                frageButton.dataset.question = this.value.trim();
+                this.value = "";
+            }
+        });
+
+        // Variablen für Spam-Schutz und Toast
         let isToastActive = false;
         let toastTimeout = null;
 
-        // Funktion zum Anzeigen der Toast-Benachrichtigung
         function showToast(message, isError = false) {
-            if (isToastActive) return; // Verhindere Mehrfachausführung
-
+            if (isToastActive) return;
             isToastActive = true;
             clearTimeout(toastTimeout);
 
@@ -459,43 +649,86 @@
                 document.body.appendChild(toast);
             }
 
-            // Farbe anpassen (rot bei Fehler)
             toast.style.backgroundColor = isError ? "#f44336" : "#4CAF50";
             toast.textContent = message;
             toast.classList.add("show");
 
-            // Nach 3 Sekunden ausblenden
             toastTimeout = setTimeout(() => {
                 toast.classList.remove("show");
-                // Warte auf das Ende der Animation, bevor isToastActive zurückgesetzt wird
                 setTimeout(() => {
                     isToastActive = false;
-                }, 400); // Entspricht der Transition-Dauer (0.4s)
+                }, 400);
             }, 3000);
         }
 
         // Quiz-Button-Funktion
         const quizButton = document.getElementById("quizButton");
         quizButton.addEventListener("click", function() {
-            if (isToastActive) return; // Spam-Schutz
+            if (isToastActive) return;
 
             const frame = document.getElementById("contentFrame");
             frame.contentWindow.postMessage({ type: "getVisibleText" }, "*");
+
+            quizButton.dataset.active = "true";
+            zusammenfassungButton.dataset.active = "false";
+            frageButton.dataset.active = "false";
+        });
+
+        // Zusammenfassung-Button-Funktion
+        const zusammenfassungButton = document.getElementById("zusammenfassungButton");
+        zusammenfassungButton.addEventListener("click", function() {
+            if (isToastActive) return;
+
+            const frame = document.getElementById("contentFrame");
+            frame.contentWindow.postMessage({ type: "getVisibleText" }, "*");
+
+            quizButton.dataset.active = "false";
+            zusammenfassungButton.dataset.active = "true";
+            frageButton.dataset.active = "false";
         });
 
         // Empfange die Antwort vom iframe
         window.addEventListener("message", (event) => {
             if (event.data.type === "visibleTextResponse") {
                 const visibleText = event.data.text;
-                const promptText = "Erstelle 2 Fragen für eine Prüfung, die nur das Wissen aus den nachstehenden Informationen abfragen:\n\n" + visibleText;
-                navigator.clipboard.writeText(promptText)
-                    .then(() => {
-                        showToast("Prompt für Quiz-Fragen wurde kopiert!");
-                    })
-                    .catch(err => {
-                        console.error("Fehler beim Kopieren: ", err);
-                        showToast("Fehler beim Kopieren in die Zwischenablage.", true);
-                    });
+
+                if (zusammenfassungButton.dataset.active === "true") {
+                    const promptText = "Fasse den nachstehenden Text präzise und strukturiert zusammen:\n\n" + visibleText;
+                    navigator.clipboard.writeText(promptText)
+                        .then(() => {
+                            showToast("Prompt für Zusammenfassung wurde kopiert!");
+                        })
+                        .catch(err => {
+                            console.error("Fehler beim Kopieren: ", err);
+                            showToast("Fehler beim Kopieren in die Zwischenablage.", true);
+                        });
+                }
+                else if (quizButton.dataset.active === "true") {
+                    const promptText = "Erstelle 2 Fragen für eine Prüfung, die nur das Wissen aus den nachstehenden Informationen abfragen:\n\n" + visibleText;
+                    navigator.clipboard.writeText(promptText)
+                        .then(() => {
+                            showToast("Prompt für Quiz-Fragen wurde kopiert!");
+                        })
+                        .catch(err => {
+                            console.error("Fehler beim Kopieren: ", err);
+                            showToast("Fehler beim Kopieren in die Zwischenablage.", true);
+                        });
+                }
+                else if (frageButton.dataset.question) {
+                    const promptText = frageButton.dataset.question + "\n\n" + visibleText;
+                    navigator.clipboard.writeText(promptText)
+                        .then(() => {
+                            showToast("Prompt für Frage wurde kopiert!");
+                        })
+                        .catch(err => {
+                            console.error("Fehler beim Kopieren: ", err);
+                            showToast("Fehler beim Kopieren in die Zwischenablage.", true);
+                        });
+                    frageButton.dataset.question = "";
+                }
+
+                quizButton.dataset.active = "false";
+                zusammenfassungButton.dataset.active = "false";
             }
         });
 
@@ -505,12 +738,17 @@
         }
         renderContentList();
 
-        // Empfange Nachrichten vom iframe (z.B. für Dark/Light-Mode-Sync)
+        // Empfange Nachrichten vom iframe
         window.addEventListener("message", (event) => {
             if (event.data.type === "getMode") {
                 const mode = document.body.classList.contains("dark-mode") ? "dark" : "light";
                 event.source.postMessage({ type: "setMode", mode: mode }, event.origin);
             }
+        });
+
+        // Schließe das Input-Menü, wenn irgendwo anders geklickt wird
+        document.addEventListener("click", function() {
+            frageInputMenu.style.display = "none";
         });
     </script>
 </body>
