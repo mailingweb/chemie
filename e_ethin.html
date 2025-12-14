@@ -32,7 +32,10 @@
             background-color: var(--bg-color);
             margin: 0;
             padding: 20px;
-            transition: background-color 0.3s, color 0.3s;
+        }
+        /* Deaktiviere Transitionen beim initialen Laden */
+        body.no-transition {
+            transition: none !important;
         }
         header {
             text-align: center;
@@ -83,8 +86,10 @@
         tr:nth-child(even) {
             background-color: rgba(0, 0, 0, 0.05);
         }
-        .dark-mode tr:nth-child(even) {
-            background-color: rgba(255, 255, 255, 0.05);
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
         }
         .highlight {
             font-weight: bold;
@@ -96,8 +101,25 @@
             font-size: 0.9em;
             color: #666;
         }
-        .dark-mode footer {
-            color: #aaa;
+        @media (prefers-color-scheme: dark) {
+            footer {
+                color: #aaa;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 0.85em;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-weight: normal;
         }
     </style>
 </head>
@@ -107,6 +129,20 @@
             <h1>Chemie-Experimente: Energetik & Ethin-Herstellung</h1>
             <p>Lernübersicht für das Abitur (Leistungskurs Chemie)</p>
         </header>
+
+        <!-- Subtilere Themen-Tags -->
+        <div class="tags">
+            <span class="tag">Energetik</span>
+            <span class="tag">Exotherme Reaktion</span>
+            <span class="tag">Endotherme Reaktion</span>
+            <span class="tag">Lösungsenthalpie</span>
+            <span class="tag">Ethin-Synthese</span>
+            <span class="tag">Calciumcarbid</span>
+            <span class="tag">Reaktionsgleichungen</span>
+            <span class="tag">Protokollführung</span>
+            <span class="tag">Systemarten</span>
+            <span class="tag">Schülerexperiment</span>
+        </div>
 
         <div class="card experiment">
             <h2>1. Temperaturmessung beim Lösen von NH₄Cl und NaOH</h2>
@@ -188,30 +224,61 @@ CaC₂ + 2 H₂O → C₂H₂ + Ca(OH)₂ &nbsp;&nbsp;&nbsp; <span class="highli
             <p>Quellen: Chemieunterricht.de, Lernhelfer, Unterrichtsmaterialien Uni Göttingen (Abitur-Niveau)</p>
         </footer>
     </div>
-
     <script>
-        // Empfange Nachrichten von der Elternseite (z. B. Modus-Änderungen)
-        window.addEventListener("message", (event) => {
-            if (event.data.type === "setMode") {
-                document.body.classList.toggle("dark-mode", event.data.mode === "dark");
+        // 1. Systemeinstellungen prüfen und sofort anwenden (ohne Animation)
+        function applySystemMode() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (isDark) {
+                document.body.classList.add("dark-mode");
             }
-        });
+            // Transition nach kurzer Verzögerung aktivieren
+            setTimeout(() => {
+                document.body.classList.remove("no-transition");
+            }, 10);
+        }
 
-        // Frage den aktuellen Modus der Elternseite ab, sobald die Seite geladen ist
-        window.addEventListener("load", () => {
-            window.parent.postMessage({ type: "getMode" }, "*");
-        });
-        
-        // Höre auf Nachrichten vom Elternfenster
-        window.addEventListener("message", (event) => {
-            if (event.data.type === "getVisibleText") {
-                // Sende den sichtbaren Text des body zurück
+        // 2. Modus manuell setzen (mit Animation)
+        function setMode(mode) {
+            document.body.classList.toggle("dark-mode", mode === "dark");
+        }
+
+        // 3. Systemeinstellungen beim Laden anwenden
+        applySystemMode();
+
+        // 4. Nachrichten von der Hauptseite empfangen
+        window.addEventListener("message", function(event) {
+            // Dark/Light-Mode wechseln (mit Animation)
+            if (event.data && event.data.type === "setMode") {
+                setMode(event.data.mode);
+            }
+            // Aktuellen Modus abfragen
+            else if (event.data && event.data.type === "getMode") {
+                window.parent.postMessage({
+                    type: "setMode",
+                    mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+                }, "*");
+            }
+            // Sichtbaren Text zurücksenden
+            else if (event.data && event.data.type === "getVisibleText") {
                 const visibleText = document.body.innerText;
                 window.parent.postMessage({
                     type: "visibleTextResponse",
                     text: visibleText
                 }, "*");
             }
+        });
+
+        // 5. Hauptseite beim Laden über den aktuellen Modus informieren
+        window.addEventListener("load", function() {
+            window.parent.postMessage({
+                type: "setMode",
+                mode: document.body.classList.contains("dark-mode") ? "dark" : "light"
+            }, "*");
+        });
+
+        // 6. Systemeinstellungen ändern (optional)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            setMode(e.matches ? "dark" : "light");
         });
     </script>
 </body>
