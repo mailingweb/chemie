@@ -6,40 +6,69 @@
     <title>Moderne Lernplattform</title>
     <style>
         :root {
-            --bg-color: #ffffff;
-            --text-color: #333;
-            --nav-bg: #fff;
-            --nav-text: #333;
-            --nav-hover: #e0e0e0;
-            --border-color: #ddd;
-            --search-bg: #eee;
-            --search-text: #333;
-            --button-bg: #4a6fa5;
-            --button-text: #fff;
+            --bg-color: #f5f5f7;
+            --text-color: #1d1d1f;
+            --nav-bg: rgba(255, 255, 255, 0.85);
+            --nav-text: #1d1d1f;
+            --nav-hover: rgba(0, 122, 255, 0.08);
+            --border-color: rgba(0, 0, 0, 0.05);
+            --search-bg: rgba(235, 235, 240, 0.9);
+            --search-text: #1d1d1f;
+            --button-bg: rgba(0, 122, 255, 0.1);
+            --button-text: #007aff;
+            --glass-morph: rgba(255, 255, 255, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.3);
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.12);
+            --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --blur: 12px;
+            --highlight: rgba(0, 122, 255, 0.2);
+            --easing: cubic-bezier(0.4, 0, 0.2, 1);
+            --button-height: 44px;
+            --button-width: 160px;
+            --menu-width: 200px;
+            --toggle-width: 20px;
+            --toggle-height: 120px;
+            --sidebar-width: 300px;
+            --sidebar-collapsed-margin: -280px;
         }
 
         .dark-mode {
             --bg-color: #1a1a1a;
-            --text-color: #f5f5f5;
-            --nav-bg: #333;
-            --nav-text: #f5f5f5;
-            --nav-hover: #444;
-            --border-color: #555;
-            --search-bg: #444;
-            --search-text: #f5f5f5;
-            --button-bg: #5a7fb5;
-            --button-text: #fff;
+            --text-color: #f5f5f7;
+            --nav-bg: rgba(30, 30, 30, 0.85);
+            --nav-text: #f5f5f7;
+            --nav-hover: rgba(10, 132, 255, 0.12);
+            --border-color: rgba(255, 255, 255, 0.05);
+            --search-bg: rgba(60, 60, 60, 0.85);
+            --search-text: #f5f5f7;
+            --button-bg: rgba(10, 132, 255, 0.15);
+            --button-text: #00d4ff;
+            --glass-morph: rgba(30, 30, 30, 0.75);
+            --glass-border: rgba(255, 255, 255, 0.15);
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.2);
+            --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.3);
+            --highlight: rgba(0, 122, 255, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: var(--bg-color);
             color: var(--text-color);
             display: flex;
             min-height: 100vh;
-            transition: margin-left 0.3s;
+            transition: margin-left 0.6s var(--easing);
+            overflow-x: hidden;
         }
 
         .container {
@@ -47,6 +76,7 @@
             width: 100%;
         }
 
+        /* Sidebar */
         .sidebar-wrapper {
             position: fixed;
             left: 0;
@@ -54,38 +84,48 @@
             bottom: 0;
             z-index: 1000;
             display: flex;
-            transition: transform 0.3s;
+            width: var(--sidebar-width);
+            transition: transform 0.6s var(--easing);
             transform: translateX(0);
+            will-change: transform;
         }
 
         .sidebar-wrapper.collapsed {
-            transform: translateX(-280px);
+            transform: translateX(var(--sidebar-collapsed-margin));
         }
 
         .sidebar-toggle {
-            width: 15px;
-            height: 50px;
-            background-color: var(--nav-bg);
-            border: 1px solid var(--border-color);
+            width: var(--toggle-width);
+            height: var(--toggle-height);
+            background-color: var(--glass-morph);
+            backdrop-filter: blur(var(--blur));
+            border: 1px solid var(--glass-border);
             border-left: none;
-            border-radius: 0 5px 5px 0;
+            border-radius: 0 12px 12px 0;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            opacity: 0.7;
-            transition: opacity 0.2s;
+            opacity: 0.4;
+            transition: opacity 0.3s var(--easing), background 0.3s var(--easing);
             z-index: 1001;
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            box-shadow: var(--shadow-md);
         }
 
         .sidebar-toggle:hover {
             opacity: 1;
+            background-color: var(--glass-morph);
         }
 
         .sidebar-toggle::after {
             content: "◀";
             color: var(--nav-text);
             font-size: 12px;
+            font-weight: 600;
         }
 
         .sidebar-wrapper.collapsed .sidebar-toggle::after {
@@ -93,37 +133,67 @@
         }
 
         .sidebar {
-            width: 300px;
+            width: 100%;
             background-color: var(--nav-bg);
+            backdrop-filter: blur(var(--blur));
             color: var(--nav-text);
-            padding: 20px;
+            padding: 25px;
             height: 100vh;
             border-right: 1px solid var(--border-color);
             overflow-y: auto;
+            box-shadow: var(--shadow-md);
+            border-radius: 0 20px 20px 0;
+            transition: padding 0.6s var(--easing);
+            will-change: padding;
+        }
+
+        .sidebar.collapsed {
+            padding: 25px 10px;
         }
 
         .search-container {
             position: relative;
             width: 100%;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            opacity: 1;
+            height: auto;
+            transition: opacity 0.4s var(--easing), margin-bottom 0.4s var(--easing);
+        }
+
+        .sidebar.collapsed .search-container {
+            opacity: 0;
+            height: 0;
+            margin-bottom: 0;
+            pointer-events: none;
         }
 
         .search-box {
             width: 100%;
-            padding: 10px 40px 10px 10px;
-            border: 1px solid var(--border-color);
-            border-radius: 5px;
+            padding: 12px 45px 12px 15px;
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
             background-color: var(--search-bg);
             color: var(--search-text);
             box-sizing: border-box;
+            font-size: 14px;
+            transition: all 0.3s var(--easing);
+            box-shadow: var(--shadow-sm);
+            backdrop-filter: blur(var(--blur));
+            will-change: border-color;
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: var(--button-text);
+            box-shadow: 0 0 0 3px var(--highlight);
         }
 
         .clear-search {
             position: absolute;
-            right: 10px;
+            right: 15px;
             top: 50%;
             transform: translateY(-50%);
-            background-color: #ccc;
+            background-color: transparent;
             color: var(--nav-text);
             border: none;
             border-radius: 50%;
@@ -133,7 +203,12 @@
             display: none;
             align-items: center;
             justify-content: center;
-            font-size: 12px;
+            font-size: 14px;
+            transition: all 0.2s var(--easing);
+        }
+
+        .clear-search:hover {
+            background-color: var(--nav-hover);
         }
 
         .content-list {
@@ -143,87 +218,182 @@
         }
 
         .content-list li {
-            padding: 8px 0;
+            padding: 6px 0;
+            transition: background-color 0.25s var(--easing);
+            overflow: hidden;
+            border-radius: 8px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            position: relative;
+        }
+
+        .content-list li::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: var(--nav-hover);
+            border-radius: 8px;
+            opacity: 0;
+            transition: opacity 0.25s var(--easing);
+            pointer-events: none;
+            z-index: -1;
         }
 
         .content-list li a {
             text-decoration: none;
             color: var(--nav-text);
             display: block;
-            padding: 5px 10px;
+            padding: 8px 15px;
+            border-radius: 8px;
+            transition: padding-left 0.25s var(--easing);
+            position: relative;
+            z-index: 1;
+        }
+
+        .content-list li a:hover {
+            background-color: transparent;
+            padding-left: 20px;
+        }
+
+        .content-list li:hover::before {
+            opacity: 1;
         }
 
         .category {
-            font-weight: bold;
-            margin-top: 15px;
+            font-weight: 600;
+            margin-top: 20px;
             font-size: 1.1em;
+            padding: 0 10px;
+            color: var(--button-text);
+            transition: all 0.3s var(--easing);
+            will-change: transform, color;
+        }
+
+        .category:hover {
+            color: var(--button-text);
+            transform: translateX(3px);
         }
 
         .subcategory {
             font-weight: 500;
-            margin-top: 10px;
+            margin-top: 12px;
             margin-left: 10px;
-            font-size: 1em;
-            color: var(--button-bg);
+            font-size: 0.95em;
+            color: var(--button-text);
+            padding: 0 10px;
+            transition: all 0.3s var(--easing);
+            will-change: transform, color;
+        }
+
+        .subcategory:hover {
+            color: var(--button-text);
+            transform: translateX(3px);
         }
 
         .entry {
             margin-left: 20px;
-            padding: 5px 10px;
-            border-radius: 3px;
+            padding: 8px 15px;
+            border-radius: 8px;
             cursor: pointer;
+            transition: none;
+            position: relative;
+            overflow: hidden;
         }
 
-        .entry:hover {
+        .entry::before {
+            content: "";
+            position: absolute;
+            inset: 0;
             background-color: var(--nav-hover);
+            border-radius: 8px;
+            opacity: 0;
+            transition: opacity 0.25s var(--easing);
+            pointer-events: none;
+            z-index: -1;
         }
 
+        .entry a {
+            display: block;
+            padding: inherit;
+            border-radius: inherit;
+            transition: padding-left 0.25s var(--easing);
+        }
+
+        .entry:hover::before {
+            opacity: 1;
+        }
+
+        .entry a:hover {
+            background-color: transparent;
+            padding-left: 30px;
+        }
+
+        /* Main Content */
         .main-content {
-            margin-left: 320px;
-            padding: 20px;
-            width: calc(100% - 320px);
-            transition: margin-left 0.3s;
+            margin-left: var(--sidebar-width);
+            padding: 30px;
+            width: calc(100% - var(--sidebar-width));
+            transition: margin-left 0.6s var(--easing), width 0.6s var(--easing);
+            will-change: margin-left, width;
         }
 
         .main-content.expanded {
-            margin-left: 20px;
-            width: calc(100% - 20px);
+            margin-left: var(--toggle-width);
+            width: calc(100% - var(--toggle-width));
         }
 
         .iframe-container {
             width: 100%;
-            height: calc(100vh - 40px);
+            height: calc(100vh - 60px);
             border: none;
-            border-radius: 5px;
-            background-color: var(--bg-color);
+            border-radius: 15px;
+            background-color: var(--glass-morph);
+            backdrop-filter: blur(var(--blur));
+            box-shadow: var(--shadow-lg);
+            transition: all 0.4s var(--easing);
+            will-change: border-radius, box-shadow;
         }
 
+        /* Toggle Mode Button */
         .toggle-mode {
             position: fixed;
-            top: 20px;
-            right: 20px;
-            padding: 10px 15px;
-            background-color: var(--button-bg);
-            color: var(--button-text);
-            border: none;
-            border-radius: 5px;
+            top: 40px;
+            right: 55px;
+            width: 44px;
+            height: 44px;
+            padding: 0;
+            background: var(--glass-morph);
+            backdrop-filter: blur(var(--blur));
+            border-radius: 50%;
+            border: 1px solid var(--glass-border);
+            color: var(--nav-text);
             cursor: pointer;
-            z-index: 1000;
-        }
-
-        .toggle-mode:hover {
-            opacity: 0.9;
-        }
-
-        .floating-button-wrapper {
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
             z-index: 1000;
             display: flex;
             align-items: center;
-            transition: transform 0.3s;
+            justify-content: center;
+            font-size: 18px;
+            transition: all 0.3s var(--easing);
+            box-shadow: var(--shadow-md);
+            will-change: transform, box-shadow;
+        }
+
+        .toggle-mode:hover {
+            transform: scale(1.08);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Floating Buttons */
+        .floating-button-wrapper {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            transition: transform 0.6s var(--easing);
             transform: translateX(0);
+            will-change: transform;
         }
 
         .floating-button-wrapper.collapsed {
@@ -231,21 +401,24 @@
         }
 
         .floating-button-toggle {
-            width: 15px;
-            height: 130px;
+            width: var(--toggle-width);
+            height: var(--toggle-height);
             background-color: var(--button-bg);
             color: var(--button-text);
-            border: 1px solid var(--border-color);
+            border: 1px solid var(--glass-border);
             border-right: none;
-            border-radius: 5px 0 0 5px;
+            border-radius: 12px 0 0 12px;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            opacity: 0.2;
-            transition: opacity 0.2s;
+            opacity: 0.4;
+            transition: opacity 0.3s var(--easing), background 0.3s var(--easing);
             z-index: 1001;
             margin-right: 20px;
+            box-shadow: var(--shadow-md);
+            backdrop-filter: blur(var(--blur));
+            will-change: opacity;
         }
 
         .floating-button-toggle:hover {
@@ -256,6 +429,7 @@
             content: "▶";
             color: var(--button-text);
             font-size: 12px;
+            font-weight: 600;
         }
 
         .floating-button-wrapper.collapsed .floating-button-toggle::after {
@@ -268,90 +442,196 @@
             align-items: flex-end;
             gap: 10px;
             margin-left: -15px;
+            transition: all 0.4s var(--easing);
+            will-change: transform;
         }
 
         .floating-button {
-            width: 180px;
+            width: var(--button-width);
+            height: var(--button-height);
             text-align: center;
-            background-color: #4CAF50;
+            background-color: var(--glass-morph);
             color: var(--button-text);
-            border: none;
-            border-radius: 5px;
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
             cursor: pointer;
-            padding: 10px 15px;
+            padding: 0 15px;
             box-sizing: border-box;
+            font-weight: 500;
+            box-shadow: var(--shadow-md);
+            backdrop-filter: blur(var(--blur));
+            transition: all 0.3s var(--easing), transform 0.2s var(--easing);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
+            will-change: transform, box-shadow;
+        }
+
+        .floating-button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+            transform: translateX(-100%) translateY(-100%);
+            transition: transform 0.4s var(--easing);
+        }
+
+        .floating-button:hover::before {
+            transform: translateX(100%) translateY(100%);
         }
 
         .floating-button:hover {
-            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .floating-button:active {
+            transform: scale(0.98);
+        }
+
+        .floating-button span {
+            font-size: 16px;
         }
 
         #frageButton {
-            background-color: #ff9800;
+            background: linear-gradient(135deg, rgba(255, 159, 10, 0.1), rgba(255, 159, 10, 0.15));
+            border: 1px solid rgba(255, 159, 10, 0.2);
+            color: #ff9f0a;
         }
 
         #zusammenfassungButton {
-            background-color: #2196F3;
+            background: linear-gradient(135deg, rgba(0, 122, 255, 0.1), rgba(0, 122, 255, 0.15));
+            border: 1px solid rgba(0, 122, 255, 0.2);
+            color: #007aff;
         }
 
         #quizButton {
-            background-color: #4CAF50;
+            background: linear-gradient(135deg, rgba(50, 215, 75, 0.1), rgba(50, 215, 75, 0.15));
+            border: 1px solid rgba(50, 215, 75, 0.2);
+            color: #32d74b;
         }
 
+        /* Frage-Menü */
         .input-menu {
             position: absolute;
-            bottom: 100%;
+            bottom: calc(100% + 10px);
             right: 0;
-            width: 180px;
-            background-color: var(--nav-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 5px;
-            padding: 10px;
+            width: var(--menu-width);
+            background-color: var(--glass-morph);
+            backdrop-filter: blur(var(--blur));
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 15px;
             box-sizing: border-box;
             display: none;
             z-index: 1002;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.4s var(--easing), opacity 0.3s var(--easing);
+            opacity: 0;
+            transform: translateY(10px);
+            will-change: opacity, transform;
+        }
+
+        .input-menu.show {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .input-menu input {
             width: 100%;
-            padding: 8px;
+            padding: 10px 12px;
             border: 1px solid var(--border-color);
-            border-radius: 3px;
+            border-radius: 8px;
             background-color: var(--search-bg);
             color: var(--search-text);
             box-sizing: border-box;
+            font-size: 14px;
+            transition: all 0.2s var(--easing);
+            will-change: border-color, box-shadow;
+        }
+
+        .input-menu input:focus {
+            outline: none;
+            border-color: var(--button-text);
+            box-shadow: 0 0 0 2px var(--highlight);
+        }
+
+        .input-menu::after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            right: 15px;
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 8px solid var(--glass-morph);
+            filter: blur(2px);
         }
 
         h1 {
             margin-top: 0;
             font-size: 1.5em;
+            font-weight: 600;
+            padding: 0 10px;
+            color: var(--button-text);
         }
 
+        /* Toast Notification */
         .toast-notification {
             position: fixed;
-            top: -60px;
+            top: -70px;
             left: 50%;
             transform: translateX(-50%);
-            background-color: #4CAF50;
+            background: linear-gradient(135deg, rgba(0, 122, 255, 0.95), rgba(0, 122, 255, 0.8));
             color: white;
-            padding: 12px 24px;
-            border-radius: 5px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            padding: 15px 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
             z-index: 1001;
-            transition: top 0.4s ease-in-out, opacity 0.3s ease-in-out;
+            transition: top 0.5s var(--easing), opacity 0.4s var(--easing);
             opacity: 0;
             pointer-events: none;
+            backdrop-filter: blur(var(--blur));
+            border: 1px solid var(--glass-border);
+            will-change: top, opacity;
         }
 
         .toast-notification.show {
-            top: 20px;
+            top: 30px;
             opacity: 1;
             pointer-events: auto;
+        }
+
+        /* Animation für Sidebar-Einträge */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .content-list li {
+            animation: fadeIn 0.4s var(--easing) forwards;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-20px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .sidebar:not(.collapsed) .content-list li {
+            animation: slideIn 0.3s var(--easing) forwards;
         }
     </style>
 </head>
 <body>
-    <button class="toggle-mode" id="toggleMode">🌓 Dark Mode</button>
+    <button class="toggle-mode" id="toggleMode">☽</button>
 
     <div class="sidebar-wrapper">
         <div class="sidebar">
@@ -370,12 +650,18 @@
     <div class="floating-button-wrapper">
         <div class="floating-button-toggle" id="floatingButtonToggle"></div>
         <div class="floating-button-container">
-            <button class="floating-button" id="frageButton">💬 Frage stellen</button>
+            <button class="floating-button" id="frageButton">
+                <span>Frage stellen</span>
+            </button>
             <div class="input-menu" id="frageInputMenu">
-                <input type="text" id="frageInput" placeholder="Frage eingeben...">
+                <input type="text" id="frageInput" placeholder="Stelle deine Frage...">
             </div>
-            <button class="floating-button" id="zusammenfassungButton">📄 Zusammenfassung erstellen</button>
-            <button class="floating-button" id="quizButton">📝 Quiz erstellen</button>
+            <button class="floating-button" id="zusammenfassungButton">
+                <span>Zusammenfassen</span>
+            </button>
+            <button class="floating-button" id="quizButton">
+                <span>Quiz erstellen</span>
+            </button>
         </div>
     </div>
 
@@ -391,12 +677,8 @@
             if (a.length === 0) return b.length;
             if (b.length === 0) return a.length;
             const matrix = [];
-            for (let i = 0; i <= b.length; i++) {
-                matrix[i] = [i];
-            }
-            for (let j = 0; j <= a.length; j++) {
-                matrix[0][j] = j;
-            }
+            for (let i = 0; i <= b.length; i++) matrix[i] = [i];
+            for (let j = 0; j <= a.length; j++) matrix[0][j] = j;
             for (let i = 1; i <= b.length; i++) {
                 for (let j = 1; j <= a.length; j++) {
                     if (b.charAt(i-1) === a.charAt(j-1)) {
@@ -413,12 +695,12 @@
             return matrix[b.length][a.length];
         }
 
-        // Prüft, ob ein String mit Fuzzy-Matching (Levenshtein ≤ 2) übereinstimmt
+        // Fuzzy-Matching
         function isFuzzyMatch(str, term) {
             return levenshtein(str.toLowerCase(), term.toLowerCase()) <= 2;
         }
 
-        // Liste der HTML-Dateien mit Kategorie, Subkategorie, Anzeigenamen und Tags
+        // Inhaltsliste
         const contentList = [
             { category: "Grundlagen", subcategory: "HTML", displayName: "Experiment Ethin", fileName: "e_ethin.html", tags: ["ethin", "einführung", "grundlagen"] },
             { category: "Grundlagen", subcategory: "HTML", displayName: "Chemische Thermodynamik", fileName: "u_chemische_thermodynamik.html", tags: ["html5", "neuerung", "neues", "features"] },
@@ -432,7 +714,7 @@
             { category: "Tools", subcategory: "Build", displayName: "Gulp für Anfänger", fileName: "gulp_anfaenger.html", tags: ["gulp", "build", "tool", "automatisierung"] },
         ];
 
-        // Sortiere die Liste nach Kategorie → Subkategorie → displayName
+        // Sortieren
         contentList.sort((a, b) => {
             if (a.category < b.category) return -1;
             if (a.category > b.category) return 1;
@@ -441,7 +723,7 @@
             return a.displayName.localeCompare(b.displayName);
         });
 
-        // Fülle das Inhaltsverzeichnis
+        // Inhaltsverzeichnis rendern
         const listElement = document.getElementById("contentList");
         const searchInput = document.getElementById("searchInput");
         const clearSearch = document.getElementById("clearSearch");
@@ -450,8 +732,8 @@
             listElement.innerHTML = "";
             let currentCategory = null;
             let currentSubcategory = null;
-            let categoryElement = null;
-            let subcategoryElement = null;
+            let categoryHasMatches = false;
+            let subcategoryHasMatches = false;
 
             contentList.forEach(item => {
                 const searchTerm = filterTerm.toLowerCase();
@@ -465,69 +747,37 @@
                 const categoryMatches = !searchTerm || category.includes(searchTerm);
                 const subcategoryMatches = !searchTerm || subcategory.includes(searchTerm);
 
-                const matchesSearch = !searchTerm ||
-                    categoryMatches ||
-                    subcategoryMatches ||
-                    displayNameMatches ||
-                    tagMatches;
+                const matchesSearch = !searchTerm || categoryMatches || subcategoryMatches || displayNameMatches || tagMatches;
 
-                if (item.category !== currentCategory) {
-                    categoryElement = document.createElement("li");
+                if (matchesSearch && item.category !== currentCategory) {
+                    const categoryElement = document.createElement("li");
                     categoryElement.className = "category";
                     categoryElement.textContent = item.category;
                     listElement.appendChild(categoryElement);
                     currentCategory = item.category;
                     currentSubcategory = null;
+                    categoryHasMatches = true;
                 }
-                if (item.subcategory !== currentSubcategory) {
-                    subcategoryElement = document.createElement("li");
+
+                if (matchesSearch && item.subcategory !== currentSubcategory) {
+                    const subcategoryElement = document.createElement("li");
                     subcategoryElement.className = "subcategory";
                     subcategoryElement.textContent = item.subcategory;
                     listElement.appendChild(subcategoryElement);
                     currentSubcategory = item.subcategory;
-                }
-                const entryElement = document.createElement("li");
-                entryElement.className = "entry";
-                if (!matchesSearch) {
-                    entryElement.style.display = "none";
-                }
-                entryElement.innerHTML = `
-                    <a href="#" data-file="${item.fileName}" data-category="${item.category}" data-subcategory="${item.subcategory}">
-                        ${item.displayName}
-                    </a>
-                `;
-                listElement.appendChild(entryElement);
-            });
-
-            document.querySelectorAll(".category, .subcategory").forEach(element => {
-                const nextElement = element.nextElementSibling;
-                const isCategory = element.classList.contains("category");
-                let hasVisibleEntries = false;
-                let current = nextElementSibling(element);
-
-                while (current && (isCategory ? current.classList.contains("subcategory") || current.classList.contains("entry") : current.classList.contains("entry"))) {
-                    if (current.style.display !== "none") {
-                        hasVisibleEntries = true;
-                        break;
-                    }
-                    current = nextElementSibling(current);
+                    subcategoryHasMatches = true;
                 }
 
-                if (!hasVisibleEntries) {
-                    element.style.display = "none";
+                if (matchesSearch) {
+                    const entryElement = document.createElement("li");
+                    entryElement.className = "entry";
+                    entryElement.innerHTML = `<a href="#" data-file="${item.fileName}">${item.displayName}</a>`;
+                    listElement.appendChild(entryElement);
                 }
             });
         }
 
-        function nextElementSibling(el) {
-            let next = el.nextElementSibling;
-            while (next && next.nodeType !== Node.ELEMENT_NODE) {
-                next = next.nextSibling;
-            }
-            return next;
-        }
-
-        // Klick-Event für die Links im Inhaltsverzeichnis
+        // Klick-Event für Links
         listElement.addEventListener("click", function(e) {
             if (e.target.tagName === "A") {
                 e.preventDefault();
@@ -541,38 +791,32 @@
             }
         });
 
-        // Suchfunktion
+        // Suche
         searchInput.addEventListener("input", function() {
             renderContentList(this.value);
             clearSearch.style.display = this.value ? "flex" : "none";
         });
 
-        // Clear-Search-Button
+        // Clear-Search
         clearSearch.addEventListener("click", function() {
             searchInput.value = "";
             renderContentList("");
             clearSearch.style.display = "none";
         });
 
-        // Dark/Light Mode Toggle mit Systemeinstellungen
+        // Dark/Light Mode
         const toggleButton = document.getElementById("toggleMode");
-
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
             document.body.classList.add("dark-mode");
-            toggleButton.textContent = "☀️ Light Mode";
+            toggleButton.textContent = "☀️";
         } else {
             document.body.classList.remove("dark-mode");
-            toggleButton.textContent = "🌓 Dark Mode";
+            toggleButton.textContent = "☽";
         }
 
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-            if (event.matches) {
-                document.body.classList.add("dark-mode");
-                toggleButton.textContent = "☀️ Light Mode";
-            } else {
-                document.body.classList.remove("dark-mode");
-                toggleButton.textContent = "🌓 Dark Mode";
-            }
+            document.body.classList.toggle("dark-mode", event.matches);
+            toggleButton.textContent = event.matches ? "☀️" : "☽";
             const frame = document.getElementById("contentFrame");
             if (frame.contentWindow) {
                 const mode = document.body.classList.contains("dark-mode") ? "dark" : "light";
@@ -580,11 +824,10 @@
             }
         });
 
-        // Toggle-Button-Funktion
         toggleButton.addEventListener("click", function() {
             document.body.classList.toggle("dark-mode");
             const mode = document.body.classList.contains("dark-mode") ? "dark" : "light";
-            this.textContent = mode === "dark" ? "☀️ Light Mode" : "🌓 Dark Mode";
+            this.textContent = mode === "dark" ? "☀️" : "☽";
             const frame = document.getElementById("contentFrame");
             if (frame.contentWindow) {
                 frame.contentWindow.postMessage({ type: "setMode", mode: mode }, "*");
@@ -594,10 +837,12 @@
         // Sidebar Toggle
         const sidebarToggle = document.getElementById("sidebarToggle");
         const sidebarWrapper = document.querySelector(".sidebar-wrapper");
+        const sidebar = document.querySelector(".sidebar");
         const mainContent = document.querySelector(".main-content");
 
         sidebarToggle.addEventListener("click", function() {
             sidebarWrapper.classList.toggle("collapsed");
+            sidebar.classList.toggle("collapsed");
             mainContent.classList.toggle("expanded");
         });
 
@@ -609,14 +854,14 @@
             floatingButtonWrapper.classList.toggle("collapsed");
         });
 
-        // Frage stellen Button
+        // Frage stellen
         const frageButton = document.getElementById("frageButton");
         const frageInputMenu = document.getElementById("frageInputMenu");
         const frageInput = document.getElementById("frageInput");
 
         frageButton.addEventListener("click", function(e) {
             e.stopPropagation();
-            frageInputMenu.style.display = frageInputMenu.style.display === "block" ? "none" : "block";
+            frageInputMenu.classList.toggle("show");
             frageInput.focus();
         });
 
@@ -624,15 +869,13 @@
             if (e.key === "Enter" && this.value.trim()) {
                 const frame = document.getElementById("contentFrame");
                 frame.contentWindow.postMessage({ type: "getVisibleText" }, "*");
-                frageInputMenu.style.display = "none";
-
-                // Speichere die Frage für die Antwort
+                frageInputMenu.classList.remove("show");
                 frageButton.dataset.question = this.value.trim();
                 this.value = "";
             }
         });
 
-        // Variablen für Spam-Schutz und Toast
+        // Toast Notification
         let isToastActive = false;
         let toastTimeout = null;
 
@@ -649,45 +892,34 @@
                 document.body.appendChild(toast);
             }
 
-            toast.style.backgroundColor = isError ? "#f44336" : "#4CAF50";
             toast.textContent = message;
             toast.classList.add("show");
 
             toastTimeout = setTimeout(() => {
                 toast.classList.remove("show");
-                setTimeout(() => {
-                    isToastActive = false;
-                }, 400);
+                setTimeout(() => { isToastActive = false; }, 400);
             }, 3000);
         }
 
-        // Quiz-Button-Funktion
+        // Quiz & Zusammenfassung
         const quizButton = document.getElementById("quizButton");
+        const zusammenfassungButton = document.getElementById("zusammenfassungButton");
+
         quizButton.addEventListener("click", function() {
             if (isToastActive) return;
-
             const frame = document.getElementById("contentFrame");
             frame.contentWindow.postMessage({ type: "getVisibleText" }, "*");
-
             quizButton.dataset.active = "true";
-            zusammenfassungButton.dataset.active = "false";
-            frageButton.dataset.active = "false";
         });
 
-        // Zusammenfassung-Button-Funktion
-        const zusammenfassungButton = document.getElementById("zusammenfassungButton");
         zusammenfassungButton.addEventListener("click", function() {
             if (isToastActive) return;
-
             const frame = document.getElementById("contentFrame");
             frame.contentWindow.postMessage({ type: "getVisibleText" }, "*");
-
-            quizButton.dataset.active = "false";
             zusammenfassungButton.dataset.active = "true";
-            frageButton.dataset.active = "false";
         });
 
-        // Empfange die Antwort vom iframe
+        // Antwort vom iframe
         window.addEventListener("message", (event) => {
             if (event.data.type === "visibleTextResponse") {
                 const visibleText = event.data.text;
@@ -695,35 +927,20 @@
                 if (zusammenfassungButton.dataset.active === "true") {
                     const promptText = "Fasse den nachstehenden Text präzise und strukturiert zusammen:\n\n" + visibleText;
                     navigator.clipboard.writeText(promptText)
-                        .then(() => {
-                            showToast("Prompt für Zusammenfassung wurde kopiert!");
-                        })
-                        .catch(err => {
-                            console.error("Fehler beim Kopieren: ", err);
-                            showToast("Fehler beim Kopieren in die Zwischenablage.", true);
-                        });
+                        .then(() => { showToast("Prompt für Zusammenfassung kopiert!"); })
+                        .catch(err => { showToast("Fehler beim Kopieren.", true); });
                 }
                 else if (quizButton.dataset.active === "true") {
                     const promptText = "Erstelle 2 Fragen für eine Prüfung, die nur das Wissen aus den nachstehenden Informationen abfragen:\n\n" + visibleText;
                     navigator.clipboard.writeText(promptText)
-                        .then(() => {
-                            showToast("Prompt für Quiz-Fragen wurde kopiert!");
-                        })
-                        .catch(err => {
-                            console.error("Fehler beim Kopieren: ", err);
-                            showToast("Fehler beim Kopieren in die Zwischenablage.", true);
-                        });
+                        .then(() => { showToast("Prompt für Quiz-Fragen kopiert!"); })
+                        .catch(err => { showToast("Fehler beim Kopieren.", true); });
                 }
                 else if (frageButton.dataset.question) {
                     const promptText = frageButton.dataset.question + "\n\n" + visibleText;
                     navigator.clipboard.writeText(promptText)
-                        .then(() => {
-                            showToast("Prompt für Frage wurde kopiert!");
-                        })
-                        .catch(err => {
-                            console.error("Fehler beim Kopieren: ", err);
-                            showToast("Fehler beim Kopieren in die Zwischenablage.", true);
-                        });
+                        .then(() => { showToast("Prompt für Frage kopiert!"); })
+                        .catch(err => { showToast("Fehler beim Kopieren.", true); });
                     frageButton.dataset.question = "";
                 }
 
@@ -732,23 +949,17 @@
             }
         });
 
-        // Standardmäßig die erste Seite laden und Inhaltsverzeichnis rendern
+        // Erste Seite laden
         if (contentList.length > 0) {
             document.getElementById("contentFrame").src = contentList[0].fileName;
         }
         renderContentList();
 
-        // Empfange Nachrichten vom iframe
-        window.addEventListener("message", (event) => {
-            if (event.data.type === "getMode") {
-                const mode = document.body.classList.contains("dark-mode") ? "dark" : "light";
-                event.source.postMessage({ type: "setMode", mode: mode }, event.origin);
+        // Schließe Input-Menü bei Klick außerhalb
+        document.addEventListener("click", function(e) {
+            if (!frageInputMenu.contains(e.target) && e.target !== frageButton) {
+                frageInputMenu.classList.remove("show");
             }
-        });
-
-        // Schließe das Input-Menü, wenn irgendwo anders geklickt wird
-        document.addEventListener("click", function() {
-            frageInputMenu.style.display = "none";
         });
     </script>
 </body>
