@@ -223,10 +223,9 @@
         .content-list li {
             padding: 6px 0;
             transition: none;
-            overflow: hidden;
             border-radius: 8px;
-            white-space: nowrap;
-            text-overflow: ellipsis;
+            white-space: normal !important;
+            word-wrap: break-word !important;
             position: relative;
         }
 
@@ -239,6 +238,8 @@
             transition: none;
             position: relative;
             z-index: 1;
+            white-space: normal !important;
+            word-wrap: break-word !important;
         }
 
         .category {
@@ -729,16 +730,405 @@
 
         // Inhaltsliste
         const contentList = [
-            { category: "Grundlagen", subcategory: "HTML", displayName: "Experiment Ethin", fileName: "e_ethin.html", tags: ["ethin", "einführung", "grundlagen"] },
-            { category: "Grundlagen", subcategory: "HTML", displayName: "Chemische Thermodynamik", fileName: "u_chemische_thermodynamik.html", tags: ["html5", "neuerung", "neues", "features"] },
-            { category: "Grundlagen", subcategory: "CSS", displayName: "Arten stofflicher Systeme", fileName: "u_arten_stofflicher_systeme.html", tags: ["css", "stile", "design"] },
-            { category: "Grundlagen", subcategory: "CSS", displayName: "CSS Layouts", fileName: "css_layouts.html", tags: ["css", "layout", "grid", "flexbox"] },
-            { category: "Fortgeschritten", subcategory: "JavaScript", displayName: "JavaScript für Anfänger", fileName: "javascript_anfaenger.html", tags: ["javascript", "js", "anfänger", "grundlagen"] },
-            { category: "Fortgeschritten", subcategory: "JavaScript", displayName: "JavaScript OOP", fileName: "javascript_oop.html", tags: ["javascript", "js", "oop", "objekte"] },
-            { category: "Fortgeschritten", subcategory: "Design", displayName: "Webdesign Prinzipien", fileName: "webdesign_prinzipien.html", tags: ["design", "prinzipien", "ui", "ux"] },
-            { category: "Fortgeschritten", subcategory: "Design", displayName: "Responsive Design", fileName: "responsive_design.html", tags: ["design", "responsive", "mobile", "adaptiv"] },
-            { category: "Tools", subcategory: "Build", displayName: "Webpack Einführung", fileName: "webpack_einfuehrung.html", tags: ["webpack", "build", "tool", "bundler"] },
-            { category: "Tools", subcategory: "Build", displayName: "Gulp für Anfänger", fileName: "gulp_anfaenger.html", tags: ["gulp", "build", "tool", "automatisierung"] },
+            {
+                "category": "Organische Chemie",
+                "subcategory": "Experimente",
+                "displayName": "Experiment Ethin",
+                "fileName": "e_ethin.html",
+                "tags": ["Ethin", "Alkin", "Nachweis", "Dreifachbindung", "Organische Synthese", "Bunsenbrenner"]
+            },
+            {
+                "category": "Physikalische Chemie",
+                "subcategory": "Thermodynamik",
+                "displayName": "Chemische Thermodynamik",
+                "fileName": "u_chemische_thermodynamik.html",
+                "tags": ["Thermodynamik", "Energie", "Enthalpie", "Entropie", "Gibbs-Energie", "Spontanität"]
+            },
+            {
+                "category": "Allgemeine Chemie",
+                "subcategory": "Grundlagen",
+                "displayName": "Arten stofflicher Systeme",
+                "fileName": "u_arten_stofflicher_systeme.html",
+                "tags": ["Stoffsysteme", "Homogen", "Heterogen", "Phasen", "Gemische", "Reinstoffe"]
+            },
+            {
+                "category": "Physikalische Chemie",
+                "subcategory": "Thermodynamik",
+                "displayName": "Volumen Arbeit",
+                "fileName": "u_volumen_arbeit.html",
+                "tags": ["Volumenarbeit", "Arbeit", "Gasgesetze", "Thermodynamik", "Energieumwandlung", "p-V-Diagramm"]
+            },
+            {
+                "category": "Allgemeine Chemie",
+                "subcategory": "Stoffmengenberechnungen",
+                "displayName": "Mol Berechnungen",
+                "fileName": "u_mol_hcl_c_berechnungen.html",
+                "tags": ["Mol", "Stoffmenge", "Konzentration", "Berechnung", "Avogadro", "Stöchiometrie"]
+            },
+            {
+                "category": "Allgemeine Chemie",
+                "subcategory": "Reaktionsarten",
+                "displayName": "Reaktionsarten Übersicht",
+                "fileName": "u_reaktionsarten.html",
+                "tags": ["Reaktionsarten", "Synthese", "Analyse", "Umlagerung", "Redoxreaktion", "Säure-Base"]
+            },
+            {
+                "category": "Analytische Chemie",
+                "subcategory": "Nachweisreaktionen",
+                "displayName": "Nachweisreaktionen Übersicht",
+                "fileName": "u_nachweisreaktionen.html",
+                "tags": ["Nachweis", "Analyse", "Ionen", "Fällung", "Flammenfärbung", "Indikator"]
+            },
+            {
+                "category": "Anorganische Chemie",
+                "subcategory": "Atombau und Bindung",
+                "displayName": "Atombau, Orbitale, Hybridisierung",
+                "fileName": "u_atombau_orbitale_hybridisierung.html",
+                "tags": ["Atombau", "Orbitale", "Hybridisierung", "Elektronenkonfiguration", "sp³", "Molekülgeometrie"]
+            },
+            {
+                "category": "Anorganische Chemie",
+                "subcategory": "Redoxreaktionen",
+                "displayName": "Redoxreaktionen und Disproportionierung",
+                "fileName": "redoxreaktionen_dis.html",
+                "tags": ["Redoxreaktion", "Oxidation", "Reduktion", "Disproportionierung", "Elektronenübertragung", "Oxidationszahl"]
+            },
+            {
+                "category": "Physikalische Chemie",
+                "subcategory": "Chemisches Gleichgewicht",
+                "displayName": "Chemische Gleichgewichte - Massenwirkungsgesetz",
+                "fileName": "chemische_gleichgewichte_mwg.html",
+                "tags": ["Gleichgewicht", "Massenwirkungsgesetz", "Kc", "Dynamisches Gleichgewicht", "Le Chatelier", "Reaktionsquotient"]
+            },
+            {
+                "category": "Allgemeine Chemie",
+                "subcategory": "Stoffmengenberechnungen",
+                "displayName": "Weitere Berechnungen Mol, chemisches GG",
+                "fileName": "berechnungen_mol_2.html",
+                "tags": ["Mol", "Gleichgewicht", "Berechnung", "Stöchiometrie", "Konzentration", "Kc"]
+            },
+            {
+                "category": "Physikalische Chemie",
+                "subcategory": "Thermodynamik",
+                "displayName": "Reaktionsenthalpie (Berechnung) Erklärung und Beispiel",
+                "fileName": "reaktionsenthalpie_erklaerung_u_bsp.html",
+                "tags": ["Reaktionsenthalpie", "Berechnung", "Enthalpie", "Exotherm", "Endotherm", "Energiebilanz"]
+            },
+            {
+                "category": "Physikalische Chemie",
+                "subcategory": "Thermodynamik",
+                "displayName": "Reaktionsenthalpie (Berechnung) Erklärung 2",
+                "fileName": "reaktionsenthalpie_rechnung_detailliert.html",
+                "tags": ["Reaktionsenthalpie", "Berechnung", "Hess’scher Satz", "Standardbildungsenthalpie", "Energie", "Thermochemie"]
+            },
+            {
+                "category": "Anorganische Chemie",
+                "subcategory": "Redoxreaktionen",
+                "displayName": "Oxidationszahlen und Beispiele",
+                "fileName": "oxidationszahlen_rechnung_1.html",
+                "tags": ["Oxidationszahl", "Redox", "Bestimmung", "Regeln", "Beispiele", "Elektronegativität"]
+            },
+            {
+                "category": "Physikalische Chemie",
+                "subcategory": "Thermodynamik",
+                "displayName": "2. Hauptsatz der Thermodynamik, Entropie, Gibbs-Helmholtz-Gleichung, Spontanität",
+                "fileName": "zweiter_hauptsatz_thermodynamik.html",
+                "tags": ["2. Hauptsatz", "Entropie", "Gibbs-Helmholtz", "Spontanität", "Freie Enthalpie", "ΔG"]
+            },
+            {
+                "category": "Physikalische Chemie",
+                "subcategory": "Thermodynamik",
+                "displayName": "Gibbs Helmholtz Gleichung Beispiel, Spontanität",
+                "fileName": "gibbs_helmholtz_beispiel_1.html",
+                "tags": ["Gibbs-Helmholtz", "Spontanität", "ΔG", "ΔH", "ΔS", "T"]
+            },
+            {
+                "category": "Anorganische Chemie",
+                "subcategory": "Industrielle Prozesse",
+                "displayName": "Ammoniaksynthese, Le Chatelier, Chemisches GG",
+                "fileName": "ammoniaksynthese_1.html",
+                "tags": ["Ammoniaksynthese", "Haber-Bosch", "Le Chatelier", "Gleichgewicht", "Katalysator", "Druck"]
+            },
+            {
+                "category": "Anorganische Chemie",
+                "subcategory": "Industrielle Prozesse",
+                "displayName": "Stickstoffmonoxid (technische Herstellung nach Ostwald), Le Chatelier, Chemisches GG",
+                "fileName": "stickstoffmonoxid_ostwald.html",
+                "tags": ["Stickstoffmonoxid", "Ostwald-Verfahren", "Le Chatelier", "Gleichgewicht", "Katalysator", "Salpetersäure"]
+            },
+            {
+                "category": "Anorganische Chemie",
+                "subcategory": "Industrielle Prozesse",
+                "displayName": "Kohlenstoff - Verbrennung im Hochofen, Le Chatelier, Chemisches GG",
+                "fileName": "kohlenstoff_hochoffen.html",
+                "tags": ["Hochofen", "Kohlenstoff", "Eisenherstellung", "Reduktion", "Le Chatelier", "Rost"]
+            },
+            {
+                "category": "Anorganische Chemie",
+                "subcategory": "Industrielle Prozesse",
+                "displayName": "Großtechnische Herstellung von Schwefelsäure, Le Chatelier, Chemisches GG",
+                "fileName": "grosstechnische_herstellung_schwefelsaeure.html",
+                "tags": ["Schwefelsäure", "Kontaktverfahren", "Le Chatelier", "Gleichgewicht", "Katalysator", "SO₃"]
+            },
+            {
+                "category": "Organische Chemie",
+                "subcategory": "Industrielle Prozesse",
+                "displayName": "Großtechnische Herstellung von Methanol, Le Chatelier, Chemisches GG",
+                "fileName": "grosstechnische_herstellung_methanol.html",
+                "tags": ["Methanol", "Synthesegas", "Le Chatelier", "Gleichgewicht", "Katalysator", "Hydrierung"]
+            },
+            {
+                "category": "Organische Chemie",
+                "subcategory": "Biochemie",
+                "displayName": "Gärungsprozess, Essigsäure",
+                "fileName": "gaerung_essigsaeure.html",
+                "tags": ["Gärung", "Essigsäure", "Fermentation", "Ethanol", "Bakterien", "Biochemie"]
+            },
+            {
+                "category": "Organische Chemie",
+                "subcategory": "Historische Experimente",
+                "displayName": "Harnstoffsynthese nach Wöhler, Organische Chemie",
+                "fileName": "harnstoffsynthese_org_chemie.html",
+                "tags": ["Harnstoffsynthese", "Wöhler", "Organische Chemie", "Harnstoff", "Ammoniumcyanat", "Isomerie"]
+            },
+            {
+                "category": "Organische Chemie",
+                "subcategory": "Grundlagen",
+                "displayName": "Kohlenwasserstoffe, Isomerie, Organische Chemie Übersicht",
+                "fileName": "org_chemie_kohlenwasserstoffe_isomerie.html",
+                "tags": ["Kohlenwasserstoffe", "Isomerie", "Alkane", "Alkene", "Alkine", "Strukturformel"]
+            },
+            {
+                "category": "Organische Chemie",
+                "subcategory": "Funktionelle Gruppen",
+                "displayName": "Funktionelle Gruppen, Organische Chemie",
+                "fileName": "org_chemie_funktionelle_gruppen.html",
+                "tags": ["Funktionelle Gruppen", "Alkohol", "Carbonsäure", "Amin", "Keton", "Ester"]
+            },
+            {
+                "category": "Organische Chemie",
+                "subcategory": "Reaktionstypen",
+                "displayName": "Reaktionstypen organische Chemie, Substitution, Addition",
+                "fileName": "reaktionstypen_org_chemie.html",
+                "tags": ["Reaktionstypen", "Substitution", "Addition", "Eliminierung", "Radikalisch", "Nukleophil"]
+            },
+            {
+                "category": "Organische Chemie",
+                "subcategory": "Reaktionsmechanismen",
+                "displayName": "Carbenium, Carbanion, Zwischenstufen organischer Reaktionen",
+                "fileName": "carbenium_carbanion_zwischenstufen.html",
+                "tags": ["Carbenium", "Carbanion", "Zwischenstufen", "Reaktionsmechanismus", "Ladung", "Stabilität"]
+            },
+            {
+                "category": "Analytische Chemie",
+                "subcategory": "Organische Analyse",
+                "displayName": "Qualitative Analyse organischer Stoffe und Nachweise",
+                "fileName": "qualitative_analyse_organischer_stoffe_und_nachweise.html",
+                "tags": ["Qualitative Analyse", "Nachweis", "Organische Stoffe", "Flammenprobe", "Löslichkeit", "Funktionelle Gruppe"]
+            },
+            {
+                "category": "Analytische Chemie",
+                "subcategory": "Quantitative Analyse",
+                "displayName": "Quantitative Analyse, Kolbenprober, Kupfer(II)-oxid",
+                "fileName": "quantitative_analyse_kolbenprober_cuo.html",
+                "tags": ["Quantitative Analyse", "Kolbenprober", "Kupfer(II)-oxid", "Verbrennung", "CO₂-Nachweis", "Wasser"]
+            },
+            {
+                "category": "Analytische Chemie",
+                "subcategory": "Organische Analyse",
+                "displayName": "Nachweis ungesättigter Kohlenwasserstoffe",
+                "fileName": "nachweis_ungesaettigter_kohlenwasserstoffe.html",
+                "tags": ["Ungesättigte Kohlenwasserstoffe", "Bromwasser", "Entfärbung", "Alkene", "Alkine", "Doppelbindung"]
+            },
+            {
+                "category": "Organische Chemie",
+                "subcategory": "Biochemie",
+                "displayName": "Glucose Nachweis, Tollensreagenz, Fehling",
+                "fileName": "glucose_nachweis.html",
+                "tags": ["Glucose", "Tollensreagenz", "Fehling", "Aldehyd", "Reduktion", "Silberspiegel"]
+            },
+            {
+                "category": "Organische Chemie",
+                "subcategory": "Biochemie",
+                "displayName": "Nachweis Polysaccharide, Iod-Iodid-Lösung",
+                "fileName": "nachweis_polysaccharide_iod_iodid.html",
+                "tags": ["Polysaccharide", "Stärke", "Iod-Iodid", "Blaufärbung", "Nachweis", "Cellulose"]
+            },
+            {
+                "category": "Organische Chemie",
+                "subcategory": "Biochemie",
+                "displayName": "Fettsäuren, Nachweise, Aufbau, Abbau",
+                "fileName": "fettsaeuren_nachweis_abbau_aufbau.html",
+                "tags": ["Fettsäuren", "Nachweis", "Ester", "Seifen", "Hydrolyse", "Triglyceride"]
+            },
+            {
+                "category": "Biochemie",
+                "subcategory": "Proteine",
+                "displayName": "Proteine Übersicht, Polare, Unpolare Aminosäuren",
+                "fileName": "proteine_uebersicht_polare_unpolare_as.html",
+                "tags": ["Proteine", "Aminosäuren", "Polar", "Unpolar", "Peptidbindung", "Struktur"]
+            },
+            {
+                "category": "Biochemie",
+                "subcategory": "Proteine",
+                "displayName": "Proteine, Primär-, Sekundär-, Tertiärstruktur",
+                "fileName": "primaer_sekundaer_struktur_proteine.html",
+                "tags": ["Proteine", "Primärstruktur", "Sekundärstruktur", "Tertiärstruktur", "α-Helix", "Faltung"]
+            },
+            {
+                "category": "Biochemie",
+                "subcategory": "Proteine",
+                "displayName": "Peptidbindung, Eigenschaften Proteine, Xanthoprotein-, Biuretreaktion",
+                "fileName": "peptidbindung_1.html",
+                "tags": ["Peptidbindung", "Xanthoprotein", "Biuret", "Nachweis", "Denaturierung", "Farbreaktion"]
+            },
+            {
+                "category": "Organische Chemie",
+                "subcategory": "Stereochemie",
+                "displayName": "Stereoisomerie, Spiegelbildisomerie, Fischer-Projektion",
+                "fileName": "stereoisomerie_spiegelbildisomerie_fischer.html",
+                "tags": ["Stereoisomerie", "Enantiomere", "Chiralität", "Fischer-Projektion", "D/L-Nomenklatur", "Optische Aktivität"]
+            },
+            {
+                "category": "Organische Chemie",
+                "subcategory": "Zuckerchemie",
+                "displayName": "Aldosen, Ketosen, Keto-Enol-Tautomerie",
+                "fileName": "aldosen_ketosen_keto_enol_tautomerie.html",
+                "tags": ["Aldosen", "Ketosen", "Tautomerie", "Glucose", "Fructose", "Ringform"]
+            },
+            {
+                "category": "Anorganische Chemie",
+                "subcategory": "Bindungstheorie",
+                "displayName": "Chemische Bindungen, Primär-, Sekundärbindungen",
+                "fileName": "chemische_bindungen_primaer_intra_sekundaer_inter.html",
+                "tags": ["Bindungen", "Primärbindung", "Sekundärbindung", "Ionenbindung", "Wasserstoffbrücke", "Van-der-Waals"]
+            },
+            {
+                "category": "Anorganische Chemie",
+                "subcategory": "Bindungstheorie",
+                "displayName": "Valenzbindungsmodell, Molekülorbitalmodell",
+                "fileName": "valenzbindungsmodell_molekuelorbitalmodell.html",
+                "tags": ["Valenzbindungsmodell", "Molekülorbital", "Hybridisierung", "σ-Bindung", "π-Bindung", "Delokalisierung"]
+            },
+            {
+                "category": "Anorganische Chemie",
+                "subcategory": "Redoxreaktionen",
+                "displayName": "Oxidationsstufen des Mangans, Experiment, Elektronenkonfiguration",
+                "fileName": "oxdiationsstufen_des_mangans.html",
+                "tags": ["Mangan", "Oxidationsstufen", "Permanganat", "Fällung", "Farbreaktion", "d-Orbitale"]
+            },
+            {
+                "category": "Anorganische Chemie",
+                "subcategory": "Redoxreaktionen",
+                "displayName": "Proportionierung, Disproportionierung, Autokatalyse",
+                "fileName": "proportionierung_und_disproportionierung_beispiele.html",
+                "tags": ["Proportionierung", "Disproportionierung", "Autokatalyse", "Chlor", "Wasserstoffperoxid", "Redox"]
+            },
+            {
+                "category": "Anorganische Chemie",
+                "subcategory": "Redoxreaktionen",
+                "displayName": "Redoxampholyte, Amphoterer Charakter in Redoxreaktionen",
+                "fileName": "redoxampholyt_amphoterer_charakter.html",
+                "tags": ["Redoxampholyt", "Amphoter", "Wasserstoffperoxid", "Schwefel", "Oxidation", "Reduktion"]
+            },
+            {
+                "category": "Physikalische Chemie",
+                "subcategory": "Elektrochemie",
+                "displayName": "Elektrochemie, Bleiakkumulator, Elektrolyte",
+                "fileName": "elektrochemie_bleiakkumulator.html",
+                "tags": ["Elektrochemie", "Bleiakkumulator", "Elektrolyt", "Galvanische Zelle", "Redox", "Batterie"]
+            },
+            {
+                "category": "Physikalische Chemie",
+                "subcategory": "Elektrochemie",
+                "displayName": "Starke und schwache Elektrolyte, Tafelwerk",
+                "fileName": "starke_und_schwache_elektrolyte.html",
+                "tags": ["Elektrolyte", "Stark", "Schwach", "Dissoziation", "Leitfähigkeit", "pKS"]
+            },
+            {
+                "category": "Allgemeine Chemie",
+                "subcategory": "Stoffmengenberechnungen",
+                "displayName": "Konzentration, Berechnung, Beispiel",
+                "fileName": "konzentration_umfassend.html",
+                "tags": ["Konzentration", "Molalität", "Molarität", "Verdünnung", "Berechnung", "Löslichkeit"]
+            },
+            {
+                "category": "Anorganische Chemie",
+                "subcategory": "Redoxreaktionen",
+                "displayName": "Reinigen von Silberschmuck, Gleichung, Beobachtung",
+                "fileName": "reinigen_silberschmuck.html",
+                "tags": ["Silberschmuck", "Redoxreaktion", "Silberoxid", "Reduktion", "Glanz", "Haushalt"]
+            },
+            {
+                "category": "Physikalische Chemie",
+                "subcategory": "Elektrochemie",
+                "displayName": "Elektrochemie, Korrosion, Beispiel, Korrosionsschutz",
+                "fileName": "elektrochemie_korrosion.html",
+                "tags": ["Korrosion", "Rosten", "Korrosionsschutz", "Opferschutz", "Passivierung", "Eisen"]
+            },
+            {
+                "category": "Physikalische Chemie",
+                "subcategory": "Elektrochemie",
+                "displayName": "Galvanische Zelle, Anodenraum, Kathodenraum",
+                "fileName": "galvanische_zelle_1.html",
+                "tags": ["Galvanische Zelle", "Anode", "Kathode", "Redox", "Spannung", "Daniell-Element"]
+            },
+            {
+                "category": "Organische Chemie",
+                "subcategory": "Chemisches Gleichgewicht",
+                "displayName": "Chemisches Gleichgewicht, Esterbildung, Dynamisches Gleichgewicht",
+                "fileName": "gleichgewicht_esterbildung.html",
+                "tags": ["Esterbildung", "Gleichgewicht", "Veresterung", "Hydrolyse", "Säure", "Alkohol"]
+            },
+            {
+                "category": "Physikalische Chemie",
+                "subcategory": "Thermodynamik",
+                "displayName": "Exotherme, Endotherme Reaktionen, Chemisches Gleichgewicht",
+                "fileName": "exotherme_endotherme_reaktion_chemisches_gleichgewicht.html",
+                "tags": ["Exotherm", "Endotherm", "Gleichgewicht", "Reaktionswärme", "Le Chatelier", "Temperatur"]
+            },
+            {
+                "category": "Physikalische Chemie",
+                "subcategory": "Chemisches Gleichgewicht",
+                "displayName": "Chemisches Gleichgewicht, Gleichgewichtskonstante, Massenwirkungsgesetz",
+                "fileName": "chemisches_gg_gleichgewichtskonstante.html",
+                "tags": ["Gleichgewichtskonstante", "Massenwirkungsgesetz", "Kc", "Reaktionsquotient", "Dynamisch", "Konzentration"]
+            },
+            {
+                "category": "Anorganische Chemie",
+                "subcategory": "Säure-Base-Chemie",
+                "displayName": "Säure-Base-Theorie, Lewis, Bronstedt, Protolyse, Ammoniak",
+                "fileName": "saeure_base_lewis_bronstedt.html",
+                "tags": ["Säure-Base", "Lewis", "Brønsted", "Protolyse", "Ammoniak", "pH-Wert"]
+            },
+            {
+                "category": "Anorganische Chemie",
+                "subcategory": "Säure-Base-Chemie",
+                "displayName": "pH-Wert, Berechnen, Protolyte, Puffersysteme",
+                "fileName": "ph_werte_berechnungen_puffersysteme.html",
+                "tags": ["pH-Wert", "Berechnung", "Protolyte", "Puffer", "Henderson-Hasselbalch", "Titration"]
+            },
+            {
+                "category": "Anorganische Chemie",
+                "subcategory": "Lösungsprozesse",
+                "displayName": "Lösen von Salzen, Lösungsenthalpie",
+                "fileName": "salze_loesungsenthalpie.html",
+                "tags": ["Salze", "Lösungsenthalpie", "Gitterenergie", "Hydratation", "Löslichkeit", "Kristall"]
+            },
+            {
+                "category": "Anorganische Chemie",
+                "subcategory": "Komplexchemie",
+                "displayName": "Komplexverbindungen, Komplexstabilitätskonstante",
+                "fileName": "komplexchemie_1.html",
+                "tags": ["Komplexverbindungen", "Ligand", "Zentralion", "Stabilitätskonstante", "Chelat", "Farbigkeit"]
+            },
+            {
+                "category": "Biochemie",
+                "subcategory": "Proteine",
+                "displayName": "Proteine, Nachweise, Aromaten, Peptide",
+                "fileName": "proteine_nachweise_1.html",
+                "tags": ["Proteine", "Nachweis", "Aromaten", "Peptide", "Biuret", "Ninhydrin"]
+            }
         ];
 
         // Sortieren
@@ -974,7 +1364,56 @@
                         .catch(err => { showToast("Fehler beim Kopieren.", true); });
                 }
                 else if (frageButton.dataset.question) {
-                    const promptText = "Beantworte die Frage:\n\n" + frageButton.dataset.question + "\n\nnur mithilfe der nachstehenden Informationen:\n\n" + visibleText;
+                    const promptText = `
+### Spracheinstellungen ###
+
+Du antwortest immer in deutscher Sprache.
+
+### Rolle ###
+
+Du bist eine Recherche KI für Naturwissenschaften, die sich mit Fragen zur Chemie auseinandersetzt.
+
+### Aufgabe ###
+
+Du führst Internetrecherchen durch. Du nutzt keine anderen Tools. Du antwortest nur mithilfe der Informationen aus der Internetrecherche und dem ursprünglich bereitgestellten Text. Wenn du keinen Zugriff auf eine Seite hast, überspringe diese eine Seite. Du gibst zu allen Informationen Fundstellen an.
+
+### Anleitung ###
+
+1. Vorbereitung
+
+1.1. Speichere den Prompt des Users als String in USER_PROMPT.
+
+1.2. Finde 5 chemische und sonstige Begriffe, die sich dem String in USER_PROMPT entnehmen lassen und von ihm ableiten. Füge den Begriffen immer den String " Chemie Abitur" am Ende bei. Speichere die Begriffe im Array USER_PROMPT_KEYWORDS.
+
+2. Zwingende Recherchen
+
+2.1. Für jeden Eintrag im Array USER_PROMPT_KEYWORDS durchsuchst du die Seiten:
+
+"https://www.chemieunterricht.de/dc2/",
+"https://www.simpleclub.com/topic/chemie-im-abi",
+"https://www.sofatutor.com/chemie",
+"https://www.studyhelp.de/online-lernen/chemie/",
+"https://www.lernhelfer.de/schuelerlexikon/chemie-abitur",
+"https://www.oberprima.com/chemie/",
+"https://de.wikipedia.org",
+"https://www.chemie-schule.de",
+"https://www.studysmarter.de/studium/chemie-studium",
+"https://www.studyflix.de/chemie",
+"https://www.lernhelfer.de/schuelerlexikon/chemie-abitur",
+"https://www.abitur-wissen.org,
+"https://www.chemie.de" und
+"https://www.abiweb.de"
+
+und speicherst jeweils die gefundenen Plain Texte in INFORMATIONEN_STRING.
+
+3. Antwortformulierung
+
+3.1. Du formulierst deine Antwort nur mithilfe der Informationen im String INFORMATIONEN_STRING dem du auch den ursprünglichen Text beifügst. Du übernimmst Formulierungen und Fachbegriffe aus INFORMATIONEN_STRING.
+
+User: Beantworte die Frage USER_PROMPT nur mithilfe der nachstehenden Informationen.\n\nInformationstexte: INFORMATIONEN_STRING.
+
+User: 
+                    ` + frageButton.dataset.question + "\n\nZusätzlich verwendest du auch diese nachstehenden Informationen:\n\n" + visibleText;
                     navigator.clipboard.writeText(promptText)
                         .then(() => { showToast("Prompt für Frage kopiert!"); })
                         .catch(err => { showToast("Fehler beim Kopieren.", true); });
